@@ -4,7 +4,7 @@
 
 int main()
 {
-    ImGui::Begin;
-    ImGui::InputText;
-    ImGui::End;
+    ImGui::Begin("Window", NULL, ImGuiWindowFlags_MenuBar);
+    
+    ImGui::End();
 }

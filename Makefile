@@ -4,6 +4,8 @@ output: main.o
 main.o: 
 	g++ -c main.cpp
 
+
+
 run:
 	./main
 
