@@ -1,20 +1,10 @@
-CXX = g++
-CXXFLAGS = -Wall
+all: compile link
+	
+compile:	
+	g++ -IInclude/SFML/include -c main.cpp
 
-
-
-
-
-
-
-output: main.o 
-	g++ main.o -o main -IC:/Users/Peyton/source/repos/FortIDE/Include/imgui-master
-
-main.o: 
-	g++ -c main.cpp
-
-run:
-	./main
+link:
+	g++ main.o -o main -LInclude/SFML/lib -lsfml-graphics -lsfml-window -lsfml-system
 
 clean:
-	del *.o *.exe
+	del *.o
