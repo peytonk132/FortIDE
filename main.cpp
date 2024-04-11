@@ -1,5 +1,5 @@
-#include "Include/imgui-sfml/imgui.h"
-#include "Include/imgui-sfml/imgui-SFML.h"
+#include "imgui/imgui.h"
+#include "imgui/imgui-SFML.h"
 
 #include <SFML/Graphics/CircleShape.hpp>
 #include <SFML/Graphics/RenderWindow.hpp>
