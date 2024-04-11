@@ -29,11 +29,46 @@ int main()
 
         ImGui::SFML::Update(window, deltaClock.restart());
 
-        ImGui::Begin("Hello, world!");
+        
+
+        
+
+        
+
         if (ImGui::BeginMainMenuBar())
         {
             if (ImGui::BeginMenuBar())
             {
+                if (ImGui::BeginTabBar("My Tab"))
+                {
+                    if (ImGui::BeginTabItem("Test"))
+                    {
+                        const char* items[] = { "AAAA", "BBBB", "CCCC", "DDDD", "EEEE", "FFFF", 
+                                                "GGGG", "HHHH", "IIII", "JJJJ", "KKKK", "LLLLLLL", 
+                                                "MMMM", "OOOOOOO", "PPPP", "QQQQQQQQQQ", "RRR", "SSSS" };
+                        static const char* current_item = NULL;
+
+                        if (ImGui::BeginCombo("##combo", current_item)) // The second parameter is the label previewed before opening the combo.
+                        {
+                            for (int n = 0; n < IM_ARRAYSIZE(items); n++)
+                            {
+                                bool is_selected = (current_item == items[n]); // You can store your selection however you want, outside or inside your objects
+                                if (ImGui::Selectable(items[n], is_selected))
+                                {
+                                    current_item = items[n];
+
+                                    if (is_selected)
+                                    {
+                                        ImGui::SetItemDefaultFocus();   // You may set the initial focus when opening the combo (scrolling + for keyboard navigation support)
+                                    }
+                                }
+                            }
+                            ImGui::EndCombo();
+                        }
+                        ImGui::EndTabItem();
+                    }
+                    ImGui::EndTabBar();
+                }
                 if (ImGui::MenuItem("Open", "Ctrl+O")) 
                 {
                     FileMan open;
@@ -43,8 +78,6 @@ int main()
             }
             ImGui::EndMainMenuBar();
         }
-        ImGui::End();
-
         window.clear();
         ImGui::SFML::Render(window);
         window.display();
