@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{6DB84BF9-73B5-44D2-90FA-B77EE9DABC17}|Project1.vcxproj|solutionrelative:Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6DB84BF9-73B5-44D2-90FA-B77EE9DABC17}|Project1.vcxproj|C:\\Users\\Peyton\\source\\repos\\FortIDE\\FortIDE\\FileSystem\\FileMan.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6DB84BF9-73B5-44D2-90FA-B77EE9DABC17}|Project1.vcxproj|solutionrelative:FileSystem\\FileMan.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6DB84BF9-73B5-44D2-90FA-B77EE9DABC17}|Project1.vcxproj|C:\\Users\\Peyton\\source\\repos\\FortIDE\\FortIDE\\FileSystem\\FileMan.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{6DB84BF9-73B5-44D2-90FA-B77EE9DABC17}|Project1.vcxproj|solutionrelative:FileSystem\\FileMan.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6DB84BF9-73B5-44D2-90FA-B77EE9DABC17}|Project1.vcxproj|C:\\Users\\Peyton\\source\\repos\\FortIDE\\FortIDE\\FileSystem\\FileMan.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6DB84BF9-73B5-44D2-90FA-B77EE9DABC17}|Project1.vcxproj|solutionrelative:FileSystem\\FileMan.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -32,14 +32,14 @@
               "RelativeDocumentMoniker": "Main.cpp",
               "ToolTip": "C:\\Users\\Peyton\\source\\repos\\FortIDE\\FortIDE\\Main.cpp",
               "RelativeToolTip": "Main.cpp",
-              "ViewState": "AQIAACoAAAAAAAAAAAAywDEAAAAAAAAA",
+              "ViewState": "AQIAACcAAAAAAAAAAAAAAC0AAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-04-11T14:37:56.123Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "FileMan.cpp",
               "DocumentMoniker": "C:\\Users\\Peyton\\source\\repos\\FortIDE\\FortIDE\\FileSystem\\FileMan.cpp",
               "RelativeDocumentMoniker": "FileSystem\\FileMan.cpp",
@@ -47,12 +47,11 @@
               "RelativeToolTip": "FileSystem\\FileMan.cpp",
               "ViewState": "AQIAAAIAAAAAAAAAAAAiwAYAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-04-11T14:33:42.06Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-11T14:33:42.06Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "FileMan.h",
               "DocumentMoniker": "C:\\Users\\Peyton\\source\\repos\\FortIDE\\FortIDE\\FileSystem\\FileMan.h",
               "RelativeDocumentMoniker": "FileSystem\\FileMan.h",
@@ -60,8 +59,7 @@
               "RelativeToolTip": "FileSystem\\FileMan.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-04-11T14:33:14.267Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-11T14:33:14.267Z"
             }
           ]
         }
