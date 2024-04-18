@@ -11,6 +11,3 @@ https://github.com/ocornut/imgui
 
 ImGui-SFML Backend:
 https://github.com/SFML/imgui-sfml
-
-Zep:
-https://github.com/Rezonality/zep
