@@ -1,68 +1,60 @@
-#include "imgui.h"
-#include "imgui-SFML.h"
-#include "FileSystem/FileMan.h"
+#include <SFML/Graphics.hpp>
+#include <windows.h>
 
-#include <SFML/Graphics/CircleShape.hpp>
-#include <SFML/Graphics/RenderWindow.hpp>
-#include <SFML/System/Clock.hpp>
-#include <SFML/Window/Event.hpp>
-
-int main() 
+int main()
 {
-    sf::RenderWindow window(sf::VideoMode(640, 480), "FortIDE");
-    window.setFramerateLimit(60);
-    ImGui::SFML::Init(window);
+    sf::RenderWindow window(sf::VideoMode(640, 480), "SFML works!");
 
-    sf::Clock deltaClock;
-    while (window.isOpen()) 
+    sf::IntRect open(0, 0, 65, 35);
+
+    sf::RectangleShape open_button(sf::Vector2f(open.width, open.height));
+    open_button.setPosition(open.left, open.top);
+    open_button.setFillColor(sf::Color::Blue); // Set the color of the rectangle
+
+    while (window.isOpen())
     {
+
+
         sf::Event event;
-        while (window.pollEvent(event)) 
+        while (window.pollEvent(event))
         {
-            ImGui::SFML::ProcessEvent(window, event);
-
-            if (event.type == sf::Event::Closed) 
-            {
+            if (event.type == sf::Event::Closed)
                 window.close();
-            }
         }
 
-        ImGui::SFML::Update(window, deltaClock.restart());
-
-        if (ImGui::BeginMainMenuBar())
+        if (sf::Mouse::isButtonPressed(sf::Mouse::Left) && open.contains(sf::Mouse::getPosition(window)))
         {
-            if (ImGui::BeginMenuBar())
-            {
-                if (ImGui::BeginTabBar("My Tab"))
-                {
-                    if (ImGui::BeginTabItem("Test"))
-                    {
-
-
-                        ImGui::EndTabItem();
-                    }
-
-                    if (ImGui::TabItemButton("Make New Tab"))
-                    {
-
-                        ImGui::EndTabItem();
-                    }
-                    ImGui::EndTabBar();
-                }
-                
-                if (ImGui::MenuItem("Open", "Ctrl+O")) 
-                {
-                    FileMan open;
-                    open.fileOpen();
-                }
-                ImGui::EndMenuBar();
-            }
-            ImGui::EndMainMenuBar();
+            ShellExecuteA(NULL, "open", "C:\\", NULL, NULL, SW_SHOWDEFAULT);
+            printf("Clicked!\n");
         }
+
+
+        sf::Text text;
+
+        sf::Font font;
+        if (!font.loadFromFile("src/fonts/tobias-font/Tobias-Regular.ttf"))
+        {
+            printf("Could Not load font!");
+        }
+
+        text.setFont(font);
+
+        text.setString("Open");
+        text.setCharacterSize(24);
+
+        // set the color
+        text.setFillColor(sf::Color::White);
+
+        text.setStyle(NULL);
+
+
+
+
         window.clear();
-        ImGui::SFML::Render(window);
+        window.draw(open_button);
+        window.draw(text);
         window.display();
     }
 
-    ImGui::SFML::Shutdown();
+    return 0;
 }
