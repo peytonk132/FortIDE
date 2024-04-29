@@ -1,60 +1,120 @@
+#include "imgui.h"
+#include "imgui-SFML.h"
+#include "NFD/src/include/nfd.h"
+
 #include <SFML/Graphics.hpp>
-#include <windows.h>
+#include <sstream>
+#include <fstream>
+#include <iostream>
 
-int main()
-{
-    sf::RenderWindow window(sf::VideoMode(640, 480), "SFML works!");
+using namespace std;
 
-    sf::IntRect open(0, 0, 65, 35);
+int main() {
+    sf::RenderWindow window(sf::VideoMode(640, 480), "ImGui + SFML = <3");
+    window.setFramerateLimit(60);
+    ImGui::SFML::Init(window);
 
-    sf::RectangleShape open_button(sf::Vector2f(open.width, open.height));
-    open_button.setPosition(open.left, open.top);
-    open_button.setFillColor(sf::Color::Blue); // Set the color of the rectangle
+    sf::Clock deltaClock;
+    char buf[1024];
 
-    while (window.isOpen())
-    {
-
-
+    while (window.isOpen()) {
         sf::Event event;
-        while (window.pollEvent(event))
-        {
-            if (event.type == sf::Event::Closed)
+        while (window.pollEvent(event)) {
+            ImGui::SFML::ProcessEvent(event);
+
+            if (event.type == sf::Event::Closed) {
                 window.close();
+            }
         }
 
-        if (sf::Mouse::isButtonPressed(sf::Mouse::Left) && open.contains(sf::Mouse::getPosition(window)))
-        {
-            ShellExecuteA(NULL, "open", "C:\\", NULL, NULL, SW_SHOWDEFAULT);
-            printf("Clicked!\n");
+        ImGui::SFML::Update(window, deltaClock.restart());
+
+        if (ImGui::Begin("Text Editor", nullptr, ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoCollapse)) {
+            ImGui::InputTextMultiline("Editor", buf, sizeof(buf), ImVec2(600, 400), ImGuiInputTextFlags_AllowTabInput | ImGuiInputTextFlags_CharsNoBlank);
+
+            if (ImGui::BeginMainMenuBar())
+            {
+                if (ImGui::Button("Open"))
+                {
+                    nfdchar_t* outPath = nullptr;
+                    nfdresult_t result = NFD_OpenDialog(nullptr, nullptr, &outPath);
+
+                    if (result == NFD_OKAY) {
+                        ifstream file(outPath);
+                        if (file.is_open()) {
+                            stringstream buffer;
+                            buffer << file.rdbuf();
+                            string fileContents = buffer.str();
+                            if (fileContents.size() < sizeof(buf)) {
+                                std::strcpy(buf, fileContents.c_str());
+                            }
+                            else {
+                                std::cerr << "File is too large to fit into buffer." << std::endl;
+                            }
+                            file.close();
+                        }
+                        free(outPath);
+                    }
+
+                    else if (result == NFD_CANCEL) {
+                        puts("User pressed cancel.");
+                    }
+                    else {
+                        printf("Error: %s\n", NFD_GetError());
+                    }
+                }
+
+                if (ImGui::Button("Save")) {
+                    nfdchar_t* outPath = nullptr;
+                    nfdresult_t result = NFD_SaveDialog(nullptr, nullptr, &outPath);
+
+                    if (result == NFD_OKAY) {
+                        ofstream file(outPath);
+                        if (file.is_open()) {
+                            file << buf;
+                            file.close();
+                        }
+                        free(outPath);
+                    }
+                    else if (result == NFD_CANCEL) {
+                        puts("User pressed cancel.");
+                    }
+                    else {
+                        printf("Error: %s\n", NFD_GetError());
+                    }
+                }
+
+                if (ImGui::Button("Compile"))
+                {
+                    const string filePath = "C:/Users/Peyton/Documents/main.f90"; // or provide a valid file path
+                    // Command to compile using gfortran
+                    string compileCommand = "gfortran -o main2 " + filePath;
+
+                    // Execute the compilation command
+                    int result = std::system(compileCommand.c_str());
+
+                    if (result == 0)
+                    {
+                        std::cout << "Compilation successful." << std::endl;
+                    }
+                    else
+                    {
+                        std::cerr << "Compilation failed." << std::endl;
+                    }
+                }
+
+                ImGui::EndMainMenuBar();
+            }
+
+            ImGui::End();
         }
-
-
-        sf::Text text;
-
-        sf::Font font;
-        if (!font.loadFromFile("src/fonts/tobias-font/Tobias-Regular.ttf"))
-        {
-            printf("Could Not load font!");
-        }
-
-        text.setFont(font);
-
-        text.setString("Open");
-        text.setCharacterSize(24);
-
-        // set the color
-        text.setFillColor(sf::Color::White);
-
-        text.setStyle(NULL);
-
-
-
 
         window.clear();
-        window.draw(open_button);
-        window.draw(text);
+        ImGui::SFML::Render(window);
         window.display();
     }
+
+    ImGui::SFML::Shutdown();
 
     return 0;
 }
