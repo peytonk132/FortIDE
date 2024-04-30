@@ -1,0 +1,8 @@
+﻿  Main.cpp
+  Generating code
+  Previous IPDB and IOBJ mismatch, fall back to full compilation.
+  All 225 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  FortIDE.vcxproj -> C:\Users\Peyton\Documents\dev\FortIDE\x64\Release\FortIDE.exe
+  'pwsh.exe' is not recognized as an internal or external command,
+  operable program or batch file.

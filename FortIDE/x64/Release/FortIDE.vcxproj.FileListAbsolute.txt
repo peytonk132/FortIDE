@@ -1,0 +1,10 @@
+C:\Users\Peyton\Documents\dev\FortIDE\x64\Release\sfml-graphics-2.dll
+C:\Users\Peyton\Documents\dev\FortIDE\x64\Release\sfml-window-2.dll
+C:\Users\Peyton\Documents\dev\FortIDE\x64\Release\sfml-system-2.dll
+C:\Users\Peyton\Documents\dev\FortIDE\x64\Release\freetype.dll
+C:\Users\Peyton\Documents\dev\FortIDE\x64\Release\zlib1.dll
+C:\Users\Peyton\Documents\dev\FortIDE\x64\Release\bz2.dll
+C:\Users\Peyton\Documents\dev\FortIDE\x64\Release\libpng16.dll
+C:\Users\Peyton\Documents\dev\FortIDE\x64\Release\brotlidec.dll
+C:\Users\Peyton\Documents\dev\FortIDE\x64\Release\brotlicommon.dll
+C:\Users\Peyton\Documents\dev\FortIDE\FortIDE\x64\Release\FortIDE.vcxproj.Up2Date
