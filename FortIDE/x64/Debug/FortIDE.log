@@ -1,4 +1,7 @@
 ﻿  Main.cpp
+C:\Users\Peyton\Documents\dev\FortIDE2\Main.cpp(19,10): warning C4101: 'buf': unreferenced local variable
+  mainfunc.cpp
+  Generating Code...
   FortIDE.vcxproj -> C:\Users\Peyton\Documents\dev\FortIDE2\x64\Debug\FortIDE.exe
   'pwsh.exe' is not recognized as an internal or external command,
   operable program or batch file.

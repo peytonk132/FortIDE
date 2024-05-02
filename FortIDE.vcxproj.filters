@@ -18,12 +18,18 @@
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="mainfunc\mainfunc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\Downloads\Compressed\nativefiledialog-master\nativefiledialog-master\src\common.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="NFD\src\include\nfd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mainfunc\mainfunc.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
