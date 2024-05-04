@@ -6,4 +6,10 @@ This is mostly going to be a conglomeration of different libraries with some of 
 SFML:
 https://github.com/SFML/SFML
 
+ImGui:
+https://github.com/ocornut/imgui
+
+NativeFileDialog(NFD):
+https://github.com/mlabbe/nativefiledialog
+
 If you have questions, comments, or concerns email me at peytonk1945@gmail.com. I would love to hear from you!
