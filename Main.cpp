@@ -31,14 +31,19 @@ int main() {
             }
 
         ImGui::SFML::Update(window, deltaClock.restart());
-
-        multiPurp::mainEditor();
+        multiPurp teditor;
+        teditor.mainEditor();
 
         if (ImGui::BeginMainMenuBar())
         {
-            multiPurp::open();
-
-            multiPurp::save();
+            multiPurp open;
+            open.open();
+            multiPurp save;
+            save.save();
+            multiPurp compile;
+            compile.Compilefunc();
+            multiPurp settings;
+            settings.settingMenu();
 
             ImGui::EndMainMenuBar();
         }

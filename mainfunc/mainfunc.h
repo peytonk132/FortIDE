@@ -14,11 +14,16 @@ class multiPurp
 {
 public:
 	static char buf[2048]; // Declaration of buf as a static member variable
+	static char ftcbuf[256];
+	nfdchar_t* outPathBuf; // Define outPathBuf as a member variable
 
-	static void open();
-	static void save();
-	static void Compilefunc();
-	static void mainEditor();
+	multiPurp() : outPathBuf(NULL) {} // Initialize outPathBuf to nullptr in the constructor
+
+	void open();
+	void save();
+	void Compilefunc();
+	void mainEditor();
+	void settingMenu();
 	//static void Debug();
 	
 };

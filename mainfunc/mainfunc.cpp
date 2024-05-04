@@ -1,9 +1,11 @@
 #include "mainfunc.h"
+#include <cstdlib>
 
 
 using namespace std;
 
 char multiPurp::buf[2048]{ '\0' };
+char multiPurp::ftcbuf[256]{ '\0' };
 
 int checkEmpty(char* buf, int size)
 {
@@ -40,11 +42,31 @@ void multiPurp::mainEditor()
     }
 }
 
+void multiPurp::settingMenu()
+{
+    if (ImGui::Button("Settings"))
+    {
+        bool showPopup = false;
+
+        if (showPopup)
+        {
+            ImGui::OpenPopup("Settings");
+            showPopup = true;
+        }
+
+        if (ImGui::BeginPopup("Settings", ImGuiWindowFlags_None))
+        { 
+            ImGui::InputText("File to be compiled: ", ftcbuf, sizeof(ftcbuf), ImGuiInputTextFlags_None);
+            ImGui::EndPopup();
+        }
+    }
+}
+
 void multiPurp::open()
 {
     if (ImGui::Button("Open"))
     {
-        nfdchar_t* outPathBuf = NULL;
+
         nfdresult_t result = NFD_OpenDialog(NULL, "C:\\", &outPathBuf);
 
 
@@ -59,6 +81,12 @@ void multiPurp::open()
                 strncpy(buf, fileContent.c_str(), sizeof(buf));
                 buf[sizeof(buf) - 1] = '\0'; // Ensure null termination
                 file.close();
+
+            }
+            else
+            {
+                // Failed to open the file
+                std::cerr << "Failed to open the selected file." << std::endl;
             }
         }
     }
@@ -81,9 +109,6 @@ void multiPurp::save()
                 file.close();
             }
         }
-
-
-
     }
 }
 
@@ -91,7 +116,32 @@ void multiPurp::Compilefunc()
 {
     if (ImGui::Button("Compile"))
     {
-        
+        if (outPathBuf != nullptr)
+        {
+            // Construct the compile command using the file path
+            std::string filePath(ftcbuf);
+            std::string compileCommand = "gfortran \"" + filePath + "\" -o output"; // adjust the output file name as needed
+
+            // Execute the compile command
+            int compileResult = std::system(compileCommand.c_str());
+
+            // Check if compilation was successful
+            if (compileResult == 0)
+            {
+                // Compilation successful
+                std::cout << "Compilation successful!" << std::endl;
+            }
+            else
+            {
+                // Compilation failed
+                std::cerr << "Compilation failed!" << std::endl;
+            }
+        }
+        else
+        {
+            // Handle the case when outPathBuf is nullptr
+            std::cerr << "No file selected for compilation." << std::endl;
+        }
     }
 }
 
