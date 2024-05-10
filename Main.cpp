@@ -18,17 +18,17 @@ int main() {
     sf::Clock deltaClock;
     char buf[2048];
 
-    while (window.isOpen()) 
+    while (window.isOpen())
     {
         sf::Event event;
-        while (window.pollEvent(event)) 
+        while (window.pollEvent(event))
 
             ImGui::SFML::ProcessEvent(event);
 
-            if (event.type == sf::Event::Closed) 
-            {
-                window.close();
-            }
+        if (event.type == sf::Event::Closed)
+        {
+            window.close();
+        }
 
         ImGui::SFML::Update(window, deltaClock.restart());
         multiPurp teditor;
@@ -42,12 +42,14 @@ int main() {
             save.save();
             multiPurp compile;
             compile.Compilefunc();
-            multiPurp settings;
-            settings.settingMenu();
+            multiPurp build;
+            build.build();
 
             ImGui::EndMainMenuBar();
         }
-        
+
+        ImGui::ShowDebugLogWindow();
+
 
         window.clear();
         ImGui::SFML::Render(window);

@@ -1,9 +1,6 @@
-﻿  Main.cpp
-  Generating code
-  1 of 225 functions ( 0.4%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
-  Finished generating code
-  FortIDE.vcxproj -> C:\Users\Peyton\Documents\dev\FortIDE2\x64\Release\FortIDE.exe
-  'pwsh.exe' is not recognized as an internal or external command,
-  operable program or batch file.
+﻿  main.cpp
+C:\Users\Peyton\Documents\dev\FortIDE2\main.cpp(19,10): warning C4101: 'buf': unreferenced local variable
+  mainfunc.cpp
+C:\Users\Peyton\Documents\dev\FortIDE2\mainfunc\mainfunc.h(5,10): error C1083: Cannot open include file: 'NFD/src/include/nfd.h': No such file or directory
+  (compiling source file 'mainfunc/mainfunc.cpp')
+  

@@ -23,8 +23,10 @@ public:
 	void save();
 	void Compilefunc();
 	void mainEditor();
-	void settingMenu();
+	void settingsInput();
+	void newTab();
+	void build();
 	//static void Debug();
-	
+
 };
 

@@ -1,8 +1,13 @@
 #include "mainfunc.h"
+#include "boost/process.hpp"
 #include <cstdlib>
+#include <string>
+
 
 
 using namespace std;
+namespace bp = boost::process;
+int compileRes;
 
 char multiPurp::buf[2048]{ '\0' };
 char multiPurp::ftcbuf[256]{ '\0' };
@@ -35,6 +40,11 @@ void multiPurp::mainEditor()
 
         //static char buf[2048];
         ImGui::InputTextMultiline("Editor", buf, sizeof(buf), ImVec2(400, 500), ImGuiInputTextFlags_AllowTabInput);
+
+        if (ImGui::IsKeyPressed(ImGuiKey_Enter))
+        {
+
+        }
         
         checkEmpty(buf, sizeof(buf));
 
@@ -42,25 +52,20 @@ void multiPurp::mainEditor()
     }
 }
 
-void multiPurp::settingMenu()
+void multiPurp::settingsInput()
+{
+
+}
+
+void multiPurp::newTab()
 {
     if (ImGui::Button("Settings"))
     {
-        bool showPopup = false;
 
-        if (showPopup)
-        {
-            ImGui::OpenPopup("Settings");
-            showPopup = true;
-        }
-
-        if (ImGui::BeginPopup("Settings", ImGuiWindowFlags_None))
-        { 
-            ImGui::InputText("File to be compiled: ", ftcbuf, sizeof(ftcbuf), ImGuiInputTextFlags_None);
-            ImGui::EndPopup();
-        }
     }
 }
+
+
 
 void multiPurp::open()
 {
@@ -101,10 +106,16 @@ void multiPurp::save()
 
         if (result == NFD_OKAY)
         {
-            ofstream file(savePathBuf);
+            // Append ".f90" to the filename
+            std::string filePathWithExtension(savePathBuf);
+            filePathWithExtension += ".f90";
+
+            // Open file for writing
+            std::ofstream file(filePathWithExtension);
 
             if (file.is_open())
             {
+
                 file << buf;
                 file.close();
             }
@@ -116,33 +127,34 @@ void multiPurp::Compilefunc()
 {
     if (ImGui::Button("Compile"))
     {
-        if (outPathBuf != nullptr)
-        {
-            // Construct the compile command using the file path
-            std::string filePath(ftcbuf);
-            std::string compileCommand = "gfortran \"" + filePath + "\" -o output"; // adjust the output file name as needed
+        boost::filesystem::path p = bp::search_path("gfortran");
 
-            // Execute the compile command
-            int compileResult = std::system(compileCommand.c_str());
-
-            // Check if compilation was successful
-            if (compileResult == 0)
-            {
-                // Compilation successful
-                std::cout << "Compilation successful!" << std::endl;
-            }
-            else
-            {
-                // Compilation failed
-                std::cerr << "Compilation failed!" << std::endl;
-            }
-        }
-        else
+        std::vector<std::string> args = {"-c"};
+        compileRes = bp::system(p, args, "add.f90");
+        if (compileRes == 0)
         {
-            // Handle the case when outPathBuf is nullptr
-            std::cerr << "No file selected for compilation." << std::endl;
+            printf("Compiled");
+
         }
     }
 }
 
+
+void multiPurp::build()
+{
+    if (ImGui::Button("Build"))
+    {
+        if (compileRes == 0)
+        {
+            std::vector<std::string> buildargs = { "-o", "main" };
+            int buildProc = bp::system("gfortran", "add.o", buildargs);
+            int buildRes = bp::system("./main");
+
+            if (buildProc || buildRes == 0)
+            {
+                printf("Failed");
+            }
+        }
+    }
+}
 

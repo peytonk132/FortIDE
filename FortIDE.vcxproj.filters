@@ -15,21 +15,30 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Main.cpp">
+    <ClCompile Include="mainfunc\mainfunc.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="mainfunc\mainfunc.cpp">
+    <ClCompile Include="NFD\src\nfd_common.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NFD\src\nfd_win.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\Downloads\Compressed\nativefiledialog-master\nativefiledialog-master\src\common.h">
+    <ClInclude Include="mainfunc\mainfunc.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="NFD\src\include\nfd.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="mainfunc\mainfunc.h">
+    <ClInclude Include="NFD\src\common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NFD\src\nfd_common.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

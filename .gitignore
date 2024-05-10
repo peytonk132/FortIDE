@@ -1,6 +1,7 @@
 # Prerequisites
 *.d
 *.vsidx
+*.db
 
 # Compiled Object files
 *.slo
