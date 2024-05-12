@@ -8,9 +8,12 @@
 using namespace std;
 namespace bp = boost::process;
 int compileRes;
+ostringstream oss;
+ostringstream setStr;
 
 char multiPurp::buf[2048]{ '\0' };
 char multiPurp::ftcbuf[256]{ '\0' };
+char multiPurp::objbuf[256]{ '\0' };
 
 int checkEmpty(char* buf, int size)
 {
@@ -52,17 +55,32 @@ void multiPurp::mainEditor()
     }
 }
 
-void multiPurp::settingsInput()
-{
-
-}
-
-void multiPurp::newTab()
-{
-    if (ImGui::Button("Settings"))
+void multiPurp::settingsInput() {
+    ImGui::Begin("Input");
+    ImGui::InputText("File to be compiled path: ", ftcbuf, sizeof(ftcbuf));
+    if (ImGui::Button("...")) 
     {
+        nfdresult_t setres = NFD_OpenDialog(NULL, NULL, &settingsBuf);
 
+        if (setres == NFD_OKAY) 
+        {
+            // Copy the selected file path to ftcbuf
+            strncpy(ftcbuf, settingsBuf, sizeof(ftcbuf));
+        }
     }
+    
+    ImGui::InputText("object file to be built: ", objbuf, sizeof(objbuf));
+    if (ImGui::Button("..."))
+    {
+        nfdresult_t setres = NFD_OpenDialog(NULL, NULL, &settingsBuf);
+
+        if (setres == NFD_OKAY)
+        {
+            // Copy the selected file path to ftcbuf
+            strncpy(objbuf, settingsBuf, sizeof(objbuf));
+        }
+    }
+    ImGui::End();
 }
 
 
@@ -72,7 +90,7 @@ void multiPurp::open()
     if (ImGui::Button("Open"))
     {
 
-        nfdresult_t result = NFD_OpenDialog(NULL, "C:\\", &outPathBuf);
+        nfdresult_t result = NFD_OpenDialog(NULL, NULL, &outPathBuf);
 
 
         if (result == NFD_OKAY)
@@ -80,7 +98,6 @@ void multiPurp::open()
             ifstream file(outPathBuf);
             if (file.is_open())
             {
-                ostringstream oss;
                 oss << file.rdbuf();
                 string fileContent = oss.str();
                 strncpy(buf, fileContent.c_str(), sizeof(buf));
@@ -128,9 +145,9 @@ void multiPurp::Compilefunc()
     if (ImGui::Button("Compile"))
     {
         boost::filesystem::path p = bp::search_path("gfortran");
-
+        
         std::vector<std::string> args = {"-c"};
-        compileRes = bp::system(p, args, "add.f90");
+        compileRes = bp::system(p, args, ftcbuf);
         if (compileRes == 0)
         {
             printf("Compiled");
@@ -146,13 +163,12 @@ void multiPurp::build()
     {
         if (compileRes == 0)
         {
-            std::vector<std::string> buildargs = { "-o", "main" };
-            int buildProc = bp::system("gfortran", "add.o", buildargs);
+            int buildProc = bp::system("gfortran hello.o - o main");
             int buildRes = bp::system("./main");
 
-            if (buildProc || buildRes == 0)
+            if (buildProc != 0)
             {
-                printf("Failed");
+                throw(strerror(errno));
             }
         }
     }

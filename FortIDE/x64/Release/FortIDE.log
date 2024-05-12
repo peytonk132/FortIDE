@@ -1,6 +1,8 @@
 ﻿  main.cpp
-C:\Users\Peyton\Documents\dev\FortIDE2\main.cpp(19,10): warning C4101: 'buf': unreferenced local variable
+C:\Users\Peyton\Documents\dev\FortIDE2\mainfunc\mainfunc.h(5,10): error C1083: Cannot open include file: 'nfd.h': No such file or directory
+  (compiling source file 'main.cpp')
+  
   mainfunc.cpp
-C:\Users\Peyton\Documents\dev\FortIDE2\mainfunc\mainfunc.h(5,10): error C1083: Cannot open include file: 'NFD/src/include/nfd.h': No such file or directory
+C:\Users\Peyton\Documents\dev\FortIDE2\mainfunc\mainfunc.h(5,10): error C1083: Cannot open include file: 'nfd.h': No such file or directory
   (compiling source file 'mainfunc/mainfunc.cpp')
   

@@ -44,6 +44,8 @@ int main() {
             compile.Compilefunc();
             multiPurp build;
             build.build();
+            multiPurp settings;
+            settings.settingsInput();
 
             ImGui::EndMainMenuBar();
         }
