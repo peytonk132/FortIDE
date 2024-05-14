@@ -147,12 +147,14 @@
     <ClCompile Include="mainfunc\mainfunc.cpp" />
     <ClCompile Include="NFD\src\nfd_common.c" />
     <ClCompile Include="NFD\src\nfd_win.cpp" />
+    <ClCompile Include="tabItem\tabItem.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mainfunc\mainfunc.h" />
     <ClInclude Include="NFD\src\common.h" />
     <ClInclude Include="NFD\src\include\nfd.h" />
     <ClInclude Include="NFD\src\nfd_common.h" />
+    <ClInclude Include="tabItem\tabItem.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

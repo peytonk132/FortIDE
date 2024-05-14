@@ -2,6 +2,7 @@
 #include "imgui-SFML.h"
 #include "NFD/src/include/nfd.h"
 #include "mainfunc/mainfunc.h"
+#include "tabItem/tabItem.h"
 
 #include <SFML/Graphics.hpp>
 #include <sstream>
@@ -31,9 +32,13 @@ int main() {
         }
 
         ImGui::SFML::Update(window, deltaClock.restart());
+        /*This is the creation of the editor. Pretty self-explanatory.*/
         multiPurp teditor;
         teditor.mainEditor();
 
+
+        /*This is the main loop for everything and it creates most things in
+        the menu bar.*/
         if (ImGui::BeginMainMenuBar())
         {
             multiPurp open;
@@ -49,8 +54,6 @@ int main() {
 
             ImGui::EndMainMenuBar();
         }
-
-        ImGui::ShowDebugLogWindow();
 
 
         window.clear();
