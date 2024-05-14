@@ -34,7 +34,7 @@ int checkEmpty(char* buf, int size)
 
 
 /*This is the main editor. This has no systax highlighting as I still need to
-work on an LSP for this. I'm think about using FortLS but I'm not sure yet.
+work on an LSP for this. I'm thinking about using FortLS but I'm not sure yet.
 */
 void multiPurp::mainEditor()
 {
@@ -64,7 +64,7 @@ void multiPurp::mainEditor()
 
 
 /*This is the input field that allows you to either manually or by opening your
-file system and clicking on the file. This is used for the Compilefunc() and is
+file system and clicking on the file, input the file to be compiled. This is used for the Compilefunc() and is
 in the process of being setup for build() to point it to where the object file is.
 It creates an Imgui begin window with only a couple input fields to it.
 Something fairly simple and starightforward.*/
