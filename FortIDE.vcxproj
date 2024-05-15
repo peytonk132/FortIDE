@@ -94,7 +94,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Peyton\Downloads\Compressed\nativefiledialog-devel\nativefiledialog-devel\src;$(SolutionDir)IC\include\csys\;$(SolutionDir)IC\include\imgui_console\;C:\Users\Peyton\Documents\dev\FortIDE2\Includes;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Peyton\Downloads\Compressed\nativefiledialog-devel\nativefiledialog-devel\src;$(SolutionDir)IC\include\csys\;$(SolutionDir)IC\include\imgui_console\;C:\Users\Peyton\Documents\dev\FortIDE2\NFD\src\include;C:\Users\Peyton\Downloads\Compressed\nativefiledialog-devel\nativefiledialog-devel\src\include;</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
@@ -131,7 +131,7 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>C:\Users\Peyton\Downloads\Compressed\nativefiledialog-devel\nativefiledialog-devel\src;$(SolutionDir)IC\include\csys\;$(SolutionDir)IC\include\imgui_console\;C:\Users\Peyton\Documents\dev\FortIDE2\Includes;$(SolutionDir)FortIDE2\Includes;$(SolutionDir)Includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Peyton\Downloads\Compressed\nativefiledialog-devel\nativefiledialog-devel\src;$(SolutionDir)IC\include\csys\;$(SolutionDir)IC\include\imgui_console\;C:\Users\Peyton\Documents\dev\FortIDE2\NFD\src\include;C:\Users\Peyton\Downloads\Compressed\nativefiledialog-devel\nativefiledialog-devel\src\include;$(SolutionDir)FortIDE2\Includes;$(SolutionDir)Includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

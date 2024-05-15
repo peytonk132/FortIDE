@@ -1,8 +1,1 @@
-﻿  main.cpp
-  mainfunc.cpp
-C:\Users\Peyton\Documents\dev\FortIDE2\mainfunc\mainfunc.h(5,10): error C1083: Cannot open include file: 'nfd.h': No such file or directory
-  (compiling source file 'main.cpp')
-  
-C:\Users\Peyton\Documents\dev\FortIDE2\mainfunc\mainfunc.h(5,10): error C1083: Cannot open include file: 'nfd.h': No such file or directory
-  (compiling source file 'mainfunc/mainfunc.cpp')
-  
+﻿  FortIDE.vcxproj -> C:\Users\Peyton\Documents\dev\FortIDE2\x64\Release\FortIDE.exe

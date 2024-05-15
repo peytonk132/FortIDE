@@ -4,6 +4,10 @@
 #include <string>
 
 
+//HONEYDO'S:
+//Make all windows fixed.
+//Find out why build doesn't work.
+
 
 using namespace std;
 namespace bp = boost::process;
@@ -42,8 +46,10 @@ void multiPurp::mainEditor()
     I think I'll use this feature for some other things too.*/
     bool isWidgetFixed = true;
     ImVec2 fixedWidgetPosition = ImVec2(0, 18); // Set your desired fixed position here
-
+    bool isWidgetSized = true;
+    ImVec2 sizedWidget = ImVec2(400, 450);
     ImGui::SetNextWindowPos(fixedWidgetPosition, ImGuiCond_Always);
+    ImGui::SetNextWindowSize(sizedWidget, ImGuiCond_Always);
     if (ImGui::Begin("Text Editor", &isWidgetFixed, ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoResize))
     {
 
@@ -69,30 +75,22 @@ in the process of being setup for build() to point it to where the object file i
 It creates an Imgui begin window with only a couple input fields to it.
 Something fairly simple and starightforward.*/
 void multiPurp::settingsInput() {
+    
+    bool isfieldfixed = true;
+    ImVec2 fixedfieldPos = ImVec2(415, 18);
+    ImGui::SetNextWindowPos(fixedfieldPos, ImGuiCond_Always);
     ImGui::Begin("Input", NULL ,ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove);
     ImGui::InputText("File to be compiled path: ", ftcbuf, sizeof(ftcbuf));
-    if (ImGui::Button("...")) 
+    if (ImGui::Button("..."))
     {
         nfdresult_t setres = NFD_OpenDialog(NULL, NULL, &settingsBuf);
 
-        if (setres == NFD_OKAY) 
+        if (setres == NFD_OKAY)
         {
             /*This is the string that keeps the file path for
             Compilefunc() to read from that gives it the path to compile
             the file.*/
             strncpy(ftcbuf, settingsBuf, sizeof(ftcbuf));
-        }
-    }
-    
-    ImGui::InputText("object file to be built: ", objbuf, sizeof(objbuf));
-    if (ImGui::Button("..."))
-    {
-        nfdresult_t objres = NFD_OpenDialog(NULL, NULL, &settingsBuf);
-
-        if (objres == NFD_OKAY)
-        {
-            vector<string> obj;
-            strncpy(objbuf, settingsBuf, sizeof(objbuf));
         }
     }
     ImGui::End();
@@ -167,31 +165,12 @@ void multiPurp::Compilefunc()
     {
         boost::filesystem::path p = bp::search_path("gfortran");
         
-        std::vector<std::string> args = { "-Wextra", "-o" "main"};
+        std::vector<std::string> args = {"-Wextra", "-o" "main"};
         compileRes = bp::system(p, args, ftcbuf);
         if (compileRes == 0)
         {
             printf("Compiled");
-
+            bp::system("./main.exe");
         }
     }
 }
-
-/*This is what builds and assembles all the files.*/
-void multiPurp::build()
-{
-    if (ImGui::Button("Build"))
-    {
-        if (compileRes == 0)
-        {
-
-            int buildProc = bp::system("gfortran main.o -o main");
-            int buildRes = bp::system("./main");
-            if (buildProc || buildRes == 0)
-            {
-                throw(strerror(errno));
-            }
-        }
-    }
-}
-

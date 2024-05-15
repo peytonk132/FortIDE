@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Peyton\\Documents\\dev\\FortIDE2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{33D48012-00E8-41D3-9E67-D14AFEBA84A7}|FortIDE.vcxproj|C:\\Users\\Peyton\\Documents\\dev\\FortIDE2\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{33D48012-00E8-41D3-9E67-D14AFEBA84A7}|FortIDE.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{33D48012-00E8-41D3-9E67-D14AFEBA84A7}|FortIDE.vcxproj|C:\\Users\\Peyton\\Documents\\dev\\FortIDE2\\mainfunc\\mainfunc.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{33D48012-00E8-41D3-9E67-D14AFEBA84A7}|FortIDE.vcxproj|solutionrelative:mainfunc\\mainfunc.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33D48012-00E8-41D3-9E67-D14AFEBA84A7}|FortIDE.vcxproj|C:\\Users\\Peyton\\Documents\\dev\\FortIDE2\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{33D48012-00E8-41D3-9E67-D14AFEBA84A7}|FortIDE.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,33 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "mainfunc.cpp",
               "DocumentMoniker": "C:\\Users\\Peyton\\Documents\\dev\\FortIDE2\\mainfunc\\mainfunc.cpp",
               "RelativeDocumentMoniker": "mainfunc\\mainfunc.cpp",
               "ToolTip": "C:\\Users\\Peyton\\Documents\\dev\\FortIDE2\\mainfunc\\mainfunc.cpp",
               "RelativeToolTip": "mainfunc\\mainfunc.cpp",
-              "ViewState": "AQIAALMAAAAAAAAAAAAAALsAAAA4AAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAADEAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-05-13T12:33:18.179Z",
+              "WhenOpened": "2024-05-15T13:11:58.531Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\Peyton\\Documents\\dev\\FortIDE2\\Main.cpp",
               "RelativeDocumentMoniker": "Main.cpp",
               "ToolTip": "C:\\Users\\Peyton\\Documents\\dev\\FortIDE2\\Main.cpp",
               "RelativeToolTip": "Main.cpp",
-              "ViewState": "AQIAABQAAAAAAAAAAAAAACIAAABGAAAA",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAAADAAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-05-13T12:32:48.805Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-15T01:22:27.128Z"
             }
           ]
         }

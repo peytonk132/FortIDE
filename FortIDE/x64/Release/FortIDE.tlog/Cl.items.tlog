@@ -1,2 +1,5 @@
-C:\Users\Peyton\Documents\dev\FortIDE2\Main.cpp;C:\Users\Peyton\Documents\dev\FortIDE2\FortIDE\x64\Release\Main.obj
-C:\Users\Peyton\Documents\dev\FortIDE2\settings\settings.cpp;C:\Users\Peyton\Documents\dev\FortIDE2\FortIDE\x64\Release\settings.obj
+C:\Users\Peyton\Documents\dev\FortIDE2\main.cpp;C:\Users\Peyton\Documents\dev\FortIDE2\FortIDE\x64\Release\main.obj
+C:\Users\Peyton\Documents\dev\FortIDE2\mainfunc\mainfunc.cpp;C:\Users\Peyton\Documents\dev\FortIDE2\FortIDE\x64\Release\mainfunc.obj
+C:\Users\Peyton\Documents\dev\FortIDE2\NFD\src\nfd_common.c;C:\Users\Peyton\Documents\dev\FortIDE2\FortIDE\x64\Release\nfd_common.obj
+C:\Users\Peyton\Documents\dev\FortIDE2\NFD\src\nfd_win.cpp;C:\Users\Peyton\Documents\dev\FortIDE2\FortIDE\x64\Release\nfd_win.obj
+C:\Users\Peyton\Documents\dev\FortIDE2\tabItem\tabItem.cpp;C:\Users\Peyton\Documents\dev\FortIDE2\FortIDE\x64\Release\tabItem.obj

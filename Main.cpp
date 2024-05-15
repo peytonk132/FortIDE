@@ -47,8 +47,6 @@ int main() {
             save.save();
             multiPurp compile;
             compile.Compilefunc();
-            multiPurp build;
-            build.build();
             multiPurp settings;
             settings.settingsInput();
 
