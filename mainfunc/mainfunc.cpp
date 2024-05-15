@@ -17,7 +17,7 @@ ostringstream setStr;
 
 char multiPurp::buf[2048]{ '\0' };
 char multiPurp::ftcbuf[256]{ '\0' };
-char multiPurp::objbuf[256]{ '\0' };
+char multiPurp::buildDir[256]{ '\0' };
 
 /*This is, again just a function that
 keeps from throwing an error if you backspace too far.*/
@@ -93,6 +93,22 @@ void multiPurp::settingsInput() {
             strncpy(ftcbuf, settingsBuf, sizeof(ftcbuf));
         }
     }
+
+    ImGui::InputText("Build Path: ", buildDir, sizeof(buildDir));
+    if (ImGui::Button("..."))
+    {
+        nfdresult_t setres = NFD_OpenDialog(NULL, NULL, &buildPath);
+
+        if (setres == NFD_OKAY)
+        {
+            /*This is the string that keeps the file path for
+            Compilefunc() to read from that gives it the path to compile
+            the file.*/
+            strncpy(buildDir, buildPath, sizeof(buildDir));
+        }
+    }
+
+
     ImGui::End();
 }
 
@@ -165,12 +181,19 @@ void multiPurp::Compilefunc()
     {
         boost::filesystem::path p = bp::search_path("gfortran");
         
+        std::vector<std::string> buildPath = {buildDir};
         std::vector<std::string> args = {"-Wextra", "-o" "main"};
-        compileRes = bp::system(p, args, ftcbuf);
+        // Store the current working directory
+        boost::filesystem::path currentDir = boost::filesystem::current_path();
+        // Change the working directory to the desired output directory
+        boost::filesystem::current_path(buildPath[0]);
+        compileRes = bp::system(p, args, ftcbuf, buildPath);
         if (compileRes == 0)
         {
             printf("Compiled");
             bp::system("./main.exe");
         }
+        // Restore the original working directory
+        boost::filesystem::current_path(currentDir);
     }
 }
