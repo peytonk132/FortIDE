@@ -18,6 +18,7 @@ ostringstream setStr;
 char multiPurp::buf[2048]{ '\0' };
 char multiPurp::ftcbuf[256]{ '\0' };
 char multiPurp::buildDir[256]{ '\0' };
+char multiPurp::exeName[256]{ '\0' };
 
 /*This is, again just a function that
 keeps from throwing an error if you backspace too far.*/
@@ -78,7 +79,10 @@ void multiPurp::settingsInput() {
     
     bool isfieldfixed = true;
     ImVec2 fixedfieldPos = ImVec2(415, 18);
+    bool isWidgetSized = true;
+    ImVec2 sizedWidget = ImVec2(200, 350);
     ImGui::SetNextWindowPos(fixedfieldPos, ImGuiCond_Always);
+    ImGui::SetNextWindowSize(sizedWidget, ImGuiCond_Always);
     ImGui::Begin("Input", NULL ,ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove);
     ImGui::InputText("File to be compiled path: ", ftcbuf, sizeof(ftcbuf));
     if (ImGui::Button("..."))
@@ -108,6 +112,7 @@ void multiPurp::settingsInput() {
         }
     }
 
+    ImGui::InputText("Exe name: ", exeName, sizeof(exeName));
 
     ImGui::End();
 }
@@ -182,7 +187,7 @@ void multiPurp::Compilefunc()
         boost::filesystem::path p = bp::search_path("gfortran");
         
         std::vector<std::string> buildPath = {buildDir};
-        std::vector<std::string> args = {"-Wextra", "-o" "main"};
+        std::vector<std::string> args = {"-Wextra", "-o", exeName}; 
         // Store the current working directory
         boost::filesystem::path currentDir = boost::filesystem::current_path();
         // Change the working directory to the desired output directory
@@ -191,7 +196,9 @@ void multiPurp::Compilefunc()
         if (compileRes == 0)
         {
             printf("Compiled");
-            bp::system("./main.exe");
+            string namedExe = exeName;
+            string cmpcmd = "./" + namedExe;
+            bp::system(cmpcmd);
         }
         // Restore the original working directory
         boost::filesystem::current_path(currentDir);
