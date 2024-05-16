@@ -80,7 +80,7 @@ void multiPurp::settingsInput() {
     bool isfieldfixed = true;
     ImVec2 fixedfieldPos = ImVec2(415, 18);
     bool isWidgetSized = true;
-    ImVec2 sizedWidget = ImVec2(200, 350);
+    ImVec2 sizedWidget = ImVec2(200, 425);
     ImGui::SetNextWindowPos(fixedfieldPos, ImGuiCond_Always);
     ImGui::SetNextWindowSize(sizedWidget, ImGuiCond_Always);
     ImGui::Begin("Input", NULL ,ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove);
