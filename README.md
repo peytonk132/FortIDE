@@ -15,4 +15,4 @@ https://github.com/mlabbe/nativefiledialog
 If you have questions, comments, or concerns email me at peytonk1945@gmail.com. I would love to hear from you!
 
 This a screenshot of the program running: 
-![Screenshot 2024-05-15 145619](https://github.com/peytonk132/FortIDE/assets/128337367/a15e24e8-740a-4861-a57d-d70c259e3331)
+![Screenshot 2024-05-15 220221](https://github.com/peytonk132/FortIDE/assets/128337367/1a4a6553-d752-4cd6-807b-6dc95fbc5d1b)
