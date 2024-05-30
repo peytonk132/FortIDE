@@ -18,16 +18,22 @@
     <ClCompile Include="mainfunc\mainfunc.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="NFD\src\nfd_common.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="NFD\src\nfd_win.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="tabItem\tabItem.cpp">
+    <ClCompile Include="colorText\TextEditor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mainfunc\nfd_common.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mainfunc\nfd_win.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mainfunc\f_MainMenu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mainfunc\FileTree\FileTree.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -35,16 +41,22 @@
     <ClInclude Include="mainfunc\mainfunc.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="NFD\src\include\nfd.h">
+    <ClInclude Include="mainfunc\nfd.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="NFD\src\common.h">
+    <ClInclude Include="mainfunc\common.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="NFD\src\nfd_common.h">
+    <ClInclude Include="mainfunc\ftg_core.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="tabItem\tabItem.h">
+    <ClInclude Include="mainfunc\nfd_common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mainfunc\f_MainMenu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mainfunc\FileTree\FileTree.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

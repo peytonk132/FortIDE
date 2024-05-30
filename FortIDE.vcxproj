@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -94,7 +94,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Peyton\Downloads\Compressed\nativefiledialog-devel\nativefiledialog-devel\src;$(SolutionDir)IC\include\csys\;$(SolutionDir)IC\include\imgui_console\;C:\Users\Peyton\Documents\dev\FortIDE2\NFD\src\include;C:\Users\Peyton\Downloads\Compressed\nativefiledialog-devel\nativefiledialog-devel\src\include;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Peyton\Downloads\Compressed\nativefiledialog-devel\nativefiledialog-devel\src;$(SolutionDir)colorText;$(SolutionDir)IC\include\csys\;C:\Users\Peyton\Documents\dev\FortIDE2\NFD\src\include;C:\Users\Peyton\Downloads\Compressed\nativefiledialog-devel\nativefiledialog-devel\src\include;</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
@@ -103,7 +103,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>%(AdditionalDependencies);</AdditionalDependencies>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -131,7 +131,7 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>C:\Users\Peyton\Downloads\Compressed\nativefiledialog-devel\nativefiledialog-devel\src;$(SolutionDir)IC\include\csys\;$(SolutionDir)IC\include\imgui_console\;C:\Users\Peyton\Documents\dev\FortIDE2\NFD\src\include;C:\Users\Peyton\Downloads\Compressed\nativefiledialog-devel\nativefiledialog-devel\src\include;$(SolutionDir)FortIDE2\Includes;$(SolutionDir)Includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Peyton\Downloads\Compressed\nativefiledialog-devel\nativefiledialog-devel\src;$(SolutionDir)colorText;$(SolutionDir)IC\include\csys\;C:\Users\Peyton\Documents\dev\FortIDE2\NFD\src\include;C:\Users\Peyton\Downloads\Compressed\nativefiledialog-devel\nativefiledialog-devel\src\include;$(SolutionDir)FortIDE2\Includes;$(SolutionDir)Includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -139,22 +139,26 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>%(AdditionalDependencies);</AdditionalDependencies>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="mainfunc\FileTree\FileTree.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="mainfunc\f_MainMenu.cpp" />
     <ClCompile Include="mainfunc\mainfunc.cpp" />
-    <ClCompile Include="NFD\src\nfd_common.c" />
-    <ClCompile Include="NFD\src\nfd_win.cpp" />
-    <ClCompile Include="tabItem\tabItem.cpp" />
+    <ClCompile Include="mainfunc\nfd_common.c" />
+    <ClCompile Include="mainfunc\nfd_win.cpp" />
+    <ClCompile Include="colorText\TextEditor.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="mainfunc\FileTree\FileTree.h" />
+    <ClInclude Include="mainfunc\common.h" />
+    <ClInclude Include="mainfunc\ftg_core.h" />
+    <ClInclude Include="mainfunc\f_MainMenu.h" />
     <ClInclude Include="mainfunc\mainfunc.h" />
-    <ClInclude Include="NFD\src\common.h" />
-    <ClInclude Include="NFD\src\include\nfd.h" />
-    <ClInclude Include="NFD\src\nfd_common.h" />
-    <ClInclude Include="tabItem\tabItem.h" />
+    <ClInclude Include="mainfunc\nfd.h" />
+    <ClInclude Include="mainfunc\nfd_common.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

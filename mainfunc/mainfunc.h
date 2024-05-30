@@ -3,6 +3,7 @@
 #include "imgui-SFML.h"
 #include "SFML/Graphics.hpp"
 #include "nfd.h"
+#include "../colorText/TextEditor.h"
 #include <sstream>
 #include <fstream>
 #include <iostream>
@@ -20,16 +21,20 @@ public:
 	nfdchar_t* outPathBuf; // Define outPathBuf as a member variable
 	nfdchar_t* settingsBuf; // Define settingsBuf as a member variable
 	nfdchar_t* buildPath;
+	nfdchar_t* projPath = nullptr;
 
 	multiPurp() : outPathBuf(NULL) {} // Initialize outPathBuf to nullptr in the constructor
 
-	void open();
-	void save();
 	void Compilefunc();
-	void mainEditor();
+	void mainEditor(TextEditor& editor);
 	void settingsInput();
-	void build();
+	void loadFont();
+	void menuBarfunc(TextEditor& editor);
+	int gitControl();
 	//static void Debug();
+
+private:
+	sf::Texture fontText;
 
 };
 
