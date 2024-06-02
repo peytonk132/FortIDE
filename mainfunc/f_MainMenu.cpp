@@ -50,6 +50,24 @@ int f_MainMenu::startMenu() {
         }
     }
 
+    if (ImGui::Button("Open Project"))
+    {
+        nfdchar_t* opPath = NULL;
+        nfdresult_t result = NFD_PickFolder(NULL, &opPath);
+
+        if (result == NFD_OKAY) {
+			boost::filesystem::current_path(opPath);
+			std::cout << "Current Working Directory: " << boost::filesystem::current_path().string() << std::endl;
+			free(opPath);
+		}
+		else if (result == NFD_CANCEL) {
+			std::cout << "User canceled the operation." << std::endl;
+		}
+		else {
+			std::cerr << "Error: " << NFD_GetError() << std::endl;
+		}
+    }
+
     ImGui::End();
     return 0;
 }
