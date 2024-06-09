@@ -1,23 +1,29 @@
-#include "colorText/TextEditor.h"
 #include "imgui.h"
 #include "imgui-SFML.h"
-#include "mainfunc/mainfunc.h"
 #include "mainfunc/nfd.h"
+#include "mainfunc/mainfunc.h"
 #include "mainfunc/f_MainMenu.h"
+#include "colorText/TextEditor.h"
 #include "mainfunc/FileTree/FileTree.h"
+#include "mainfunc/searchParser/Parser.h"
 
 #include <fstream>
+#include <memory>
+#include <stdexcept>
 #include <iostream>
+#include <string>
+#include <sstream>
+#include <array>
+#include <cstdio>
 #include <SFML/Graphics.hpp>
 #include <sstream>
 
 using namespace std;
 
-
-void loadFileIntoEditor(const std::string& filePath, TextEditor& editor) 
+void loadFileIntoEditor(const std::string& filePath, TextEditor& editor)
 {
     std::ifstream file(filePath);
-    if (file.is_open()) 
+    if (file.is_open())
     {
         std::stringstream buffer;
         buffer << file.rdbuf();
@@ -25,50 +31,134 @@ void loadFileIntoEditor(const std::string& filePath, TextEditor& editor)
     }
 }
 
-int main() 
+std::string exec(const char* cmd) {
+    std::array<char, 128> buffer;
+    std::string result;
+    std::unique_ptr<FILE, decltype(&_pclose)> pipe(_popen(cmd, "r"), _pclose);
+    if (!pipe) {
+        throw std::runtime_error("_popen() failed!");
+    }
+    while (fgets(buffer.data(), buffer.size(), pipe.get()) != nullptr) {
+        result += buffer.data();
+    }
+    return result;
+}
+
+bool isPackageInFpmToml(const std::string& packageName)
 {
+    std::ifstream infile("fpm.toml");
+    std::string line;
+    while (std::getline(infile, line))
+    {
+        if (line.find(packageName) != std::string::npos)
+        {
+            return true;
+        }
+    }
+    return false;
+}
+
+void installPackage(const std::string& toml) {
+    // Run the command to install the package
+    std::string command = "fpm run -- demo substitute fpm.toml";
+    try 
+    {
+        exec(command.c_str());
+    }
+    catch (const std::exception& e) 
+    {
+        std::cerr << "Error executing command: " << e.what() << std::endl;
+    }
+    std::cout << "Installed package: " << toml << std::endl;
+}
+
+int main()
+{
+    // Capture the output of 'fpm search' command
+    std::string fpmOutput;
+    try
+    {
+        fpmOutput = exec("fpm search --verbose");
+    }
+    catch (const std::exception& e)
+    {
+        std::cerr << "Error executing command: " << e.what() << std::endl;
+        return 1;
+    }
+
+    // Parse the output and convert to XML
+    auto packages = parseFpmSearchOutput(fpmOutput);
+    std::string xml = convertToXML(packages);
+
+    // Write the XML to a file
+    std::ofstream outFile("packages.xml");
+    if (outFile.is_open()) {
+        outFile << xml;
+        outFile.close();
+    }
+    else {
+        std::cerr << "Unable to open file for writing\n";
+    }
+
+    // Load packages from the XML file
+    packages = loadPackagesFromXML("packages.xml");
+
     sf::VideoMode desktopSize = sf::VideoMode::getDesktopMode();
 
     f_MainMenu::entryPoint();
-
 
     sf::RenderWindow window(desktopSize, "FortIDE");
     window.setFramerateLimit(60);
     ImGui::SFML::Init(window);
     TextEditor editor; // Create a TextEditor instance
     FileTree fileTree;
-    
-    fileTree.setFileClickCallback([&editor](const std::string& filePath) 
-    {
-        loadFileIntoEditor(filePath, editor);
-    });
 
+    fileTree.setFileClickCallback([&editor](const std::string& filePath)
+        {
+            loadFileIntoEditor(filePath, editor);
+        });
     
-    
+
     sf::Clock deltaClock;
-    char buf[2048];
 
     while (window.isOpen())
     {
         boost::filesystem::current_path();
         sf::Event event;
         while (window.pollEvent(event))
-
-        ImGui::SFML::ProcessEvent(event);
-
-        if (event.type == sf::Event::Closed)
         {
-            window.close();
+            ImGui::SFML::ProcessEvent(event);
+
+            if (event.type == sf::Event::Closed)
+            {
+                window.close();
+            }
         }
 
-
-
-
-
-
         ImGui::SFML::Update(window, deltaClock.restart());
-            //This is the creation of the editor. Pretty self-explanatory.
-            // Update to pass the editor instance
+
+        // This is the creation of the editor. Pretty self-explanatory.
+        // Update to pass the editor instance
+
+        ImVec2 fixedWidgetPosition = ImVec2(800, 30); // Set your desired fixed position here
+        ImVec2 sizedWidget = ImVec2(570, 450);
+
+        ImGui::SetNextWindowPos(fixedWidgetPosition, ImGuiCond_Always);
+        ImGui::SetNextWindowSize(sizedWidget, ImGuiCond_Always);
+        ImGui::Begin("Package Installer");
+        for (const auto& pkg : packages) {
+            if (ImGui::Button(("Install " + pkg.name).c_str())) {
+                installPackage(pkg.toml);
+            }
+            ImGui::Text("Version: %s", pkg.version.c_str());
+            ImGui::TextWrapped("Description: %s", pkg.description.c_str());
+            ImGui::Text("License: %s", pkg.license.c_str());
+            ImGui::Text("Author: %s", pkg.author.c_str());
+            ImGui::Text("Toml: %s", pkg.toml.c_str());
+            ImGui::Separator();
+        }
+        ImGui::End();
+
         multiPurp teditor;
         teditor.mainEditor(editor);
 
@@ -77,11 +167,11 @@ int main()
 
         fileTree.treeNode();
 
-
         window.clear();
         ImGui::SFML::Render(window);
         window.display();
     }
 
+    ImGui::SFML::Shutdown();
     return 0;
 }

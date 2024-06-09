@@ -9,6 +9,7 @@
 
 class FileTree {
 public:
+    std::string clickedFileName;
     using FileClickCallback = std::function<void(const std::string&)>;
 
     void treeNode();

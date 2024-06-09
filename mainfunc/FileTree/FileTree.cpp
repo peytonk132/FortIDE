@@ -12,6 +12,7 @@ FileTree::FileNode FileTree::TraverseDirectory(const fs::path& directory) {
             node.children.push_back(TraverseDirectory(entry.path()));
         }
     }
+
     return node;
 }
 
@@ -24,10 +25,18 @@ void FileTree::RenderFileNode(FileNode& node) {
                 RenderFileNode(child);
             }
         }
+        
+        if (!node.isDirectory && ImGui::IsItemClicked()) {
+            // The file node is clicked
+            clickedFileName = node.name; // Store the clicked file name
+            std::cout << "Clicked file: " << clickedFileName << std::endl;
+        }
+
 
         if (!node.isDirectory && ImGui::IsItemClicked()) {
             if (fileClickCallback) {
                 fileClickCallback(node.path);
+                std::cout << "File path: " << node.path << std::endl;
             }
         }
 
@@ -69,11 +78,12 @@ void FileTree::treeNode() {
     ImGui::SetNextWindowPos(fixedWidgetPosition, ImGuiCond_Always);
     ImGui::SetNextWindowSize(sizedWidget, ImGuiCond_Always);
 
-    ImGui::Begin("File Tree",NULL, ImGuiWindowFlags_NoResize);
+    ImGui::Begin("File Tree",NULL, ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoCollapse);
     RenderFileNode(rootNode);
     ImGui::End();
 }
 
-void FileTree::setFileClickCallback(FileClickCallback callback) {
+void FileTree::setFileClickCallback(FileClickCallback callback) 
+{
     fileClickCallback = std::move(callback);
 }

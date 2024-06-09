@@ -1,0 +1,506 @@
+<packages>
+  <package>
+    <name>           name: datetime</name>
+    <version>        version: 1.7.0, latest</version>
+    <description>    description: null</description>
+    <license>        license: MIT</license>
+    <author>         author: Milan Curcic</author>
+    <maintainer>     maintainer: caomaco@gmail.com</maintainer>
+    <copyright>      copyright: 2013-2020 datetime-fortran contributors</copyright>
+    <git>            git: https://github.com/wavebitscientific/datetime-fortran</git>
+    <git-tag>        git-tag: null</git-tag>
+    <toml>           toml: datetime = { git = "https://github.com/wavebitscientific/datetime-fortran" }</toml>
+  </package>
+  <package>
+    <name>           name: iso_varying_string</name>
+    <version>        version: latest</version>
+    <description>    description: null</description>
+    <license>        license: MIT</license>
+    <author>         author: Brad Richardson</author>
+    <maintainer>     maintainer: everythingfunctional@protonmail.com</maintainer>
+    <copyright>      copyright: 2020 Brad Richardson</copyright>
+    <git>            git: https://gitlab.com/everythingfunctional/iso_varying_string</git>
+    <git-tag>        git-tag: null</git-tag>
+    <toml>           toml: iso_varying_string = { git = "https://gitlab.com/everythingfunctional/iso_varying_string" }</toml>
+  </package>
+  <package>
+    <name>           name: jsonff</name>
+    <version>        version: latest</version>
+    <description>    description: null</description>
+    <license>        license: MIT</license>
+    <author>         author: Brad Richardson</author>
+    <maintainer>     maintainer: everythingfunctional@protonmail.com</maintainer>
+    <copyright>      copyright: 2020 Brad Richardson</copyright>
+    <git>            git: https://gitlab.com/everythingfunctional/jsonff</git>
+    <git-tag>        git-tag: null</git-tag>
+    <toml>           toml: jsonff = { git = "https://gitlab.com/everythingfunctional/jsonff" }</toml>
+  </package>
+  <package>
+    <name>           name: M_calculator</name>
+    <version>        version: latest</version>
+    <description>    description: basic numeric expression parser</description>
+    <license>        license: Public Domain</license>
+    <author>         author: John S. Urban</author>
+    <maintainer>     maintainer: urbanjost@comcast.net</maintainer>
+    <copyright>      copyright: 2020 John S. Urban</copyright>
+    <git>            git: https://github.com/urbanjost/M_calculator</git>
+    <git-tag>        git-tag: null</git-tag>
+    <toml>           toml: M_calculator = { git = "https://github.com/urbanjost/M_calculator" }</toml>
+  </package>
+  <package>
+    <name>           name: M_change</name>
+    <version>        version: latest</version>
+    <description>    description: Basic Regular Expressions</description>
+    <license>        license: MIT</license>
+    <author>         author: John S. Urban</author>
+    <maintainer>     maintainer: urbanjost@comcast.net</maintainer>
+    <copyright>      copyright: 2020 John S. Urban</copyright>
+    <git>            git: https://github.com/urbanjost/M_change</git>
+    <git-tag>        git-tag: null</git-tag>
+    <toml>           toml: M_change = { git = "https://github.com/urbanjost/M_change" }</toml>
+  </package>
+  <package>
+    <name>           name: M_color</name>
+    <version>        version: latest</version>
+    <description>    description: conversions between common color models </description>
+    <license>        license: Public Domain</license>
+    <author>         author: John S. Urban</author>
+    <maintainer>     maintainer: urbanjost@comcast.net</maintainer>
+    <copyright>      copyright: 2020 John S. Urban</copyright>
+    <git>            git: https://github.com/urbanjost/M_color</git>
+    <git-tag>        git-tag: null</git-tag>
+    <toml>           toml: M_color = { git = "https://github.com/urbanjost/M_color" }</toml>
+  </package>
+  <package>
+    <name>           name: M_history</name>
+    <version>        version: latest</version>
+    <description>    description: Input History Editor</description>
+    <license>        license: MIT</license>
+    <author>         author: John S. Urban</author>
+    <maintainer>     maintainer: urbanjost@comcast.net</maintainer>
+    <copyright>      copyright: 2020 John S. Urban</copyright>
+    <git>            git: https://github.com/urbanjost/M_history</git>
+    <git-tag>        git-tag: null</git-tag>
+    <toml>           toml: M_history = { git = "https://github.com/urbanjost/M_history" }</toml>
+  </package>
+  <package>
+    <name>           name: M_io</name>
+    <version>        version: latest</version>
+    <description>    description: I/O-related tools</description>
+    <license>        license: Public Domain</license>
+    <author>         author: John S. Urban</author>
+    <maintainer>     maintainer: urbanjost@comcast.net</maintainer>
+    <copyright>      copyright: 2020 John S. Urban</copyright>
+    <git>            git: https://github.com/urbanjost/M_io</git>
+    <git-tag>        git-tag: null</git-tag>
+    <toml>           toml: M_io = { git = "https://github.com/urbanjost/M_io" }</toml>
+  </package>
+  <package>
+    <name>           name: M_msg</name>
+    <version>        version: latest</version>
+    <description>    description: converts any standard scalar type to a string and support unit testing</description>
+    <license>        license: Public Domain</license>
+    <author>         author: John S. Urban</author>
+    <maintainer>     maintainer: urbanjost@comcast.net</maintainer>
+    <copyright>      copyright: 2020 John S. Urban</copyright>
+    <git>            git: https://github.com/urbanjost/M_msg</git>
+    <git-tag>        git-tag: null</git-tag>
+    <toml>           toml: M_msg = { git = "https://github.com/urbanjost/M_msg" }</toml>
+  </package>
+  <package>
+    <name>           name: M_process</name>
+    <version>        version: latest</version>
+    <description>    description: ISO_C_BINDING interface to popen(3c) and related system procedures </description>
+    <license>        license: Public Domain</license>
+    <author>         author: John S. Urban</author>
+    <maintainer>     maintainer: urbanjost@comcast.net</maintainer>
+    <copyright>      copyright: 2020 John S. Urban</copyright>
+    <git>            git: https://github.com/urbanjost/M_process</git>
+    <git-tag>        git-tag: null</git-tag>
+    <toml>           toml: M_process = { git = "https://github.com/urbanjost/M_process" }</toml>
+  </package>
+  <package>
+    <name>           name: M_strings</name>
+    <version>        version: latest</version>
+    <description>    description: string manipulation</description>
+    <license>        license: Public Domain</license>
+    <author>         author: John S. Urban</author>
+    <maintainer>     maintainer: urbanjost@comcast.net</maintainer>
+    <copyright>      copyright: 2020 John S. Urban</copyright>
+    <git>            git: https://github.com/urbanjost/M_strings</git>
+    <git-tag>        git-tag: null</git-tag>
+    <toml>           toml: M_strings = { git = "https://github.com/urbanjost/M_strings" }</toml>
+  </package>
+  <package>
+    <name>           name: M_time</name>
+    <version>        version: latest</version>
+    <description>    description: date and time conversion, formatting and computation </description>
+    <license>        license: Public Domain</license>
+    <author>         author: John S. Urban</author>
+    <maintainer>     maintainer: urbanjost@comcast.net</maintainer>
+    <copyright>      copyright: 2020 John Urban</copyright>
+    <git>            git: https://github.com/urbanjost/M_time</git>
+    <git-tag>        git-tag: null</git-tag>
+    <toml>           toml: M_time = { git = "https://github.com/urbanjost/M_time" }</toml>
+  </package>
+  <package>
+    <name>           name: quaff</name>
+    <version>        version: latest</version>
+    <description>    description: null</description>
+    <license>        license: MIT</license>
+    <author>         author: Brad Richardson</author>
+    <maintainer>     maintainer: everythingfunctional@protonmail.com</maintainer>
+    <copyright>      copyright: 2020 Brad Richardson</copyright>
+    <git>            git: https://gitlab.com/everythingfunctional/quaff</git>
+    <git-tag>        git-tag: null</git-tag>
+    <toml>           toml: quaff = { git = "https://gitlab.com/everythingfunctional/quaff" }</toml>
+  </package>
+  <package>
+    <name>           name: sqliteff</name>
+    <version>        version: latest</version>
+    <description>    description: null</description>
+    <license>        license: MIT</license>
+    <author>         author: Brad Richardson</author>
+    <maintainer>     maintainer: everythingfunctional@protonmail.com</maintainer>
+    <copyright>      copyright: 2020 Brad Richardson</copyright>
+    <git>            git: https://gitlab.com/everythingfunctional/sqliteff</git>
+    <git-tag>        git-tag: null</git-tag>
+    <toml>           toml: sqliteff = { git = "https://gitlab.com/everythingfunctional/sqliteff" }</toml>
+  </package>
+  <package>
+    <name>           name: strff</name>
+    <version>        version: latest</version>
+    <description>    description: null</description>
+    <license>        license: MIT</license>
+    <author>         author: Brad Richardson</author>
+    <maintainer>     maintainer: everythingfunctional@protonmail.com</maintainer>
+    <copyright>      copyright: 2020 Brad Richardson</copyright>
+    <git>            git: https://gitlab.com/everythingfunctional/strff</git>
+    <git-tag>        git-tag: null</git-tag>
+    <toml>           toml: strff = { git = "https://gitlab.com/everythingfunctional/strff" }</toml>
+  </package>
+  <package>
+    <name>           name: vegetables</name>
+    <version>        version: latest</version>
+    <description>    description: null</description>
+    <license>        license: MIT</license>
+    <author>         author: Brad Richardson</author>
+    <maintainer>     maintainer: everythingfunctional@protonmail.com</maintainer>
+    <copyright>      copyright: 2020 Brad Richardson</copyright>
+    <git>            git: https://gitlab.com/everythingfunctional/vegetables</git>
+    <git-tag>        git-tag: null</git-tag>
+    <toml>           toml: vegetables = { git = "https://gitlab.com/everythingfunctional/vegetables" }</toml>
+  </package>
+  <package>
+    <name>           name: M_draw</name>
+    <version>        version: latest</version>
+    <description>    description: basic vector graphics package</description>
+    <license>        license: Public Domain</license>
+    <author>         author: John S. Urban</author>
+    <maintainer>     maintainer: urbanjost@comcast.net</maintainer>
+    <copyright>      copyright: 2020 John S. Urban</copyright>
+    <git>            git: https://github.com/urbanjost/M_draw</git>
+    <git-tag>        git-tag: null</git-tag>
+    <toml>           toml: M_draw = { git = "https://github.com/urbanjost/M_draw" }</toml>
+  </package>
+  <package>
+    <name>           name: M_kracken95</name>
+    <version>        version: latest</version>
+    <description>    description:  command line parsing using Fortran 95 (LICENSE:PD)</description>
+    <license>        license: Public Domain</license>
+    <author>         author: John S. Urban</author>
+    <maintainer>     maintainer: urbanjost@comcast.net</maintainer>
+    <copyright>      copyright: 2020 John S. Urban</copyright>
+    <git>            git: https://github.com/urbanjost/M_kracken95</git>
+    <git-tag>        git-tag: null</git-tag>
+    <toml>           toml: M_kracken95 = { git = "https://github.com/urbanjost/M_kracken95" }</toml>
+  </package>
+  <package>
+    <name>           name: M_pixel</name>
+    <version>        version: latest</version>
+    <description>    description: basic vector drawing into a pixel graphics format</description>
+    <license>        license: Public Domain</license>
+    <author>         author: John S. Urban</author>
+    <maintainer>     maintainer: urbanjost@comcast.net</maintainer>
+    <copyright>      copyright: 2020 John Urban</copyright>
+    <git>            git: https://github.com/urbanjost/M_pixel</git>
+    <git-tag>        git-tag: null</git-tag>
+    <toml>           toml: M_pixel = { git = "https://github.com/urbanjost/M_pixel" }</toml>
+  </package>
+  <package>
+    <name>           name: M_system</name>
+    <version>        version: latest</version>
+    <description>    description: (mostly)POSIX system routine interface</description>
+    <license>        license: Public Domain</license>
+    <author>         author: John S. Urban</author>
+    <maintainer>     maintainer: urbanjost@comcast.net</maintainer>
+    <copyright>      copyright: 2020 John S. Urban</copyright>
+    <git>            git: https://github.com/urbanjost/M_system</git>
+    <git-tag>        git-tag: null</git-tag>
+    <toml>           toml: M_system = { git = "https://github.com/urbanjost/M_system" }</toml>
+  </package>
+  <package>
+    <name>           name: pointsets</name>
+    <version>        version: latest</version>
+    <description>    description: null</description>
+    <license>        license: MIT</license>
+    <author>         author: Arjen Markus</author>
+    <maintainer>     maintainer: arjen.markus895@gmail.com</maintainer>
+    <copyright>      copyright: 2020 Arjen Markus</copyright>
+    <git>            git: https://github.com/arjenmarkus/pointsets</git>
+    <git-tag>        git-tag: null</git-tag>
+    <toml>           toml: pointsets = { git = "https://github.com/arjenmarkus/pointsets" }</toml>
+  </package>
+  <package>
+    <name>           name: M_escape</name>
+    <version>        version: latest</version>
+    <description>    description: ANSI control escape sequences using an XML-like syntax for attributes like color on video displays and emulators</description>
+    <license>        license: Public Domain</license>
+    <author>         author: John S. Urban</author>
+    <maintainer>     maintainer: urbanjost@comcast.net</maintainer>
+    <copyright>      copyright: 2020 John S. Urban</copyright>
+    <git>            git: https://github.com/urbanjost/M_escape</git>
+    <git-tag>        git-tag: null</git-tag>
+    <toml>           toml: M_escape = { git = "https://github.com/urbanjost/M_escape" }</toml>
+  </package>
+  <package>
+    <name>           name: fhash</name>
+    <version>        version: 0.1.0, latest</version>
+    <description>    description: Implements a hash table type with support for generic keys and values.</description>
+    <license>        license: MIT</license>
+    <author>         author: Laurence Kedward</author>
+    <maintainer>     maintainer: laurencekedward@gmail.com</maintainer>
+    <copyright>      copyright: Laurence Kedward 2020</copyright>
+    <git>            git: https://github.com/LKedward/fhash</git>
+    <git-tag>        git-tag: null</git-tag>
+    <toml>           toml: fhash = { git = "https://github.com/LKedward/fhash" }</toml>
+  </package>
+  <package>
+    <name>           name: mctc-gcp</name>
+    <version>        version: latest</version>
+    <description>    description: Geometrical Counter-Poise correction</description>
+    <license>        license: GPL-3.0-or-later</license>
+    <author>         author: Stefan Grimme, J. Gerit Brandenburg, Holger Kruse</author>
+    <maintainer>     maintainer: @grimme-lab</maintainer>
+    <copyright>      copyright: 2012-2021 Grimme group</copyright>
+    <git>            git: https://github.com/grimme-lab/gcp.git</git>
+    <git-tag>        git-tag: null</git-tag>
+    <toml>           toml: mctc-gcp = { git = "https://github.com/grimme-lab/gcp.git" }</toml>
+  </package>
+  <package>
+    <name>           name: mctc-lib</name>
+    <version>        version: latest</version>
+    <description>    description: Modular computation tool chain library</description>
+    <license>        license: Apache-2.0</license>
+    <author>         author: Sebastian Ehlert</author>
+    <maintainer>     maintainer: @awvwgk</maintainer>
+    <copyright>      copyright: 2020-2021 Sebastian Ehlert</copyright>
+    <git>            git: https://github.com/grimme-lab/mctc-lib.git</git>
+    <git-tag>        git-tag: null</git-tag>
+    <toml>           toml: mctc-lib = { git = "https://github.com/grimme-lab/mctc-lib.git" }</toml>
+  </package>
+  <package>
+    <name>           name: mstore</name>
+    <version>        version: latest</version>
+    <description>    description: Molecular structure store for testing</description>
+    <license>        license: Apache-2.0</license>
+    <author>         author: Sebastian Ehlert</author>
+    <maintainer>     maintainer: @awvwgk</maintainer>
+    <copyright>      copyright: 2020-2021 Sebastian Ehlert</copyright>
+    <git>            git: https://github.com/grimme-lab/mstore.git</git>
+    <git-tag>        git-tag: null</git-tag>
+    <toml>           toml: mstore = { git = "https://github.com/grimme-lab/mstore.git" }</toml>
+  </package>
+  <package>
+    <name>           name: s-dftd3</name>
+    <version>        version: latest</version>
+    <description>    description: Simple reimplementation of the DFT-D3 method</description>
+    <license>        license: LGPL-3.0-or-later</license>
+    <author>         author: Sebastian Ehlert</author>
+    <maintainer>     maintainer: @awvwgk</maintainer>
+    <copyright>      copyright: 2019-2021 Sebastian Ehlert</copyright>
+    <git>            git: https://github.com/awvwgk/simple-dftd3.git</git>
+    <git-tag>        git-tag: null</git-tag>
+    <toml>           toml: s-dftd3 = { git = "https://github.com/awvwgk/simple-dftd3.git" }</toml>
+  </package>
+  <package>
+    <name>           name: toml-f</name>
+    <version>        version: latest</version>
+    <description>    description: TOML parser implementation for data serialization and deserialization</description>
+    <license>        license: Apache-2.0 OR MIT</license>
+    <author>         author: Sebastian Ehlert</author>
+    <maintainer>     maintainer: @awvwgk</maintainer>
+    <copyright>      copyright: 2019-2021 Sebastian Ehlert</copyright>
+    <git>            git: https://github.com/toml-f/toml-f.git</git>
+    <git-tag>        git-tag: null</git-tag>
+    <toml>           toml: toml-f = { git = "https://github.com/toml-f/toml-f.git" }</toml>
+  </package>
+  <package>
+    <name>           name: M_CLI</name>
+    <version>        version: latest</version>
+    <description>    description: Unix-style commandline parsing using a prototype command and NAMELIST (STD:f2008)</description>
+    <license>        license: Public Domain</license>
+    <author>         author: John S. Urban</author>
+    <maintainer>     maintainer: urbanjost@comcast.net</maintainer>
+    <copyright>      copyright: 2020 John S. Urban</copyright>
+    <git>            git: https://github.com/urbanjost/M_CLI</git>
+    <git-tag>        git-tag: null</git-tag>
+    <toml>           toml: M_CLI = { git = "https://github.com/urbanjost/M_CLI" }</toml>
+  </package>
+  <package>
+    <name>           name: M_CLI2</name>
+    <version>        version: latest</version>
+    <description>    description: Unix-style commandline parsing using a prototype command</description>
+    <license>        license: Public Domain</license>
+    <author>         author: John S. Urban</author>
+    <maintainer>     maintainer: urbanjost@comcast.net</maintainer>
+    <copyright>      copyright: 2020 John S. Urban</copyright>
+    <git>            git: https://github.com/urbanjost/M_CLI2</git>
+    <git-tag>        git-tag: null</git-tag>
+    <toml>           toml: M_CLI2 = { git = "https://github.com/urbanjost/M_CLI2" }</toml>
+  </package>
+  <package>
+    <name>           name: dftd4</name>
+    <version>        version: latest</version>
+    <description>    description: Generally Applicable Atomic-Charge Dependent London Dispersion Correction</description>
+    <license>        license: LGPL-3.0-or-later</license>
+    <author>         author: Eike Caldeweyher, Sebastian Ehlert, Stefan Grimme</author>
+    <maintainer>     maintainer: @awvwgk</maintainer>
+    <copyright>      copyright: Copyright 2017-2021 E. Caldeweyher, S. Ehlert, S. Grimme</copyright>
+    <git>            git: https://github.com/dftd4/dftd4</git>
+    <git-tag>        git-tag: null</git-tag>
+    <toml>           toml: dftd4 = { git = "https://github.com/dftd4/dftd4" }</toml>
+  </package>
+  <package>
+    <name>           name: multicharge</name>
+    <version>        version: latest</version>
+    <description>    description: null</description>
+    <license>        license: Apache-2.0</license>
+    <author>         author: Sebastian Ehlert</author>
+    <maintainer>     maintainer: @awvwgk</maintainer>
+    <copyright>      copyright: Copyright 2021 Sebastian Ehlert</copyright>
+    <git>            git: https://github.com/grimme-lab/multicharge.git</git>
+    <git-tag>        git-tag: null</git-tag>
+    <toml>           toml: multicharge = { git = "https://github.com/grimme-lab/multicharge.git" }</toml>
+  </package>
+  <package>
+    <name>           name: finterp</name>
+    <version>        version: 1.2.2, latest</version>
+    <description>    description: Modern Fortran Multidimensional Linear Interpolation</description>
+    <license>        license: BSD</license>
+    <author>         author: Jacob Williams</author>
+    <maintainer>     maintainer: Jacob Williams</maintainer>
+    <copyright>      copyright: Copyright (c) 2016-2021, Jacob Williams</copyright>
+    <git>            git: https://github.com/jacobwilliams/finterp</git>
+    <git-tag>        git-tag: null</git-tag>
+    <toml>           toml: finterp = { git = "https://github.com/jacobwilliams/finterp" }</toml>
+  </package>
+  <package>
+    <name>           name: forlab</name>
+    <version>        version: 1.0.1, latest</version>
+    <description>    description: A Fortran module that provides a lot of functions for scientific computing</description>
+    <license>        license: MIT</license>
+    <author>         author: forlab contributors</author>
+    <maintainer>     maintainer: https://github.com/fortran-fans/forlab</maintainer>
+    <copyright>      copyright: 2016-2021 forlab contributors</copyright>
+    <git>            git: https://github.com/zoziha/forlab</git>
+    <git-tag>        git-tag: null</git-tag>
+    <toml>           toml: forlab = { git = "https://github.com/zoziha/forlab" }</toml>
+  </package>
+  <package>
+    <name>           name: functional</name>
+    <version>        version: latest</version>
+    <description>    description: null</description>
+    <license>        license: BSD-3-Clause</license>
+    <author>         author: Milan Curcic</author>
+    <maintainer>     maintainer: milancurcic@hey.com</maintainer>
+    <copyright>      copyright: Copyright (c) 2016-2020, functional-fortran contributors</copyright>
+    <git>            git: https://github.com/wavebitscientific/functional-fortran</git>
+    <git-tag>        git-tag: null</git-tag>
+    <toml>           toml: functional = { git = "https://github.com/wavebitscientific/functional-fortran" }</toml>
+  </package>
+  <package>
+    <name>           name: neural-fortran</name>
+    <version>        version: latest</version>
+    <description>    description: null</description>
+    <license>        license: MIT</license>
+    <author>         author: Milan Curcic</author>
+    <maintainer>     maintainer: milancurcic@hey.com</maintainer>
+    <copyright>      copyright: Copyright 2018-2021, neural-fortran contributors</copyright>
+    <git>            git: https://github.com/modern-fortran/neural-fortran</git>
+    <git-tag>        git-tag: null</git-tag>
+    <toml>           toml: neural-fortran = { git = "https://github.com/modern-fortran/neural-fortran" }</toml>
+  </package>
+  <package>
+    <name>           name: fpm</name>
+    <version>        version: latest</version>
+    <description>    description: null</description>
+    <license>        license: MIT</license>
+    <author>         author: fpm maintainers</author>
+    <maintainer>     maintainer: </maintainer>
+    <copyright>      copyright: 2020 fpm contributors</copyright>
+    <git>            git: https://github.com/fortran-lang/fpm</git>
+    <git-tag>        git-tag: null</git-tag>
+    <toml>           toml: fpm = { git = "https://github.com/fortran-lang/fpm" }</toml>
+  </package>
+  <package>
+    <name>           name: test-drive</name>
+    <version>        version: latest</version>
+    <description>    description: The simple testing framework</description>
+    <license>        license: Apache-2.0 OR MIT</license>
+    <author>         author: Sebastian Ehlert</author>
+    <maintainer>     maintainer: @awvwgk</maintainer>
+    <copyright>      copyright: 2020-2021 Sebastian Ehlert</copyright>
+    <git>            git: https://github.com/awvwgk/test-drive</git>
+    <git-tag>        git-tag: null</git-tag>
+    <toml>           toml: test-drive = { git = "https://github.com/awvwgk/test-drive" }</toml>
+  </package>
+  <package>
+    <name>           name: nlopt-f</name>
+    <version>        version: latest</version>
+    <description>    description: Interface to NLopt library</description>
+    <license>        license: MIT</license>
+    <author>         author: Sebastian Ehlert</author>
+    <maintainer>     maintainer: @awvwgk</maintainer>
+    <copyright>      copyright: Copyright 2021 S. Ehlert</copyright>
+    <git>            git: https://github.com/grimme-lab/nlopt-f</git>
+    <git-tag>        git-tag: null</git-tag>
+    <toml>           toml: nlopt-f = { git = "https://github.com/grimme-lab/nlopt-f" }</toml>
+  </package>
+  <package>
+    <name>           name: tblite</name>
+    <version>        version: latest</version>
+    <description>    description: Light-weight tight-binding framework</description>
+    <license>        license: LGPL-3.0-or-later</license>
+    <author>         author: Sebastian Ehlert</author>
+    <maintainer>     maintainer: @awvwgk</maintainer>
+    <copyright>      copyright: Copyright 2021 S. Ehlert</copyright>
+    <git>            git: https://github.com/awvwgk/tblite</git>
+    <git-tag>        git-tag: null</git-tag>
+    <toml>           toml: tblite = { git = "https://github.com/awvwgk/tblite" }</toml>
+  </package>
+  <package>
+    <name>           name: fftpack</name>
+    <version>        version: 4.0.0, latest</version>
+    <description>    description: A package of fortran subprograms for the fast fourier transform of periodic and other symmetric sequences</description>
+    <license>        license: Public Domain</license>
+    <author>         author: Paul N. Swarztrauber</author>
+    <maintainer>     maintainer: @fortran-lang</maintainer>
+    <copyright>      copyright: Copyright 1985 National Center for Atmospheric Research, Boulder, CO</copyright>
+    <git>            git: https://github.com/fortran-lang/fftpack</git>
+    <git-tag>        git-tag: null</git-tag>
+    <toml>           toml: fftpack = { git = "https://github.com/fortran-lang/fftpack" }</toml>
+  </package>
+  <package>
+    <name>           name: stdlib</name>
+    <version>        version: latest</version>
+    <description>    description: null</description>
+    <license>        license: MIT</license>
+    <author>         author: stdlib contributors</author>
+    <maintainer>     maintainer: @fortran-lang/stdlib</maintainer>
+    <copyright>      copyright: 2019-2021 stdlib contributors</copyright>
+    <git>            git: https://github.com/fortran-lang/stdlib</git>
+    <git-tag>        git-tag: stdlib-fpm</git-tag>
+    <toml>           toml: stdlib = { git = "https://github.com/fortran-lang/stdlib", tag="stdlib-fpm" }</toml>
+  </package>
+</packages>

@@ -18,4 +18,5 @@ C:\Users\Peyton\Documents\dev\FortIDE2\x64\Debug\bz2d.dll
 C:\Users\Peyton\Documents\dev\FortIDE2\x64\Debug\libpng16d.dll
 C:\Users\Peyton\Documents\dev\FortIDE2\x64\Debug\brotlidec.dll
 C:\Users\Peyton\Documents\dev\FortIDE2\x64\Debug\brotlicommon.dll
+C:\Users\Peyton\Documents\dev\FortIDE2\x64\Debug\tinyxml2.dll
 C:\Users\Peyton\Documents\dev\FortIDE2\FortIDE\x64\Debug\FortIDE.vcxproj.Up2Date

@@ -1,6 +1,7 @@
 #include "mainfunc.h"
 #include "boost/process.hpp"
 #include "../colorText/TextEditor.h"
+#include "FileTree/FileTree.h"
 #include <cstdlib>
 #include <string>
 #include <windows.h>
@@ -14,6 +15,7 @@ namespace fs = boost::filesystem;
 int compileRes;
 ostringstream oss;
 ostringstream setStr;
+FileTree fileObj;
 
 char multiPurp::buf[2048]{ '\0' };
 char multiPurp::ftcbuf[256]{ '\0' };
@@ -42,7 +44,7 @@ void multiPurp::mainEditor(TextEditor& editor)
     ImGui::SetNextWindowSize(sizedWidget, ImGuiCond_Always);
 
     if (ImGui::Begin("Text Editor", nullptr, ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoResize))
-    {
+    { 
         editor.Render("Text Editor");
         ImGui::End();
     }
@@ -61,91 +63,89 @@ void multiPurp::loadFont()
     io.Fonts->ClearTexData();
 }
 
-void multiPurp::menuBarfunc(TextEditor& editor)
+int multiPurp::menuBarfunc(TextEditor& editor)
 {
-    static bool openDialog = false; // Track whether the file dialog is open
-    static bool saveDialog = false;
-
-    if (ImGui::Button("Open")) 
+    if (ImGui::BeginMainMenuBar())
     {
-        openDialog = true; // Set flag to open the file dialog
-    }
-    //if (ImGui::IsKeyPressed(ImGuiKey_LeftCtrl) || ImGui::IsKeyPressed(ImGuiKey_RightCtrl) && ImGui::IsKeyPressed(ImGuiKey_O))
-    //{
-      //  openDialog = true; // Set flag to open the file dialog
-    //}
+        static bool showPopup = false;
+        static bool saveDialog = false;
+        //if (ImGui::IsKeyPressed(ImGuiKey_LeftCtrl) || ImGui::IsKeyPressed(ImGuiKey_RightCtrl) && ImGui::IsKeyPressed(ImGuiKey_S))
+        //{
+          //  saveDialog = true; // Set flag to open the file dialog
+        //}
 
-    if (ImGui::Button("Save"))
-    {
-        saveDialog = true; // Set flag to open the file dialog
-    }
-    //if (ImGui::IsKeyPressed(ImGuiKey_LeftCtrl) || ImGui::IsKeyPressed(ImGuiKey_RightCtrl) && ImGui::IsKeyPressed(ImGuiKey_S))
-    //{
-      //  saveDialog = true; // Set flag to open the file dialog
-    //}
+        // Save button functionality
 
-
-    if (openDialog)
-    {
-        nfdchar_t* outPathBuf = NULL;
-        nfdresult_t result = NFD_OpenDialog(NULL, NULL, &outPathBuf);
-        if (result == NFD_OKAY)
+        if (ImGui::Button("Save"))
         {
-            std::ifstream file(outPathBuf);
-            if (file.is_open())
+            saveDialog = true;
+            if (saveDialog)
             {
-                // Read the contents of the file into a string
-                std::ostringstream oss;
-                oss << file.rdbuf();
-                std::string fileContent = oss.str();
+                nfdchar_t* savePathBuf = NULL;
+                nfdresult_t result = NFD_SaveDialog(NULL, NULL, &savePathBuf);
 
-                // Set the content of the file to the editor
-                editor.SetText(fileContent.c_str());
-            }
-            else
-            {
-                std::cerr << "Error: Unable to open file" << std::endl;
-            }
-            // Close the file
-            file.close();
+                if (result == NFD_OKAY)
+                {
+                    std::string filePathWithExtension(savePathBuf);
 
-            // Free the memory allocated by NFD_OpenDialog
-            free(outPathBuf);
+                    std::ofstream file(filePathWithExtension);
+
+                    if (file.is_open())
+                    {
+                        file << editor.GetText(); // Save the content of the editor
+                        file.close();
+                    }
+                    free(savePathBuf); // Free the memory allocated by NFD_SaveDialog
+                }
+                saveDialog = false;
+            }
         }
-        // Reset the flag after opening the dialog
-        openDialog = false;
-    }
+        
 
-    if (saveDialog)
-    {
-        nfdchar_t* savePathBuf = NULL;
-        nfdresult_t result = NFD_SaveDialog(NULL, NULL, &savePathBuf);
+        
 
-        if (result == NFD_OKAY)
+        if (showPopup) {
+            ImGui::OpenPopup("Popup");
+            showPopup = false;
+        }
+
+        if (ImGui::Button("New File"))
         {
-            std::string filePathWithExtension(savePathBuf);
-            filePathWithExtension += ".f90";
-
-            std::ofstream file(filePathWithExtension, std::ios::out | std::ios::trunc);
-
-            if (file.is_open())
-            {
-                file << editor.GetText(); // Save the content of the editor
-                file.close();
-            }
-            free(savePathBuf); // Free the memory allocated by NFD_SaveDialog
+            ImGui::OpenPopup("New File Popup");
         }
-        saveDialog = false;
+
+        if (ImGui::BeginPopupModal("New File Popup"))
+        {
+            ImGui::Text("Enter filename:");
+            ImGui::InputText(".f90", buf, sizeof(buf));
+
+            if (ImGui::IsKeyPressed(ImGuiKey_Enter)) {
+				bp::system("touch placeholder > " + std::string(buf) + ".f90");
+				std::cout << "File created successfully" << std::endl;
+				ImGui::CloseCurrentPopup();
+			}
+            if (ImGui::Button("Close"))
+            {
+                ImGui::CloseCurrentPopup();
+            }
+
+            ImGui::EndPopup();
+        }
+
+
+        multiPurp::Compilefunc();
+        ImGui::EndMainMenuBar();
     }
 
-    multiPurp::Compilefunc();
+        auto cpos = editor.GetCursorPosition();
+        ImGui::Text("%6d/%-6d %6d lines  | %s | %s | %s | %s",
+            cpos.mLine + 1, cpos.mColumn + 1, editor.GetTotalLines(),
+            editor.IsOverwrite() ? "Ovr" : "Ins",
+            editor.CanUndo() ? "*" : " ",
+            editor.GetLanguageDefinition().mName.c_str(), NULL);
 
-    auto cpos = editor.GetCursorPosition();
-    ImGui::Text("%6d/%-6d %6d lines  | %s | %s | %s | %s",
-        cpos.mLine + 1, cpos.mColumn + 1, editor.GetTotalLines(),
-        editor.IsOverwrite() ? "Ovr" : "Ins",
-        editor.CanUndo() ? "*" : " ",
-        editor.GetLanguageDefinition().mName.c_str(), NULL);
+    
+        return 0;
 }
 
 void multiPurp::Compilefunc()
@@ -155,23 +155,10 @@ void multiPurp::Compilefunc()
 
         bp::system("fpm build");
         bp::system("fpm run");
-        /*
-        boost::filesystem::path p = bp::search_path("gfortran");
-
-        std::vector<std::string> buildPath = { buildDir, "\\", exeName };
-        std::vector<std::string> fileCompPath = { ftcbuf };
-        std::vector<std::string> args = { "-Wextra", "-v", "-o" };
-
-        compileRes = bp::system(p, args, fileCompPath, buildPath);
-        if (compileRes == 0)
-        {
-            printf("Compiled");
-            string namedExe = exeName;
-            string cmpcmd = "./" + namedExe;
-            bp::system(cmpcmd);
-        }
-
-        boost::filesystem::current_path(currentDir);
-        */
     }
+
+    if (ImGui::Button("Test"))
+	{
+		bp::system("fpm test");
+	}
 }

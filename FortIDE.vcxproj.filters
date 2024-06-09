@@ -36,6 +36,9 @@
     <ClCompile Include="mainfunc\FileTree\FileTree.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="mainfunc\searchParser\Parser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mainfunc\mainfunc.h">
@@ -57,6 +60,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="mainfunc\FileTree\FileTree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cmdPrompt\imgui_console.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mainfunc\searchParser\Parser.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

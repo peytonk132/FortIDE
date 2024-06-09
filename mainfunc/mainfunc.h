@@ -27,10 +27,8 @@ public:
 
 	void Compilefunc();
 	void mainEditor(TextEditor& editor);
-	void settingsInput();
 	void loadFont();
-	void menuBarfunc(TextEditor& editor);
-	int gitControl();
+	int menuBarfunc(TextEditor& editor);
 	//static void Debug();
 
 private:
