@@ -12,4 +12,6 @@ Native File Dialog (NFD)
 Boost
 FPM
 
+I suggest watching this video I made to get an idea of how to use the IDE: https://youtu.be/5SWVWErUa08
+
 If you have anything you want to tell me, good or bad, please email me at peytonk1945@gmail.com because I constantly check my email. Thanks again and I hope you enjoy the program.
