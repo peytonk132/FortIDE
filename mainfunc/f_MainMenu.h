@@ -25,4 +25,5 @@ public:
     int startMenu();
     static int entryPoint();
     static int f_genNewProject();
+    static int stackWindow();
 };

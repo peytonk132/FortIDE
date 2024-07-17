@@ -3,6 +3,12 @@
 #include <string>
 #include <regex>
 #include <cmath>
+#include <nlohmann/json.hpp>
+#include <fstream>
+#include <string>
+#include <vector>
+#include <iostream>
+using json = nlohmann::json;
 
 #include "TextEditor.h"
 
@@ -27,7 +33,7 @@ bool equals(InputIt1 first1, InputIt1 last1,
 TextEditor::TextEditor()
 	: mLineSpacing(1.0f)
 	, mUndoIndex(0)
-	, mTabSize(4)
+	, mTabSize(6)
 	, mOverwrite(false)
 	, mReadOnly(false)
 	, mWithinRender(false)
@@ -3281,39 +3287,6 @@ const TextEditor::LanguageDefinition& TextEditor::LanguageDefinition::Lua()
 	return langDef;
 }
 
-// Define keywords, intrinsic functions, and other tokens for Fortran
-const char* fortran_keywords[] = {
-	"program", "end", "subroutine", "function", "if", "else", "then", "do", "while",
-	"call", "return", "write", "read", "integer", "real", "complex", "double",
-	"precision", "logical", "character", "dimension", "allocate", "deallocate",
-	"implicit", "none", "external", "intrinsic", "save", "data", "common",
-	"block", "structure", "union", "record", "pointer", "target", "equivalence",
-	"namelist", "parameter", "intent", "optional", "public", "private", "protected",
-	"module", "contains", "interface", "abstract", "extends", "procedure", "pure",
-	"elemental", "recursive", "result", "bind", "generic", "select", "case", "associate",
-	"class", "associate", "block", "enum", "type", "use", "import"
-};
-
-const char* fortran_intrinsics[] = {
-	"sin", "cos", "tan", "sqrt", "print", "read", "write", "allocatable", "allocate", "assign",
-	"assignment", "block", "data", "call", "case", "character", "common", "complex",
-	"contains", "continue", "cycle", "data", "deallocate", "default", "do", "double",
-	"precision", "else", "else", "if", "elsewhere", "end", "block", "data", "end",
-	"do", "end", "function", "end", "if", "end", "interface", "end", "module",
-	"end", "program", "end", "select", "end", "subroutine", "end", "type",
-	"end", "where", "entry", "equivalence", "exit", "external", "function", "go",
-	"to", "if", "implicit", "in", "inout", "integer", "intent", "interface",
-	"intrinsic", "kind", "len", "logical", "module", "namelist", "nullify", "only",
-	"operator", "optional", "out", "parameter", "pause", "pointer", "private",
-	"program", "public", "real", "recursive", "result", "return", "save", "select",
-	"case", "stop", "subroutine", "target", "then", "type", "type()", "use",
-	"Where", "While"
-};
-
-
-
-
-
 const TextEditor::LanguageDefinition& TextEditor::LanguageDefinition::Fortran()
 {
 	static bool inited = false;
@@ -3322,10 +3295,46 @@ const TextEditor::LanguageDefinition& TextEditor::LanguageDefinition::Fortran()
 	{
 		langDef.mName = "Fortran";
 
-		// Insert keywords
+		const char* fortran_keywords[] =
+		{
+			"program", "end", "subroutine", "function", "if", "else", "then", "do", "while",
+			"call", "return", "write", "read", "integer", "real", "complex", "double",
+			"precision", "logical", "character", "dimension", "allocate", "deallocate",
+			"implicit", "none", "external", "intrinsic", "save", "data", "common",
+			"block", "structure", "union", "record", "pointer", "target", "equivalence",
+			"namelist", "parameter", "intent", "optional", "public", "private", "protected",
+			"module", "contains", "interface", "abstract", "extends", "procedure", "pure",
+			"elemental", "recursive", "result", "bind", "generic", "select", "case", "associate",
+			"class", "associate", "block", "enum", "type", "use", "import",
+			"PROGRAM", "END", "SUBROUTINE", "FUNCTION", "IF", "ELSE", "THEN", "DO", "WHILE",
+			"CALL", "RETURN", "WRITE", "READ", "INTEGER", "REAL", "COMPLEX", "DOUBLE", "PRECISION",
+			"LOGICAL", "CHARACTER", "DIMENSION", "ALLOCATE", "DEALLOCATE", "IMPLICIT", "NONE",
+			"EXTERNAL", "INTRINSIC", "SAVE", "DATA", "COMMON", "BLOCK", "STRUCTURE", "UNION",
+			"RECORD", "POINTER", "TARGET", "EQUIVALENCE", "NAMELIST", "PARAMETER", "INTENT",
+			"OPTIONAL", "PUBLIC", "PRIVATE", "PROTECTED", "MODULE", "CONTAINS", "INTERFACE",
+			"ABSTRACT", "EXTENDS", "PROCEDURE", "PURE", "ELEMENTAL", "RECURSIVE", "RESULT", "BIND",
+			"GENERIC", "SELECT", "CASE", "ASSOCIATE", "CLASS", "ASSOCIATE", "BLOCK", "ENUM", "TYPE",
+			"USE", "IMPORT"
+		};
 		for (const auto& k : fortran_keywords)
 			langDef.mKeywords.insert(k);
 
+		const char* fortran_intrinsics[] =
+		{
+			"sin", "cos", "tan", "sqrt", "print", "read", "write", "allocatable", "allocate", "assign",
+			"assignment", "block", "data", "call", "case", "character", "common", "complex",
+			"contains", "continue", "cycle", "data", "deallocate", "default", "do", "double",
+			"precision", "else", "else", "if", "elsewhere", "end", "block", "data", "end",
+			"do", "end", "function", "end", "if", "end", "interface", "end", "module",
+			"end", "program", "end", "select", "end", "subroutine", "end", "type",
+			"end", "where", "entry", "equivalence", "exit", "external", "function", "go",
+			"to", "if", "implicit", "in", "inout", "integer", "intent", "interface",
+			"intrinsic", "kind", "len", "logical", "module", "namelist", "nullify", "only",
+			"operator", "optional", "out", "parameter", "pause", "pointer", "private",
+			"program", "public", "real", "recursive", "result", "return", "save", "select",
+			"case", "stop", "subroutine", "target", "then", "type", "type()", "use",
+			"Where", "While"
+		};
 		// Insert identifiers (intrinsic functions and others)
 		for (const auto& k : fortran_intrinsics)
 		{
@@ -3374,3 +3383,6 @@ const TextEditor::LanguageDefinition& TextEditor::LanguageDefinition::Fortran()
 	}
 	return langDef;
 }
+
+
+

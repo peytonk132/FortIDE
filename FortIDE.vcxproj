@@ -162,6 +162,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cmdPrompt\imgui_console.h" />
+    <ClInclude Include="colorText\TextEditor.h" />
     <ClInclude Include="mainfunc\FileTree\FileTree.h" />
     <ClInclude Include="mainfunc\common.h" />
     <ClInclude Include="mainfunc\ftg_core.h" />
@@ -170,6 +171,9 @@
     <ClInclude Include="mainfunc\nfd.h" />
     <ClInclude Include="mainfunc\nfd_common.h" />
     <ClInclude Include="mainfunc\searchParser\Parser.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="jsons\fortran_database.json" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

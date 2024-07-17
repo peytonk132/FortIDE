@@ -147,9 +147,6 @@ int main()
         ImGui::SetNextWindowSize(sizedWidget, ImGuiCond_Always);
         ImGui::Begin("Package Installer");
         for (const auto& pkg : packages) {
-            if (ImGui::Button(("Install " + pkg.name).c_str())) {
-                installPackage(pkg.toml);
-            }
             ImGui::Text("Version: %s", pkg.version.c_str());
             ImGui::TextWrapped("Description: %s", pkg.description.c_str());
             ImGui::Text("License: %s", pkg.license.c_str());
@@ -158,6 +155,8 @@ int main()
             ImGui::Separator();
         }
         ImGui::End();
+
+        
 
         multiPurp teditor;
         teditor.mainEditor(editor);

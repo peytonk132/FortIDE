@@ -10,6 +10,16 @@ int f_MainMenu::f_genNewProject()
 
     return 0;
 }
+int f_MainMenu::stackWindow()
+{
+    ImVec2 fixedWidPos = ImVec2(0, 0); // Set your desired fixed position here
+    ImVec2 sizedWid = ImVec2(570, 450);
+    ImGui::SetNextWindowPos(fixedWidPos, ImGuiCond_Always);
+    ImGui::SetNextWindowSize(sizedWid, ImGuiCond_Always);
+    ImGui::Begin("##");
+    ImGui::End();
+    return 0;
+}
 int f_MainMenu::startMenu() {
     sf::VideoMode autoReSize = sf::VideoMode::getDesktopMode();
     unsigned int sizeY = autoReSize.height;
@@ -20,35 +30,54 @@ int f_MainMenu::startMenu() {
     ImGui::SetNextWindowPos(fixedfieldPos, ImGuiCond_Always);
     ImGui::SetNextWindowSize(sizedWidget, ImGuiCond_Always);
     ImGui::Begin("##", NULL, ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoTitleBar);
-    ImGui::InputText("##", buf, sizeof(buf), NULL, NULL);
+    
 
-    if (ImGui::Button("New Project", ImVec2(200, 100))) {
-        nfdchar_t* wdPath = NULL;
-        nfdresult_t result = NFD_PickFolder(NULL, &wdPath);
-
-        if (result == NFD_OKAY) {
-            boost::filesystem::current_path(wdPath);
-            std::cout << "Current Working Directory: " << boost::filesystem::current_path().string() << std::endl;
-            free(wdPath);
-
-            if (f_genNewProject() == 0)
-            {
-                std::cout << "Project created successfully in directory: " << boost::filesystem::current_path().string() << std::endl;
-                boost::filesystem::current_path(buf);
-                std::cout << "New path: " << boost::filesystem::current_path().string() << std::endl;
-            }
-            else
-            {
-                std::cout << "Project failed";
-            }
-        }
-        else if (result == NFD_CANCEL) {
-            std::cout << "User canceled the operation." << std::endl;
-        }
-        else {
-            std::cerr << "Error: " << NFD_GetError() << std::endl;
-        }
+    if (ImGui::Button("New Project", ImVec2(200, 100))) 
+    {
+        ImGui::OpenPopup("New Project");
     }
+
+    if (ImGui::BeginPopupModal("New Project", NULL))
+	{
+        ImGui::Text("Enter the name for your Project.:");
+        ImGui::InputText("##", buf, sizeof(buf), NULL, NULL);
+
+        if (ImGui::IsKeyPressed(ImGuiKey_Enter))
+        {
+            nfdchar_t* wdPath = NULL;
+            nfdresult_t result = NFD_PickFolder(NULL, &wdPath);
+
+            if (result == NFD_OKAY) {
+                boost::filesystem::current_path(wdPath);
+                std::cout << "Current Working Directory: " << boost::filesystem::current_path().string() << std::endl;
+                free(wdPath);
+
+                if (f_genNewProject() == 0)
+                {
+                    std::cout << "Project created successfully in directory: " << boost::filesystem::current_path().string() << std::endl;
+                    boost::filesystem::current_path(buf);
+                    std::cout << "New path: " << boost::filesystem::current_path().string() << std::endl;
+                }
+                else
+                {
+                    std::cout << "Project failed";
+                }
+            }
+            else if (result == NFD_CANCEL) {
+                std::cout << "User canceled the operation." << std::endl;
+            }
+            else {
+                std::cerr << "Error: " << NFD_GetError() << std::endl;
+            }
+        }
+        
+        if (ImGui::Button("Close"))
+        {
+            ImGui::CloseCurrentPopup();
+        }
+
+		ImGui::EndPopup();
+	}
 
     if (ImGui::Button("Open Project"))
     {
@@ -67,6 +96,11 @@ int f_MainMenu::startMenu() {
 			std::cerr << "Error: " << NFD_GetError() << std::endl;
 		}
     }
+
+    if (ImGui::Button("Login to Github"))
+	{
+		boost::process::system("gh auth login");
+	}
 
     ImGui::End();
     return 0;

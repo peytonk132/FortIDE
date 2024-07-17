@@ -1,0 +1,32 @@
+{
+  "keywords": [
+    "PROGRAM",
+    "END",
+    "SUBROUTINE",
+    "FUNCTION",
+    "MODULE",
+    "IF",
+    "THEN",
+    "ELSE",
+    "ENDIF",
+    "DO",
+    "WHILE",
+    "INTEGER",
+    "REAL",
+    "CHARACTER"
+  ],
+  "intrinsic_functions": [
+    "ABS",
+    "SIN",
+    "COS",
+    "TAN",
+    "LOG",
+    "EXP",
+    "SQRT"
+  ],
+  "syntax_rules": {
+    "statement_end": [ "\n", ";" ],
+    "variable_declaration": [ "INTEGER", "REAL", "CHARACTER" ],
+    "control_structures": [ "IF", "DO", "WHILE" ]
+  }
+}

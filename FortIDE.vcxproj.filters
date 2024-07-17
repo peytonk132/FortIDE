@@ -68,5 +68,11 @@
     <ClInclude Include="mainfunc\searchParser\Parser.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="colorText\TextEditor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="jsons\fortran_database.json" />
   </ItemGroup>
 </Project>

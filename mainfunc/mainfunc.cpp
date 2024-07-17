@@ -8,10 +8,14 @@
 #include <fstream>
 #include <iostream>
 #include <memory>
+#include <nlohmann/json.hpp>
+#include <vector>
 
 using namespace std;
 namespace bp = boost::process;
 namespace fs = boost::filesystem;
+using json = nlohmann::json;
+
 int compileRes;
 ostringstream oss;
 ostringstream setStr;
@@ -22,33 +26,216 @@ char multiPurp::ftcbuf[256]{ '\0' };
 char multiPurp::buildDir[256]{ '\0' };
 char multiPurp::exeName[256]{ '\0' };
 
-std::unique_ptr<std::string> fileContent; // Unique pointer to hold the file content
+std::unique_ptr<std::istream> fileContent; // Unique pointer to hold the file content
 
 
+void detectFortranErrors(TextEditor& editor, const char* keywords[], const char* intrinsicFunctions[])
+{
+    const char* fortran_keywords[] =
+    {
+    "program", "end", "subroutine", "function", "if", "else", "then", "do", "while",
+    "call", "return", "write", "read", "integer", "real", "complex", "double",
+    "precision", "logical", "character", "dimension", "allocate", "deallocate",
+    "implicit", "none", "external", "intrinsic", "save", "data", "common",
+    "block", "structure", "union", "record", "pointer", "target", "equivalence",
+    "namelist", "parameter", "intent", "optional", "public", "private", "protected",
+    "module", "contains", "interface", "abstract", "extends", "procedure", "pure",
+    "elemental", "recursive", "result", "bind", "generic", "select", "case", "associate",
+    "class", "associate", "block", "enum", "type", "use", "import",
+    "PROGRAM", "END", "SUBROUTINE", "FUNCTION", "IF", "ELSE", "THEN", "DO", "WHILE",
+    "CALL", "RETURN", "WRITE", "READ", "INTEGER", "REAL", "COMPLEX", "DOUBLE", "PRECISION",
+    "LOGICAL", "CHARACTER", "DIMENSION", "ALLOCATE", "DEALLOCATE", "IMPLICIT", "NONE",
+    "EXTERNAL", "INTRINSIC", "SAVE", "DATA", "COMMON", "BLOCK", "STRUCTURE", "UNION",
+    "RECORD", "POINTER", "TARGET", "EQUIVALENCE", "NAMELIST", "PARAMETER", "INTENT",
+    "OPTIONAL", "PUBLIC", "PRIVATE", "PROTECTED", "MODULE", "CONTAINS", "INTERFACE",
+    "ABSTRACT", "EXTENDS", "PROCEDURE", "PURE", "ELEMENTAL", "RECURSIVE", "RESULT", "BIND",
+    "GENERIC", "SELECT", "CASE", "ASSOCIATE", "CLASS", "ASSOCIATE", "BLOCK", "ENUM", "TYPE",
+    "USE", "IMPORT"
+    };
+
+    const char* fortran_intrinsics[] =
+    {
+    "sin", "cos", "tan", "sqrt", "print", "read", "write", "allocatable", "allocate", "assign",
+    "assignment", "block", "data", "call", "case", "character", "common", "complex",
+    "contains", "continue", "cycle", "data", "deallocate", "default", "do", "double",
+    "precision", "else", "else", "if", "elsewhere", "end", "block", "data", "end",
+    "do", "end", "function", "end", "if", "end", "interface", "end", "module",
+    "end", "program", "end", "select", "end", "subroutine", "end", "type",
+    "end", "where", "entry", "equivalence", "exit", "external", "function", "go",
+    "to", "if", "implicit", "in", "inout", "integer", "intent", "interface",
+    "intrinsic", "kind", "len", "logical", "module", "namelist", "nullify", "only",
+    "operator", "optional", "out", "parameter", "pause", "pointer", "private",
+    "program", "public", "real", "recursive", "result", "return", "save", "select",
+    "case", "stop", "subroutine", "target", "then", "type", "type()", "use",
+    "Where", "While"
+    };
+
+
+
+    auto lines = editor.GetTextLines();
+    TextEditor::ErrorMarkers markers;
+
+    std::vector<int> parenthesisStack;
+    std::vector<int> printStack;
+    bool insideString = false;
+    size_t stringStartLine = 0;
+
+
+
+    for (size_t line_num = 0; line_num < lines.size(); ++line_num)
+    {
+        const auto& line = lines[line_num];
+        std::istringstream iss(line);
+        std::string token;
+
+        for (size_t i = 0; i < line.size(); ++i)
+        {
+            char ch = line[i];
+
+            if (ch == '"')
+            {
+                if (!insideString)
+                {
+                    insideString = true;
+                    stringStartLine = line_num;
+                }
+                else
+                {
+                    insideString = false;
+                }
+            }
+
+            if (!insideString)
+            {
+                if (ch == '(')
+                {
+                    parenthesisStack.push_back(line_num + 1);
+                }
+                else if (ch == ')')
+                {
+                    if (parenthesisStack.empty())
+                    {
+                        markers.insert({ line_num + 1, "Unexpected closing parenthesis" });
+                    }
+                    else
+                    {
+                        parenthesisStack.pop_back();
+                    }
+                }
+            }
+        }
+
+        while (iss >> token)
+        {
+            bool isKeyword = false;
+            bool isIntrinsic = false;
+
+            // Check if token is a keyword
+            for (const char* kw : fortran_keywords)
+            {
+                if (token == kw)
+                {
+                    isKeyword = true;
+                    break;
+                }
+            }
+
+            // Check if token is an intrinsic function
+            for (const char* intr : fortran_intrinsics)
+            {
+                if (token == intr)
+                {
+                    isIntrinsic = true;
+                    break;
+                }
+            }
+        }
+
+        // Check for an unclosed string at the end of the line
+        if (insideString && line_num == lines.size() - 1)
+        {
+            markers.insert({ stringStartLine + 1, "Unclosed string literal" });
+        }
+    }
+
+    while (!parenthesisStack.empty())
+    {
+        markers.insert({ parenthesisStack.back(), "Unclosed opening parenthesis" });
+        parenthesisStack.pop_back();
+    }
+
+    editor.SetErrorMarkers(markers);
+}
 // Highlighting is done by ImGuiColorTextEdit. The repo: https://github.com/BalazsJako/ImGuiColorTextEdit
 void multiPurp::mainEditor(TextEditor& editor)
 {
-    TextEditor::ErrorMarkers f_markers;
     static bool isLanguageSet = false;
+    static const char* fortran_keywords[] =
+    {
+        "program", "end", "subroutine", "function", "if", "else", "then", "do", "while",
+        "call", "return", "write", "read", "integer", "real", "complex", "double",
+        "precision", "logical", "character", "dimension", "allocate", "deallocate",
+        "implicit", "none", "external", "intrinsic", "save", "data", "common",
+        "block", "structure", "union", "record", "pointer", "target", "equivalence",
+        "namelist", "parameter", "intent", "optional", "public", "private", "protected",
+        "module", "contains", "interface", "abstract", "extends", "procedure", "pure",
+        "elemental", "recursive", "result", "bind", "generic", "select", "case", "associate",
+        "class", "associate", "block", "enum", "type", "use", "import",
+        "PROGRAM", "END", "SUBROUTINE", "FUNCTION", "IF", "ELSE", "THEN", "DO", "WHILE",
+        "CALL", "RETURN", "WRITE", "READ", "INTEGER", "REAL", "COMPLEX", "DOUBLE", "PRECISION",
+        "LOGICAL", "CHARACTER", "DIMENSION", "ALLOCATE", "DEALLOCATE", "IMPLICIT", "NONE",
+        "EXTERNAL", "INTRINSIC", "SAVE", "DATA", "COMMON", "BLOCK", "STRUCTURE", "UNION",
+        "RECORD", "POINTER", "TARGET", "EQUIVALENCE", "NAMELIST", "PARAMETER", "INTENT",
+        "OPTIONAL", "PUBLIC", "PRIVATE", "PROTECTED", "MODULE", "CONTAINS", "INTERFACE",
+        "ABSTRACT", "EXTENDS", "PROCEDURE", "PURE", "ELEMENTAL", "RECURSIVE", "RESULT", "BIND",
+        "GENERIC", "SELECT", "CASE", "ASSOCIATE", "CLASS", "ASSOCIATE", "BLOCK", "ENUM", "TYPE",
+        "USE", "IMPORT"
+    };
+    static const char* fortran_intrinsics[] =
+    {
+        "sin", "cos", "tan", "sqrt", "print", "read", "write", "allocatable", "allocate", "assign",
+        "assignment", "block", "data", "call", "case", "character", "common", "complex",
+        "contains", "continue", "cycle", "data", "deallocate", "default", "do", "double",
+        "precision", "else", "else", "if", "elsewhere", "end", "block", "data", "end",
+        "do", "end", "function", "end", "if", "end", "interface", "end", "module",
+        "end", "program", "end", "select", "end", "subroutine", "end", "type",
+        "end", "where", "entry", "equivalence", "exit", "external", "function", "go",
+        "to", "if", "implicit", "in", "inout", "integer", "intent", "interface",
+        "intrinsic", "kind", "len", "logical", "module", "namelist", "nullify", "only",
+        "operator", "optional", "out", "parameter", "pause", "pointer", "private",
+        "program", "public", "real", "recursive", "result", "return", "save", "select",
+        "case", "stop", "subroutine", "target", "then", "type", "type()", "use",
+        "Where", "While"
+    };
+
     if (!isLanguageSet)
     {
+        // Optionally, you can load these arrays from a file or database
+        // instead of hardcoding them here.
         auto lang = TextEditor::LanguageDefinition::Fortran();
         editor.SetLanguageDefinition(lang);
         isLanguageSet = true;
     }
 
     ImVec2 fixedWidgetPosition = ImVec2(0, 30); // Set your desired fixed position here
-    ImVec2 sizedWidget = ImVec2(400, 450);
+    ImVec2 sizedWidget = ImVec2(400, 450); // Adjust size according to your preference
 
     ImGui::SetNextWindowPos(fixedWidgetPosition, ImGuiCond_Always);
     ImGui::SetNextWindowSize(sizedWidget, ImGuiCond_Always);
 
     if (ImGui::Begin("Text Editor", nullptr, ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoResize))
-    { 
+    {
+        // Render the editor
         editor.Render("Text Editor");
+
+        // Detect and highlight errors
+
+        detectFortranErrors(editor, fortran_keywords, fortran_intrinsics);
+
         ImGui::End();
     }
 }
+
 
 void multiPurp::loadFont()
 {
@@ -116,12 +303,22 @@ int multiPurp::menuBarfunc(TextEditor& editor)
 
         if (ImGui::BeginPopupModal("New File Popup"))
         {
+
             ImGui::Text("Enter filename:");
             ImGui::InputText(".f90", buf, sizeof(buf));
 
             if (ImGui::IsKeyPressed(ImGuiKey_Enter)) {
-				bp::system("touch placeholder > " + std::string(buf) + ".f90");
-				std::cout << "File created successfully" << std::endl;
+                
+                nfdchar_t* newFileBuf = NULL;
+                nfdresult_t result = NFD_PickFolder(NULL, &newFileBuf);
+
+                if (result == NFD_OKAY)
+                {
+                    string newFile = buf;
+                    std::ofstream file(newFile + ".f90");
+                }
+
+
 				ImGui::CloseCurrentPopup();
 			}
             if (ImGui::Button("Close"))
@@ -148,17 +345,36 @@ int multiPurp::menuBarfunc(TextEditor& editor)
         return 0;
 }
 
+
+
 void multiPurp::Compilefunc()
 {
-    if (ImGui::Button("Compile"))
+    if (ImGui::Button("Build Options"))
     {
-
-        bp::system("fpm build");
-        bp::system("fpm run");
+        ImGui::OpenPopup("Build Options");
     }
-
-    if (ImGui::Button("Test"))
+    if (ImGui::BeginPopup("Build Options"))
 	{
-		bp::system("fpm test");
+		if (ImGui::Button("Build"))
+		{
+            bp::system("fpm build");
+			ImGui::CloseCurrentPopup();
+		}
+
+        if (ImGui::Button("Run"))
+        {
+            bp::system("fpm run");
+            ImGui::CloseCurrentPopup();
+        }
+
+        if (ImGui::Button("Test"))
+        {
+			bp::system("fpm test");
+			ImGui::CloseCurrentPopup();
+        }
+
+		ImGui::EndPopup();
 	}
 }
+
+

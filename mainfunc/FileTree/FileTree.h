@@ -6,6 +6,7 @@
 #include <vector>
 #include <string>
 #include <functional>
+#include <chrono>
 
 class FileTree {
 public:
@@ -32,9 +33,13 @@ private:
 
     FileNode TraverseDirectory(const boost::filesystem::path& directory);
     void RenderFileNode(FileNode& node);
+    void UpdateTree();
 
     FileNode rootNode;
     bool isInitialized = false;
 
     FileClickCallback fileClickCallback;
+
+    std::chrono::time_point<std::chrono::steady_clock> lastUpdateTime;
+    std::chrono::milliseconds updateInterval{ 1000 }; // Update interval of 1 second
 };
