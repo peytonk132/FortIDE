@@ -1,31 +1,9 @@
-﻿  mainfunc.cpp
+﻿  f_MainMenu.cpp
   Please define _WIN32_WINNT or _WIN32_WINDOWS appropriately. For example:
   - add -D_WIN32_WINNT=0x0601 to the compiler command line; or
   - add _WIN32_WINNT=0x0601 to your project's Preprocessor Definitions.
   Assuming _WIN32_WINNT=0x0601 (i.e. Windows 7 target).
-C:\Users\Peyton\Documents\dev\FortIDE2\mainfunc\mainfunc.cpp(112,57): warning C4267: 'argument': conversion from 'size_t' to '_Ty', possible loss of data
-C:\Users\Peyton\Documents\dev\FortIDE2\mainfunc\mainfunc.cpp(112,57): warning C4267:         with
-C:\Users\Peyton\Documents\dev\FortIDE2\mainfunc\mainfunc.cpp(112,57): warning C4267:         [
-C:\Users\Peyton\Documents\dev\FortIDE2\mainfunc\mainfunc.cpp(112,57): warning C4267:             _Ty=int
-C:\Users\Peyton\Documents\dev\FortIDE2\mainfunc\mainfunc.cpp(112,57): warning C4267:         ]
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\utility(250,16): warning C4267: 'initializing': conversion from 'size_t' to '_Ty1', possible loss of data
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\utility(250,16): warning C4267:         with
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\utility(250,16): warning C4267:         [
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\utility(250,16): warning C4267:             _Ty1=const int
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\utility(250,16): warning C4267:         ]
-  (compiling source file 'mainfunc/mainfunc.cpp')
-  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\utility(250,16):
-  the template instantiation context (the oldest one first) is
-  	C:\Users\Peyton\Documents\dev\FortIDE2\mainfunc\mainfunc.cpp(118,40):
-  	see reference to function template instantiation 'std::pair<const int,std::string>::pair<size_t,const char(&)[31],0>(_Other1 &&,_Other2) noexcept(false)' being compiled
-          with
-          [
-              _Other1=size_t,
-              _Other2=const char (&)[31]
-          ]
-  		C:\Users\Peyton\Documents\dev\FortIDE2\mainfunc\mainfunc.cpp(118,39):
-  		see the first reference to 'std::pair<const int,std::string>::pair' in 'detectFortranErrors'
-  
+C:\Users\Peyton\Documents\dev\FortIDE2\mainfunc\f_MainMenu.cpp(28,38): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
   FortIDE.vcxproj -> C:\Users\Peyton\Documents\dev\FortIDE2\x64\Debug\FortIDE.exe
   'pwsh.exe' is not recognized as an internal or external command,
   operable program or batch file.

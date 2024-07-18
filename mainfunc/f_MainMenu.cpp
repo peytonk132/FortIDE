@@ -42,7 +42,7 @@ int f_MainMenu::startMenu() {
         ImGui::Text("Enter the name for your Project.:");
         ImGui::InputText("##", buf, sizeof(buf), NULL, NULL);
 
-        if (ImGui::IsKeyPressed(ImGuiKey_Enter))
+        if (ImGui::IsKeyReleased(ImGuiKey_Enter))
         {
             nfdchar_t* wdPath = NULL;
             nfdresult_t result = NFD_PickFolder(NULL, &wdPath);
