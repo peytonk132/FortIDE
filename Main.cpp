@@ -1,3 +1,5 @@
+//#pragma comment(linker, "/SUBSYSTEM:windows /ENTRY:mainCRTStartup")
+
 #include "imgui.h"
 #include "imgui-SFML.h"
 #include "mainfunc/nfd.h"

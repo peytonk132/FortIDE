@@ -151,6 +151,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="mainfunc\Config.cpp" />
     <ClCompile Include="mainfunc\FileTree\FileTree.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="mainfunc\f_MainMenu.cpp" />
@@ -163,6 +164,7 @@
   <ItemGroup>
     <ClInclude Include="cmdPrompt\imgui_console.h" />
     <ClInclude Include="colorText\TextEditor.h" />
+    <ClInclude Include="mainfunc\Config.h" />
     <ClInclude Include="mainfunc\FileTree\FileTree.h" />
     <ClInclude Include="mainfunc\common.h" />
     <ClInclude Include="mainfunc\ftg_core.h" />

@@ -2,6 +2,7 @@
 #include "boost/process.hpp"
 #include "../colorText/TextEditor.h"
 #include "FileTree/FileTree.h"
+#include "Config.h"
 #include <cstdlib>
 #include <string>
 #include <windows.h>
@@ -28,7 +29,7 @@ char multiPurp::exeName[256]{ '\0' };
 
 std::unique_ptr<std::istream> fileContent; // Unique pointer to hold the file content
 
-
+//TODO: create a way to change the build, test, and run options in the IDE.
 void detectFortranErrors(TextEditor& editor, const char* keywords[], const char* intrinsicFunctions[])
 {
     const char* fortran_keywords[] =
@@ -252,6 +253,8 @@ void multiPurp::loadFont()
 
 int multiPurp::menuBarfunc(TextEditor& editor)
 {
+    Config::SettingsMenu();
+    
     if (ImGui::BeginMainMenuBar())
     {
         static bool showPopup = false;
@@ -354,27 +357,53 @@ void multiPurp::Compilefunc()
         ImGui::OpenPopup("Build Options");
     }
     if (ImGui::BeginPopup("Build Options"))
-	{
-		if (ImGui::Button("Build"))
-		{
-            bp::system("fpm build");
-			ImGui::CloseCurrentPopup();
-		}
+    {
+        if (ImGui::Button("Build"))
+        {
+            try {
+                std::stringstream ss;
+                ss << Config::buildCom; 
+                std::string command = ss.str();
+                bp::system(command);
+                ImGui::Text("Build command executed successfully.");
+            }
+            catch (const std::exception& e) {
+                ImGui::Text("Error executing build: %s", e.what());
+            }
+            ImGui::CloseCurrentPopup();
+        }
 
         if (ImGui::Button("Run"))
         {
-            bp::system("fpm run");
+            try {
+                std::stringstream ss;
+                ss << Config::runCom;
+                std::string command = ss.str();
+                bp::system(command);
+                ImGui::Text("Run command executed successfully.");
+            }
+            catch (const std::exception& e) {
+                ImGui::Text("Error executing build: %s", e.what());
+            }
             ImGui::CloseCurrentPopup();
         }
 
         if (ImGui::Button("Test"))
         {
-			bp::system("fpm test");
-			ImGui::CloseCurrentPopup();
+            try {
+                std::stringstream ss;
+                ss << Config::testCom;
+                std::string command = ss.str();
+                bp::system(command);
+                ImGui::Text("Test command executed successfully.");
+            }
+            catch (const std::exception& e) {
+                ImGui::Text("Error executing build: %s", e.what());
+            }
+            ImGui::CloseCurrentPopup();
         }
 
-		ImGui::EndPopup();
-	}
+        ImGui::EndPopup();
+    }
 }
-
 

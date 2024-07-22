@@ -13,6 +13,7 @@
 class TextEditor
 {
 public:
+	inline static char mSearchBuffer[64]{};
 	enum class PaletteIndex
 	{
 		Default,
@@ -172,14 +173,6 @@ public:
 			: mPreprocChar('#'), mAutoIndentation(true), mTokenize(nullptr), mCaseSensitive(true)
 		{
 		}
-
-		static const LanguageDefinition& CPlusPlus();
-		static const LanguageDefinition& HLSL();
-		static const LanguageDefinition& GLSL();
-		static const LanguageDefinition& C();
-		static const LanguageDefinition& SQL();
-		static const LanguageDefinition& AngelScript();
-		static const LanguageDefinition& Lua();
 		static const LanguageDefinition& Fortran();
 	};
 
@@ -257,6 +250,7 @@ public:
 	void Cut();
 	void Paste();
 	void Delete();
+	void Search();
 
 	bool CanUndo() const;
 	bool CanRedo() const;
