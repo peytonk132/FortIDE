@@ -19,6 +19,7 @@ The goal is to make a light-weight, easy-on-the-eyes, simple and easy to use IDE
 # The libraies I used are:
 * SFML
 * ImGui
+* TinyXML2
 * SFML-ImGui backend
 * Native File Dialog (NFD)
 * Boost
