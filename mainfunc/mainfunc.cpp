@@ -3,19 +3,20 @@
 #include "../colorText/TextEditor.h"
 #include "FileTree/FileTree.h"
 #include "Config.h"
+#include "antlr-runtime/antlr4-runtime.h"
+#include "F90Files/Fortran90Parser.h"
+#include "F90Files/Fortran90Lexer.h"
 #include <cstdlib>
 #include <string>
 #include <windows.h>
 #include <fstream>
 #include <iostream>
 #include <memory>
-#include <nlohmann/json.hpp>
 #include <vector>
 
 using namespace std;
 namespace bp = boost::process;
 namespace fs = boost::filesystem;
-using json = nlohmann::json;
 
 int compileRes;
 ostringstream oss;
@@ -30,142 +31,36 @@ char multiPurp::exeName[256]{ '\0' };
 std::unique_ptr<std::istream> fileContent; // Unique pointer to hold the file content
 
 //TODO: create a way to change the build, test, and run options in the IDE.
-void detectFortranErrors(TextEditor& editor, const char* keywords[], const char* intrinsicFunctions[])
-{
-    const char* fortran_keywords[] =
-    {
-    "program", "end", "subroutine", "function", "if", "else", "then", "do", "while",
-    "call", "return", "write", "read", "integer", "real", "complex", "double",
-    "precision", "logical", "character", "dimension", "allocate", "deallocate",
-    "implicit", "none", "external", "intrinsic", "save", "data", "common",
-    "block", "structure", "union", "record", "pointer", "target", "equivalence",
-    "namelist", "parameter", "intent", "optional", "public", "private", "protected",
-    "module", "contains", "interface", "abstract", "extends", "procedure", "pure",
-    "elemental", "recursive", "result", "bind", "generic", "select", "case", "associate",
-    "class", "associate", "block", "enum", "type", "use", "import",
-    "PROGRAM", "END", "SUBROUTINE", "FUNCTION", "IF", "ELSE", "THEN", "DO", "WHILE",
-    "CALL", "RETURN", "WRITE", "READ", "INTEGER", "REAL", "COMPLEX", "DOUBLE", "PRECISION",
-    "LOGICAL", "CHARACTER", "DIMENSION", "ALLOCATE", "DEALLOCATE", "IMPLICIT", "NONE",
-    "EXTERNAL", "INTRINSIC", "SAVE", "DATA", "COMMON", "BLOCK", "STRUCTURE", "UNION",
-    "RECORD", "POINTER", "TARGET", "EQUIVALENCE", "NAMELIST", "PARAMETER", "INTENT",
-    "OPTIONAL", "PUBLIC", "PRIVATE", "PROTECTED", "MODULE", "CONTAINS", "INTERFACE",
-    "ABSTRACT", "EXTENDS", "PROCEDURE", "PURE", "ELEMENTAL", "RECURSIVE", "RESULT", "BIND",
-    "GENERIC", "SELECT", "CASE", "ASSOCIATE", "CLASS", "ASSOCIATE", "BLOCK", "ENUM", "TYPE",
-    "USE", "IMPORT"
+void detectFortranErrors(TextEditor& editor) {
+    std::string code = editor.GetText();
+    antlr4::ANTLRInputStream inputStream(code);
+    Fortran90Lexer lexer(&inputStream);
+    antlr4::CommonTokenStream tokens(&lexer);
+    Fortran90Parser parser(&tokens);
+
+    // Custom error listener
+    class SyntaxErrorListener : public antlr4::BaseErrorListener {
+    public:
+        SyntaxErrorListener(TextEditor& editor) : editor(editor) {}
+
+        void syntaxError(antlr4::Recognizer* recognizer, antlr4::Token* offendingSymbol,
+            size_t line, size_t charPositionInLine,
+            const std::string& msg, std::exception_ptr e) override {
+            // Assuming SetErrorMarkers expects a map<int, string>
+            std::map<int, std::string> errorMarkers;
+            errorMarkers[static_cast<int>(line)] = msg;  // Cast line to int
+            editor.SetErrorMarkers(errorMarkers);
+        }
+
+    private:
+        TextEditor& editor;
     };
 
-    const char* fortran_intrinsics[] =
-    {
-    "sin", "cos", "tan", "sqrt", "print", "read", "write", "allocatable", "allocate", "assign",
-    "assignment", "block", "data", "call", "case", "character", "common", "complex",
-    "contains", "continue", "cycle", "data", "deallocate", "default", "do", "double",
-    "precision", "else", "else", "if", "elsewhere", "end", "block", "data", "end",
-    "do", "end", "function", "end", "if", "end", "interface", "end", "module",
-    "end", "program", "end", "select", "end", "subroutine", "end", "type",
-    "end", "where", "entry", "equivalence", "exit", "external", "function", "go",
-    "to", "if", "implicit", "in", "inout", "integer", "intent", "interface",
-    "intrinsic", "kind", "len", "logical", "module", "namelist", "nullify", "only",
-    "operator", "optional", "out", "parameter", "pause", "pointer", "private",
-    "program", "public", "real", "recursive", "result", "return", "save", "select",
-    "case", "stop", "subroutine", "target", "then", "type", "type()", "use",
-    "Where", "While"
-    };
+    SyntaxErrorListener errorListener(editor);
+    parser.removeErrorListeners();
+    parser.addErrorListener(&errorListener);
 
-
-
-    auto lines = editor.GetTextLines();
-    TextEditor::ErrorMarkers markers;
-
-    std::vector<int> parenthesisStack;
-    std::vector<int> printStack;
-    bool insideString = false;
-    size_t stringStartLine = 0;
-
-
-
-    for (size_t line_num = 0; line_num < lines.size(); ++line_num)
-    {
-        const auto& line = lines[line_num];
-        std::istringstream iss(line);
-        std::string token;
-
-        for (size_t i = 0; i < line.size(); ++i)
-        {
-            char ch = line[i];
-
-            if (ch == '"')
-            {
-                if (!insideString)
-                {
-                    insideString = true;
-                    stringStartLine = line_num;
-                }
-                else
-                {
-                    insideString = false;
-                }
-            }
-
-            if (!insideString)
-            {
-                if (ch == '(')
-                {
-                    parenthesisStack.push_back(line_num + 1);
-                }
-                else if (ch == ')')
-                {
-                    if (parenthesisStack.empty())
-                    {
-                        markers.insert({ line_num + 1, "Unexpected closing parenthesis" });
-                    }
-                    else
-                    {
-                        parenthesisStack.pop_back();
-                    }
-                }
-            }
-        }
-
-        while (iss >> token)
-        {
-            bool isKeyword = false;
-            bool isIntrinsic = false;
-
-            // Check if token is a keyword
-            for (const char* kw : fortran_keywords)
-            {
-                if (token == kw)
-                {
-                    isKeyword = true;
-                    break;
-                }
-            }
-
-            // Check if token is an intrinsic function
-            for (const char* intr : fortran_intrinsics)
-            {
-                if (token == intr)
-                {
-                    isIntrinsic = true;
-                    break;
-                }
-            }
-        }
-
-        // Check for an unclosed string at the end of the line
-        if (insideString && line_num == lines.size() - 1)
-        {
-            markers.insert({ stringStartLine + 1, "Unclosed string literal" });
-        }
-    }
-
-    while (!parenthesisStack.empty())
-    {
-        markers.insert({ parenthesisStack.back(), "Unclosed opening parenthesis" });
-        parenthesisStack.pop_back();
-    }
-
-    editor.SetErrorMarkers(markers);
+    antlr4::tree::ParseTree* tree = parser.program();
 }
 // Highlighting is done by ImGuiColorTextEdit. The repo: https://github.com/BalazsJako/ImGuiColorTextEdit
 void multiPurp::mainEditor(TextEditor& editor)
@@ -231,7 +126,7 @@ void multiPurp::mainEditor(TextEditor& editor)
 
         // Detect and highlight errors
 
-        detectFortranErrors(editor, fortran_keywords, fortran_intrinsics);
+        detectFortranErrors(editor);
 
         ImGui::End();
     }

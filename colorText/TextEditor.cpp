@@ -3,7 +3,6 @@
 #include <string>
 #include <regex>
 #include <cmath>
-#include <nlohmann/json.hpp>
 #include <fstream>
 #include <string>
 #include <vector>
