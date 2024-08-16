@@ -1,3 +1,4 @@
+#include "Fortran90LexerBase.h"
 
 // Generated from Fortran90Lexer.g4 by ANTLR 4.13.2
 
@@ -1527,7 +1528,7 @@ bool Fortran90Lexer::sempred(RuleContext *context, size_t ruleIndex, size_t pred
 
 bool Fortran90Lexer::COMMENTSempred(antlr4::RuleContext *_localctx, size_t predicateIndex) {
   switch (predicateIndex) {
-    case 0: return this.IsColumnZero();
+    case 0: return this->IsColumnZero();
 
   default:
     break;
@@ -1537,7 +1538,7 @@ bool Fortran90Lexer::COMMENTSempred(antlr4::RuleContext *_localctx, size_t predi
 
 bool Fortran90Lexer::RDCONSempred(antlr4::RuleContext *_localctx, size_t predicateIndex) {
   switch (predicateIndex) {
-    case 1: return  this.VerifyNotOperator() ;
+    case 1: return  this->VerifyNotOperator() ;
 
   default:
     break;

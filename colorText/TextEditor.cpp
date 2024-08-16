@@ -7,7 +7,6 @@
 #include <string>
 #include <vector>
 #include <iostream>
-using json = nlohmann::json;
 
 #include "TextEditor.h"
 

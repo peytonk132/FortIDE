@@ -7,7 +7,7 @@
 #include "mainfunc/f_MainMenu.h"
 #include "colorText/TextEditor.h"
 #include "mainfunc/FileTree/FileTree.h"
-#include "mainfunc/searchParser/Parser.h"
+#include "mainfunc/searchParser/s_Parser.h"
 
 #include <fstream>
 #include <memory>

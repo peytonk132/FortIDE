@@ -36,7 +36,7 @@
     <ClCompile Include="mainfunc\FileTree\FileTree.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="mainfunc\searchParser\Parser.cpp">
+    <ClCompile Include="mainfunc\searchParser\s_Parser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="mainfunc\Config.cpp">
@@ -468,6 +468,9 @@
     <ClCompile Include="mainfunc\F90Files\Fortran90ParserVisitor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="mainfunc\F90Files\Fortran90LexerBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mainfunc\mainfunc.h">
@@ -494,7 +497,7 @@
     <ClInclude Include="cmdPrompt\imgui_console.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="mainfunc\searchParser\Parser.h">
+    <ClInclude Include="mainfunc\searchParser\s_Parser.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="colorText\TextEditor.h">
@@ -1034,8 +1037,14 @@
     <ClInclude Include="mainfunc\F90Files\Fortran90ParserVisitor.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="mainfunc\F90Files\Fortran90LexerBase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="jsons\fortran_database.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="antlr-lib\antlr4-runtime.lib" />
   </ItemGroup>
 </Project>

@@ -73,8 +73,8 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);ANTLR4CPP_STATIC</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>C:\Users\Peyton\Downloads\Compressed\nativefiledialog-devel\nativefiledialog-devel\src;$(SolutionDir)mainfunc\antlr-runtime\;$(SolutionDir)IC\include\csys\;$(SolutionDir)IC\include\imgui_console\;C:\Users\Peyton\Documents\dev\FortIDE2\Includes;</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
@@ -93,8 +93,8 @@
       <WarningLevel>Level3</WarningLevel>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions);ANTLR4CPP_STATIC</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>C:\Users\Peyton\Downloads\Compressed\nativefiledialog-devel\nativefiledialog-devel\src;$(SolutionDir)mainfunc\antlr-runtime\;$(SolutionDir)colorText;$(SolutionDir)IC\include\csys\;C:\Users\Peyton\Documents\dev\FortIDE2\NFD\src\include;C:\Users\Peyton\Downloads\Compressed\nativefiledialog-devel\nativefiledialog-devel\src\include;</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
@@ -113,8 +113,8 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS;ANTLR4CPP_STATIC</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalIncludeDirectories>C:\Users\Peyton\Downloads\Compressed\nativefiledialog-devel\nativefiledialog-devel\src;$(SolutionDir)mainfunc\antlr-runtime\;$(SolutionDir)IC\include\csys\;$(SolutionDir)IC\include\imgui_console\;C:\Users\Peyton\Documents\dev\FortIDE2\Includes;$(SolutionDir)FortIDE2\Includes;C:\Users\Peyton\Documents\dev\FortIDE2\mainfunc;C:\Users\Peyton\Documents\dev\FortIDE2\NFD\src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -133,8 +133,8 @@
       <WarningLevel>Level3</WarningLevel>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS;ANTLR4CPP_STATIC</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalIncludeDirectories>C:\Users\Peyton\Downloads\Compressed\nativefiledialog-devel\nativefiledialog-devel\src;$(SolutionDir)mainfunc\antlr-runtime\;$(SolutionDir)colorText;$(SolutionDir)IC\include\csys\;C:\Users\Peyton\Documents\dev\FortIDE2\NFD\src\include;C:\Users\Peyton\Downloads\Compressed\nativefiledialog-devel\nativefiledialog-devel\src\include;$(SolutionDir)FortIDE2\Includes;$(SolutionDir)Includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -289,6 +289,7 @@
     <ClCompile Include="mainfunc\antlr-runtime\WritableToken.cpp" />
     <ClCompile Include="mainfunc\Config.cpp" />
     <ClCompile Include="mainfunc\F90Files\Fortran90Lexer.cpp" />
+    <ClCompile Include="mainfunc\F90Files\Fortran90LexerBase.cpp" />
     <ClCompile Include="mainfunc\F90Files\Fortran90Parser.cpp" />
     <ClCompile Include="mainfunc\F90Files\Fortran90ParserBaseListener.cpp" />
     <ClCompile Include="mainfunc\F90Files\Fortran90ParserBaseVisitor.cpp" />
@@ -301,7 +302,7 @@
     <ClCompile Include="mainfunc\nfd_common.c" />
     <ClCompile Include="mainfunc\nfd_win.cpp" />
     <ClCompile Include="colorText\TextEditor.cpp" />
-    <ClCompile Include="mainfunc\searchParser\Parser.cpp" />
+    <ClCompile Include="mainfunc\searchParser\s_Parser.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cmdPrompt\imgui_console.h" />
@@ -479,6 +480,7 @@
     <ClInclude Include="mainfunc\antlr-runtime\WritableToken.h" />
     <ClInclude Include="mainfunc\Config.h" />
     <ClInclude Include="mainfunc\F90Files\Fortran90Lexer.h" />
+    <ClInclude Include="mainfunc\F90Files\Fortran90LexerBase.h" />
     <ClInclude Include="mainfunc\F90Files\Fortran90Parser.h" />
     <ClInclude Include="mainfunc\F90Files\Fortran90ParserBaseListener.h" />
     <ClInclude Include="mainfunc\F90Files\Fortran90ParserBaseVisitor.h" />
@@ -491,10 +493,13 @@
     <ClInclude Include="mainfunc\mainfunc.h" />
     <ClInclude Include="mainfunc\nfd.h" />
     <ClInclude Include="mainfunc\nfd_common.h" />
-    <ClInclude Include="mainfunc\searchParser\Parser.h" />
+    <ClInclude Include="mainfunc\searchParser\s_Parser.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="jsons\fortran_database.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="antlr-lib\antlr4-runtime.lib" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
