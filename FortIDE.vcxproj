@@ -74,7 +74,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>false</SDLCheck>
-      <PreprocessorDefinitions>_WIN32_WINNT=0x0601</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_WIN32_WINNT=0x0601;_UNICODE;UNICODE</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>C:\Users\Peyton\Downloads\Compressed\nativefiledialog-devel\nativefiledialog-devel\src;C:\Users\Peyton\Documents\antlr4\runtime\Cpp\runtime\src;$(SolutionDir)IC\include\csys\;$(SolutionDir)IC\include\imgui_console\;C:\Users\Peyton\Documents\dev\FortIDE2\Includes;</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
@@ -83,8 +83,8 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)bin\vs-2022\Debug DLL\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>%(AdditionalDependencies);;antlr-runtime.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)bin\vs-2022\x64\Debug DLL\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies);antlr4-runtime.lib</AdditionalDependencies>
       <EntryPointSymbol>
       </EntryPointSymbol>
     </Link>
@@ -95,7 +95,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>false</SDLCheck>
-      <PreprocessorDefinitions>_WIN32_WINNT=0x0601</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_WIN32_WINNT=0x0601;_UNICODE;UNICODE</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>C:\Users\Peyton\Downloads\Compressed\nativefiledialog-devel\nativefiledialog-devel\src;C:\Users\Peyton\Documents\antlr4\runtime\Cpp\runtime\src;$(SolutionDir)colorText;$(SolutionDir)IC\include\csys\;C:\Users\Peyton\Documents\dev\FortIDE2\NFD\src\include;C:\Users\Peyton\Downloads\Compressed\nativefiledialog-devel\nativefiledialog-devel\src\include;</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
@@ -106,8 +106,8 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)bin\vs-2022\Debug DLL\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>%(AdditionalDependencies);;antlr-runtime.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)bin\vs-2022\x64\Debug DLL\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies);antlr4-runtime.lib</AdditionalDependencies>
       <EntryPointSymbol>
       </EntryPointSymbol>
     </Link>
@@ -116,7 +116,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>false</SDLCheck>
-      <PreprocessorDefinitions>_WIN32_WINNT=0x0601</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_WIN32_WINNT=0x0601;_UNICODE;UNICODE</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalIncludeDirectories>C:\Users\Peyton\Downloads\Compressed\nativefiledialog-devel\nativefiledialog-devel\src;C:\Users\Peyton\Documents\antlr4\runtime\Cpp\runtime\src;$(SolutionDir)IC\include\csys\;$(SolutionDir)IC\include\imgui_console\;C:\Users\Peyton\Documents\dev\FortIDE2\Includes;$(SolutionDir)FortIDE2\Includes;C:\Users\Peyton\Documents\dev\FortIDE2\mainfunc;C:\Users\Peyton\Documents\dev\FortIDE2\NFD\src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -125,8 +125,8 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)bin\vs-2022\Debug DLL\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>%(AdditionalDependencies);;antlr-runtime.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)bin\vs-2022\x64\Debug DLL\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies);antlr4-runtime.lib</AdditionalDependencies>
       <EntryPointSymbol>
       </EntryPointSymbol>
     </Link>
@@ -137,7 +137,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>false</SDLCheck>
-      <PreprocessorDefinitions>_WIN32_WINNT=0x0601</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_WIN32_WINNT=0x0601;_UNICODE;UNICODE</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalIncludeDirectories>C:\Users\Peyton\Downloads\Compressed\nativefiledialog-devel\nativefiledialog-devel\src;C:\Users\Peyton\Documents\antlr4\runtime\Cpp\runtime\src;$(SolutionDir)colorText;$(SolutionDir)IC\include\csys\;C:\Users\Peyton\Documents\dev\FortIDE2\NFD\src\include;C:\Users\Peyton\Downloads\Compressed\nativefiledialog-devel\nativefiledialog-devel\src\include;$(SolutionDir)FortIDE2\Includes;$(SolutionDir)Includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -148,14 +148,15 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)bin\vs-2022\Debug DLL\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>%(AdditionalDependencies);;antlr-runtime.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)bin\vs-2022\x64\Debug DLL\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies);antlr4-runtime.lib</AdditionalDependencies>
       <EntryPointSymbol>
       </EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="mainfunc\Config.cpp" />
+    <ClCompile Include="mainfunc\F90Files\ErrorListener.cpp" />
     <ClCompile Include="mainfunc\F90Files\Fortran90Lexer.cpp" />
     <ClCompile Include="mainfunc\F90Files\Fortran90LexerBase.cpp" />
     <ClCompile Include="mainfunc\F90Files\Fortran90Parser.cpp" />
@@ -176,6 +177,7 @@
     <ClInclude Include="cmdPrompt\imgui_console.h" />
     <ClInclude Include="colorText\TextEditor.h" />
     <ClInclude Include="mainfunc\Config.h" />
+    <ClInclude Include="mainfunc\F90Files\ErrorListener.h" />
     <ClInclude Include="mainfunc\F90Files\Fortran90Lexer.h" />
     <ClInclude Include="mainfunc\F90Files\Fortran90LexerBase.h" />
     <ClInclude Include="mainfunc\F90Files\Fortran90Parser.h" />

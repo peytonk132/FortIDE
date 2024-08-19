@@ -3,9 +3,9 @@
 #include "../colorText/TextEditor.h"
 #include "FileTree/FileTree.h"
 #include "Config.h"
-#include "antlr4-runtime.h"
-#include "F90Files/Fortran90Parser.h"
-#include "F90Files/Fortran90Lexer.h"
+//#include "antlr4-runtime.h"
+//#include "F90Files/Fortran90Parser.h"
+//#include "F90Files/Fortran90Lexer.h"
 #include <cstdlib>
 #include <string>
 #include <windows.h>

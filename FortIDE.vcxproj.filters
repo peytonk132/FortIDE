@@ -63,6 +63,9 @@
     <ClCompile Include="mainfunc\F90Files\Fortran90LexerBase.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="mainfunc\F90Files\ErrorListener.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mainfunc\mainfunc.h">
@@ -117,6 +120,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="mainfunc\F90Files\Fortran90LexerBase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mainfunc\F90Files\ErrorListener.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
