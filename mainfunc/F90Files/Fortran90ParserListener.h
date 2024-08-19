@@ -4,7 +4,7 @@
 #pragma once
 
 
-#include "../antlr-runtime/antlr4-runtime.h"
+#include "antlr4-runtime.h"
 #include "Fortran90Parser.h"
 
 

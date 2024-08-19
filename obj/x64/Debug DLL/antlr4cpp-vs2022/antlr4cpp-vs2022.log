@@ -1,0 +1,180 @@
+﻿  ANTLRErrorListener.cpp
+  ANTLRErrorStrategy.cpp
+  ANTLRFileStream.cpp
+  ANTLRInputStream.cpp
+  ActionTransition.cpp
+  AmbiguityInfo.cpp
+  ArrayPredictionContext.cpp
+  ATN.cpp
+  ATNConfig.cpp
+  ATNConfigSet.cpp
+  ATNDeserializationOptions.cpp
+  ATNDeserializer.cpp
+  ATNSimulator.cpp
+  ATNState.cpp
+  AtomTransition.cpp
+  ContextSensitivityInfo.cpp
+  DecisionEventInfo.cpp
+  DecisionInfo.cpp
+  DecisionState.cpp
+  EpsilonTransition.cpp
+  ErrorInfo.cpp
+  LexerAction.cpp
+  LexerActionExecutor.cpp
+  LexerATNConfig.cpp
+  LexerATNSimulator.cpp
+  LexerChannelAction.cpp
+  LexerCustomAction.cpp
+  LexerIndexedCustomAction.cpp
+  LexerModeAction.cpp
+  LexerMoreAction.cpp
+  LexerPopModeAction.cpp
+  LexerPushModeAction.cpp
+  LexerSkipAction.cpp
+  LexerTypeAction.cpp
+  LL1Analyzer.cpp
+  LookaheadEventInfo.cpp
+  NotSetTransition.cpp
+  OrderedATNConfigSet.cpp
+  ParseInfo.cpp
+  ParserATNSimulator.cpp
+  PrecedencePredicateTransition.cpp
+  PredicateEvalInfo.cpp
+  PredicateTransition.cpp
+  PredictionContext.cpp
+  PredictionContextCache.cpp
+  PredictionContextMergeCache.cpp
+  PredictionMode.cpp
+  ProfilingATNSimulator.cpp
+  RangeTransition.cpp
+  RuleTransition.cpp
+  SemanticContext.cpp
+  SetTransition.cpp
+  SingletonPredictionContext.cpp
+  StarLoopbackState.cpp
+  Transition.cpp
+  WildcardTransition.cpp
+  BailErrorStrategy.cpp
+  BaseErrorListener.cpp
+  BufferedTokenStream.cpp
+  CharStream.cpp
+  CommonToken.cpp
+  CommonTokenFactory.cpp
+  CommonTokenStream.cpp
+  ConsoleErrorListener.cpp
+  DefaultErrorStrategy.cpp
+  DFA.cpp
+  DFASerializer.cpp
+  DFAState.cpp
+  LexerDFASerializer.cpp
+  DiagnosticErrorListener.cpp
+  Exceptions.cpp
+  FailedPredicateException.cpp
+  InputMismatchException.cpp
+  Synchronization.cpp
+  InterpreterRuleContext.cpp
+  IntStream.cpp
+  Lexer.cpp
+  LexerInterpreter.cpp
+  LexerNoViableAltException.cpp
+  ListTokenSource.cpp
+  InterpreterDataReader.cpp
+  Interval.cpp
+  IntervalSet.cpp
+  MurmurHash.cpp
+  Predicate.cpp
+  NoViableAltException.cpp
+  Parser.cpp
+  ParserInterpreter.cpp
+  ParserRuleContext.cpp
+  ProxyErrorListener.cpp
+  RecognitionException.cpp
+  Recognizer.cpp
+  RuleContext.cpp
+  RuleContextWithAltNum.cpp
+  RuntimeMetaData.cpp
+  Any.cpp
+  Arrays.cpp
+  CPPUtils.cpp
+  StringUtils.cpp
+  Utf8.cpp
+  Token.cpp
+  TokenSource.cpp
+  TokenStream.cpp
+  TokenStreamRewriter.cpp
+  ErrorNodeImpl.cpp
+  IterativeParseTreeWalker.cpp
+  ParseTree.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(247,16): warning C4244: 'initializing': conversion from '_Ty' to '_Ty1', possible loss of data
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(247,16): warning C4244:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(247,16): warning C4244:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(247,16): warning C4244:             _Ty=int
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(247,16): warning C4244:         ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(247,16): warning C4244:         and
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(247,16): warning C4244:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(247,16): warning C4244:             _Ty1=uint8_t
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(247,16): warning C4244:         ]
+  (compiling source file 'src/support/Utf8.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(247,16):
+      the template instantiation context (the oldest one first) is
+          C:\Users\Peyton\Documents\antlr4\runtime\Cpp\runtime\src\support\Utf8.cpp(95,20):
+          see reference to function template instantiation 'std::pair<uint8_t,uint8_t>::pair<int,const uint8_t&,0>(_Other1 &&,_Other2) noexcept' being compiled
+          with
+          [
+              _Other1=int,
+              _Other2=const uint8_t &
+          ]
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(247,54): warning C4244: 'initializing': conversion from '_Ty' to '_Ty2', possible loss of data
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(247,54): warning C4244:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(247,54): warning C4244:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(247,54): warning C4244:             _Ty=int
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(247,54): warning C4244:         ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(247,54): warning C4244:         and
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(247,54): warning C4244:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(247,54): warning C4244:             _Ty2=uint8_t
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(247,54): warning C4244:         ]
+  (compiling source file 'src/support/Utf8.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(247,54):
+      the template instantiation context (the oldest one first) is
+          C:\Users\Peyton\Documents\antlr4\runtime\Cpp\runtime\src\support\Utf8.cpp(95,34):
+          see reference to function template instantiation 'std::pair<uint8_t,uint8_t>::pair<const uint8_t&,int,0>(_Other1,_Other2 &&) noexcept' being compiled
+          with
+          [
+              _Other1=const uint8_t &,
+              _Other2=int
+          ]
+  
+  ParseTreeListener.cpp
+  ParseTreeVisitor.cpp
+  ParseTreeWalker.cpp
+  Chunk.cpp
+  ParseTreeMatch.cpp
+  ParseTreePattern.cpp
+  ParseTreePatternMatcher.cpp
+  RuleTagToken.cpp
+  TagChunk.cpp
+  TextChunk.cpp
+  TokenTagToken.cpp
+  TerminalNodeImpl.cpp
+  Trees.cpp
+  XPath.cpp
+  XPathElement.cpp
+  XPathLexer.cpp
+  XPathLexerErrorListener.cpp
+  XPathRuleAnywhereElement.cpp
+  XPathRuleElement.cpp
+  XPathTokenAnywhereElement.cpp
+  XPathTokenElement.cpp
+  XPathWildcardAnywhereElement.cpp
+  XPathWildcardElement.cpp
+  UnbufferedCharStream.cpp
+C:\Users\Peyton\Documents\antlr4\runtime\Cpp\runtime\src\tree\xpath\XPathLexer.cpp(158,48): warning C4100: 'context': unreferenced formal parameter
+  UnbufferedTokenStream.cpp
+  Vocabulary.cpp
+  WritableToken.cpp
+C:\Users\Peyton\Documents\antlr4\runtime\Cpp\runtime\src\Vocabulary.cpp(12,30): warning C4996: 'antlr4::dfa::Vocabulary::EMPTY_VOCABULARY': Use the default constructor of Vocabulary instead.
+     Creating library C:\Users\Peyton\Documents\dev\FortIDE\x64\Debug\antlr4-runtime.lib and object C:\Users\Peyton\Documents\dev\FortIDE\x64\Debug\antlr4-runtime.exp
+  antlr4cpp-vs2022.vcxproj -> C:\Users\Peyton\Documents\dev\FortIDE\x64\Debug\antlr4-runtime.dll
+  'pwsh.exe' is not recognized as an internal or external command,
+  operable program or batch file.

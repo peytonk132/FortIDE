@@ -3,7 +3,7 @@
 #include "../colorText/TextEditor.h"
 #include "FileTree/FileTree.h"
 #include "Config.h"
-#include "antlr-runtime/antlr4-runtime.h"
+#include "antlr4-runtime.h"
 #include "F90Files/Fortran90Parser.h"
 #include "F90Files/Fortran90Lexer.h"
 #include <cstdlib>
@@ -31,36 +31,9 @@ char multiPurp::exeName[256]{ '\0' };
 std::unique_ptr<std::istream> fileContent; // Unique pointer to hold the file content
 
 //TODO: create a way to change the build, test, and run options in the IDE.
-void detectFortranErrors(TextEditor& editor) {
-    std::string code = editor.GetText();
-    antlr4::ANTLRInputStream inputStream(code);
-    Fortran90Lexer lexer(&inputStream);
-    antlr4::CommonTokenStream tokens(&lexer);
-    Fortran90Parser parser(&tokens);
-
-    // Custom error listener
-    class SyntaxErrorListener : public antlr4::BaseErrorListener {
-    public:
-        SyntaxErrorListener(TextEditor& editor) : editor(editor) {}
-
-        void syntaxError(antlr4::Recognizer* recognizer, antlr4::Token* offendingSymbol,
-            size_t line, size_t charPositionInLine,
-            const std::string& msg, std::exception_ptr e) override {
-            // Assuming SetErrorMarkers expects a map<int, string>
-            std::map<int, std::string> errorMarkers;
-            errorMarkers[static_cast<int>(line)] = msg;  // Cast line to int
-            editor.SetErrorMarkers(errorMarkers);
-        }
-
-    private:
-        TextEditor& editor;
-    };
-
-    SyntaxErrorListener errorListener(editor);
-    parser.removeErrorListeners();
-    parser.addErrorListener(&errorListener);
-
-    antlr4::tree::ParseTree* tree = parser.program();
+void detectFortranErrors(TextEditor& editor) 
+{
+    printf("Hello World");
 }
 // Highlighting is done by ImGuiColorTextEdit. The repo: https://github.com/BalazsJako/ImGuiColorTextEdit
 void multiPurp::mainEditor(TextEditor& editor)

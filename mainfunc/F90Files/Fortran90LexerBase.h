@@ -1,7 +1,7 @@
 #ifndef PLSQLLEXERBASE_H
 #define PLSQLLEXERBASE_H
 
-#include "../antlr-runtime/antlr4-runtime.h"
+#include "antlr4-runtime.h"
 
 class Fortran90LexerBase : public antlr4::Lexer
 {
