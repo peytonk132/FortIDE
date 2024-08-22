@@ -66,6 +66,9 @@
     <ClCompile Include="mainfunc\F90Files\ErrorListener.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="mainfunc\c_Parser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mainfunc\mainfunc.h">
@@ -123,6 +126,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="mainfunc\F90Files\ErrorListener.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mainfunc\c_Parser.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

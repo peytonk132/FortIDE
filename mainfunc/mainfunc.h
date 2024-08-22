@@ -21,9 +21,9 @@ class multiPurp
 {
 public:
     static char buf[2048]; // Declaration of buf as a static member variable
-    static char ftcbuf[256];
-    static char buildDir[256];
-    static char exeName[256];
+    //static char ftcbuf[256];
+    //static char buildDir[256];
+    //static char exeName[256];
     nfdchar_t* outPathBuf; // Define outPathBuf as a member variable
     nfdchar_t* settingsBuf; // Define settingsBuf as a member variable
     nfdchar_t* buildPath;

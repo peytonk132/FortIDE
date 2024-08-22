@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Peyton\Documents\antlr4\runtime\Cpp\runtime\src\atn\</FILEPATH>
+      <FILENAME>PredictionContext.cpp</FILENAME>
+      <LINE>133</LINE>
+      <COLUMN>19</COLUMN>
+    </SFA>
+    <DEFECTCODE>26439</DEFECTCODE>
+    <DESCRIPTION>This kind of function should not throw. Declare it 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>antlr4::atn::PredictionContext::{ctor}</FUNCTION>
+    <DECORATED>??0PredictionContext@atn@antlr4@@IEAA@$$QEAV012@@Z</DECORATED>
+    <FUNCLINE>133</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>

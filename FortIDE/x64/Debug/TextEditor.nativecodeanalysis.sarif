@@ -1,0 +1,59 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.41.34120.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/colortext/texteditor.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "sha-256": "8fca7b623953edce92a473761104337f2e98ae4a23f4d7e8686166843619cb17"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/colortext/texteditor.h"
+          },
+          "hashes": {
+            "sha-256": "fee10d0abe73906d2831b5aee24ac727fe1c5b73302085151f0e263ffdf198c7"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/imgui/imgui.h"
+          },
+          "hashes": {
+            "sha-256": "bee76cd4b4f5212963757c70411de22ad7e1d024aa7e3d5b3e76849a02d2f17b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/imgui/imconfig.h"
+          },
+          "hashes": {
+            "sha-256": "ac21980510fd3d7e04e7ece5d49bd0c0b676db59bc469de580817c154d9a7c77"
+          }
+        }
+      ]
+    }
+  ]
+}

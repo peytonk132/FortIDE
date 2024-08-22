@@ -76,15 +76,15 @@
       <SDLCheck>false</SDLCheck>
       <PreprocessorDefinitions>_WIN32_WINNT=0x0601;_UNICODE;UNICODE</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Peyton\Downloads\Compressed\nativefiledialog-devel\nativefiledialog-devel\src;C:\Users\Peyton\Documents\antlr4\runtime\Cpp\runtime\src;$(SolutionDir)IC\include\csys\;$(SolutionDir)IC\include\imgui_console\;C:\Users\Peyton\Documents\dev\FortIDE2\Includes;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)deps\;$(SolutionDir)deps\imgui-sfml;$(SolutionDir)deps\SFML;$(SolutionDir)deps\imgui;$(SolutionDir)deps\antlr4\runtime\Cpp\runtime\src;$(SolutionDir)IC\include\csys\;$(SolutionDir)IC\include\imgui_console\;C:\Users\Peyton\Documents\dev\FortIDE2\Includes;</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <DisableSpecificWarnings>4275;4251</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)bin\vs-2022\x64\Debug DLL\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>%(AdditionalDependencies);antlr4-runtime.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)deps\SFML\lib\Debug;$(SolutionDir)bin\vs-2022\x64\Debug DLL\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies);antlr4-runtime.lib;sfml-audio-d.lib;sfml-graphics-d.lib;sfml-main-d.lib;sfml-network-d.lib;sfml-system-d.lib;sfml-window-d.lib</AdditionalDependencies>
       <EntryPointSymbol>
       </EntryPointSymbol>
     </Link>
@@ -97,7 +97,7 @@
       <SDLCheck>false</SDLCheck>
       <PreprocessorDefinitions>_WIN32_WINNT=0x0601;_UNICODE;UNICODE</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Peyton\Downloads\Compressed\nativefiledialog-devel\nativefiledialog-devel\src;C:\Users\Peyton\Documents\antlr4\runtime\Cpp\runtime\src;$(SolutionDir)colorText;$(SolutionDir)IC\include\csys\;C:\Users\Peyton\Documents\dev\FortIDE2\NFD\src\include;C:\Users\Peyton\Downloads\Compressed\nativefiledialog-devel\nativefiledialog-devel\src\include;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)deps\;$(SolutionDir)deps\imgui-sfml;$(SolutionDir)deps\SFML;$(SolutionDir)deps\imgui;$(SolutionDir)deps\antlr4\runtime\Cpp\runtime\src;$(SolutionDir)colorText;$(SolutionDir)IC\include\csys\;C:\Users\Peyton\Documents\dev\FortIDE2\NFD\src\include;C:\Users\Peyton\Downloads\Compressed\nativefiledialog-devel\nativefiledialog-devel\src\include;</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <DisableSpecificWarnings>4275;4251</DisableSpecificWarnings>
     </ClCompile>
@@ -106,8 +106,8 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)bin\vs-2022\x64\Debug DLL\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>%(AdditionalDependencies);antlr4-runtime.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)deps\SFML\lib\Debug;$(SolutionDir)bin\vs-2022\x64\Debug DLL\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies);antlr4-runtime.lib;sfml-audio-d.lib;sfml-graphics-d.lib;sfml-main-d.lib;sfml-network-d.lib;sfml-system-d.lib;sfml-window-d.lib</AdditionalDependencies>
       <EntryPointSymbol>
       </EntryPointSymbol>
     </Link>
@@ -119,14 +119,14 @@
       <PreprocessorDefinitions>_WIN32_WINNT=0x0601;_UNICODE;UNICODE</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>C:\Users\Peyton\Downloads\Compressed\nativefiledialog-devel\nativefiledialog-devel\src;C:\Users\Peyton\Documents\antlr4\runtime\Cpp\runtime\src;$(SolutionDir)IC\include\csys\;$(SolutionDir)IC\include\imgui_console\;C:\Users\Peyton\Documents\dev\FortIDE2\Includes;$(SolutionDir)FortIDE2\Includes;C:\Users\Peyton\Documents\dev\FortIDE2\mainfunc;C:\Users\Peyton\Documents\dev\FortIDE2\NFD\src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)deps\;$(SolutionDir)deps\imgui-sfml;$(SolutionDir)deps\SFML;$(SolutionDir)deps\imgui;$(SolutionDir)deps\antlr4\runtime\Cpp\runtime\src;$(SolutionDir)IC\include\csys\;$(SolutionDir)IC\include\imgui_console\;C:\Users\Peyton\Documents\dev\FortIDE2\Includes;$(SolutionDir)FortIDE2\Includes;C:\Users\Peyton\Documents\dev\FortIDE2\mainfunc;C:\Users\Peyton\Documents\dev\FortIDE2\NFD\src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4275;4251</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)bin\vs-2022\x64\Debug DLL\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>%(AdditionalDependencies);antlr4-runtime.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)deps\SFML\lib\Debug;$(SolutionDir)bin\vs-2022\x64\Debug DLL\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies);antlr4-runtime.lib;sfml-audio-d.lib;sfml-graphics-d.lib;sfml-main-d.lib;sfml-network-d.lib;sfml-system-d.lib;sfml-window-d.lib</AdditionalDependencies>
       <EntryPointSymbol>
       </EntryPointSymbol>
     </Link>
@@ -140,7 +140,7 @@
       <PreprocessorDefinitions>_WIN32_WINNT=0x0601;_UNICODE;UNICODE</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>C:\Users\Peyton\Downloads\Compressed\nativefiledialog-devel\nativefiledialog-devel\src;C:\Users\Peyton\Documents\antlr4\runtime\Cpp\runtime\src;$(SolutionDir)colorText;$(SolutionDir)IC\include\csys\;C:\Users\Peyton\Documents\dev\FortIDE2\NFD\src\include;C:\Users\Peyton\Downloads\Compressed\nativefiledialog-devel\nativefiledialog-devel\src\include;$(SolutionDir)FortIDE2\Includes;$(SolutionDir)Includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)deps\;$(SolutionDir)deps\imgui-sfml;$(SolutionDir)deps\SFML;$(SolutionDir)deps\imgui;$(SolutionDir)deps\antlr4\runtime\Cpp\runtime\src;$(SolutionDir)colorText;$(SolutionDir)IC\include\csys\;C:\Users\Peyton\Documents\dev\FortIDE2\NFD\src\include;C:\Users\Peyton\Downloads\Compressed\nativefiledialog-devel\nativefiledialog-devel\src\include;$(SolutionDir)FortIDE2\Includes;$(SolutionDir)Includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4275;4251</DisableSpecificWarnings>
     </ClCompile>
     <Link>
@@ -148,13 +148,14 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)bin\vs-2022\x64\Debug DLL\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>%(AdditionalDependencies);antlr4-runtime.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)deps\SFML\lib\Debug;$(SolutionDir)deps\SFML\lib\Release;$(SolutionDir)bin\vs-2022\x64\Debug DLL\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies);antlr4-runtime.lib;sfml-audio-d.lib;sfml-graphics-d.lib;sfml-main-d.lib;sfml-network-d.lib;sfml-system-d.lib;sfml-window-d.lib;sfml-audio.lib;sfml-graphics.lib;sfml-main.lib;sfml-network.lib;sfml-system.lib;sfml-window.lib</AdditionalDependencies>
       <EntryPointSymbol>
       </EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="mainfunc\c_Parser.cpp" />
     <ClCompile Include="mainfunc\Config.cpp" />
     <ClCompile Include="mainfunc\F90Files\ErrorListener.cpp" />
     <ClCompile Include="mainfunc\F90Files\Fortran90Lexer.cpp" />
@@ -176,6 +177,7 @@
   <ItemGroup>
     <ClInclude Include="cmdPrompt\imgui_console.h" />
     <ClInclude Include="colorText\TextEditor.h" />
+    <ClInclude Include="mainfunc\c_Parser.h" />
     <ClInclude Include="mainfunc\Config.h" />
     <ClInclude Include="mainfunc\F90Files\ErrorListener.h" />
     <ClInclude Include="mainfunc\F90Files\Fortran90Lexer.h" />

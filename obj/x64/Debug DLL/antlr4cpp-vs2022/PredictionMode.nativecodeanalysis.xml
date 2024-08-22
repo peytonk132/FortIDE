@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Peyton\Documents\antlr4\runtime\Cpp\runtime\src\atn\</FILEPATH>
+      <FILENAME>PredictionMode.cpp</FILENAME>
+      <LINE>104</LINE>
+      <COLUMN>24</COLUMN>
+    </SFA>
+    <DEFECTCODE>26817</DEFECTCODE>
+    <DESCRIPTION>Potentially expensive copy of variable 'alts' in range-for loop. Consider making it a const reference (es.71).</DESCRIPTION>
+    <FUNCTION>antlr4::atn::PredictionModeClass::hasNonConflictingAltSet</FUNCTION>
+    <DECORATED>?hasNonConflictingAltSet@PredictionModeClass@atn@antlr4@@SA_NAEBV?$vector@VBitSet@antlrcpp@@V?$allocator@VBitSet@antlrcpp@@@std@@@std@@@Z</DECORATED>
+    <FUNCLINE>103</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Peyton\Documents\antlr4\runtime\Cpp\runtime\src\atn\</FILEPATH>
+      <FILENAME>PredictionMode.cpp</FILENAME>
+      <LINE>113</LINE>
+      <COLUMN>24</COLUMN>
+    </SFA>
+    <DEFECTCODE>26817</DEFECTCODE>
+    <DESCRIPTION>Potentially expensive copy of variable 'alts' in range-for loop. Consider making it a const reference (es.71).</DESCRIPTION>
+    <FUNCTION>antlr4::atn::PredictionModeClass::hasConflictingAltSet</FUNCTION>
+    <DECORATED>?hasConflictingAltSet@PredictionModeClass@atn@antlr4@@SA_NAEBV?$vector@VBitSet@antlrcpp@@V?$allocator@VBitSet@antlrcpp@@@std@@@std@@@Z</DECORATED>
+    <FUNCLINE>112</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>

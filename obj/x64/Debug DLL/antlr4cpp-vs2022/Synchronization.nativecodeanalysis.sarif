@@ -1,0 +1,132 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "C26110",
+          "message": {
+            "text": "Caller failing to hold lock 'this->_impl' before calling function 'std::_Mutex_base::unlock'."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Peyton/Documents/antlr4/runtime/Cpp/runtime/src/internal/Synchronization.cpp"
+                },
+                "region": {
+                  "startLine": 50,
+                  "startColumn": 3,
+                  "endLine": 50,
+                  "endColumn": 15
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "antlr4::internal::Mutex::unlock",
+                  "decoratedName": "?unlock@Mutex@internal@antlr4@@QEAAXXZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Peyton/Documents/antlr4/runtime/Cpp/runtime/src/internal/Synchronization.cpp"
+                          },
+                          "region": {
+                            "startLine": 46,
+                            "startColumn": 13
+                          }
+                        },
+                        "message": {
+                          "text": "'this' is a formal parameter to the current function"
+                        }
+                      },
+                      "kinds": [
+                        "Declaration"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Peyton/Documents/antlr4/runtime/Cpp/runtime/src/internal/Synchronization.cpp"
+                          },
+                          "region": {
+                            "startLine": 50,
+                            "startColumn": 15
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.41.34120.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///C:/Users/Peyton/Documents/antlr4/runtime/Cpp/runtime/src/internal/Synchronization.cpp"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "fdbce6ee6775f41b204adbfbf97e91fe70a0630e3fd24f739dc59ae16e73b2b4"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/internal/synchronization.h"
+          },
+          "hashes": {
+            "sha-256": "b0fd0ca4c7df4819d4d4a961d7688eebc74373a77bdf4d5135f3f7d6b25ffb56"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/antlr4-common.h"
+          },
+          "hashes": {
+            "sha-256": "bc77adfae835ac99cd2aa87ae1e62e78fa05f1e8683357dde17312189d7693dc"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/support/declarations.h"
+          },
+          "hashes": {
+            "sha-256": "3dba7305520ef56646c6ddab2899cbf501f4e8313d4b09c9b5f5f4aaee358a25"
+          }
+        }
+      ]
+    }
+  ]
+}

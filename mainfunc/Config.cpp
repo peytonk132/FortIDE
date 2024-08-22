@@ -17,7 +17,7 @@ void Config::SettingsMenu()
 		if (ImGui::Button("Build Command"))
 		{
 			ImGui::OpenPopup("Build");
-}
+		}
 		if (ImGui::BeginPopup("Build", NULL))
 		{
 			ImGui::InputText("Build Command", Config::buildCom, 256);

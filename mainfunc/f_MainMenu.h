@@ -8,6 +8,7 @@
 #include <iostream>
 #include "nfd.h"
 #include <boost/process.hpp>
+#include <boost/filesystem.hpp>
 
 // Define ProjectSettings structure
 struct ProjectSettings {

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Peyton\Documents\antlr4\runtime\Cpp\runtime\src\internal\</FILEPATH>
+      <FILENAME>Synchronization.cpp</FILENAME>
+      <LINE>50</LINE>
+      <COLUMN>14</COLUMN>
+    </SFA>
+    <DEFECTCODE>26110</DEFECTCODE>
+    <DESCRIPTION>Caller failing to hold lock 'this-&gt;_impl' before calling function 'std::_Mutex_base::unlock'.</DESCRIPTION>
+    <FUNCTION>antlr4::internal::Mutex::unlock</FUNCTION>
+    <DECORATED>?unlock@Mutex@internal@antlr4@@QEAAXXZ</DECORATED>
+    <FUNCLINE>46</FUNCLINE>
+    <PATH>
+      <SFA>
+        <FILEPATH>C:\Users\Peyton\Documents\antlr4\runtime\Cpp\runtime\src\internal\</FILEPATH>
+        <FILENAME>Synchronization.cpp</FILENAME>
+        <LINE>46</LINE>
+        <COLUMN>12</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>Declaration</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'this' is a formal parameter to the current function</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Peyton\Documents\antlr4\runtime\Cpp\runtime\src\internal\</FILEPATH>
+        <FILENAME>Synchronization.cpp</FILENAME>
+        <LINE>50</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+    </PATH>
+  </DEFECT>
+</DEFECTS>

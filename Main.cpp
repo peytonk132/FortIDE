@@ -4,6 +4,7 @@
 #include "imgui-SFML.h"
 #include "mainfunc/nfd.h"
 #include "mainfunc/mainfunc.h"
+//#include "mainfunc/c_Parser.h"
 #include "mainfunc/f_MainMenu.h"
 #include "colorText/TextEditor.h"
 #include "mainfunc/FileTree/FileTree.h"
@@ -162,6 +163,9 @@ int main()
 
         multiPurp teditor;
         teditor.mainEditor(editor);
+        //c_Parser teditor;
+		//teditor.mainEditor(editor);
+
 
         multiPurp t_menuItems;
         t_menuItems.menuBarfunc(editor);

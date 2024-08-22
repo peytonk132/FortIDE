@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Peyton\Documents\antlr4\runtime\Cpp\runtime\src\</FILEPATH>
+      <FILENAME>Parser.cpp</FILENAME>
+      <LINE>627</LINE>
+      <COLUMN>29</COLUMN>
+    </SFA>
+    <DEFECTCODE>6011</DEFECTCODE>
+    <DESCRIPTION>Dereferencing NULL pointer 'interp'. </DESCRIPTION>
+    <FUNCTION>antlr4::Parser::setProfile</FUNCTION>
+    <DECORATED>?setProfile@Parser@antlr4@@QEAAX_N@Z</DECORATED>
+    <FUNCLINE>618</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>C:\Users\Peyton\Documents\antlr4\runtime\Cpp\runtime\src\</FILEPATH>
+        <FILENAME>Parser.cpp</FILENAME>
+        <LINE>619</LINE>
+        <COLUMN>27</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Peyton\Documents\antlr4\runtime\Cpp\runtime\src\</FILEPATH>
+        <FILENAME>Parser.cpp</FILENAME>
+        <LINE>620</LINE>
+        <COLUMN>22</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'interp' may be NULL</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Peyton\Documents\antlr4\runtime\Cpp\runtime\src\</FILEPATH>
+        <FILENAME>Parser.cpp</FILENAME>
+        <LINE>621</LINE>
+        <COLUMN>6</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this branch, (assume 'profile' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Peyton\Documents\antlr4\runtime\Cpp\runtime\src\</FILEPATH>
+        <FILENAME>Parser.cpp</FILENAME>
+        <LINE>625</LINE>
+        <COLUMN>45</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'interp' is an In/Out argument to 'antlrcpp::is' (declared at c:\users\peyton\documents\antlr4\runtime\cpp\runtime\src\support\cpputils.h:44)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Peyton\Documents\antlr4\runtime\Cpp\runtime\src\</FILEPATH>
+        <FILENAME>Parser.cpp</FILENAME>
+        <LINE>625</LINE>
+        <COLUMN>45</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this branch, (assume 'is(interp)')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Peyton\Documents\antlr4\runtime\Cpp\runtime\src\</FILEPATH>
+        <FILENAME>Parser.cpp</FILENAME>
+        <LINE>627</LINE>
+        <COLUMN>29</COLUMN>
+        <KEYEVENT>
+          <ID>5</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'interp' is dereferenced, but may still be NULL</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+</DEFECTS>

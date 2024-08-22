@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Peyton\Documents\antlr4\runtime\Cpp\runtime\src\</FILEPATH>
+      <FILENAME>TokenStreamRewriter.cpp</FILENAME>
+      <LINE>272</LINE>
+      <COLUMN>23</COLUMN>
+    </SFA>
+    <DEFECTCODE>6287</DEFECTCODE>
+    <DESCRIPTION>Redundant code.</DESCRIPTION>
+    <FUNCTION>antlr4::TokenStreamRewriter::getText</FUNCTION>
+    <DECORATED>?getText@TokenStreamRewriter@antlr4@@UEAA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AEBV34@AEBVInterval@misc@2@@Z</DECORATED>
+    <FUNCLINE>259</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>

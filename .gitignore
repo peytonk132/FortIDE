@@ -30,3 +30,13 @@
 *.exe
 *.out
 *.app
+
+# Deps
+antlr4/
+boost/
+boost_1_82_0/
+imgui/
+imgui-sfml/
+json/
+SFML/
+

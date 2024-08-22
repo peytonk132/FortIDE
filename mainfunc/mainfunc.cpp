@@ -2,13 +2,10 @@
 #include "boost/process.hpp"
 #include "../colorText/TextEditor.h"
 #include "FileTree/FileTree.h"
+#include "c_Parser.h"
 #include "Config.h"
-//#include "antlr4-runtime.h"
-//#include "F90Files/Fortran90Parser.h"
-//#include "F90Files/Fortran90Lexer.h"
 #include <cstdlib>
 #include <string>
-#include <windows.h>
 #include <fstream>
 #include <iostream>
 #include <memory>
@@ -24,17 +21,13 @@ ostringstream setStr;
 FileTree fileObj;
 
 char multiPurp::buf[2048]{ '\0' };
-char multiPurp::ftcbuf[256]{ '\0' };
-char multiPurp::buildDir[256]{ '\0' };
-char multiPurp::exeName[256]{ '\0' };
+//char multiPurp::ftcbuf[256]{ '\0' };
+//char multiPurp::buildDir[256]{ '\0' };
+//char multiPurp::exeName[256]{ '\0' };
 
 std::unique_ptr<std::istream> fileContent; // Unique pointer to hold the file content
 
-//TODO: create a way to change the build, test, and run options in the IDE.
-void detectFortranErrors(TextEditor& editor) 
-{
-    printf("Hello World");
-}
+//TODO: Add error detection
 // Highlighting is done by ImGuiColorTextEdit. The repo: https://github.com/BalazsJako/ImGuiColorTextEdit
 void multiPurp::mainEditor(TextEditor& editor)
 {
@@ -99,7 +92,7 @@ void multiPurp::mainEditor(TextEditor& editor)
 
         // Detect and highlight errors
 
-        detectFortranErrors(editor);
+        c_Parser::parseCode(editor);
 
         ImGui::End();
     }
