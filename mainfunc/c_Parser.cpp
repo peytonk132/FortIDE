@@ -3,7 +3,9 @@
 #include "F90Files/Fortran90Lexer.h"
 #include "F90Files/Fortran90Parser.h"
 
-// Ensure that TextEditor is valid during the entire parsing process.
+// Declare errorMarkers as a global variable
+std::map<int, std::string> errorMarkers;
+
 void c_Parser::parseCode(TextEditor& editor)
 {
     std::string code = editor.GetText();
@@ -15,30 +17,39 @@ void c_Parser::parseCode(TextEditor& editor)
 
     class SyntaxErrorListener : public antlr4::BaseErrorListener {
     public:
-        SyntaxErrorListener(TextEditor& editor) : editor(editor) {}
-
         void syntaxError(antlr4::Recognizer* recognizer, antlr4::Token* offendingSymbol,
             size_t line, size_t charPositionInLine,
             const std::string& msg, std::exception_ptr e) override {
-            std::map<int, std::string> errorMarkers;
+            // Store the error in the global errorMarkers map
             errorMarkers[static_cast<int>(line)] = msg;
-            editor.SetErrorMarkers(errorMarkers);
         }
-
-    private:
-        TextEditor& editor;
     };
 
-    SyntaxErrorListener errorListener(editor);
+    // Clear old error markers
+    errorMarkers.clear();
+
+    SyntaxErrorListener errorListener;
     parser->removeErrorListeners();
     parser->addErrorListener(&errorListener);
 
-    // Parse
+    // Parse the code
     antlr4::tree::ParseTree* tree = parser->program();
 
-    // Clean up explicitly
+    // Update the editor with new error markers
+    editor.SetErrorMarkers(errorMarkers);
+
+    // Clear resolved errors (this function updates the editor)
+    clearResolvedErrors(editor);
+
+    // Clean up
     delete parser;
     delete tokens;
     delete lexer;
     delete inputStream;
+}
+
+void c_Parser::clearResolvedErrors(TextEditor& editor)
+{
+    // The editor should now only display the markers in the global errorMarkers
+    editor.SetErrorMarkers(errorMarkers);
 }

@@ -9,6 +9,9 @@
 #include "nfd.h"
 #include <boost/process.hpp>
 #include <boost/filesystem.hpp>
+#include <ctime>
+#include <iomanip>
+#include <chrono>
 
 // Define ProjectSettings structure
 struct ProjectSettings {
@@ -16,8 +19,6 @@ struct ProjectSettings {
     std::string compiler;
     std::vector<std::string> sourceFiles;
 };
-
-// Function prototypes
 
 
 class f_MainMenu {

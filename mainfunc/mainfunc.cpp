@@ -115,7 +115,7 @@ void multiPurp::loadFont()
 int multiPurp::menuBarfunc(TextEditor& editor)
 {
     Config::SettingsMenu();
-    
+
     if (ImGui::BeginMainMenuBar())
     {
         static bool showPopup = false;
@@ -151,9 +151,9 @@ int multiPurp::menuBarfunc(TextEditor& editor)
                 saveDialog = false;
             }
         }
-        
 
-        
+
+
 
         if (showPopup) {
             ImGui::OpenPopup("Popup");
@@ -172,7 +172,7 @@ int multiPurp::menuBarfunc(TextEditor& editor)
             ImGui::InputText(".f90", buf, sizeof(buf));
 
             if (ImGui::IsKeyPressed(ImGuiKey_Enter)) {
-                
+
                 nfdchar_t* newFileBuf = NULL;
                 nfdresult_t result = NFD_PickFolder(NULL, &newFileBuf);
 
@@ -183,8 +183,8 @@ int multiPurp::menuBarfunc(TextEditor& editor)
                 }
 
 
-				ImGui::CloseCurrentPopup();
-			}
+                ImGui::CloseCurrentPopup();
+            }
             if (ImGui::Button("Close"))
             {
                 ImGui::CloseCurrentPopup();
@@ -198,15 +198,15 @@ int multiPurp::menuBarfunc(TextEditor& editor)
         ImGui::EndMainMenuBar();
     }
 
-        auto cpos = editor.GetCursorPosition();
-        ImGui::Text("%6d/%-6d %6d lines  | %s | %s | %s | %s",
-            cpos.mLine + 1, cpos.mColumn + 1, editor.GetTotalLines(),
-            editor.IsOverwrite() ? "Ovr" : "Ins",
-            editor.CanUndo() ? "*" : " ",
-            editor.GetLanguageDefinition().mName.c_str(), NULL);
+    auto cpos = editor.GetCursorPosition();
+    ImGui::Text("%6d/%-6d %6d lines  | %s | %s | %s | %s",
+        cpos.mLine + 1, cpos.mColumn + 1, editor.GetTotalLines(),
+        editor.IsOverwrite() ? "Ovr" : "Ins",
+        editor.CanUndo() ? "*" : " ",
+        editor.GetLanguageDefinition().mName.c_str(), NULL);
 
-    
-        return 0;
+
+    return 0;
 }
 
 
@@ -223,7 +223,7 @@ void multiPurp::Compilefunc()
         {
             try {
                 std::stringstream ss;
-                ss << Config::buildCom; 
+                ss << Config::buildCom;
                 std::string command = ss.str();
                 bp::system(command);
                 ImGui::Text("Build command executed successfully.");
@@ -267,4 +267,3 @@ void multiPurp::Compilefunc()
         ImGui::EndPopup();
     }
 }
-

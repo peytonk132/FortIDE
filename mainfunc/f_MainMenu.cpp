@@ -10,16 +10,21 @@ int f_MainMenu::f_genNewProject()
 
     return 0;
 }
-int f_MainMenu::stackWindow()
+
+void getDate()
 {
-    ImVec2 fixedWidPos = ImVec2(0, 0); // Set your desired fixed position here
-    ImVec2 sizedWid = ImVec2(570, 450);
-    ImGui::SetNextWindowPos(fixedWidPos, ImGuiCond_Always);
-    ImGui::SetNextWindowSize(sizedWid, ImGuiCond_Always);
-    ImGui::Begin("##");
-    ImGui::End();
-    return 0;
+    // Get current time
+    auto now = std::chrono::system_clock::now();
+
+    // Convert to time_t, which represents the time as a number of seconds
+    std::time_t currentTime = std::chrono::system_clock::to_time_t(now);
+
+    // Convert to tm structure for local time
+    std::tm* localTime = std::localtime(&currentTime);
 }
+
+
+
 int f_MainMenu::startMenu() {
     sf::VideoMode autoReSize = sf::VideoMode::getDesktopMode();
     unsigned int sizeY = autoReSize.height;
