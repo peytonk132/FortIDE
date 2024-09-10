@@ -29,6 +29,80 @@ std::unique_ptr<std::istream> fileContent; // Unique pointer to hold the file co
 
 //TODO: Add error detection
 // Highlighting is done by ImGuiColorTextEdit. The repo: https://github.com/BalazsJako/ImGuiColorTextEdit
+
+std::string multiPurp::chooseFilePath()
+{
+    nfdchar_t* outPath = NULL;
+    nfdresult_t result = NFD_OpenDialog("f90", NULL, &outPath);  // Opens dialog for Fortran files
+    if (result == NFD_OKAY)
+    {
+        std::string filePath(outPath);
+        free(outPath);  // Free the path memory
+        return filePath;
+    }
+    else if (result == NFD_CANCEL)
+    {
+        std::cout << "User canceled the file selection." << std::endl;
+        return "";
+    }
+    else
+    {
+        std::cerr << "Error: " << NFD_GetError() << std::endl;
+        return "";
+    }
+}
+
+bool multiPurp::createFile(const std::string& filePath)
+{
+    std::ofstream newFile(filePath);
+    if (newFile.is_open())
+    {
+        newFile.close();
+        std::cout << "File created at: " << filePath << std::endl;
+        return true;
+    }
+    else
+    {
+        std::cerr << "Error creating file at: " << filePath << std::endl;
+        return false;
+    }
+}
+
+std::string multiPurp::readFileContent(const std::string& filePath)
+{
+    std::ifstream file(filePath);
+    if (file.is_open())
+    {
+        std::string content((std::istreambuf_iterator<char>(file)),
+            std::istreambuf_iterator<char>());
+        file.close();
+        return content;
+    }
+    else
+    {
+        std::cerr << "Error reading file: " << filePath << std::endl;
+        return "";
+    }
+}
+
+bool multiPurp::saveToFile(const std::string& filePath, const std::string& content)
+{
+    std::ofstream file(filePath);
+    if (file.is_open())
+    {
+        file << content;
+        file.close();
+        std::cout << "Content saved to: " << filePath << std::endl;
+        return true;
+    }
+    else
+    {
+        std::cerr << "Error saving to file: " << filePath << std::endl;
+        return false;
+    }
+}
+
+
 void multiPurp::mainEditor(TextEditor& editor)
 {
     static bool isLanguageSet = false;
@@ -114,97 +188,29 @@ void multiPurp::loadFont()
 
 int multiPurp::menuBarfunc(TextEditor& editor)
 {
-    Config::SettingsMenu();
-
     if (ImGui::BeginMainMenuBar())
     {
-        static bool showPopup = false;
-        static bool saveDialog = false;
-        //if (ImGui::IsKeyPressed(ImGuiKey_LeftCtrl) || ImGui::IsKeyPressed(ImGuiKey_RightCtrl) && ImGui::IsKeyPressed(ImGuiKey_S))
-        //{
-          //  saveDialog = true; // Set flag to open the file dialog
-        //}
-
-        // Save button functionality
-
-        if (ImGui::Button("Save"))
+        if (ImGui::Button("Open File"))
         {
-            saveDialog = true;
-            if (saveDialog)
+            std::string filePath = chooseFilePath();
+            if (!filePath.empty())
             {
-                nfdchar_t* savePathBuf = NULL;
-                nfdresult_t result = NFD_SaveDialog(NULL, NULL, &savePathBuf);
-
-                if (result == NFD_OKAY)
-                {
-                    std::string filePathWithExtension(savePathBuf);
-
-                    std::ofstream file(filePathWithExtension);
-
-                    if (file.is_open())
-                    {
-                        file << editor.GetText(); // Save the content of the editor
-                        file.close();
-                    }
-                    free(savePathBuf); // Free the memory allocated by NFD_SaveDialog
-                }
-                saveDialog = false;
+                std::string content = readFileContent(filePath);
+                editor.SetText(content);  // Set the file content in the editor
             }
         }
 
-
-
-
-        if (showPopup) {
-            ImGui::OpenPopup("Popup");
-            showPopup = false;
-        }
-
-        if (ImGui::Button("New File"))
+        if (ImGui::Button("Save File"))
         {
-            ImGui::OpenPopup("New File Popup");
-        }
-
-        if (ImGui::BeginPopupModal("New File Popup"))
-        {
-
-            ImGui::Text("Enter filename:");
-            ImGui::InputText(".f90", buf, sizeof(buf));
-
-            if (ImGui::IsKeyPressed(ImGuiKey_Enter)) {
-
-                nfdchar_t* newFileBuf = NULL;
-                nfdresult_t result = NFD_PickFolder(NULL, &newFileBuf);
-
-                if (result == NFD_OKAY)
-                {
-                    string newFile = buf;
-                    std::ofstream file(newFile + ".f90");
-                }
-
-
-                ImGui::CloseCurrentPopup();
-            }
-            if (ImGui::Button("Close"))
+            std::string filePath = chooseFilePath();
+            if (!filePath.empty())
             {
-                ImGui::CloseCurrentPopup();
+                saveToFile(filePath, editor.GetText());  // Save the editor content to the file
             }
-
-            ImGui::EndPopup();
         }
 
-
-        multiPurp::Compilefunc();
         ImGui::EndMainMenuBar();
     }
-
-    auto cpos = editor.GetCursorPosition();
-    ImGui::Text("%6d/%-6d %6d lines  | %s | %s | %s | %s",
-        cpos.mLine + 1, cpos.mColumn + 1, editor.GetTotalLines(),
-        editor.IsOverwrite() ? "Ovr" : "Ins",
-        editor.CanUndo() ? "*" : " ",
-        editor.GetLanguageDefinition().mName.c_str(), NULL);
-
 
     return 0;
 }

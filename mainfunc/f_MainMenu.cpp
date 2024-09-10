@@ -1,4 +1,5 @@
 #include "f_MainMenu.h"
+#include <git2.h>
 
 char f_MainMenu::buf[256]{ '\0' };
 
@@ -104,7 +105,6 @@ int f_MainMenu::startMenu() {
 
     if (ImGui::Button("Login to Github"))
 	{
-		boost::process::system("gh auth login");
 	}
 
     ImGui::End();

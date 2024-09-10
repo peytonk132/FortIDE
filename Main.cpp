@@ -19,7 +19,9 @@
 #include <array>
 #include <cstdio>
 #include <SFML/Graphics.hpp>
+//#include <boost/filesystem.hpp>
 #include <sstream>
+#include <toml.hpp>
 
 using namespace std;
 
@@ -105,6 +107,7 @@ int main()
 
     // Load packages from the XML file
     packages = loadPackagesFromXML("packages.xml");
+    
 
     sf::VideoMode desktopSize = sf::VideoMode::getDesktopMode();
 
@@ -120,6 +123,9 @@ int main()
         {
             loadFileIntoEditor(filePath, editor);
         });
+    /*fileDir.setFileClickCallback([](const std::string& path) {
+        std::cout << "File clicked: " << path << std::endl;
+        });*/
     
 
     sf::Clock deltaClock;

@@ -31,6 +31,13 @@ public:
 
     multiPurp() : outPathBuf(NULL) {} // Initialize outPathBuf to nullptr in the constructor
 
+    // New function for file path management
+    std::string chooseFilePath();  // Opens a file dialog and returns the selected file path
+    bool createFile(const std::string& filePath);  // Creates a new file at the given path
+    std::string readFileContent(const std::string& filePath);  // Reads content from a file
+    bool saveToFile(const std::string& filePath, const std::string& content);  // Saves content to a file
+
+
     void Compilefunc();
     void mainEditor(TextEditor& editor); // Declaration only
     void loadFont();
