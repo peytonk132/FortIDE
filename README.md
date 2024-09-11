@@ -24,6 +24,8 @@ The goal is to make a light-weight, easy-on-the-eyes, simple and easy to use IDE
 * Native File Dialog (NFD)
 * Boost
 * FPM
+* libgit2
+* toml11
 
 # How To Basic
 These are just the beginning steps to creating a project and using it in the IDE.
