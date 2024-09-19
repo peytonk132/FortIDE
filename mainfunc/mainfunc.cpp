@@ -166,7 +166,8 @@ void multiPurp::mainEditor(TextEditor& editor)
 
         // Detect and highlight errors
 
-        c_Parser::parseCode(editor);
+        c_Parser parse;
+            parse.parseCode(editor);
 
         ImGui::End();
     }
@@ -209,12 +210,16 @@ int multiPurp::menuBarfunc(TextEditor& editor)
             }
         }
 
+        multiPurp::Compilefunc();
+
+        //Terminal term;
+        //term.Render();
+
         ImGui::EndMainMenuBar();
     }
 
     return 0;
 }
-
 
 
 void multiPurp::Compilefunc()

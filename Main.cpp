@@ -66,11 +66,11 @@ bool isPackageInFpmToml(const std::string& packageName)
 void installPackage(const std::string& toml) {
     // Run the command to install the package
     std::string command = "fpm run -- demo substitute fpm.toml";
-    try 
+    try
     {
         exec(command.c_str());
     }
-    catch (const std::exception& e) 
+    catch (const std::exception& e)
     {
         std::cerr << "Error executing command: " << e.what() << std::endl;
     }
@@ -107,7 +107,7 @@ int main()
 
     // Load packages from the XML file
     packages = loadPackagesFromXML("packages.xml");
-    
+
 
     sf::VideoMode desktopSize = sf::VideoMode::getDesktopMode();
 
@@ -126,17 +126,17 @@ int main()
     /*fileDir.setFileClickCallback([](const std::string& path) {
         std::cout << "File clicked: " << path << std::endl;
         });*/
-    
+
 
     sf::Clock deltaClock;
 
     while (window.isOpen())
     {
         boost::filesystem::current_path();
-        sf::Event event;
-        while (window.pollEvent(event))
+
+        while (const std::optional event = window.pollEvent())
         {
-            ImGui::SFML::ProcessEvent(event);
+            ImGui::SFML::ProcessEvent(window, event);
 
             if (event.type == sf::Event::Closed)
             {
@@ -165,12 +165,12 @@ int main()
         }
         ImGui::End();
 
-        
+
 
         multiPurp teditor;
         teditor.mainEditor(editor);
         //c_Parser teditor;
-		//teditor.mainEditor(editor);
+        //teditor.mainEditor(editor);
 
 
         multiPurp t_menuItems;

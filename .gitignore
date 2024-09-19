@@ -34,9 +34,22 @@
 # Deps
 antlr4/
 boost/
-boost_1_82_0/
+boost_1_86_0/
+fmt/
+glfw-3.4/
 imgui/
 imgui-sfml/
 json/
 SFML/
+libgit2/
+FortIDE/
+spdlog/
+Terminal/
+tinyxml2/
+toml11-main/
+obj/
+
+#Ex. Dirs
+.vs/
+bin/
 

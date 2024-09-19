@@ -15,34 +15,19 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="mainfunc\mainfunc.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="colorText\TextEditor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="mainfunc\nfd_common.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="mainfunc\nfd_win.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="mainfunc\f_MainMenu.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="mainfunc\FileTree\FileTree.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="mainfunc\searchParser\s_Parser.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="mainfunc\Config.cpp">
+    <ClCompile Include="mainfunc\F90Files\ErrorListener.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="mainfunc\F90Files\Fortran90Lexer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mainfunc\F90Files\Fortran90LexerBase.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="mainfunc\F90Files\Fortran90Parser.cpp">
@@ -60,51 +45,72 @@
     <ClCompile Include="mainfunc\F90Files\Fortran90ParserVisitor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="mainfunc\F90Files\Fortran90LexerBase.cpp">
+    <ClCompile Include="mainfunc\FileTree\FileTree.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="mainfunc\F90Files\ErrorListener.cpp">
+    <ClCompile Include="mainfunc\searchParser\s_Parser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="mainfunc\c_Parser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="mainfunc\Config.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mainfunc\f_MainMenu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mainfunc\mainfunc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mainfunc\nfd_common.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mainfunc\nfd_win.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\imgui\imgui.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\imgui\imgui_demo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\imgui\imgui_draw.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\imgui\imgui_tables.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\imgui\imgui_widgets.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\imgui-sfml\imgui-SFML.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\tinyxml2\tinyxml2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\imgui\backends\imgui_impl_glfw.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="mainfunc\mainfunc.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="mainfunc\nfd.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="mainfunc\common.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="mainfunc\ftg_core.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="mainfunc\nfd_common.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="mainfunc\f_MainMenu.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="mainfunc\FileTree\FileTree.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="cmdPrompt\imgui_console.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="mainfunc\searchParser\s_Parser.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="colorText\TextEditor.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="mainfunc\Config.h">
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mainfunc\F90Files\ErrorListener.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="mainfunc\F90Files\Fortran90Lexer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mainfunc\F90Files\Fortran90LexerBase.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="mainfunc\F90Files\Fortran90Parser.h">
@@ -122,21 +128,73 @@
     <ClInclude Include="mainfunc\F90Files\Fortran90ParserVisitor.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="mainfunc\F90Files\Fortran90LexerBase.h">
+    <ClInclude Include="mainfunc\FileTree\FileTree.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="mainfunc\F90Files\ErrorListener.h">
+    <ClInclude Include="mainfunc\searchParser\s_Parser.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="mainfunc\c_Parser.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="resource.h">
+    <ClInclude Include="mainfunc\common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mainfunc\Config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mainfunc\f_MainMenu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mainfunc\ftg_core.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mainfunc\mainfunc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mainfunc\nfd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mainfunc\nfd_common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="deps\toml11-main\single_include\toml.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="deps\ImTerm\include\imterm\misc.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="deps\ImTerm\include\imterm\terminal.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="deps\ImTerm\include\imterm\terminal_helpers.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="deps\ImTerm\include\imterm\utils.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="deps\imgui\imconfig.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="deps\imgui\imgui.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="deps\imgui\imgui_internal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="deps\imgui\imstb_rectpack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="deps\imgui\imstb_textedit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="deps\imgui\imstb_truetype.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="jsons\fortran_database.json" />
+    <None Include="deps\ImTerm\include\imterm\terminal.tpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="FortIDE.ico">

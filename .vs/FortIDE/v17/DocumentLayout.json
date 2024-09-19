@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Peyton\\Documents\\dev\\FortIDE\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{33D48012-00E8-41D3-9E67-D14AFEBA84A7}|FortIDE.vcxproj|C:\\Users\\Peyton\\Documents\\dev\\FortIDE\\colorText\\TextEditor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{33D48012-00E8-41D3-9E67-D14AFEBA84A7}|FortIDE.vcxproj|solutionrelative:colorText\\TextEditor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{33D48012-00E8-41D3-9E67-D14AFEBA84A7}|FortIDE.vcxproj|C:\\Users\\Peyton\\Documents\\dev\\FortIDE\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{33D48012-00E8-41D3-9E67-D14AFEBA84A7}|FortIDE.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{33D48012-00E8-41D3-9E67-D14AFEBA84A7}|FortIDE.vcxproj|C:\\Users\\Peyton\\Documents\\dev\\FortIDE\\mainfunc\\c_Parser.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{33D48012-00E8-41D3-9E67-D14AFEBA84A7}|FortIDE.vcxproj|solutionrelative:mainfunc\\c_Parser.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{33D48012-00E8-41D3-9E67-D14AFEBA84A7}|FortIDE.vcxproj|C:\\Users\\Peyton\\Documents\\dev\\FortIDE\\mainfunc\\f_MainMenu.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{33D48012-00E8-41D3-9E67-D14AFEBA84A7}|FortIDE.vcxproj|solutionrelative:mainfunc\\f_MainMenu.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{33D48012-00E8-41D3-9E67-D14AFEBA84A7}|FortIDE.vcxproj|C:\\Users\\Peyton\\Documents\\dev\\FortIDE\\mainfunc\\c_Parser.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{33D48012-00E8-41D3-9E67-D14AFEBA84A7}|FortIDE.vcxproj|solutionrelative:mainfunc\\c_Parser.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{33D48012-00E8-41D3-9E67-D14AFEBA84A7}|FortIDE.vcxproj|C:\\Users\\Peyton\\Documents\\dev\\FortIDE\\mainfunc\\f_MainMenu.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{33D48012-00E8-41D3-9E67-D14AFEBA84A7}|FortIDE.vcxproj|solutionrelative:mainfunc\\f_MainMenu.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +22,43 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TextEditor.cpp",
-              "DocumentMoniker": "C:\\Users\\Peyton\\Documents\\dev\\FortIDE\\colorText\\TextEditor.cpp",
-              "RelativeDocumentMoniker": "colorText\\TextEditor.cpp",
-              "ToolTip": "C:\\Users\\Peyton\\Documents\\dev\\FortIDE\\colorText\\TextEditor.cpp",
-              "RelativeToolTip": "colorText\\TextEditor.cpp",
-              "ViewState": "AgIAALEDAAAAAAAAAAAAAL4DAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-09-03T00:54:49.212Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "c_Parser.h",
-              "DocumentMoniker": "C:\\Users\\Peyton\\Documents\\dev\\FortIDE\\mainfunc\\c_Parser.h",
-              "RelativeDocumentMoniker": "mainfunc\\c_Parser.h",
-              "ToolTip": "C:\\Users\\Peyton\\Documents\\dev\\FortIDE\\mainfunc\\c_Parser.h",
-              "RelativeToolTip": "mainfunc\\c_Parser.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Title": "f_MainMenu.h",
+              "DocumentMoniker": "C:\\Users\\Peyton\\Documents\\dev\\FortIDE\\mainfunc\\f_MainMenu.h",
+              "RelativeDocumentMoniker": "mainfunc\\f_MainMenu.h",
+              "ToolTip": "C:\\Users\\Peyton\\Documents\\dev\\FortIDE\\mainfunc\\f_MainMenu.h",
+              "RelativeToolTip": "mainfunc\\f_MainMenu.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-09-03T00:49:06.423Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-18T01:27:49.329Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "c_Parser.cpp",
-              "DocumentMoniker": "C:\\Users\\Peyton\\Documents\\dev\\FortIDE\\mainfunc\\c_Parser.cpp",
-              "RelativeDocumentMoniker": "mainfunc\\c_Parser.cpp",
-              "ToolTip": "C:\\Users\\Peyton\\Documents\\dev\\FortIDE\\mainfunc\\c_Parser.cpp",
-              "RelativeToolTip": "mainfunc\\c_Parser.cpp",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAAADQAAAAnAAAAAAAAAA==",
+              "Title": "f_MainMenu.cpp",
+              "DocumentMoniker": "C:\\Users\\Peyton\\Documents\\dev\\FortIDE\\mainfunc\\f_MainMenu.cpp",
+              "RelativeDocumentMoniker": "mainfunc\\f_MainMenu.cpp",
+              "ToolTip": "C:\\Users\\Peyton\\Documents\\dev\\FortIDE\\mainfunc\\f_MainMenu.cpp",
+              "RelativeToolTip": "mainfunc\\f_MainMenu.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-09-02T19:12:08.744Z",
+              "WhenOpened": "2024-09-18T01:13:44.822Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\Peyton\\Documents\\dev\\FortIDE\\Main.cpp",
+              "RelativeDocumentMoniker": "Main.cpp",
+              "ToolTip": "C:\\Users\\Peyton\\Documents\\dev\\FortIDE\\Main.cpp",
+              "RelativeToolTip": "Main.cpp",
+              "ViewState": "AgIAAHsAAAAAAAAAAAAAAIgAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-09-16T01:57:14.309Z",
               "EditorCaption": ""
             }
           ]

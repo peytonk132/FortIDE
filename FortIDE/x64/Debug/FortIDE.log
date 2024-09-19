@@ -1,6 +1,1 @@
-﻿  mainfunc.cpp
-  TextEditor.cpp
-  Generating Code...
-  FortIDE.vcxproj -> C:\Users\Peyton\Documents\dev\FortIDE\x64\Debug\FortIDE.exe
-  'pwsh.exe' is not recognized as an internal or external command,
-  operable program or batch file.
+﻿  main.cpp

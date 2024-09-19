@@ -349,7 +349,7 @@
                           }
                         },
                         "message": {
-                          "text": "'events_' is an Input to 'CloseHandle' (declared at c:\\program files (x86)\\windows kits\\10\\include\\10.0.22621.0\\um\\handleapi.h:39)"
+                          "text": "'events_' is an Input to 'CloseHandle' (declared at c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\um\\handleapi.h:39)"
                         }
                       },
                       "kinds": [
@@ -600,7 +600,7 @@
                           }
                         },
                         "message": {
-                          "text": "'arg' is an In/Out argument to '_beginthreadex' (declared at c:\\program files (x86)\\windows kits\\10\\include\\10.0.22621.0\\ucrt\\process.h:96)"
+                          "text": "'arg' is an In/Out argument to '_beginthreadex' (declared at c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\ucrt\\process.h:96)"
                         }
                       },
                       "kinds": [
@@ -1222,7 +1222,7 @@
                           }
                         },
                         "message": {
-                          "text": "'*entry_event' is an Input to 'WaitForSingleObject' (declared at c:\\program files (x86)\\windows kits\\10\\include\\10.0.22621.0\\um\\synchapi.h:346)"
+                          "text": "'*entry_event' is an Input to 'WaitForSingleObject' (declared at c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\um\\synchapi.h:352)"
                         }
                       },
                       "kinds": [
@@ -1506,7 +1506,7 @@
                           }
                         },
                         "message": {
-                          "text": "'waitable_timer_' is an In/Out argument to 'SetWaitableTimer' (declared at c:\\program files (x86)\\windows kits\\10\\include\\10.0.22621.0\\um\\synchapi.h:534)"
+                          "text": "'waitable_timer_' is an In/Out argument to 'SetWaitableTimer' (declared at c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\um\\synchapi.h:540)"
                         }
                       },
                       "kinds": [
@@ -1810,7 +1810,7 @@
                           }
                         },
                         "message": {
-                          "text": "'<symbol>' receives the Return value from 'GetModuleHandleA' (declared at c:\\program files (x86)\\windows kits\\10\\include\\10.0.22621.0\\um\\libloaderapi.h:235)"
+                          "text": "'<symbol>' receives the Return value from 'GetModuleHandleA' (declared at c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\um\\libloaderapi.h:235)"
                         }
                       },
                       "kinds": [
@@ -1862,7 +1862,7 @@
                           }
                         },
                         "message": {
-                          "text": "'<symbol>' receives the Return value from 'GetModuleHandleA' (declared at c:\\program files (x86)\\windows kits\\10\\include\\10.0.22621.0\\um\\libloaderapi.h:235)"
+                          "text": "'<symbol>' receives the Return value from 'GetModuleHandleA' (declared at c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\um\\libloaderapi.h:235)"
                         }
                       },
                       "kinds": [
@@ -2126,6 +2126,78 @@
           ]
         },
         {
+          "ruleId": "C26110",
+          "level": "warning",
+          "message": {
+            "text": "Caller failing to hold lock '*(reinterpret_cast<struct _RTL_SRWLOCK *>(SRWLock))' before calling function 'ReleaseSRWLockShared'."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Peyton/Documents/dev/vcpkg/installed/x64-windows/include/boost/winapi/srw_lock.hpp"
+                },
+                "region": {
+                  "startLine": 84,
+                  "startColumn": 7,
+                  "endLine": 84,
+                  "endColumn": 64
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "boost::winapi::ReleaseSRWLockShared",
+                  "decoratedName": "?ReleaseSRWLockShared@winapi@boost@@YAXPEAU_RTL_SRWLOCK@12@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Peyton/Documents/dev/vcpkg/installed/x64-windows/include/boost/winapi/srw_lock.hpp"
+                          },
+                          "region": {
+                            "startLine": 82,
+                            "startColumn": 25
+                          }
+                        },
+                        "message": {
+                          "text": "'SRWLock' is a formal parameter to the current function"
+                        }
+                      },
+                      "kinds": [
+                        "Declaration"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Peyton/Documents/dev/vcpkg/installed/x64-windows/include/boost/winapi/srw_lock.hpp"
+                          },
+                          "region": {
+                            "startLine": 84,
+                            "startColumn": 27
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
           "ruleId": "C26439",
           "level": "warning",
           "message": {
@@ -2156,7 +2228,7 @@
           "ruleId": "C28251",
           "level": "warning",
           "message": {
-            "text": "Inconsistent annotation for 'CreateIoCompletionPort': this instance has no annotations. See c:\\program files (x86)\\windows kits\\10\\include\\10.0.22621.0\\um\\ioapiset.h(32). "
+            "text": "Inconsistent annotation for 'CreateIoCompletionPort': this instance has no annotations. See c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\um\\ioapiset.h(32). "
           },
           "locations": [
             {
@@ -2183,7 +2255,7 @@
           "ruleId": "C28251",
           "level": "warning",
           "message": {
-            "text": "Inconsistent annotation for 'GetQueuedCompletionStatus': this instance has no annotations. See c:\\program files (x86)\\windows kits\\10\\include\\10.0.22621.0\\um\\ioapiset.h(42). "
+            "text": "Inconsistent annotation for 'GetQueuedCompletionStatus': this instance has no annotations. See c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\um\\ioapiset.h(42). "
           },
           "locations": [
             {
@@ -2950,7 +3022,7 @@
             "analysisTarget"
           ],
           "hashes": {
-            "sha-256": "d6038062131e1aa04312a957139bb996b0bac061a99b8ec2f1c9bf800ecb1ea9"
+            "sha-256": "9b5151db93e40e26564f32b4cd7c43ec751fd1ce7ad3d40aa5ad96ec28a28b99"
           }
         },
         {
@@ -2958,7 +3030,7 @@
             "uri": "file:///c:/users/peyton/documents/dev/fortide/mainfunc/f_mainmenu.h"
           },
           "hashes": {
-            "sha-256": "3d693537c4b3fd60563b5d39b5e6c64e47d0768ac53b65b5c1233cd820faf15f"
+            "sha-256": "28890e35e157ba783787dadb311f306dde4bd2467e2761c58ca44cb2b419f35e"
           }
         },
         {
@@ -3579,18 +3651,18 @@
         },
         {
           "location": {
-            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/imgui/imgui.h"
+            "uri": "file:///c:/users/peyton/documents/dev/vcpkg/installed/x64-windows/include/imgui.h"
           },
           "hashes": {
-            "sha-256": "bee76cd4b4f5212963757c70411de22ad7e1d024aa7e3d5b3e76849a02d2f17b"
+            "sha-256": "af5f8dc5061759de5e485834e5d9b3d2da7f89d0390174039344254788c760dd"
           }
         },
         {
           "location": {
-            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/imgui/imconfig.h"
+            "uri": "file:///c:/users/peyton/documents/dev/vcpkg/installed/x64-windows/include/imconfig.h"
           },
           "hashes": {
-            "sha-256": "ac21980510fd3d7e04e7ece5d49bd0c0b676db59bc469de580817c154d9a7c77"
+            "sha-256": "a253e82c1960f8aa7594a51a8ac606a6235738c923f12d67a7742e88bf07ed63"
           }
         },
         {
@@ -14239,6 +14311,550 @@
           },
           "hashes": {
             "sha-256": "1c25872d8090e02065f72488dd7d74402fa2d3b292f64d35855c99f335db8edf"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2.h"
+          },
+          "hashes": {
+            "sha-256": "8dad606d7062845b5d78ba8fa45923f47d2392fca4905da9ebae6f776569deaf"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/annotated_commit.h"
+          },
+          "hashes": {
+            "sha-256": "31777d983add1fb63be087c4d54e809cbb10d37a0b69ff273fb85d206110d835"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/common.h"
+          },
+          "hashes": {
+            "sha-256": "2735751c2945703137ed1ba4eaa8daf2f11e7ea0ebb1c6711bfa20e986a7db30"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/repository.h"
+          },
+          "hashes": {
+            "sha-256": "536b883bb594b46c35930b7d7e43626d6e2270e3f984d9b8bc6248cd4162ce9c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/types.h"
+          },
+          "hashes": {
+            "sha-256": "3c2364502419e443ae109dd652440fb8deee970fc454e939535852a48307d17b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/buffer.h"
+          },
+          "hashes": {
+            "sha-256": "efa8eb6520ab00f2d30cd415a3adc846839a29508632b94a73fad91406fa1e6e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/oid.h"
+          },
+          "hashes": {
+            "sha-256": "060f9d9e2c7bc120fc0d07f61a005ba2f5734a8256247472a86a0b505f466e02"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/experimental.h"
+          },
+          "hashes": {
+            "sha-256": "2e26f90c1c1f360c39911750ca34ecb08e90113fd329f2156ee0490e1fd38e3c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/commit.h"
+          },
+          "hashes": {
+            "sha-256": "17793a4d6bcb5c23d047e46537e279d54584c320cb8da9bf26a7d727d1bf5a80"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/object.h"
+          },
+          "hashes": {
+            "sha-256": "6b02510f7b79c415aba6b4d4ed818f8833837c79218a39205bba4973727e868c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/apply.h"
+          },
+          "hashes": {
+            "sha-256": "dcdaedb861addcb3960ab258775f0594e007a62aa2c61ba052b9cc18b4618b77"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/diff.h"
+          },
+          "hashes": {
+            "sha-256": "8a8e986ac5d9c81d70aad434d8c6cb8d3bd1d066ed4432212ed8f1d5b3d6b98b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/tree.h"
+          },
+          "hashes": {
+            "sha-256": "f3e495547aa42b3692d5101d942846569b676d5abcb7d59cd0633fdf1f954be9"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/refs.h"
+          },
+          "hashes": {
+            "sha-256": "fd383fc550c5d324736039ac6795d9bbd0061fd67fd368b57765d09f485a3869"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/strarray.h"
+          },
+          "hashes": {
+            "sha-256": "55185d55bc3cbb286c4400726c72cb7d7a6448c62d208ba521961f9297cce6b4"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/attr.h"
+          },
+          "hashes": {
+            "sha-256": "3f8543d020ce02fb89641fa64d494533ae08b64c796b92540b928d47b2809cd0"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/blob.h"
+          },
+          "hashes": {
+            "sha-256": "48c74cc639a6823c2e21b1803201c6368c300f84653f36caf0c6b54b31e07a57"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/blame.h"
+          },
+          "hashes": {
+            "sha-256": "93e4ff646a52ece343a1169c4f7f2a9b62cc8044504ef24024d1a17f129890fa"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/branch.h"
+          },
+          "hashes": {
+            "sha-256": "849a23af540041f14d8c17242c2ce6f1fd98a9e221f8e90ea098e11727960c77"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/cert.h"
+          },
+          "hashes": {
+            "sha-256": "fe4f002901b03b20b378de7aed286991e0b25784947f266f9980e06dfd5cb069"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/checkout.h"
+          },
+          "hashes": {
+            "sha-256": "bfe2fd62c7da69186c4347261881a67f525c563f1161bff33715894046c38271"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/cherrypick.h"
+          },
+          "hashes": {
+            "sha-256": "81131549cbf00bd1713ed51d35faa18f056307e94e42fdb96709e356af4792b8"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/merge.h"
+          },
+          "hashes": {
+            "sha-256": "212f98909fbaad397d4f470650a8a1e3b8b6aaabc6699327209c0ace7ee7c1d9"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/oidarray.h"
+          },
+          "hashes": {
+            "sha-256": "17f7cf244bde8ac7d73f23cc461ebb74864d34eaed1da134214efb5f5ccfdd85"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/index.h"
+          },
+          "hashes": {
+            "sha-256": "ff9ba52da08d39a501c83ea7e8d766d9c0698ce78ccc958566bc227716159bc2"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/indexer.h"
+          },
+          "hashes": {
+            "sha-256": "b7257a0b220be2af619647d1bcf1bceaee6162819177c362c98cb5be017aab83"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/clone.h"
+          },
+          "hashes": {
+            "sha-256": "8bbc6da73e8b1ada66b7b42311653862b3036549d606481a7a96a68660f8673e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/remote.h"
+          },
+          "hashes": {
+            "sha-256": "c4b57ce144dfd7fada01117d7db9e2f4bf402fc68b1302015238c9e05b113b26"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/refspec.h"
+          },
+          "hashes": {
+            "sha-256": "e794965591925777d63ee715a47757af7c9ac57278e9ae934264aa0cdf1ec3e6"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/net.h"
+          },
+          "hashes": {
+            "sha-256": "917b93fb0fe26db466ec6d8b24a69f78c38dad604f14af09fa7c2cac54e30a82"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/transport.h"
+          },
+          "hashes": {
+            "sha-256": "500ef91c64f365b4f9d0b5642e483c2340fff86b6bcaf80afab6f49e58b18acb"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/credential.h"
+          },
+          "hashes": {
+            "sha-256": "6a4348ae0360f79d22fd43c60bbc865d8ea156002a49dab2a0f1cb5289b3ea7f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/pack.h"
+          },
+          "hashes": {
+            "sha-256": "940e3671ec76efd1b7cac36267c30d0a6f3e741d3be32b043664f6c46005858b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/proxy.h"
+          },
+          "hashes": {
+            "sha-256": "b3b43d24644201aa2a3deac3287bc528d41041fb3e2f395f59a1597bacc249c1"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/config.h"
+          },
+          "hashes": {
+            "sha-256": "b78d875306a0f3535d656b668be35c16a65aa7b70ac7801a6fd2decfe41c7587"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/deprecated.h"
+          },
+          "hashes": {
+            "sha-256": "8726939ec2b01afb00cceec30499ec4f0190f833e7fe756b85cba7d12c2ae692"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/describe.h"
+          },
+          "hashes": {
+            "sha-256": "f8d16ed75d3a9238ef2b08b124f6d9e5843b3fad8d919e9e441eb6502850fc87"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/errors.h"
+          },
+          "hashes": {
+            "sha-256": "d771dfe4ca2729af94c2c36a3a2c568c7a4168d441c3434b75c3f3f138cf3f47"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/filter.h"
+          },
+          "hashes": {
+            "sha-256": "c18db6d5840818e11ec7905e75283c73a72064ef1721ba413766182855204d6a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/rebase.h"
+          },
+          "hashes": {
+            "sha-256": "ca9f8c1e243819e3a93ddf59d9aefc0c1720140427a0f30731c08c42115b98e5"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/trace.h"
+          },
+          "hashes": {
+            "sha-256": "ae50d0624fea4d11f61b0a0dfe796cbd3d4d197c57176b2eeac469b8796054ea"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/revert.h"
+          },
+          "hashes": {
+            "sha-256": "fe0f2cb4f6cfecdfb2df5f6e9007bd55c842ba3103e7453a4bc7b39209021676"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/revparse.h"
+          },
+          "hashes": {
+            "sha-256": "67eed30c0fea47c4632929b542545717184fb1d8d214510e50b231e886de3699"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/stash.h"
+          },
+          "hashes": {
+            "sha-256": "ffeb742fef21ecb541af611d7beb98e464bc8a5bc1e234f84f0536feee7c5714"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/status.h"
+          },
+          "hashes": {
+            "sha-256": "a3785fee06e4395b87190c291863e80289aa8c06ddd54c4e538d85736d4d9c70"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/submodule.h"
+          },
+          "hashes": {
+            "sha-256": "193f597d5f15d6c680970f79819c3c61a4b5614cecd17c4051648618459d4ec3"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/worktree.h"
+          },
+          "hashes": {
+            "sha-256": "8ac16aafa9e02d7858dedda39c1151e60ee7dc9ff0f2d1106219a4653a814ed1"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/credential_helpers.h"
+          },
+          "hashes": {
+            "sha-256": "e34f64710d97f22ff2be4643dab784ada645d32651bb48400eb710aa1f2cc4b9"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/sys/credential.h"
+          },
+          "hashes": {
+            "sha-256": "d88c26fecfb162cb373c951ed900f07d3d379cdab74c870a24531c12fa79c0e1"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/email.h"
+          },
+          "hashes": {
+            "sha-256": "7ce2a278d287df29db9984a84b6b3971a876812b805da3e77e44af5ebe265f12"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/global.h"
+          },
+          "hashes": {
+            "sha-256": "cbc5153ea54919acc4d957a7ad3146f3d4bfe8045b54a3842d06e1309817e8db"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/graph.h"
+          },
+          "hashes": {
+            "sha-256": "3e54eec84c174a9fadec0e6a444f2bb87fb3002ae854194a594ebfd3f6244fb5"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/ignore.h"
+          },
+          "hashes": {
+            "sha-256": "0e1bc6d8f8c74b5ebb3c7b947e8ff9bda72069a2cb09215f3a56f6f8d31a0f91"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/mailmap.h"
+          },
+          "hashes": {
+            "sha-256": "df8257a9bda339cb38a461eeead3ce9eb9f56401007afa7270ba151a452b030b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/message.h"
+          },
+          "hashes": {
+            "sha-256": "9cb8b04509138e590eba2a0595064557c0253d4d9eb39ee537689f583241b4d8"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/notes.h"
+          },
+          "hashes": {
+            "sha-256": "173662e1aa0dabc34dfbbfbffb45f1d140b695436bb5ba5763bdb197b5c36bd6"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/odb.h"
+          },
+          "hashes": {
+            "sha-256": "1331b9e2fa0d8876b6bc0b731282d463f52e40edcd9c45239a141c776042ebd8"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/odb_backend.h"
+          },
+          "hashes": {
+            "sha-256": "323c63eb855285750fcbe1c2002f4a7e08bb3999c98bdac977723ac9721dc21a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/patch.h"
+          },
+          "hashes": {
+            "sha-256": "b80bb215c9ccc7c369c2523a1eb3513aa48aaa55b40e05e69e0ea04264f8bf32"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/pathspec.h"
+          },
+          "hashes": {
+            "sha-256": "dfd8b53d4d62f81517c8ead191f3e40bfc2086d7ea23c5aefccf14f62f5bb714"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/refdb.h"
+          },
+          "hashes": {
+            "sha-256": "d7d1dcac0ecc5fd477f420b855c82c3fa6ca898e8f6e5c6abbd041912021070d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/reflog.h"
+          },
+          "hashes": {
+            "sha-256": "e2b14a919f8aab74a69953515edda1e794daaf085d8bcd925c5d508b85faadf4"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/reset.h"
+          },
+          "hashes": {
+            "sha-256": "6153be9089e0d6f7bade72dc079abfeba5df0caf8f7e593898ef7d7919a54e21"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/revwalk.h"
+          },
+          "hashes": {
+            "sha-256": "4a712528989525cfbf0a8de677ac094f2afd814966cdf9fe93eb187e27ec3b1f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/signature.h"
+          },
+          "hashes": {
+            "sha-256": "ad9eab1d1edafb77e97784a5d7ea5e692c2ea25c70a98ddf589026e03d684be3"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/tag.h"
+          },
+          "hashes": {
+            "sha-256": "57fb9cf8251d7156a9fc800805eee42507716afcfb50080ea4afbfd84c8fcac6"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/transaction.h"
+          },
+          "hashes": {
+            "sha-256": "379ed1ded40599b48abb97c7678b0b4a202e4c9bd12f2e4e73f41af264e9abd3"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/libgit2/include/git2/version.h"
+          },
+          "hashes": {
+            "sha-256": "bbd28752ca68488edf4881c4287487e0ad34647392c1ca008872107fdbd02846"
           }
         }
       ]

@@ -67,35 +67,6 @@
         {
           "ruleId": "C26495",
           "message": {
-            "text": "Variable 'multiPurp::buildPath' is uninitialized. Always initialize a member variable (type.6)."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "file:///C:/Users/Peyton/Documents/dev/FortIDE/mainfunc/mainfunc.h"
-                },
-                "region": {
-                  "startLine": 32,
-                  "startColumn": 5
-                }
-              },
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "multiPurp::{ctor}",
-                  "decoratedName": "??0multiPurp@@QEAA@XZ",
-                  "kind": "function"
-                }
-              ]
-            }
-          ],
-          "properties": {
-            "targetSymbol": "multiPurp::buildPath"
-          }
-        },
-        {
-          "ruleId": "C26495",
-          "message": {
             "text": "Variable 'multiPurp::settingsBuf' is uninitialized. Always initialize a member variable (type.6)."
           },
           "locations": [
@@ -124,6 +95,35 @@
         },
         {
           "ruleId": "C26495",
+          "message": {
+            "text": "Variable 'multiPurp::buildPath' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Peyton/Documents/dev/FortIDE/mainfunc/mainfunc.h"
+                },
+                "region": {
+                  "startLine": 32,
+                  "startColumn": 5
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "multiPurp::{ctor}",
+                  "decoratedName": "??0multiPurp@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "multiPurp::buildPath"
+          }
+        },
+        {
+          "ruleId": "C26495",
           "level": "warning",
           "message": {
             "text": "Variable 'boost::asio::execution::detail::any_executor_base::object_' is uninitialized. Always initialize a member variable (type.6)."
@@ -143,6 +143,36 @@
                 {
                   "fullyQualifiedName": "boost::asio::execution::detail::any_executor_base::{ctor}",
                   "decoratedName": "??0any_executor_base@detail@execution@asio@boost@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "boost::asio::execution::detail::any_executor_base::object_"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "level": "warning",
+          "message": {
+            "text": "Variable 'boost::asio::execution::detail::any_executor_base::object_' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Peyton/Documents/dev/vcpkg/installed/x64-windows/include/boost/asio/execution/any_executor.hpp"
+                },
+                "region": {
+                  "startLine": 614,
+                  "startColumn": 3
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "boost::asio::execution::detail::any_executor_base::{ctor}",
+                  "decoratedName": "??0any_executor_base@detail@execution@asio@boost@@QEAA@$$QEAV01234@@Z",
                   "kind": "function"
                 }
               ]
@@ -180,36 +210,6 @@
           ],
           "properties": {
             "targetSymbol": "boost::asio::execution::detail::any_executor_base::target_"
-          }
-        },
-        {
-          "ruleId": "C26495",
-          "level": "warning",
-          "message": {
-            "text": "Variable 'boost::asio::execution::detail::any_executor_base::object_' is uninitialized. Always initialize a member variable (type.6)."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "file:///C:/Users/Peyton/Documents/dev/vcpkg/installed/x64-windows/include/boost/asio/execution/any_executor.hpp"
-                },
-                "region": {
-                  "startLine": 614,
-                  "startColumn": 3
-                }
-              },
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "boost::asio::execution::detail::any_executor_base::{ctor}",
-                  "decoratedName": "??0any_executor_base@detail@execution@asio@boost@@QEAA@$$QEAV01234@@Z",
-                  "kind": "function"
-                }
-              ]
-            }
-          ],
-          "properties": {
-            "targetSymbol": "boost::asio::execution::detail::any_executor_base::object_"
           }
         },
         {
@@ -407,7 +407,7 @@
                           }
                         },
                         "message": {
-                          "text": "'events_' is an Input to 'CloseHandle' (declared at c:\\program files (x86)\\windows kits\\10\\include\\10.0.22621.0\\um\\handleapi.h:39)"
+                          "text": "'events_' is an Input to 'CloseHandle' (declared at c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\um\\handleapi.h:39)"
                         }
                       },
                       "kinds": [
@@ -658,7 +658,7 @@
                           }
                         },
                         "message": {
-                          "text": "'arg' is an In/Out argument to '_beginthreadex' (declared at c:\\program files (x86)\\windows kits\\10\\include\\10.0.22621.0\\ucrt\\process.h:96)"
+                          "text": "'arg' is an In/Out argument to '_beginthreadex' (declared at c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\ucrt\\process.h:96)"
                         }
                       },
                       "kinds": [
@@ -1280,7 +1280,7 @@
                           }
                         },
                         "message": {
-                          "text": "'*entry_event' is an Input to 'WaitForSingleObject' (declared at c:\\program files (x86)\\windows kits\\10\\include\\10.0.22621.0\\um\\synchapi.h:346)"
+                          "text": "'*entry_event' is an Input to 'WaitForSingleObject' (declared at c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\um\\synchapi.h:352)"
                         }
                       },
                       "kinds": [
@@ -1564,7 +1564,7 @@
                           }
                         },
                         "message": {
-                          "text": "'waitable_timer_' is an In/Out argument to 'SetWaitableTimer' (declared at c:\\program files (x86)\\windows kits\\10\\include\\10.0.22621.0\\um\\synchapi.h:534)"
+                          "text": "'waitable_timer_' is an In/Out argument to 'SetWaitableTimer' (declared at c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\um\\synchapi.h:540)"
                         }
                       },
                       "kinds": [
@@ -1868,7 +1868,7 @@
                           }
                         },
                         "message": {
-                          "text": "'<symbol>' receives the Return value from 'GetModuleHandleA' (declared at c:\\program files (x86)\\windows kits\\10\\include\\10.0.22621.0\\um\\libloaderapi.h:235)"
+                          "text": "'<symbol>' receives the Return value from 'GetModuleHandleA' (declared at c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\um\\libloaderapi.h:235)"
                         }
                       },
                       "kinds": [
@@ -1920,7 +1920,7 @@
                           }
                         },
                         "message": {
-                          "text": "'<symbol>' receives the Return value from 'GetModuleHandleA' (declared at c:\\program files (x86)\\windows kits\\10\\include\\10.0.22621.0\\um\\libloaderapi.h:235)"
+                          "text": "'<symbol>' receives the Return value from 'GetModuleHandleA' (declared at c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\um\\libloaderapi.h:235)"
                         }
                       },
                       "kinds": [
@@ -2184,6 +2184,78 @@
           ]
         },
         {
+          "ruleId": "C26110",
+          "level": "warning",
+          "message": {
+            "text": "Caller failing to hold lock '*(reinterpret_cast<struct _RTL_SRWLOCK *>(SRWLock))' before calling function 'ReleaseSRWLockShared'."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Peyton/Documents/dev/vcpkg/installed/x64-windows/include/boost/winapi/srw_lock.hpp"
+                },
+                "region": {
+                  "startLine": 84,
+                  "startColumn": 7,
+                  "endLine": 84,
+                  "endColumn": 64
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "boost::winapi::ReleaseSRWLockShared",
+                  "decoratedName": "?ReleaseSRWLockShared@winapi@boost@@YAXPEAU_RTL_SRWLOCK@12@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Peyton/Documents/dev/vcpkg/installed/x64-windows/include/boost/winapi/srw_lock.hpp"
+                          },
+                          "region": {
+                            "startLine": 82,
+                            "startColumn": 25
+                          }
+                        },
+                        "message": {
+                          "text": "'SRWLock' is a formal parameter to the current function"
+                        }
+                      },
+                      "kinds": [
+                        "Declaration"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Peyton/Documents/dev/vcpkg/installed/x64-windows/include/boost/winapi/srw_lock.hpp"
+                          },
+                          "region": {
+                            "startLine": 84,
+                            "startColumn": 27
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
           "ruleId": "C26439",
           "level": "warning",
           "message": {
@@ -2214,7 +2286,7 @@
           "ruleId": "C28251",
           "level": "warning",
           "message": {
-            "text": "Inconsistent annotation for 'CreateIoCompletionPort': this instance has no annotations. See c:\\program files (x86)\\windows kits\\10\\include\\10.0.22621.0\\um\\ioapiset.h(32). "
+            "text": "Inconsistent annotation for 'CreateIoCompletionPort': this instance has no annotations. See c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\um\\ioapiset.h(32). "
           },
           "locations": [
             {
@@ -2241,7 +2313,7 @@
           "ruleId": "C28251",
           "level": "warning",
           "message": {
-            "text": "Inconsistent annotation for 'GetQueuedCompletionStatus': this instance has no annotations. See c:\\program files (x86)\\windows kits\\10\\include\\10.0.22621.0\\um\\ioapiset.h(42). "
+            "text": "Inconsistent annotation for 'GetQueuedCompletionStatus': this instance has no annotations. See c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\um\\ioapiset.h(42). "
           },
           "locations": [
             {
@@ -2676,36 +2748,6 @@
           "ruleId": "C26495",
           "level": "warning",
           "message": {
-            "text": "Variable 'boost::asio::detail::win_thread::func_base::exit_event_' is uninitialized. Always initialize a member variable (type.6)."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "file:///C:/Users/Peyton/Documents/dev/vcpkg/installed/x64-windows/include/boost/asio/detail/win_thread.hpp"
-                },
-                "region": {
-                  "startLine": 102,
-                  "startColumn": 3
-                }
-              },
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "boost::asio::detail::win_thread::func_base::{ctor}",
-                  "decoratedName": "??0func_base@win_thread@detail@asio@boost@@QEAA@XZ",
-                  "kind": "function"
-                }
-              ]
-            }
-          ],
-          "properties": {
-            "targetSymbol": "boost::asio::detail::win_thread::func_base::exit_event_"
-          }
-        },
-        {
-          "ruleId": "C26495",
-          "level": "warning",
-          "message": {
             "text": "Variable 'boost::asio::detail::win_thread::func_base::entry_event_' is uninitialized. Always initialize a member variable (type.6)."
           },
           "locations": [
@@ -2730,6 +2772,36 @@
           ],
           "properties": {
             "targetSymbol": "boost::asio::detail::win_thread::func_base::entry_event_"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "level": "warning",
+          "message": {
+            "text": "Variable 'boost::asio::detail::win_thread::func_base::exit_event_' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Peyton/Documents/dev/vcpkg/installed/x64-windows/include/boost/asio/detail/win_thread.hpp"
+                },
+                "region": {
+                  "startLine": 102,
+                  "startColumn": 3
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "boost::asio::detail::win_thread::func_base::{ctor}",
+                  "decoratedName": "??0func_base@win_thread@detail@asio@boost@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "boost::asio::detail::win_thread::func_base::exit_event_"
           }
         }
       ],
@@ -2766,7 +2838,7 @@
             "resultFile"
           ],
           "hashes": {
-            "sha-256": "669fc166621b50d8417070f42822a94f3c5fed91c9697dafa12154176e8542d4"
+            "sha-256": "5cdd1a4472f1e9857d0927e16059429ea8279819d5fe31cb5edb7cd9d71399cf"
           }
         },
         {
@@ -3019,23 +3091,23 @@
             "analysisTarget"
           ],
           "hashes": {
-            "sha-256": "ed5ab1e638f5f85b530c8b66b561260a23e0fdd073d8ea83fdd7cab6465870a6"
+            "sha-256": "f7f7c4066f7add3704bbdf3c89769376494fbe53cd1724a4af939b5e559f90d6"
           }
         },
         {
           "location": {
-            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/imgui/imgui.h"
+            "uri": "file:///c:/users/peyton/documents/dev/vcpkg/installed/x64-windows/include/imgui.h"
           },
           "hashes": {
-            "sha-256": "bee76cd4b4f5212963757c70411de22ad7e1d024aa7e3d5b3e76849a02d2f17b"
+            "sha-256": "af5f8dc5061759de5e485834e5d9b3d2da7f89d0390174039344254788c760dd"
           }
         },
         {
           "location": {
-            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/imgui/imconfig.h"
+            "uri": "file:///c:/users/peyton/documents/dev/vcpkg/installed/x64-windows/include/imconfig.h"
           },
           "hashes": {
-            "sha-256": "ac21980510fd3d7e04e7ece5d49bd0c0b676db59bc469de580817c154d9a7c77"
+            "sha-256": "a253e82c1960f8aa7594a51a8ac606a6235738c923f12d67a7742e88bf07ed63"
           }
         },
         {
@@ -3667,7 +3739,7 @@
             "uri": "file:///c:/users/peyton/documents/dev/fortide/colortext/texteditor.h"
           },
           "hashes": {
-            "sha-256": "fee10d0abe73906d2831b5aee24ac727fe1c5b73302085151f0e263ffdf198c7"
+            "sha-256": "248bdab12a7792183a677b2315446dcc3a991937684f367b8b8097e6a730efd1"
           }
         },
         {
@@ -14195,7 +14267,7 @@
             "uri": "file:///c:/users/peyton/documents/dev/fortide/mainfunc/filetree/filetree.h"
           },
           "hashes": {
-            "sha-256": "3b30de769291ea5d773fcbfa6234f9c13b6de14694f7afdf9214b299afe468ef"
+            "sha-256": "0d7f8bf6f5079b2d9387f3e0544f37523c53467fcac0e84210ea1362ef73bd6b"
           }
         },
         {
@@ -14320,18 +14392,18 @@
         },
         {
           "location": {
-            "uri": "file:///c:/users/peyton/documents/dev/fortide/mainfunc/config.h"
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/mainfunc/c_parser.h"
           },
           "hashes": {
-            "sha-256": "649045626c73d7bc4e1e47b638ad3631a77a0b22e048baba805b2234372af00a"
+            "sha-256": "9ceb358794b5eecf4d7f27d3bb3ddb9305dab68741b7525140f1c74a2c9a47df"
           }
         },
         {
           "location": {
-            "uri": "file:///c:/users/peyton/documents/dev/fortide/mainfunc/c_parser.h"
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/mainfunc/config.h"
           },
           "hashes": {
-            "sha-256": "5a60f34347feb8747eeb5f6e2bffcd94596a383f590a3a4e9f984fc64b2ed233"
+            "sha-256": "99c3b3b2f8cb0716de8c00016c8e4661199cda5e581f1b5aeb85b3018cda62ac"
           }
         }
       ]
