@@ -21,7 +21,6 @@
 #include <SFML/Graphics.hpp>
 //#include <boost/filesystem.hpp>
 #include <sstream>
-#include <toml.hpp>
 
 using namespace std;
 
@@ -133,17 +132,10 @@ int main()
     while (window.isOpen())
     {
         boost::filesystem::current_path();
-<<<<<<< Updated upstream
-        sf::Event event;
-        while (window.pollEvent(event))
-        {
-            ImGui::SFML::ProcessEvent(event);
-=======
 
         while (const std::optional<sf::Event> event = window.pollEvent())
         {
             ImGui::SFML::ProcessEvent(window, *event);
->>>>>>> Stashed changes
 
             if (event->is<sf::Event::Closed>())
             {
@@ -171,14 +163,8 @@ int main()
             ImGui::Separator();
         }
         ImGui::End();
-
-<<<<<<< Updated upstream
-        
-
-=======
         git_libgit2_init();
         ImGui::ShowDemoWindow();
->>>>>>> Stashed changes
         multiPurp teditor;
         teditor.mainEditor(editor);
         //c_Parser teditor;
