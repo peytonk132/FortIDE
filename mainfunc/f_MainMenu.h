@@ -28,4 +28,5 @@ public:
     static int entryPoint();
     static int f_genNewProject();
     static int stackWindow();
+    bool cloneRepo(const std::string& repoUrl, const std::string& localPath);
 };

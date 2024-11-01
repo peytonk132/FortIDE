@@ -2,9 +2,6 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\Peyton\Documents\dev\FortIDE\x64\Debug\antlr4-runtime.dll</FullPath>
-    </ProjectOutput>
-    <ProjectOutput>
       <FullPath>C:\Users\Peyton\Documents\dev\FortIDE\x64\Debug\FortIDE.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>

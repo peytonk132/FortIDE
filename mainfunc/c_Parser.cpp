@@ -2,9 +2,16 @@
 #include <antlr4-runtime.h>
 #include "F90Files/Fortran90Lexer.h"
 #include "F90Files/Fortran90Parser.h"
+<<<<<<< Updated upstream
 
 // Declare errorMarkers as a global variable
 std::map<int, std::string> errorMarkers;
+=======
+#include <memory>
+#include <iostream>
+#include <regex>
+#include "../colorText/TextEditor.h"
+>>>>>>> Stashed changes
 
 void c_Parser::parseCode(TextEditor& editor)
 {
@@ -41,11 +48,23 @@ void c_Parser::parseCode(TextEditor& editor)
     // Clear resolved errors (this function updates the editor)
     clearResolvedErrors(editor);
 
+<<<<<<< Updated upstream
     // Clean up
     delete parser;
     delete tokens;
     delete lexer;
     delete inputStream;
+=======
+        editor.SetErrorMarkers(errorMarkers);  // Set error markers in the editor
+        clearResolvedErrors(editor);  // Clear resolved errors
+    }
+    catch (const std::exception& e) {
+        std::cerr << "Exception during parsing: " << e.what() << std::endl;
+    }
+    catch (...) {
+        std::cerr << "Unknown exception occurred during parsing." << std::endl;
+    }
+>>>>>>> Stashed changes
 }
 
 void c_Parser::clearResolvedErrors(TextEditor& editor)

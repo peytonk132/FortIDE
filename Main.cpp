@@ -35,7 +35,7 @@ void loadFileIntoEditor(const std::string& filePath, TextEditor& editor)
 }
 
 std::string exec(const char* cmd) {
-    std::array<char, 128> buffer;
+    std::array<char, 128> buffer{};
     std::string result;
     std::unique_ptr<FILE, decltype(&_pclose)> pipe(_popen(cmd, "r"), _pclose);
     if (!pipe) {
@@ -81,7 +81,7 @@ int main()
     std::string fpmOutput;
     try
     {
-        fpmOutput = exec("fpm search --verbose");
+        fpmOutput = exec("fpm-search --verbose");
     }
     catch (const std::exception& e)
     {
@@ -111,7 +111,7 @@ int main()
     f_MainMenu::entryPoint();
 
     sf::RenderWindow window(desktopSize, "FortIDE");
-    window.setFramerateLimit(60);
+    window.setVerticalSyncEnabled(true); // Enable vertical sync
     ImGui::SFML::Init(window);
     TextEditor editor; // Create a TextEditor instance
     FileTree fileTree;
@@ -127,12 +127,19 @@ int main()
     while (window.isOpen())
     {
         boost::filesystem::current_path();
+<<<<<<< Updated upstream
         sf::Event event;
         while (window.pollEvent(event))
         {
             ImGui::SFML::ProcessEvent(event);
+=======
 
-            if (event.type == sf::Event::Closed)
+        while (const std::optional<sf::Event> event = window.pollEvent())
+        {
+            ImGui::SFML::ProcessEvent(window, *event);
+>>>>>>> Stashed changes
+
+            if (event->is<sf::Event::Closed>())
             {
                 window.close();
             }
@@ -159,8 +166,13 @@ int main()
         }
         ImGui::End();
 
+<<<<<<< Updated upstream
         
 
+=======
+        git_libgit2_init();
+        ImGui::ShowDemoWindow();
+>>>>>>> Stashed changes
         multiPurp teditor;
         teditor.mainEditor(editor);
         //c_Parser teditor;
@@ -175,6 +187,7 @@ int main()
         window.clear();
         ImGui::SFML::Render(window);
         window.display();
+        git_libgit2_shutdown();
     }
 
     ImGui::SFML::Shutdown();

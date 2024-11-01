@@ -13,6 +13,7 @@
 class TextEditor
 {
 public:
+	//static void SearchBox();
 	inline static char mSearchBuffer[64]{};
 	enum class PaletteIndex
 	{
@@ -130,6 +131,7 @@ public:
 	typedef std::unordered_map<std::string, Identifier> Identifiers;
 	typedef std::unordered_set<std::string> Keywords;
 	typedef std::map<int, std::string> ErrorMarkers;
+	typedef std::map<int, std::string> HighlightMarkers;
 	typedef std::unordered_set<int> Breakpoints;
 	typedef std::array<ImU32, (unsigned)PaletteIndex::Max> Palette;
 	typedef uint8_t Char;
@@ -148,6 +150,14 @@ public:
 
 	typedef std::vector<Glyph> Line;
 	typedef std::vector<Line> Lines;
+
+	struct SearchOutput
+	{
+		std::string word;
+		int lineNum;
+	};
+
+	typedef std::vector<SearchOutput> Search;
 
 	struct LanguageDefinition
 	{
@@ -186,8 +196,11 @@ public:
 	void SetPalette(const Palette& aValue);
 
 	void SetErrorMarkers(const ErrorMarkers& aMarkers) { mErrorMarkers = aMarkers; }
+	void SetSearchMarkers(const HighlightMarkers& aHMarkers) { mHighlightMarkers = aHMarkers; }
 	void ClearErrorMarkers(const ErrorMarkers& aMarkers) { mClearMarkers = aMarkers; }
+	void ClearSearchMarkers(const HighlightMarkers& aMarkers) { mClearMarkers = aMarkers; }
 	void SetBreakpoints(const Breakpoints& aMarkers) { mBreakpoints = aMarkers; }
+
 
 	void Render(const char* aTitle, const ImVec2& aSize = ImVec2(), bool aBorder = false);
 	void SetText(const std::string& aText);
@@ -251,7 +264,6 @@ public:
 	void Cut();
 	void Paste();
 	void Delete();
-	void Search();
 
 	bool CanUndo() const;
 	bool CanRedo() const;
@@ -377,6 +389,7 @@ private:
 	bool mCheckComments;
 	Breakpoints mBreakpoints;
 	ErrorMarkers mErrorMarkers;
+	HighlightMarkers mHighlightMarkers;
 	ErrorMarkers mClearMarkers;
 	ImVec2 mCharAdvance;
 	Coordinates mInteractiveStart, mInteractiveEnd;
