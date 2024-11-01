@@ -17,7 +17,7 @@ void Config::SettingsMenu()
 		if (ImGui::Button("Build Command"))
 		{
 			ImGui::OpenPopup("Build");
-}
+		}
 		if (ImGui::BeginPopup("Build", NULL))
 		{
 			ImGui::InputText("Build Command", Config::buildCom, 256);
@@ -25,6 +25,7 @@ void Config::SettingsMenu()
 			{
 				std::cout << "Written successfully!" << std::endl;
 				ImGui::CloseCurrentPopup();
+				delete(Config::buildCom);
 			}
 			ImGui::EndPopup();
 		}
@@ -40,6 +41,7 @@ void Config::SettingsMenu()
 			{
 				std::cout << "Written successfully!" << std::endl;
 				ImGui::CloseCurrentPopup();
+				delete(Config::runCom);
 			}
 			ImGui::EndPopup();
 		}
@@ -55,10 +57,15 @@ void Config::SettingsMenu()
 			{
 				std::cout << "Written successfully!" << std::endl;
 				ImGui::CloseCurrentPopup();
+				delete(Config::testCom);
 			}
 			ImGui::EndPopup();
 		}
 		ImGui::EndPopup();
 	}
 	
+}
+
+void Config::configMenu()
+{
 }

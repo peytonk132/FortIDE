@@ -4,10 +4,11 @@
 #include "imgui-SFML.h"
 #include "mainfunc/nfd.h"
 #include "mainfunc/mainfunc.h"
+//#include "mainfunc/c_Parser.h"
 #include "mainfunc/f_MainMenu.h"
 #include "colorText/TextEditor.h"
 #include "mainfunc/FileTree/FileTree.h"
-#include "mainfunc/searchParser/Parser.h"
+#include "mainfunc/searchParser/s_Parser.h"
 
 #include <fstream>
 #include <memory>
@@ -18,7 +19,9 @@
 #include <array>
 #include <cstdio>
 #include <SFML/Graphics.hpp>
+//#include <boost/filesystem.hpp>
 #include <sstream>
+#include <toml.hpp>
 
 using namespace std;
 
@@ -34,7 +37,7 @@ void loadFileIntoEditor(const std::string& filePath, TextEditor& editor)
 }
 
 std::string exec(const char* cmd) {
-    std::array<char, 128> buffer;
+    std::array<char, 128> buffer{};
     std::string result;
     std::unique_ptr<FILE, decltype(&_pclose)> pipe(_popen(cmd, "r"), _pclose);
     if (!pipe) {
@@ -63,11 +66,11 @@ bool isPackageInFpmToml(const std::string& packageName)
 void installPackage(const std::string& toml) {
     // Run the command to install the package
     std::string command = "fpm run -- demo substitute fpm.toml";
-    try 
+    try
     {
         exec(command.c_str());
     }
-    catch (const std::exception& e) 
+    catch (const std::exception& e)
     {
         std::cerr << "Error executing command: " << e.what() << std::endl;
     }
@@ -80,7 +83,7 @@ int main()
     std::string fpmOutput;
     try
     {
-        fpmOutput = exec("fpm search --verbose");
+        fpmOutput = exec("fpm-search --verbose");
     }
     catch (const std::exception& e)
     {
@@ -105,12 +108,13 @@ int main()
     // Load packages from the XML file
     packages = loadPackagesFromXML("packages.xml");
 
+
     sf::VideoMode desktopSize = sf::VideoMode::getDesktopMode();
 
     f_MainMenu::entryPoint();
 
     sf::RenderWindow window(desktopSize, "FortIDE");
-    window.setFramerateLimit(60);
+    window.setVerticalSyncEnabled(true); // Enable vertical sync
     ImGui::SFML::Init(window);
     TextEditor editor; // Create a TextEditor instance
     FileTree fileTree;
@@ -119,19 +123,29 @@ int main()
         {
             loadFileIntoEditor(filePath, editor);
         });
-    
+    /*fileDir.setFileClickCallback([](const std::string& path) {
+        std::cout << "File clicked: " << path << std::endl;
+        });*/
+
 
     sf::Clock deltaClock;
 
     while (window.isOpen())
     {
         boost::filesystem::current_path();
+<<<<<<< Updated upstream
         sf::Event event;
         while (window.pollEvent(event))
         {
             ImGui::SFML::ProcessEvent(event);
+=======
 
-            if (event.type == sf::Event::Closed)
+        while (const std::optional<sf::Event> event = window.pollEvent())
+        {
+            ImGui::SFML::ProcessEvent(window, *event);
+>>>>>>> Stashed changes
+
+            if (event->is<sf::Event::Closed>())
             {
                 window.close();
             }
@@ -158,10 +172,18 @@ int main()
         }
         ImGui::End();
 
+<<<<<<< Updated upstream
         
 
+=======
+        git_libgit2_init();
+        ImGui::ShowDemoWindow();
+>>>>>>> Stashed changes
         multiPurp teditor;
         teditor.mainEditor(editor);
+        //c_Parser teditor;
+        //teditor.mainEditor(editor);
+
 
         multiPurp t_menuItems;
         t_menuItems.menuBarfunc(editor);
@@ -171,6 +193,7 @@ int main()
         window.clear();
         ImGui::SFML::Render(window);
         window.display();
+        git_libgit2_shutdown();
     }
 
     ImGui::SFML::Shutdown();

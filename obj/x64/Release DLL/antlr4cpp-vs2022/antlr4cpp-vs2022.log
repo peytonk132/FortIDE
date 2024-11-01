@@ -1,0 +1,74 @@
+﻿  DiagnosticErrorListener.cpp
+  FailedPredicateException.cpp
+  InputMismatchException.cpp
+  IntStream.cpp
+  InterpreterRuleContext.cpp
+  Lexer.cpp
+  LexerInterpreter.cpp
+  LexerNoViableAltException.cpp
+  ListTokenSource.cpp
+  NoViableAltException.cpp
+  Parser.cpp
+  ParserInterpreter.cpp
+  ParserRuleContext.cpp
+  ProxyErrorListener.cpp
+  RecognitionException.cpp
+  Recognizer.cpp
+  RuleContext.cpp
+  RuleContextWithAltNum.cpp
+  RuntimeMetaData.cpp
+  Token.cpp
+  TokenSource.cpp
+  TokenStream.cpp
+  TokenStreamRewriter.cpp
+  UnbufferedCharStream.cpp
+  UnbufferedTokenStream.cpp
+  Vocabulary.cpp
+  WritableToken.cpp
+  DFASerializer.cpp
+  DFAState.cpp
+  Synchronization.cpp
+  InterpreterDataReader.cpp
+  Interval.cpp
+  IntervalSet.cpp
+  MurmurHash.cpp
+  Predicate.cpp
+  Any.cpp
+  Arrays.cpp
+  CPPUtils.cpp
+  StringUtils.cpp
+  Utf8.cpp
+  ErrorNodeImpl.cpp
+  IterativeParseTreeWalker.cpp
+  ParseTree.cpp
+  ParseTreeListener.cpp
+  ParseTreeVisitor.cpp
+  ParseTreeWalker.cpp
+  TerminalNodeImpl.cpp
+  Trees.cpp
+  Chunk.cpp
+  ParseTreeMatch.cpp
+  ParseTreePattern.cpp
+  ParseTreePatternMatcher.cpp
+  RuleTagToken.cpp
+  TagChunk.cpp
+  TextChunk.cpp
+  TokenTagToken.cpp
+  XPath.cpp
+  XPathElement.cpp
+  XPathLexer.cpp
+  XPathLexerErrorListener.cpp
+  XPathRuleAnywhereElement.cpp
+  XPathRuleElement.cpp
+  XPathTokenAnywhereElement.cpp
+  XPathTokenElement.cpp
+  XPathWildcardAnywhereElement.cpp
+  XPathWildcardElement.cpp
+     Creating library C:\Users\Peyton\Documents\dev\FortIDE\x64\Debug\antlr4-runtime.lib and object C:\Users\Peyton\Documents\dev\FortIDE\x64\Debug\antlr4-runtime.exp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 10879 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  antlr4cpp-vs2022.vcxproj -> C:\Users\Peyton\Documents\dev\FortIDE\x64\Debug\antlr4-runtime.dll
+  'pwsh.exe' is not recognized as an internal or external command,
+  operable program or batch file.

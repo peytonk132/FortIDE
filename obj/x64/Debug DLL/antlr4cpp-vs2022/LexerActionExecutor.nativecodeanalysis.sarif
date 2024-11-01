@@ -1,0 +1,179 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.41.34120.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/atn/lexeractionexecutor.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "sha-256": "0c0985e95b9e4543e69d6bcfba7f48257f1f94a1cc74421d3a6460d94a4a3a56"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/misc/murmurhash.h"
+          },
+          "hashes": {
+            "sha-256": "78c215147fcd5a0b3c0e17873bb20bf1795fa8623470a4cf2e15a681034824e0"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/antlr4-common.h"
+          },
+          "hashes": {
+            "sha-256": "c8417daf6a0fce8b67bcc2e41fe87d5580556b21a9e47676e1920948db78cb62"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/support/declarations.h"
+          },
+          "hashes": {
+            "sha-256": "3dba7305520ef56646c6ddab2899cbf501f4e8313d4b09c9b5f5f4aaee358a25"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/atn/lexerindexedcustomaction.h"
+          },
+          "hashes": {
+            "sha-256": "ddec8b5eb3dcecad210b5b701c0029e4f153197a63c4052956f7fc6930bffda9"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/rulecontext.h"
+          },
+          "hashes": {
+            "sha-256": "5dead01c86036b75e92fa35fb8511f7f88e41865a669289a8603d57c4809349e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/tree/parsetree.h"
+          },
+          "hashes": {
+            "sha-256": "e7be3a35f83881ebdc55d5d79d3373d112110b32b7dee9f148a3235d3c904423"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/support/any.h"
+          },
+          "hashes": {
+            "sha-256": "edec4736cfca08f7dbd3514a143e51959b7db501ebb0109fbf6efdac1ec18a8d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/tree/parsetreetype.h"
+          },
+          "hashes": {
+            "sha-256": "f7318f042944e1ae251d52d57bfe90ae63b31c66a9b96df668d130745fcffdef"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/atn/lexeraction.h"
+          },
+          "hashes": {
+            "sha-256": "41c48fac0a49fa504323f9fc42eb6afdd198183ca1cbe23737596f843ffdf84d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/atn/lexeractiontype.h"
+          },
+          "hashes": {
+            "sha-256": "3952885e1558724e3cbbe6d1aadfe57800f1f2df8f5307c6bf7f1127f4684906"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/atn/hashutils.h"
+          },
+          "hashes": {
+            "sha-256": "2cf996cde47fe186e17bb1def3a86aff1955438a91e6be7abb6bb533a7fed3cd"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/support/cpputils.h"
+          },
+          "hashes": {
+            "sha-256": "c10db5bc40e53cb39c40014646064f5b6e7e9c869dbbdbdd0fc98a2112ed7849"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/support/arrays.h"
+          },
+          "hashes": {
+            "sha-256": "3ef936b1622fcee89d22f038ad70a9d4fb464717625e06132e5b1261b9ff4dac"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/support/casts.h"
+          },
+          "hashes": {
+            "sha-256": "d2fffbc00917c7ae35c7d375d92bc6fa774b597dc14069fd60a9463782303d7f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/atn/lexeractionexecutor.h"
+          },
+          "hashes": {
+            "sha-256": "73a42f607d716444ad5d74729f009047a577248f3c9cb401f85bcc9e5cffe20f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/charstream.h"
+          },
+          "hashes": {
+            "sha-256": "b8edc357a4fdab25dfccee1de7a0a2d3c7227c283f7f14b73fcb6acb9d9ddcfb"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/intstream.h"
+          },
+          "hashes": {
+            "sha-256": "a567f83abf1906067cf84b6402477556cc9a5b76558e81aa279a9a06f5419863"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/misc/interval.h"
+          },
+          "hashes": {
+            "sha-256": "4b6533a5224c75a9216f01c10166e31296b2c2a5d1ccfae003e8a0106b7981f0"
+          }
+        }
+      ]
+    }
+  ]
+}

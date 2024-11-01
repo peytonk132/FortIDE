@@ -3,12 +3,11 @@
 #include <string>
 #include <regex>
 #include <cmath>
-#include <nlohmann/json.hpp>
 #include <fstream>
 #include <string>
 #include <vector>
 #include <iostream>
-using json = nlohmann::json;
+#include <SFML/Window/Keyboard.hpp>
 
 #include "TextEditor.h"
 
@@ -939,14 +938,17 @@ void TextEditor::Render()
 				drawList->AddRectFilled(start, end, mPalette[(int)PaletteIndex::Breakpoint]);
 			}
 
-			// Draw error markers
+			// Draw error markers  
 			auto errorIt = mErrorMarkers.find(lineNo + 1);
 			if (errorIt != mErrorMarkers.end())
 			{
-				auto end = ImVec2(lineStartScreenPos.x + contentSize.x + 2.0f * scrollX, lineStartScreenPos.y + mCharAdvance.y);
+				ImVec2 start = lineStartScreenPos; // Assuming you've defined this
+				ImVec2 end = ImVec2(lineStartScreenPos.x + contentSize.x + 2.0f * scrollX, lineStartScreenPos.y + mCharAdvance.y);
+
 				drawList->AddRectFilled(start, end, mPalette[(int)PaletteIndex::ErrorMarker]);
 
-				if (ImGui::IsMouseHoveringRect(lineStartScreenPos, end))
+				// Only show the tooltip if the mouse is hovering over the marker area
+				if (ImGui::IsMouseHoveringRect(start, end))
 				{
 					ImGui::BeginTooltip();
 					ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1.0f, 0.2f, 0.2f, 1.0f));
@@ -954,6 +956,27 @@ void TextEditor::Render()
 					ImGui::PopStyleColor();
 					ImGui::Separator();
 					ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1.0f, 1.0f, 0.2f, 1.0f));
+					ImGui::Text("%s", errorIt->second.c_str());
+					ImGui::PopStyleColor();
+					ImGui::EndTooltip();
+				}
+			}
+
+
+			auto HighlightIt = mHighlightMarkers.find(lineNo + 1);
+			if (HighlightIt != mHighlightMarkers.end())
+			{
+				auto end = ImVec2(lineStartScreenPos.x + contentSize.x + 2.0f * scrollX, lineStartScreenPos.y + mCharAdvance.y);
+				drawList->AddRectFilled(start, end, mPalette[(int)PaletteIndex::ErrorMarker]);
+
+				if (ImGui::IsMouseHoveringRect(lineStartScreenPos, end))
+				{
+					ImGui::BeginTooltip();
+					ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1.0f, 0.2f, 0.5f, 0.5f));
+					ImGui::Text("Match at line %d:", errorIt->first);
+					ImGui::PopStyleColor();
+					ImGui::Separator();
+					ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1.0f, 1.0f, 0.5f, 0.5f));
 					ImGui::Text("%s", errorIt->second.c_str());
 					ImGui::PopStyleColor();
 					ImGui::EndTooltip();
@@ -1123,6 +1146,19 @@ void TextEditor::Render()
 	}
 }
 
+/*void TextEditor::SearchBox()
+{
+	char inputBuf[256];
+	if (ImGui::IsKeyPressed(ImGuiKey_LeftCtrl) && ImGui::IsKeyPressed(ImGuiKey_F))
+	{
+		if (ImGui::Begin("##"))
+		{
+			ImGui::InputText("##", inputBuf, sizeof(inputBuf));
+			ImGui::End();
+		}
+	}
+}*/
+
 void TextEditor::Render(const char* aTitle, const ImVec2& aSize, bool aBorder)
 {
 	mWithinRender = true;
@@ -1154,6 +1190,7 @@ void TextEditor::Render(const char* aTitle, const ImVec2& aSize, bool aBorder)
 
 	ImGui::PopStyleVar();
 	ImGui::PopStyleColor();
+	//SearchBox();
 
 	mWithinRender = false;
 }
@@ -1816,16 +1853,6 @@ void TextEditor::Delete()
 
 	u.mAfter = mState;
 	AddUndo(u);
-}
-
-void TextEditor::Search()
-{
-	ImGui::BeginPopup("Search");
-	if (ImGui::InputText("Search", mSearchBuffer, 64))
-	{
-		
-	}
-	ImGui::EndPopup();
 }
 
 void TextEditor::Backspace()

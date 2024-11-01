@@ -1,0 +1,343 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "C26439",
+          "message": {
+            "text": "This kind of function should not throw. Declare it 'noexcept' (f.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Peyton/Documents/antlr4/runtime/Cpp/runtime/src/atn/PredictionContext.cpp"
+                },
+                "region": {
+                  "startLine": 133,
+                  "startColumn": 20
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "antlr4::atn::PredictionContext::{ctor}",
+                  "decoratedName": "??0PredictionContext@atn@antlr4@@IEAA@$$QEAV012@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.41.34120.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///C:/Users/Peyton/Documents/antlr4/runtime/Cpp/runtime/src/atn/PredictionContext.cpp"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "d1a3a518b9c4ecc5e44eb64f825d1d314505a55161f1e6ad2b6a07ad026076bd"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/atn/singletonpredictioncontext.h"
+          },
+          "hashes": {
+            "sha-256": "0b4b3028991e50be0a7ce2278411bf990f05e39e8c3eaac0f1352452a834346d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/atn/predictioncontext.h"
+          },
+          "hashes": {
+            "sha-256": "3e26c317c180b90829200fa0eeacca327dd38002b44e38394824314b878b6167"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/recognizer.h"
+          },
+          "hashes": {
+            "sha-256": "8923326f4c86987d7034b6e5615d40c3a5603d796c10cc654aa88d5d1bec84ce"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/proxyerrorlistener.h"
+          },
+          "hashes": {
+            "sha-256": "cd3e1aeaad1c7fa9fec0a16edbd8d3b5f6626a7dd0a787d6acad36bbc2852d75"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/antlrerrorlistener.h"
+          },
+          "hashes": {
+            "sha-256": "e52200856058788cd7dac996694fee3c1b2b940bc73e3452fbf3328f2c347c8c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/recognitionexception.h"
+          },
+          "hashes": {
+            "sha-256": "c14ed3c199becf219de42c6f19cbb313cf8b45594a51cf862cdb9e7d8476ee74"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/exceptions.h"
+          },
+          "hashes": {
+            "sha-256": "5ef2fbda97df7ad2ee0e2bf40b38d13eb472df8c32e691ac5325f66d5ee43b01"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/antlr4-common.h"
+          },
+          "hashes": {
+            "sha-256": "c8417daf6a0fce8b67bcc2e41fe87d5580556b21a9e47676e1920948db78cb62"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/support/declarations.h"
+          },
+          "hashes": {
+            "sha-256": "3dba7305520ef56646c6ddab2899cbf501f4e8313d4b09c9b5f5f4aaee358a25"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/support/casts.h"
+          },
+          "hashes": {
+            "sha-256": "d2fffbc00917c7ae35c7d375d92bc6fa774b597dc14069fd60a9463782303d7f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/atn/serializedatnview.h"
+          },
+          "hashes": {
+            "sha-256": "49a572fe35858e7930be59d6a67fb0cd4418e5565fe665a52fd19fc0c92e3a74"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/misc/murmurhash.h"
+          },
+          "hashes": {
+            "sha-256": "78c215147fcd5a0b3c0e17873bb20bf1795fa8623470a4cf2e15a681034824e0"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/internal/synchronization.h"
+          },
+          "hashes": {
+            "sha-256": "b0fd0ca4c7df4819d4d4a961d7688eebc74373a77bdf4d5135f3f7d6b25ffb56"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/atn/atn.h"
+          },
+          "hashes": {
+            "sha-256": "853adf9af18739d9c815a8d82516b9c568d1448ccf59628cf091afac4b64b346"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/rulecontext.h"
+          },
+          "hashes": {
+            "sha-256": "5dead01c86036b75e92fa35fb8511f7f88e41865a669289a8603d57c4809349e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/tree/parsetree.h"
+          },
+          "hashes": {
+            "sha-256": "e7be3a35f83881ebdc55d5d79d3373d112110b32b7dee9f148a3235d3c904423"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/support/any.h"
+          },
+          "hashes": {
+            "sha-256": "edec4736cfca08f7dbd3514a143e51959b7db501ebb0109fbf6efdac1ec18a8d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/tree/parsetreetype.h"
+          },
+          "hashes": {
+            "sha-256": "f7318f042944e1ae251d52d57bfe90ae63b31c66a9b96df668d130745fcffdef"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/atn/atnstate.h"
+          },
+          "hashes": {
+            "sha-256": "590a0119fac272ff27548505d04c5a0795a248ed15d003adfc444cb040db10ab"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/misc/intervalset.h"
+          },
+          "hashes": {
+            "sha-256": "884b51d81a0eae40903c2eb37126af96127cf67c3d43f9e2298eb8c98b318a47"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/misc/interval.h"
+          },
+          "hashes": {
+            "sha-256": "4b6533a5224c75a9216f01c10166e31296b2c2a5d1ccfae003e8a0106b7981f0"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/atn/transition.h"
+          },
+          "hashes": {
+            "sha-256": "2ca178c3b01c0d3f878eb9db5b5891eedfe68160001599b9ce3427e19f428475"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/atn/transitiontype.h"
+          },
+          "hashes": {
+            "sha-256": "210057f309b29837f66eae5cbf174b90b4d2b818f909145e838b0b1439daea3d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/atn/atnstatetype.h"
+          },
+          "hashes": {
+            "sha-256": "d2ac8499045f6acb4f46835e6d4f9edc797398c071017e39583d7f15ea7e42bd"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/atn/predictioncontexttype.h"
+          },
+          "hashes": {
+            "sha-256": "0edb463ab31066bb2ed555fb870eac3e645d51ad2b76f315d7edf3ee59d717df"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/atn/arraypredictioncontext.h"
+          },
+          "hashes": {
+            "sha-256": "1d6a36cef3d71fbbaf36db436bc24ded31857aa20fc228be87797f3380f6409c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/atn/predictioncontextcache.h"
+          },
+          "hashes": {
+            "sha-256": "ae56adf411b754b56bf073f443bcdf0d5a48be9ad86d92af488edc1b368dc692"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/flathashset.h"
+          },
+          "hashes": {
+            "sha-256": "8ee50986ce19c695d3b244523d09d1a0ace91e7c489397a3ff8def6c4510c86e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/atn/predictioncontextmergecache.h"
+          },
+          "hashes": {
+            "sha-256": "32ad62c1aa893f70a10a92221613826f4fe1a112d90e15c1bab3947f590f8159"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/atn/predictioncontextmergecacheoptions.h"
+          },
+          "hashes": {
+            "sha-256": "d7692f6e3f7d876ea3ba37779c19c5e16793eda39011bc7a148fce365dbf64af"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/flathashmap.h"
+          },
+          "hashes": {
+            "sha-256": "895b6e4b7cb62637805211ad06f22bb37a124c94d75963bc833fd276200b59c6"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/parserrulecontext.h"
+          },
+          "hashes": {
+            "sha-256": "377c4125e83b8200dd5a5706e16c5ee0e8767ae93f71fb02e03c1bc90a4a6aab"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/support/cpputils.h"
+          },
+          "hashes": {
+            "sha-256": "c10db5bc40e53cb39c40014646064f5b6e7e9c869dbbdbdd0fc98a2112ed7849"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/atn/ruletransition.h"
+          },
+          "hashes": {
+            "sha-256": "46a357bd7fd1ba0b42c965b02fb97caf6f46d7fa84f725b666c26b31bb33d4f8"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/support/arrays.h"
+          },
+          "hashes": {
+            "sha-256": "3ef936b1622fcee89d22f038ad70a9d4fb464717625e06132e5b1261b9ff4dac"
+          }
+        }
+      ]
+    }
+  ]
+}

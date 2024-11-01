@@ -1,0 +1,75 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.41.34120.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/antlrerrorstrategy.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "sha-256": "e58c9bccf199f564e53fe6e647c9aa4450e0ddb279025a85c97d3fbbc5314df2"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/antlrerrorstrategy.h"
+          },
+          "hashes": {
+            "sha-256": "382f21fc9d65854a86787061e133ef624d4192940a78304873214e52f55325f4"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/token.h"
+          },
+          "hashes": {
+            "sha-256": "fc0f204a89abd4f17c42cfad49c3ed9782f3e50eb480d1b4dd14615c9e564579"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/intstream.h"
+          },
+          "hashes": {
+            "sha-256": "a567f83abf1906067cf84b6402477556cc9a5b76558e81aa279a9a06f5419863"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/antlr4-common.h"
+          },
+          "hashes": {
+            "sha-256": "c8417daf6a0fce8b67bcc2e41fe87d5580556b21a9e47676e1920948db78cb62"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/support/declarations.h"
+          },
+          "hashes": {
+            "sha-256": "3dba7305520ef56646c6ddab2899cbf501f4e8313d4b09c9b5f5f4aaee358a25"
+          }
+        }
+      ]
+    }
+  ]
+}

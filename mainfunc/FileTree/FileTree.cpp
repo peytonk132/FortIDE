@@ -6,12 +6,12 @@
 
 namespace fs = boost::filesystem;
 
-FileTree::FileNode FileTree::TraverseDirectory(const fs::path& directory) 
+FileTree::FileNode FileTree::TraverseDirectory(const fs::path& directory)
 {
     FileNode node(directory.filename().string(), directory.string(), fs::is_directory(directory));
-    if (fs::is_directory(directory)) 
+    if (fs::is_directory(directory))
     {
-        for (const auto& entry : fs::directory_iterator(directory)) 
+        for (const auto& entry : fs::directory_iterator(directory))
         {
             node.children.push_back(TraverseDirectory(entry.path()));
         }
@@ -20,35 +20,35 @@ FileTree::FileNode FileTree::TraverseDirectory(const fs::path& directory)
     return node;
 }
 
-void FileTree::RenderFileNode(FileNode& node) 
+void FileTree::RenderFileNode(FileNode& node)
 {
     ImGuiTreeNodeFlags flags = node.isDirectory ? ImGuiTreeNodeFlags_OpenOnArrow : ImGuiTreeNodeFlags_Leaf;
 
-    if (ImGui::TreeNodeEx(node.name.c_str(), flags)) 
+    if (ImGui::TreeNodeEx(node.name.c_str(), flags))
     {
-        if (node.isDirectory) 
+        if (node.isDirectory)
         {
-            for (auto& child : node.children) 
+            for (auto& child : node.children)
             {
                 RenderFileNode(child);
             }
         }
 
-        if (!node.isDirectory && ImGui::IsItemClicked()) 
+        // If the node is a file and the item is clicked
+        if (!node.isDirectory && ImGui::IsItemClicked())
         {
-            // The file node is clicked
-            clickedFileName = node.name; // Store the clicked file name
+            clickedFileName = node.name;  // Store the clicked file name
+            filePath = node.path;         // Store the clicked file path
             std::cout << "Clicked file: " << clickedFileName << std::endl;
-        }
+            std::cout << "File path: " << filePath << std::endl;
 
-        if (!node.isDirectory && ImGui::IsItemClicked()) 
-        {
-            if (fileClickCallback) 
+            // Invoke the callback, passing the file path
+            if (fileClickCallback)
             {
-                fileClickCallback(node.path);
-                std::cout << "File path: " << node.path << std::endl;
+                fileClickCallback(filePath);
             }
         }
+
 
         if (ImGui::BeginDragDropSource(ImGuiDragDropFlags_SourceAllowNullID)) {
             ImGui::SetDragDropPayload("DND_FILE", node.path.c_str(), node.path.size() + 1);
@@ -57,7 +57,7 @@ void FileTree::RenderFileNode(FileNode& node)
         }
 
         if (ImGui::BeginDragDropTarget()) {
-            if (const ImGuiPayload* payload = ImGui::AcceptDragDropPayload("DND_FILE")) 
+            if (const ImGuiPayload* payload = ImGui::AcceptDragDropPayload("DND_FILE"))
             {
                 std::string sourcePath((const char*)payload->Data);
                 std::string destinationPath = node.path + "/" + fs::path(sourcePath).filename().string();
@@ -75,9 +75,9 @@ void FileTree::RenderFileNode(FileNode& node)
     }
 }
 
-void FileTree::treeNode() 
+void FileTree::treeNode()
 {
-    if (!isInitialized) 
+    if (!isInitialized)
     {
         // Specify your root directory here
         fs::path rootPath = fs::current_path();
@@ -88,7 +88,7 @@ void FileTree::treeNode()
 
     // Update the tree at regular intervals
     auto now = std::chrono::steady_clock::now();
-    if (now - lastUpdateTime >= updateInterval) 
+    if (now - lastUpdateTime >= updateInterval)
     {
         UpdateTree();
         lastUpdateTime = now;
@@ -105,15 +105,13 @@ void FileTree::treeNode()
     ImGui::End();
 }
 
-void FileTree::UpdateTree() 
+void FileTree::UpdateTree()
 {
     fs::path rootPath = fs::current_path();
     rootNode = TraverseDirectory(rootPath);
 }
 
-void FileTree::setFileClickCallback(FileClickCallback callback) 
+void FileTree::setFileClickCallback(FileClickCallback callback)
 {
     fileClickCallback = std::move(callback);
-    std::cout << "File click callback set successfully." << std::endl;
-    std::cout << "Callback function address: " << reinterpret_cast<void*>(fileClickCallback.target<void(const std::string&)>()) << std::endl;
 }

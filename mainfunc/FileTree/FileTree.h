@@ -15,9 +15,24 @@ public:
 
     void treeNode();
     void setFileClickCallback(FileClickCallback callback);
+    
+    
 
 private:
-    struct FileNode {
+    std::string filePath;
+    /*struct FileName
+    {
+        std::string path;
+        bool isDirectory;
+
+        FileName() : isDirectory(false) {}
+
+        FileName(const std::string& path, bool isDirectory)
+            : path(path), isDirectory(isDirectory) {}
+    };*/
+
+    struct FileNode 
+    {
         std::string name;
         std::string path;
         std::vector<FileNode> children;
@@ -33,6 +48,7 @@ private:
 
     FileNode TraverseDirectory(const boost::filesystem::path& directory);
     void RenderFileNode(FileNode& node);
+    //int getFilePath(FileName& node);
     void UpdateTree();
 
     FileNode rootNode;
@@ -41,5 +57,5 @@ private:
     FileClickCallback fileClickCallback;
 
     std::chrono::time_point<std::chrono::steady_clock> lastUpdateTime;
-    std::chrono::milliseconds updateInterval{ 1000 }; // Update interval of 1 second
+    std::chrono::milliseconds updateInterval{ 1000 }; //Update interval of 1 second
 };

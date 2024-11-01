@@ -1,0 +1,115 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.41.34120.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/atn/decisioninfo.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "sha-256": "ed5defac9b2baedd5fd03a94491c1e6e63972928d31f5c8e20680290dda92bfa"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/atn/errorinfo.h"
+          },
+          "hashes": {
+            "sha-256": "5e6c5fd4fc0d65bb4745499461f2723a9eb2b7e9e4612a9ab2f38467554d5b03"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/atn/decisioneventinfo.h"
+          },
+          "hashes": {
+            "sha-256": "7d834a23544f3fc84c120f716b9935e731b655d8d4d244747e871e02b0198ff4"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/antlr4-common.h"
+          },
+          "hashes": {
+            "sha-256": "c8417daf6a0fce8b67bcc2e41fe87d5580556b21a9e47676e1920948db78cb62"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/support/declarations.h"
+          },
+          "hashes": {
+            "sha-256": "3dba7305520ef56646c6ddab2899cbf501f4e8313d4b09c9b5f5f4aaee358a25"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/atn/lookaheadeventinfo.h"
+          },
+          "hashes": {
+            "sha-256": "ca7237ee9332daf7e78faeeb1eb5baac3dcee1ba2955bae8cfbc8b2e5c4874fd"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/atn/decisioninfo.h"
+          },
+          "hashes": {
+            "sha-256": "63b4bee2bd64ce3f6bfe854810563ae4ad4a824491b97d3332d5841218478ca2"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/atn/contextsensitivityinfo.h"
+          },
+          "hashes": {
+            "sha-256": "e8b38d5faabb3c67e9bab677e9285a73431dbb158f4db92b94335c34fb8c32aa"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/atn/ambiguityinfo.h"
+          },
+          "hashes": {
+            "sha-256": "2896d97afde7a99969c37a6ee5d97cacf5d6e8ac467f200e1242615b1261d14a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/support/bitset.h"
+          },
+          "hashes": {
+            "sha-256": "fb4361f780de533c3a21e0aef0b95457b1d29bd9cb817bf042202ea626adfd56"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/antlr4/runtime/cpp/runtime/src/atn/predicateevalinfo.h"
+          },
+          "hashes": {
+            "sha-256": "d21d89f4c4b2c37e70fe49503de121240039360884f9fbdd1ca291c185cf7381"
+          }
+        }
+      ]
+    }
+  ]
+}
