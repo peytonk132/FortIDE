@@ -1,3 +1,1480 @@
-﻿  LINK : C:\Users\Peyton\Documents\dev\FortIDE\x64\Debug\antlr4-runtime.dll not found or not built by the last incremental link; performing full link
-     Creating library C:\Users\Peyton\Documents\dev\FortIDE\x64\Debug\antlr4-runtime.lib and object C:\Users\Peyton\Documents\dev\FortIDE\x64\Debug\antlr4-runtime.exp
-  antlr4cpp-vs2022.vcxproj -> C:\Users\Peyton\Documents\dev\FortIDE\x64\Debug\antlr4-runtime.dll
+﻿  ANTLRErrorListener.cpp
+  ANTLRErrorStrategy.cpp
+  ANTLRFileStream.cpp
+  ANTLRInputStream.cpp
+  ActionTransition.cpp
+  AmbiguityInfo.cpp
+  ArrayPredictionContext.cpp
+  ATN.cpp
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/ANTLRErrorListener.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/ANTLRErrorListener.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/ANTLRInputStream.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/atn/ATN.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/ANTLRInputStream.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/atn/ATN.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/atn/ActionTransition.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/atn/ArrayPredictionContext.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/atn/ArrayPredictionContext.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/atn/ActionTransition.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+  ATNConfig.cpp
+  ATNConfigSet.cpp
+  ATNDeserializationOptions.cpp
+  ATNDeserializer.cpp
+  ATNSimulator.cpp
+  ATNState.cpp
+  AtomTransition.cpp
+  ContextSensitivityInfo.cpp
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/atn/ATNConfig.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/atn/ATNConfig.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/atn/ATNConfigSet.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/atn/ATNConfigSet.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/atn/ATNDeserializer.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/atn/ATNDeserializer.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/atn/ATNDeserializationOptions.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/atn/ATNDeserializationOptions.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/atn/AtomTransition.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/atn/AtomTransition.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/atn/ATNSimulator.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/atn/ATNState.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/atn/ATNSimulator.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/atn/ATNState.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+  DecisionEventInfo.cpp
+  DecisionInfo.cpp
+  DecisionState.cpp
+  EpsilonTransition.cpp
+  ErrorInfo.cpp
+  LexerAction.cpp
+  LexerActionExecutor.cpp
+  LexerATNConfig.cpp
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/atn/DecisionState.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/atn/DecisionState.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+  LexerATNSimulator.cpp
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/atn/EpsilonTransition.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/atn/EpsilonTransition.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/atn/ErrorInfo.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/atn/ErrorInfo.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+  LexerChannelAction.cpp
+  LexerCustomAction.cpp
+  LexerIndexedCustomAction.cpp
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/atn/LexerATNConfig.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/atn/LexerATNConfig.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+  LexerModeAction.cpp
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/atn/LexerATNSimulator.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/atn/LexerATNSimulator.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+  LexerMoreAction.cpp
+  LexerPopModeAction.cpp
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/atn/LexerChannelAction.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/atn/LexerChannelAction.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/atn/LexerCustomAction.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/atn/LexerCustomAction.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/atn/LexerIndexedCustomAction.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/atn/LexerIndexedCustomAction.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+  LexerPushModeAction.cpp
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/atn/LexerModeAction.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+  LexerSkipAction.cpp
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/atn/LexerModeAction.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+  LexerTypeAction.cpp
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/atn/LexerMoreAction.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/atn/LexerMoreAction.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+  LL1Analyzer.cpp
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/atn/LexerPopModeAction.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/atn/LexerPopModeAction.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+  LookaheadEventInfo.cpp
+  NotSetTransition.cpp
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/atn/LexerPushModeAction.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/atn/LexerPushModeAction.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+  OrderedATNConfigSet.cpp
+  ParseInfo.cpp
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/atn/LexerSkipAction.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/atn/LexerSkipAction.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/atn/LexerTypeAction.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/atn/LexerTypeAction.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/atn/LL1Analyzer.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/atn/LL1Analyzer.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+  ParserATNSimulator.cpp
+  PrecedencePredicateTransition.cpp
+  PredicateEvalInfo.cpp
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/atn/NotSetTransition.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/atn/NotSetTransition.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+  PredicateTransition.cpp
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/atn/OrderedATNConfigSet.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/atn/OrderedATNConfigSet.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/atn/ParseInfo.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/atn/ParseInfo.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+  PredictionContext.cpp
+  PredictionContextCache.cpp
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/atn/ParserATNSimulator.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/atn/ParserATNSimulator.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/atn/PrecedencePredicateTransition.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/atn/PrecedencePredicateTransition.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/atn/PredicateEvalInfo.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/atn/PredicateEvalInfo.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+  PredictionContextMergeCache.cpp
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/atn/PredicateTransition.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/atn/PredicateTransition.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/atn/PredictionContext.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/atn/PredictionContext.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+  PredictionMode.cpp
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/atn/PredictionContextCache.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/atn/PredictionContextCache.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+  ProfilingATNSimulator.cpp
+  RangeTransition.cpp
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/atn/PredictionContextMergeCache.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/atn/PredictionContextMergeCache.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+  RuleTransition.cpp
+  SemanticContext.cpp
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/atn/PredictionMode.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/atn/RangeTransition.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/atn/PredictionMode.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/atn/RangeTransition.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+  SetTransition.cpp
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/atn/ProfilingATNSimulator.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/atn/ProfilingATNSimulator.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+  SingletonPredictionContext.cpp
+  StarLoopbackState.cpp
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/atn/RuleTransition.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/atn/RuleTransition.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+  Transition.cpp
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/atn/SemanticContext.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/atn/SemanticContext.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+  WildcardTransition.cpp
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/atn/SetTransition.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/atn/SetTransition.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+  BailErrorStrategy.cpp
+  BaseErrorListener.cpp
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/atn/SingletonPredictionContext.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/atn/SingletonPredictionContext.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+  BufferedTokenStream.cpp
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/atn/StarLoopbackState.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/atn/StarLoopbackState.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/atn/Transition.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/atn/Transition.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+  CharStream.cpp
+  CommonToken.cpp
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/atn/WildcardTransition.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/atn/WildcardTransition.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+  CommonTokenFactory.cpp
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/BailErrorStrategy.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+  CommonTokenStream.cpp
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/BailErrorStrategy.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/BaseErrorListener.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+  ConsoleErrorListener.cpp
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/BaseErrorListener.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/BufferedTokenStream.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/BufferedTokenStream.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+  DefaultErrorStrategy.cpp
+  DFA.cpp
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/CommonToken.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/CommonToken.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+  DFASerializer.cpp
+  DFAState.cpp
+  LexerDFASerializer.cpp
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/ConsoleErrorListener.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/ConsoleErrorListener.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+  DiagnosticErrorListener.cpp
+  Exceptions.cpp
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/DefaultErrorStrategy.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/DefaultErrorStrategy.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+  FailedPredicateException.cpp
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/dfa/DFA.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/dfa/DFA.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/dfa/DFASerializer.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/dfa/DFASerializer.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/dfa/DFAState.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/dfa/DFAState.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/DiagnosticErrorListener.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/DiagnosticErrorListener.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/Exceptions.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/Exceptions.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+  InputMismatchException.cpp
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/FailedPredicateException.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/FailedPredicateException.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+  Synchronization.cpp
+  InterpreterRuleContext.cpp
+  IntStream.cpp
+  Lexer.cpp
+  LexerInterpreter.cpp
+  LexerNoViableAltException.cpp
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/InputMismatchException.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/InputMismatchException.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+  ListTokenSource.cpp
+  InterpreterDataReader.cpp
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/Lexer.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/Lexer.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+  Interval.cpp
+  IntervalSet.cpp
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/LexerInterpreter.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/LexerInterpreter.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+  MurmurHash.cpp
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/LexerNoViableAltException.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/LexerNoViableAltException.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+  Predicate.cpp
+  NoViableAltException.cpp
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/misc/IntervalSet.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/misc/InterpreterDataReader.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/misc/IntervalSet.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/misc/InterpreterDataReader.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+  Parser.cpp
+  ParserInterpreter.cpp
+  ParserRuleContext.cpp
+  ProxyErrorListener.cpp
+  RecognitionException.cpp
+  Recognizer.cpp
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/NoViableAltException.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/NoViableAltException.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/Parser.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/Parser.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/ParserInterpreter.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/ParserInterpreter.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+  RuleContext.cpp
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/ParserRuleContext.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/ParserRuleContext.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/ProxyErrorListener.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/ProxyErrorListener.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+  RuleContextWithAltNum.cpp
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/RecognitionException.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/RecognitionException.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/Recognizer.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/Recognizer.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+  RuntimeMetaData.cpp
+  Any.cpp
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/RuleContext.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/RuleContext.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+  Arrays.cpp
+  CPPUtils.cpp
+  StringUtils.cpp
+  Utf8.cpp
+  Token.cpp
+  TokenSource.cpp
+  TokenStream.cpp
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/support/Arrays.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/support/Arrays.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+  TokenStreamRewriter.cpp
+  ErrorNodeImpl.cpp
+  IterativeParseTreeWalker.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(247,16): warning C4244: 'initializing': conversion from '_Ty' to '_Ty1', possible loss of data
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(247,16): warning C4244:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(247,16): warning C4244:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(247,16): warning C4244:             _Ty=int
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(247,16): warning C4244:         ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(247,16): warning C4244:         and
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(247,16): warning C4244:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(247,16): warning C4244:             _Ty1=uint8_t
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(247,16): warning C4244:         ]
+  (compiling source file 'src/support/Utf8.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(247,16):
+      the template instantiation context (the oldest one first) is
+          C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\support\Utf8.cpp(95,20):
+          see reference to function template instantiation 'std::pair<uint8_t,uint8_t>::pair<int,const uint8_t&,0>(_Other1 &&,_Other2) noexcept' being compiled
+          with
+          [
+              _Other1=int,
+              _Other2=const uint8_t &
+          ]
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(247,54): warning C4244: 'initializing': conversion from '_Ty' to '_Ty2', possible loss of data
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(247,54): warning C4244:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(247,54): warning C4244:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(247,54): warning C4244:             _Ty=int
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(247,54): warning C4244:         ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(247,54): warning C4244:         and
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(247,54): warning C4244:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(247,54): warning C4244:             _Ty2=uint8_t
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(247,54): warning C4244:         ]
+  (compiling source file 'src/support/Utf8.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(247,54):
+      the template instantiation context (the oldest one first) is
+          C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\support\Utf8.cpp(95,34):
+          see reference to function template instantiation 'std::pair<uint8_t,uint8_t>::pair<const uint8_t&,int,0>(_Other1,_Other2 &&) noexcept' being compiled
+          with
+          [
+              _Other1=const uint8_t &,
+              _Other2=int
+          ]
+  
+  ParseTree.cpp
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/TokenStreamRewriter.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/TokenStreamRewriter.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+  ParseTreeListener.cpp
+  ParseTreeVisitor.cpp
+  ParseTreeWalker.cpp
+  Chunk.cpp
+  ParseTreeMatch.cpp
+  ParseTreePattern.cpp
+  ParseTreePatternMatcher.cpp
+  RuleTagToken.cpp
+  TagChunk.cpp
+  TextChunk.cpp
+  TokenTagToken.cpp
+  TerminalNodeImpl.cpp
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/tree/pattern/ParseTreeMatch.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/tree/pattern/ParseTreeMatch.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/tree/pattern/ParseTreePattern.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/tree/pattern/ParseTreePattern.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/tree/pattern/ParseTreePatternMatcher.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/tree/pattern/RuleTagToken.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/tree/pattern/ParseTreePatternMatcher.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/tree/pattern/RuleTagToken.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+  Trees.cpp
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/tree/pattern/TagChunk.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/tree/pattern/TagChunk.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+  XPath.cpp
+  XPathElement.cpp
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/tree/pattern/TextChunk.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/tree/pattern/TextChunk.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+  XPathLexer.cpp
+  XPathLexerErrorListener.cpp
+  XPathRuleAnywhereElement.cpp
+  XPathRuleElement.cpp
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/tree/Trees.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/tree/Trees.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/tree/xpath/XPath.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/tree/xpath/XPath.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+  XPathTokenAnywhereElement.cpp
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/tree/xpath/XPathLexer.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/tree/xpath/XPathLexer.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/tree/xpath/XPathLexerErrorListener.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/tree/xpath/XPathLexerErrorListener.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+  XPathTokenElement.cpp
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/tree/xpath/XPathRuleElement.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/tree/xpath/XPathRuleElement.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/tree/xpath/XPathRuleAnywhereElement.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/tree/xpath/XPathRuleAnywhereElement.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+  XPathWildcardAnywhereElement.cpp
+  XPathWildcardElement.cpp
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/tree/xpath/XPathTokenAnywhereElement.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/tree/xpath/XPathTokenAnywhereElement.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\tree\xpath\XPathLexer.cpp(158,48): warning C4100: 'context': unreferenced formal parameter
+  UnbufferedCharStream.cpp
+  UnbufferedTokenStream.cpp
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/tree/xpath/XPathTokenElement.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/tree/xpath/XPathTokenElement.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+  Vocabulary.cpp
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/tree/xpath/XPathWildcardAnywhereElement.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/tree/xpath/XPathWildcardAnywhereElement.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/tree/xpath/XPathWildcardElement.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/tree/xpath/XPathWildcardElement.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+  WritableToken.cpp
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/UnbufferedCharStream.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/UnbufferedCharStream.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,57): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::RuntimeException'
+  (compiling source file 'src/UnbufferedTokenStream.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(13,26):
+      see declaration of 'antlr4::RuntimeException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,52): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'antlr4::IOException'
+  (compiling source file 'src/UnbufferedTokenStream.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vcruntime_exception.h(49,24):
+      see declaration of 'std::exception'
+      C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Exceptions.h(73,26):
+      see declaration of 'antlr4::IOException'
+  
+C:\Users\Peyton\Documents\dev\FortIDE\deps\antlr4\runtime\Cpp\runtime\src\Vocabulary.cpp(12,30): warning C4996: 'antlr4::dfa::Vocabulary::EMPTY_VOCABULARY': Use the default constructor of Vocabulary instead.
+     Creating library C:\Users\Peyton\Documents\dev\FortIDE\bin\vs-2022\x64\Debug DLL\antlr4-runtime.lib and object C:\Users\Peyton\Documents\dev\FortIDE\bin\vs-2022\x64\Debug DLL\antlr4-runtime.exp
+  antlr4cpp-vs2022.vcxproj -> C:\Users\Peyton\Documents\dev\FortIDE\bin\vs-2022\x64\Debug DLL\antlr4-runtime.dll

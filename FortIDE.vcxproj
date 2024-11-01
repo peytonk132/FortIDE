@@ -132,7 +132,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir)deps\libunistd\Debug;C:\Users\Peyton\Documents\dev\FortIDE\deps\libgit2\Debug;$(SolutionDir)deps\fmt\Debug;$(SolutionDir)deps\boost\stage\lib;$(SolutionDir)deps\glfw-3.4\glfw-3.4\lib-vc2022;$(SolutionDir)deps\spdlog\Debug;$(SolutionDir)deps\SFML\lib\Debug;$(SolutionDir)antlr-bin\bin\vs-2022\x64\Debug DLL\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>%(AdditionalDependencies);antlr4-runtime.lib;sfml-audio-d.lib;sfml-graphics-d.lib;sfml-main-d.lib;sfml-network-d.lib;sfml-system-d.lib;sfml-window-d.lib;libboost_filesystem-vc143-mt-gd-x64-1_86.lib;libboost_filesystem-vc143-mt-x64-1_86.lib;glfw3.lib;git2.lib;OpenGL32.Lib;spdlogd.lib;fmtd.lib;libunistd.lib</AdditionalDependencies>
+      <AdditionalDependencies>%(AdditionalDependencies);antlr4-runtime.lib;sfml-audio-d.lib;sfml-graphics-d.lib;sfml-main-d.lib;sfml-network-d.lib;sfml-system-d.lib;sfml-window-d.lib;libboost_filesystem-vc143-mt-gd-x64-1_86.lib;libboost_filesystem-vc143-mt-x64-1_86.lib;git2.lib;OpenGL32.Lib;spdlogd.lib;fmtd.lib;libunistd.lib</AdditionalDependencies>
       <EntryPointSymbol>
       </EntryPointSymbol>
     </Link>
@@ -162,7 +162,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="deps\imgui-sfml\imgui-SFML.cpp" />
-    <ClCompile Include="deps\imgui\backends\imgui_impl_glfw.cpp" />
     <ClCompile Include="deps\imgui\imgui.cpp" />
     <ClCompile Include="deps\imgui\imgui_demo.cpp" />
     <ClCompile Include="deps\imgui\imgui_draw.cpp" />
@@ -172,8 +171,6 @@
     <ClCompile Include="deps\tinyxml2\tinyxml2.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="colorText\TextEditor.cpp" />
-    <ClCompile Include="mainfunc\Config.cpp" />
-    <ClCompile Include="mainfunc\c_Parser.cpp" />
     <ClCompile Include="mainfunc\Config.cpp" />
     <ClCompile Include="mainfunc\c_Parser.cpp" />
     <ClCompile Include="mainfunc\F90Files\ErrorListener.cpp" />
@@ -237,6 +234,11 @@
   </ItemGroup>
   <ItemGroup>
     <Natvis Include="deps\imgui\misc\debuggers\imgui.natvis" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="deps\antlr4\runtime\Cpp\runtime\antlr4cpp-vs2022.vcxproj">
+      <Project>{52618d4b-6ec4-49ad-8b83-52686244e8f3}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

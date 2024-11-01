@@ -41,8 +41,6 @@ std::thread _repoPickerThread;
 std::unique_ptr<std::istream> fileContent; // Unique pointer to hold the file content
 
 // Highlighting is done by ImGuiColorTextEdit. The repo: https://github.com/BalazsJako/ImGuiColorTextEdit
-<<<<<<< Updated upstream
-=======
 
 int _repoPathPicker() {
     nfdchar_t* outPath = NULL;
@@ -146,8 +144,6 @@ bool multiPurp::saveToFile(const std::string& filePath, const std::string& conte
     }
 }
 
-// Highlighting is done by ImGuiColorTextEdit. The repo: https://github.com/BalazsJako/ImGuiColorTextEdit
->>>>>>> Stashed changes
 void multiPurp::mainEditor(TextEditor& editor)
 {
     static bool isLanguageSet = false;
@@ -416,7 +412,7 @@ bool multiPurp::pushChanges(git_repository* repo) {
 
     // Set up the callbacks for authentication
     callbacks.credentials = [](git_credential** out, const char* url, const char* username_from_url, unsigned int allowed_types, void* payload) {
-        return git_credential_userpass_plaintext_new(out, "peytonk132", "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"); // Use your actual token here
+        return git_credential_userpass_plaintext_new(out, "peytonk132", "github_token"); // Use your actual token here
         };
     options.callbacks = callbacks;
 

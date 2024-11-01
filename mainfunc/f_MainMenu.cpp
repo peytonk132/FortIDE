@@ -221,9 +221,6 @@ int f_MainMenu::entryPoint()
 {
     sf::VideoMode autoSize = sf::VideoMode::getDesktopMode();
 
-    sf::RenderWindow window(autoSize, "Menu");
-    window.setFramerateLimit(60);
-
     sf::RenderWindow window(autoSize, "Menu", sf::Style::Default);
     window.setVerticalSyncEnabled(true); // Enable vertical sync
 
@@ -233,13 +230,6 @@ int f_MainMenu::entryPoint()
 
     sf::Clock deltaClock;
     while (window.isOpen()) {
-
-        sf::Event event;
-        while (window.pollEvent(event)) {
-            ImGui::SFML::ProcessEvent(event);
-
-            if (event.type == sf::Event::Closed) {
-
         while (const std::optional<sf::Event> event = window.pollEvent())
         {
             ImGui::SFML::ProcessEvent(window, *event);
