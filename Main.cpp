@@ -19,7 +19,9 @@
 #include <array>
 #include <cstdio>
 #include <SFML/Graphics.hpp>
+//#include <boost/filesystem.hpp>
 #include <sstream>
+#include <toml.hpp>
 
 using namespace std;
 
@@ -64,11 +66,11 @@ bool isPackageInFpmToml(const std::string& packageName)
 void installPackage(const std::string& toml) {
     // Run the command to install the package
     std::string command = "fpm run -- demo substitute fpm.toml";
-    try 
+    try
     {
         exec(command.c_str());
     }
-    catch (const std::exception& e) 
+    catch (const std::exception& e)
     {
         std::cerr << "Error executing command: " << e.what() << std::endl;
     }
@@ -106,6 +108,7 @@ int main()
     // Load packages from the XML file
     packages = loadPackagesFromXML("packages.xml");
 
+
     sf::VideoMode desktopSize = sf::VideoMode::getDesktopMode();
 
     f_MainMenu::entryPoint();
@@ -120,7 +123,10 @@ int main()
         {
             loadFileIntoEditor(filePath, editor);
         });
-    
+    /*fileDir.setFileClickCallback([](const std::string& path) {
+        std::cout << "File clicked: " << path << std::endl;
+        });*/
+
 
     sf::Clock deltaClock;
 
@@ -176,7 +182,7 @@ int main()
         multiPurp teditor;
         teditor.mainEditor(editor);
         //c_Parser teditor;
-		//teditor.mainEditor(editor);
+        //teditor.mainEditor(editor);
 
 
         multiPurp t_menuItems;

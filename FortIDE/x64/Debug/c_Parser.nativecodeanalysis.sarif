@@ -26,7 +26,7 @@
             "analysisTarget"
           ],
           "hashes": {
-            "sha-256": "cec0ebcddc32fd28b3e41588c0828bd1b223ede20888074513777650f83cb962"
+            "sha-256": "7791da313c3a7b3f5b522c8cd4592a512cc9c18c82083d38662acec37d2726f5"
           }
         },
         {
@@ -34,7 +34,7 @@
             "uri": "file:///c:/users/peyton/documents/dev/fortide/mainfunc/c_parser.h"
           },
           "hashes": {
-            "sha-256": "5a60f34347feb8747eeb5f6e2bffcd94596a383f590a3a4e9f984fc64b2ed233"
+            "sha-256": "9ceb358794b5eecf4d7f27d3bb3ddb9305dab68741b7525140f1c74a2c9a47df"
           }
         },
         {
@@ -42,23 +42,23 @@
             "uri": "file:///c:/users/peyton/documents/dev/fortide/colortext/texteditor.h"
           },
           "hashes": {
-            "sha-256": "fee10d0abe73906d2831b5aee24ac727fe1c5b73302085151f0e263ffdf198c7"
+            "sha-256": "248bdab12a7792183a677b2315446dcc3a991937684f367b8b8097e6a730efd1"
           }
         },
         {
           "location": {
-            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/imgui/imgui.h"
+            "uri": "file:///c:/users/peyton/documents/dev/vcpkg/installed/x64-windows/include/imgui.h"
           },
           "hashes": {
-            "sha-256": "bee76cd4b4f5212963757c70411de22ad7e1d024aa7e3d5b3e76849a02d2f17b"
+            "sha-256": "af5f8dc5061759de5e485834e5d9b3d2da7f89d0390174039344254788c760dd"
           }
         },
         {
           "location": {
-            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/imgui/imconfig.h"
+            "uri": "file:///c:/users/peyton/documents/dev/vcpkg/installed/x64-windows/include/imconfig.h"
           },
           "hashes": {
-            "sha-256": "ac21980510fd3d7e04e7ece5d49bd0c0b676db59bc469de580817c154d9a7c77"
+            "sha-256": "a253e82c1960f8aa7594a51a8ac606a6235738c923f12d67a7742e88bf07ed63"
           }
         },
         {

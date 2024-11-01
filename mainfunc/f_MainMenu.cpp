@@ -1,6 +1,5 @@
 #include "f_MainMenu.h"
-<<<<<<< Updated upstream
-=======
+
 #include <git2.h>
 #include <SFML/Graphics.hpp>
 #include <imgui.h>
@@ -13,7 +12,6 @@
 #include <thread>
 #include <cstring>
 #include <atomic>
->>>>>>> Stashed changes
 
 // Buffer for ImGui input
 char f_MainMenu::buf[256]{ '\0' };
@@ -124,25 +122,18 @@ int f_MainMenu::f_genNewProject()
     std::string projectTitle(buf);
     std::string title = "fpm new " + projectTitle;
     boost::process::system(title);
-
     return 0;
 }
 
 void getDate()
 {
-    // Get current time
     auto now = std::chrono::system_clock::now();
-
-    // Convert to time_t, which represents the time as a number of seconds
     std::time_t currentTime = std::chrono::system_clock::to_time_t(now);
-
-    // Convert to tm structure for local time
     std::tm* localTime = std::localtime(&currentTime);
 }
 
-
-
-int f_MainMenu::startMenu() {
+int f_MainMenu::startMenu()
+{
     sf::VideoMode autoReSize = sf::VideoMode::getDesktopMode();
     unsigned int sizeY = autoReSize.size.x;
     unsigned int sizeX = autoReSize.size.y;
@@ -152,24 +143,23 @@ int f_MainMenu::startMenu() {
     ImGui::SetNextWindowPos(fixedfieldPos, ImGuiCond_Always);
     ImGui::SetNextWindowSize(sizedWidget, ImGuiCond_Always);
     ImGui::Begin("##", NULL, ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoTitleBar);
-    
 
-    if (ImGui::Button("New Project", ImVec2(200, 100))) 
+    if (ImGui::Button("New Project", ImVec2(200, 100)))
     {
         ImGui::OpenPopup("New Project");
     }
 
     if (ImGui::BeginPopupModal("New Project", NULL))
-	{
-        ImGui::Text("Enter the name for your Project.:");
-        ImGui::InputText("##", buf, sizeof(buf), NULL, NULL);
+    {
+        ImGui::Text("Enter the name for your Project:");
+        ImGui::InputText("##", buf, sizeof(buf));
 
         if (ImGui::IsKeyReleased(ImGuiKey_Enter))
         {
             nfdchar_t* wdPath = NULL;
             nfdresult_t result = NFD_PickFolder(NULL, &wdPath);
 
-            if (result == NFD_OKAY) {
+            if (result != NFD_OKAY && wdPath != NULL) {
                 boost::filesystem::current_path(wdPath);
                 std::cout << "Current Working Directory: " << boost::filesystem::current_path().string() << std::endl;
                 free(wdPath);
@@ -182,7 +172,7 @@ int f_MainMenu::startMenu() {
                 }
                 else
                 {
-                    std::cout << "Project failed";
+                    std::cout << "Project creation failed." << std::endl;
                 }
             }
             else if (result == NFD_CANCEL) {
@@ -192,14 +182,14 @@ int f_MainMenu::startMenu() {
                 std::cerr << "Error: " << NFD_GetError() << std::endl;
             }
         }
-        
+
         if (ImGui::Button("Close"))
         {
             ImGui::CloseCurrentPopup();
         }
 
-		ImGui::EndPopup();
-	}
+        ImGui::EndPopup();
+    }
 
     if (ImGui::Button("Open Project"))
     {
@@ -207,63 +197,55 @@ int f_MainMenu::startMenu() {
         nfdresult_t result = NFD_PickFolder(NULL, &opPath);
 
         if (result == NFD_OKAY) {
-			boost::filesystem::current_path(opPath);
-			std::cout << "Current Working Directory: " << boost::filesystem::current_path().string() << std::endl;
-			free(opPath);
-		}
-		else if (result == NFD_CANCEL) {
-			std::cout << "User canceled the operation." << std::endl;
-		}
-		else {
-			std::cerr << "Error: " << NFD_GetError() << std::endl;
-		}
+            boost::filesystem::current_path(opPath);
+            std::cout << "Current Working Directory: " << boost::filesystem::current_path().string() << std::endl;
+            free(opPath);
+        }
+        else if (result == NFD_CANCEL) {
+            std::cout << "User canceled the operation." << std::endl;
+        }
+        else {
+            std::cerr << "Error: " << NFD_GetError() << std::endl;
+        }
     }
 
-<<<<<<< Updated upstream
-    if (ImGui::Button("Login to Github"))
-	{
-		boost::process::system("gh auth login");
-	}
-=======
+
     f_MainMenu git;
     git_window();
->>>>>>> Stashed changes
 
     ImGui::End();
     return 0;
 }
 
-
 int f_MainMenu::entryPoint()
 {
     sf::VideoMode autoSize = sf::VideoMode::getDesktopMode();
-<<<<<<< Updated upstream
+
     sf::RenderWindow window(autoSize, "Menu");
     window.setFramerateLimit(60);
-=======
+
     sf::RenderWindow window(autoSize, "Menu", sf::Style::Default);
     window.setVerticalSyncEnabled(true); // Enable vertical sync
->>>>>>> Stashed changes
+
     ImGui::SFML::Init(window);
 
     f_MainMenu mainMenu;
 
     sf::Clock deltaClock;
     while (window.isOpen()) {
-<<<<<<< Updated upstream
+
         sf::Event event;
         while (window.pollEvent(event)) {
             ImGui::SFML::ProcessEvent(event);
 
             if (event.type == sf::Event::Closed) {
-=======
+
         while (const std::optional<sf::Event> event = window.pollEvent())
         {
             ImGui::SFML::ProcessEvent(window, *event);
 
             if (event->is<sf::Event::Closed>()) 
             {
->>>>>>> Stashed changes
                 window.close();
             }
         }
@@ -276,7 +258,7 @@ int f_MainMenu::entryPoint()
         ImGui::SFML::Render(window);
         window.display();
     }
-    ImGui::SFML::Shutdown();
 
+    ImGui::SFML::Shutdown();
     return 0;
 }

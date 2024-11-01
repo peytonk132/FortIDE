@@ -25,6 +25,7 @@ void Config::SettingsMenu()
 			{
 				std::cout << "Written successfully!" << std::endl;
 				ImGui::CloseCurrentPopup();
+				delete(Config::buildCom);
 			}
 			ImGui::EndPopup();
 		}
@@ -40,6 +41,7 @@ void Config::SettingsMenu()
 			{
 				std::cout << "Written successfully!" << std::endl;
 				ImGui::CloseCurrentPopup();
+				delete(Config::runCom);
 			}
 			ImGui::EndPopup();
 		}
@@ -55,10 +57,15 @@ void Config::SettingsMenu()
 			{
 				std::cout << "Written successfully!" << std::endl;
 				ImGui::CloseCurrentPopup();
+				delete(Config::testCom);
 			}
 			ImGui::EndPopup();
 		}
 		ImGui::EndPopup();
 	}
 	
+}
+
+void Config::configMenu()
+{
 }

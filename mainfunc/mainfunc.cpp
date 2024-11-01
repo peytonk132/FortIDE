@@ -208,14 +208,10 @@ void multiPurp::mainEditor(TextEditor& editor)
     {
         // Render the editor
         editor.Render("Text Editor");
-
-<<<<<<< Updated upstream
         // Detect and highlight errors
 
-        c_Parser::parseCode(editor);
-
-=======
->>>>>>> Stashed changes
+        c_Parser parse;
+            parse.parseCode(editor);
         ImGui::End();
     }
 }
@@ -252,11 +248,9 @@ std::vector<multiPurp::SearchOutput> multiPurp::findMatches(const std::string& s
 
 int multiPurp::menuBarfunc(TextEditor& editor)
 {
-    Config::SettingsMenu();
-
     if (ImGui::BeginMainMenuBar())
     {
-<<<<<<< Updated upstream
+
         static bool showPopup = false;
         static bool saveDialog = false;
         //if (ImGui::IsKeyPressed(ImGuiKey_LeftCtrl) || ImGui::IsKeyPressed(ImGuiKey_RightCtrl) && ImGui::IsKeyPressed(ImGuiKey_S))
@@ -267,10 +261,7 @@ int multiPurp::menuBarfunc(TextEditor& editor)
         // Save button functionality
 
         if (ImGui::Button("Save"))
-=======
-        
-        if (ImGui::Button("Open File"))
->>>>>>> Stashed changes
+
         {
             saveDialog = true;
             if (saveDialog)
@@ -302,61 +293,15 @@ int multiPurp::menuBarfunc(TextEditor& editor)
             ImGui::OpenPopup("Popup");
             showPopup = false;
         }
-<<<<<<< Updated upstream
 
-        if (ImGui::Button("New File"))
-        {
-            ImGui::OpenPopup("New File Popup");
-        }
-
-        if (ImGui::BeginPopupModal("New File Popup"))
-        {
-
-            ImGui::Text("Enter filename:");
-            ImGui::InputText(".f90", buf, sizeof(buf));
-
-            if (ImGui::IsKeyPressed(ImGuiKey_Enter)) {
-
-                nfdchar_t* newFileBuf = NULL;
-                nfdresult_t result = NFD_PickFolder(NULL, &newFileBuf);
-
-                if (result == NFD_OKAY)
-                {
-                    string newFile = buf;
-                    std::ofstream file(newFile + ".f90");
-                }
-
-
-                ImGui::CloseCurrentPopup();
-            }
-            if (ImGui::Button("Close"))
-            {
-                ImGui::CloseCurrentPopup();
-            }
-
-            ImGui::EndPopup();
-        }
-
-
-        multiPurp::Compilefunc();
-=======
         multiPurp::Compilefunc();
 
         OpenGitControl();
 
         //Terminal term;
         //term.Render();
->>>>>>> Stashed changes
         ImGui::EndMainMenuBar();
     }
-
-    auto cpos = editor.GetCursorPosition();
-    ImGui::Text("%6d/%-6d %6d lines  | %s | %s | %s | %s",
-        cpos.mLine + 1, cpos.mColumn + 1, editor.GetTotalLines(),
-        editor.IsOverwrite() ? "Ovr" : "Ins",
-        editor.CanUndo() ? "*" : " ",
-        editor.GetLanguageDefinition().mName.c_str(), NULL);
-
 
     return 0;
 }

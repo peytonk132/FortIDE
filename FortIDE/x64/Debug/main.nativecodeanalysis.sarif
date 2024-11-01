@@ -407,7 +407,7 @@
                           }
                         },
                         "message": {
-                          "text": "'events_' is an Input to 'CloseHandle' (declared at c:\\program files (x86)\\windows kits\\10\\include\\10.0.22621.0\\um\\handleapi.h:39)"
+                          "text": "'events_' is an Input to 'CloseHandle' (declared at c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\um\\handleapi.h:39)"
                         }
                       },
                       "kinds": [
@@ -658,7 +658,7 @@
                           }
                         },
                         "message": {
-                          "text": "'arg' is an In/Out argument to '_beginthreadex' (declared at c:\\program files (x86)\\windows kits\\10\\include\\10.0.22621.0\\ucrt\\process.h:96)"
+                          "text": "'arg' is an In/Out argument to '_beginthreadex' (declared at c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\ucrt\\process.h:96)"
                         }
                       },
                       "kinds": [
@@ -1280,7 +1280,7 @@
                           }
                         },
                         "message": {
-                          "text": "'*entry_event' is an Input to 'WaitForSingleObject' (declared at c:\\program files (x86)\\windows kits\\10\\include\\10.0.22621.0\\um\\synchapi.h:346)"
+                          "text": "'*entry_event' is an Input to 'WaitForSingleObject' (declared at c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\um\\synchapi.h:352)"
                         }
                       },
                       "kinds": [
@@ -1564,7 +1564,7 @@
                           }
                         },
                         "message": {
-                          "text": "'waitable_timer_' is an In/Out argument to 'SetWaitableTimer' (declared at c:\\program files (x86)\\windows kits\\10\\include\\10.0.22621.0\\um\\synchapi.h:534)"
+                          "text": "'waitable_timer_' is an In/Out argument to 'SetWaitableTimer' (declared at c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\um\\synchapi.h:540)"
                         }
                       },
                       "kinds": [
@@ -1868,7 +1868,7 @@
                           }
                         },
                         "message": {
-                          "text": "'<symbol>' receives the Return value from 'GetModuleHandleA' (declared at c:\\program files (x86)\\windows kits\\10\\include\\10.0.22621.0\\um\\libloaderapi.h:235)"
+                          "text": "'<symbol>' receives the Return value from 'GetModuleHandleA' (declared at c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\um\\libloaderapi.h:235)"
                         }
                       },
                       "kinds": [
@@ -1920,7 +1920,7 @@
                           }
                         },
                         "message": {
-                          "text": "'<symbol>' receives the Return value from 'GetModuleHandleA' (declared at c:\\program files (x86)\\windows kits\\10\\include\\10.0.22621.0\\um\\libloaderapi.h:235)"
+                          "text": "'<symbol>' receives the Return value from 'GetModuleHandleA' (declared at c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\um\\libloaderapi.h:235)"
                         }
                       },
                       "kinds": [
@@ -2184,6 +2184,78 @@
           ]
         },
         {
+          "ruleId": "C26110",
+          "level": "warning",
+          "message": {
+            "text": "Caller failing to hold lock '*(reinterpret_cast<struct _RTL_SRWLOCK *>(SRWLock))' before calling function 'ReleaseSRWLockShared'."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Peyton/Documents/dev/vcpkg/installed/x64-windows/include/boost/winapi/srw_lock.hpp"
+                },
+                "region": {
+                  "startLine": 84,
+                  "startColumn": 7,
+                  "endLine": 84,
+                  "endColumn": 64
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "boost::winapi::ReleaseSRWLockShared",
+                  "decoratedName": "?ReleaseSRWLockShared@winapi@boost@@YAXPEAU_RTL_SRWLOCK@12@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Peyton/Documents/dev/vcpkg/installed/x64-windows/include/boost/winapi/srw_lock.hpp"
+                          },
+                          "region": {
+                            "startLine": 82,
+                            "startColumn": 25
+                          }
+                        },
+                        "message": {
+                          "text": "'SRWLock' is a formal parameter to the current function"
+                        }
+                      },
+                      "kinds": [
+                        "Declaration"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Peyton/Documents/dev/vcpkg/installed/x64-windows/include/boost/winapi/srw_lock.hpp"
+                          },
+                          "region": {
+                            "startLine": 84,
+                            "startColumn": 27
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
           "ruleId": "C26439",
           "level": "warning",
           "message": {
@@ -2214,7 +2286,7 @@
           "ruleId": "C28251",
           "level": "warning",
           "message": {
-            "text": "Inconsistent annotation for 'CreateIoCompletionPort': this instance has no annotations. See c:\\program files (x86)\\windows kits\\10\\include\\10.0.22621.0\\um\\ioapiset.h(32). "
+            "text": "Inconsistent annotation for 'CreateIoCompletionPort': this instance has no annotations. See c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\um\\ioapiset.h(32). "
           },
           "locations": [
             {
@@ -2241,7 +2313,7 @@
           "ruleId": "C28251",
           "level": "warning",
           "message": {
-            "text": "Inconsistent annotation for 'GetQueuedCompletionStatus': this instance has no annotations. See c:\\program files (x86)\\windows kits\\10\\include\\10.0.22621.0\\um\\ioapiset.h(42). "
+            "text": "Inconsistent annotation for 'GetQueuedCompletionStatus': this instance has no annotations. See c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\um\\ioapiset.h(42). "
           },
           "locations": [
             {
@@ -2450,6 +2522,88 @@
                 {
                   "fullyQualifiedName": "boost::process::detail::windows::file_descriptor::=",
                   "decoratedName": "??4file_descriptor@windows@detail@process@boost@@QEAAAEAU01234@$$QEAU01234@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26478",
+          "message": {
+            "text": "Don't use std::move on constant variables. (es.56)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Peyton/Documents/dev/FortIDE/deps/toml11-main/include/toml11/types.hpp"
+                },
+                "region": {
+                  "startLine": 171,
+                  "startColumn": 18,
+                  "endLine": 171,
+                  "endColumn": 23
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "toml::read_hex_float",
+                  "decoratedName": "?read_hex_float@toml@@YA?AU?$result@MUerror_info@toml@@@1@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@Usource_location@1@M@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26478",
+          "message": {
+            "text": "Don't use std::move on constant variables. (es.56)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Peyton/Documents/dev/FortIDE/deps/toml11-main/include/toml11/types.hpp"
+                },
+                "region": {
+                  "startLine": 187,
+                  "startColumn": 18,
+                  "endLine": 187,
+                  "endColumn": 23
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "toml::read_hex_float",
+                  "decoratedName": "?read_hex_float@toml@@YA?AU?$result@NUerror_info@toml@@@1@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@Usource_location@1@N@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26439",
+          "message": {
+            "text": "This kind of function should not throw. Declare it 'noexcept' (f.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Peyton/Documents/dev/FortIDE/deps/toml11-main/include/toml11/value.hpp"
+                },
+                "region": {
+                  "startLine": 112,
+                  "startColumn": 5
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "toml::basic_value<toml::type_config>::{ctor}",
+                  "decoratedName": "??0?$basic_value@Utype_config@toml@@@toml@@QEAA@$$QEAV01@@Z",
                   "kind": "function"
                 }
               ]
@@ -2674,6 +2828,93 @@
         },
         {
           "ruleId": "C26495",
+          "message": {
+            "text": "Variable 'toml::detail::multiline_spacer<toml::type_config>::newline_found' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Peyton/Documents/dev/FortIDE/deps/toml11-main/include/toml11/parser.hpp"
+                },
+                "region": {
+                  "startLine": 1822,
+                  "startColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "toml::detail::multiline_spacer<toml::type_config>::{ctor}",
+                  "decoratedName": "??0?$multiline_spacer@Utype_config@toml@@@detail@toml@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "toml::detail::multiline_spacer<toml::type_config>::newline_found"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "Variable 'toml::detail::multiline_spacer<toml::type_config>::indent_type' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Peyton/Documents/dev/FortIDE/deps/toml11-main/include/toml11/parser.hpp"
+                },
+                "region": {
+                  "startLine": 1822,
+                  "startColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "toml::detail::multiline_spacer<toml::type_config>::{ctor}",
+                  "decoratedName": "??0?$multiline_spacer@Utype_config@toml@@@detail@toml@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "toml::detail::multiline_spacer<toml::type_config>::indent_type"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "Variable 'toml::detail::multiline_spacer<toml::type_config>::indent' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Peyton/Documents/dev/FortIDE/deps/toml11-main/include/toml11/parser.hpp"
+                },
+                "region": {
+                  "startLine": 1822,
+                  "startColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "toml::detail::multiline_spacer<toml::type_config>::{ctor}",
+                  "decoratedName": "??0?$multiline_spacer@Utype_config@toml@@@detail@toml@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "toml::detail::multiline_spacer<toml::type_config>::indent"
+          }
+        },
+        {
+          "ruleId": "C26495",
           "level": "warning",
           "message": {
             "text": "Variable 'boost::asio::detail::win_thread::func_base::exit_event_' is uninitialized. Always initialize a member variable (type.6)."
@@ -2731,6 +2972,34 @@
           "properties": {
             "targetSymbol": "boost::asio::detail::win_thread::func_base::entry_event_"
           }
+        },
+        {
+          "ruleId": "C26498",
+          "message": {
+            "text": "The function 'std::numeric_limits<__int64>::max' is constexpr, mark variable 'max_value' constexpr if compile-time evaluation is desired (con.5)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Peyton/Documents/dev/FortIDE/deps/toml11-main/include/toml11/types.hpp"
+                },
+                "region": {
+                  "startLine": 98,
+                  "startColumn": 16,
+                  "endLine": 98,
+                  "endColumn": 58
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "toml::read_bin_int",
+                  "decoratedName": "??$read_bin_int@_J@toml@@YA?AU?$result@_JUerror_info@toml@@@0@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@Usource_location@0@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
         }
       ],
       "tool": {
@@ -2766,7 +3035,7 @@
             "resultFile"
           ],
           "hashes": {
-            "sha-256": "669fc166621b50d8417070f42822a94f3c5fed91c9697dafa12154176e8542d4"
+            "sha-256": "5cdd1a4472f1e9857d0927e16059429ea8279819d5fe31cb5edb7cd9d71399cf"
           }
         },
         {
@@ -2958,6 +3227,28 @@
         },
         {
           "location": {
+            "uri": "file:///C:/Users/Peyton/Documents/dev/FortIDE/deps/toml11-main/include/toml11/types.hpp"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "b87dec9b6e9ce0a56f7cc8be145302549c018c9d5072fcd746d87579b790d1f5"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Peyton/Documents/dev/FortIDE/deps/toml11-main/include/toml11/value.hpp"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "02260191c6b67750706b30827e87d56433f509ac318395fd19660c8e7465ceb7"
+          }
+        },
+        {
+          "location": {
             "uri": "file:///C:/Users/Peyton/Documents/dev/vcpkg/installed/x64-windows/include/boost/process/detail/windows/environment.hpp"
           },
           "roles": [
@@ -3002,6 +3293,17 @@
         },
         {
           "location": {
+            "uri": "file:///C:/Users/Peyton/Documents/dev/FortIDE/deps/toml11-main/include/toml11/parser.hpp"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "4cb2e9065172dd0793954d0a4ec725b283e7d716f6a1eb14595cb91d60016094"
+          }
+        },
+        {
+          "location": {
             "uri": "file:///C:/Users/Peyton/Documents/dev/vcpkg/installed/x64-windows/include/boost/asio/detail/win_thread.hpp"
           },
           "roles": [
@@ -3019,23 +3321,23 @@
             "analysisTarget"
           ],
           "hashes": {
-            "sha-256": "b6f3ba7bda931cb18324b7ca5db02d0c49c2bff9fc9f9f9c752306486f05e3f5"
+            "sha-256": "1e45b8725c843679d5566490927dd52cf80fd896fdc1b60b45bd07f8bf8152e4"
           }
         },
         {
           "location": {
-            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/imgui/imgui.h"
+            "uri": "file:///c:/users/peyton/documents/dev/vcpkg/installed/x64-windows/include/imgui.h"
           },
           "hashes": {
-            "sha-256": "bee76cd4b4f5212963757c70411de22ad7e1d024aa7e3d5b3e76849a02d2f17b"
+            "sha-256": "af5f8dc5061759de5e485834e5d9b3d2da7f89d0390174039344254788c760dd"
           }
         },
         {
           "location": {
-            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/imgui/imconfig.h"
+            "uri": "file:///c:/users/peyton/documents/dev/vcpkg/installed/x64-windows/include/imconfig.h"
           },
           "hashes": {
-            "sha-256": "ac21980510fd3d7e04e7ece5d49bd0c0b676db59bc469de580817c154d9a7c77"
+            "sha-256": "a253e82c1960f8aa7594a51a8ac606a6235738c923f12d67a7742e88bf07ed63"
           }
         },
         {
@@ -3667,7 +3969,7 @@
             "uri": "file:///c:/users/peyton/documents/dev/fortide/colortext/texteditor.h"
           },
           "hashes": {
-            "sha-256": "fee10d0abe73906d2831b5aee24ac727fe1c5b73302085151f0e263ffdf198c7"
+            "sha-256": "248bdab12a7792183a677b2315446dcc3a991937684f367b8b8097e6a730efd1"
           }
         },
         {
@@ -3675,7 +3977,7 @@
             "uri": "file:///c:/users/peyton/documents/dev/fortide/mainfunc/f_mainmenu.h"
           },
           "hashes": {
-            "sha-256": "3d693537c4b3fd60563b5d39b5e6c64e47d0768ac53b65b5c1233cd820faf15f"
+            "sha-256": "28890e35e157ba783787dadb311f306dde4bd2467e2761c58ca44cb2b419f35e"
           }
         },
         {
@@ -14323,7 +14625,7 @@
             "uri": "file:///c:/users/peyton/documents/dev/fortide/mainfunc/filetree/filetree.h"
           },
           "hashes": {
-            "sha-256": "3b30de769291ea5d773fcbfa6234f9c13b6de14694f7afdf9214b299afe468ef"
+            "sha-256": "0d7f8bf6f5079b2d9387f3e0544f37523c53467fcac0e84210ea1362ef73bd6b"
           }
         },
         {
@@ -14332,6 +14634,446 @@
           },
           "hashes": {
             "sha-256": "38aab37709a2f4625da597a8d5fc3c8416c9af3497ea8a9ab5109ef4bb5cd112"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/toml11-main/include/toml.hpp"
+          },
+          "hashes": {
+            "sha-256": "debfa23b762af478cc1d5e652e83d77155f1b56b4b0de653319a6f52343c70b6"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/toml11-main/include/toml11/color.hpp"
+          },
+          "hashes": {
+            "sha-256": "fa5c1e949ed5cdc1b7d6fc7cd2c6b4c819f9cd7bec05de4ad84a08e3e0d6f14a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/toml11-main/include/toml11/fwd/color_fwd.hpp"
+          },
+          "hashes": {
+            "sha-256": "46ccfec920f254c6327b5b1b18aee527cb7b995b904ce25ad4723849d236e0d5"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/toml11-main/include/toml11/impl/color_impl.hpp"
+          },
+          "hashes": {
+            "sha-256": "2d1d5cf47c15e90d890e5642a94b6570c14d55fcf1c9c67b712424751efc2db2"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/toml11-main/include/toml11/version.hpp"
+          },
+          "hashes": {
+            "sha-256": "87280afcb915cb390b1fdc8f0c58adfa44ec85a92d6ceca39204c1a2f5408189"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/toml11-main/include/toml11/comments.hpp"
+          },
+          "hashes": {
+            "sha-256": "7f27a463dc7ae1c824b13b9ebb597c00af6da3638289bc35f4f02c7a6f832f3a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/toml11-main/include/toml11/fwd/comments_fwd.hpp"
+          },
+          "hashes": {
+            "sha-256": "d3a4a1bdabc94873cd11ea781bf52a9845b8ee8851d75f11dd9935dc67bb0500"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/toml11-main/include/toml11/impl/comments_impl.hpp"
+          },
+          "hashes": {
+            "sha-256": "ee08d52bc3d5e71b164e1eb286d936e2a1ac3d69f731a84f582b67fbbcc59cab"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/toml11-main/include/toml11/compat.hpp"
+          },
+          "hashes": {
+            "sha-256": "9512be086f3655d1b26afc09659c7d8475763ae30d0627e598fc274f1cf97e22"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/toml11-main/include/toml11/context.hpp"
+          },
+          "hashes": {
+            "sha-256": "02bfa008e874bb98bbe33e336c42df209ed5935f652c086d0ecb19b912ba1b12"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/toml11-main/include/toml11/error_info.hpp"
+          },
+          "hashes": {
+            "sha-256": "c0669a27a8cd8dbc17cf24c74b174ba52efaf9b3086dfb2f35ad68a78af08d9a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/toml11-main/include/toml11/fwd/error_info_fwd.hpp"
+          },
+          "hashes": {
+            "sha-256": "f2e10d5baee3cb75014836cb20f9e573193463256e2bba99375dc0893ee1527a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/toml11-main/include/toml11/source_location.hpp"
+          },
+          "hashes": {
+            "sha-256": "8e3732061f4536961a67e2a0660c72f253fde2a942ff334f018f9145d7cdb9eb"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/toml11-main/include/toml11/fwd/source_location_fwd.hpp"
+          },
+          "hashes": {
+            "sha-256": "6926081e1c8a6e4c8d56ddaaf4972a545b25303514eb608cf58dc0508ca70162"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/toml11-main/include/toml11/region.hpp"
+          },
+          "hashes": {
+            "sha-256": "6cfc42b7c50f9aa924d7287ebf0596791ae4ddf799e56d824b3db67a3aac9b3f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/toml11-main/include/toml11/fwd/region_fwd.hpp"
+          },
+          "hashes": {
+            "sha-256": "d28c8f6e286e7bcfa7c75c954171c3e92d64a521a536b16a336965367776ac5c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/toml11-main/include/toml11/location.hpp"
+          },
+          "hashes": {
+            "sha-256": "fd0886a97c0d1968347d01e162ea02d6a7669ceaf1d32e67a355a0d1ac5595a5"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/toml11-main/include/toml11/fwd/location_fwd.hpp"
+          },
+          "hashes": {
+            "sha-256": "b17cd9af3e945ac338fed22d47b77166d4fba125e9eeb1c9cc2d1e0323d77348"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/toml11-main/include/toml11/result.hpp"
+          },
+          "hashes": {
+            "sha-256": "c98db2457307a76d048d6cc6a807d407db362ec49512686f7e0f73dfcd8fa009"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/toml11-main/include/toml11/exception.hpp"
+          },
+          "hashes": {
+            "sha-256": "7ef7758056a2bc78075796c563925bd23e4c58be8901e600351782716a7e6a8a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/toml11-main/include/toml11/impl/location_impl.hpp"
+          },
+          "hashes": {
+            "sha-256": "fd7c0953dc3650ec6fdc655a05a44a554da5ebad6997436d2cefc0a010def533"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/toml11-main/include/toml11/utility.hpp"
+          },
+          "hashes": {
+            "sha-256": "e8a05ce00c49b46a20d28d292e148cabea6ab7af740aeb064ad9f4cf90ae30e1"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/toml11-main/include/toml11/traits.hpp"
+          },
+          "hashes": {
+            "sha-256": "dede710d82b4672b77e46d9dcf1a9ac0d309ce0bcbbb135733b51ac9b4ceb521"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/toml11-main/include/toml11/from.hpp"
+          },
+          "hashes": {
+            "sha-256": "a5ba1635d1492eeebd31b26f2d518c74f3ed07c920aca35b240bf411e390b2ac"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/toml11-main/include/toml11/into.hpp"
+          },
+          "hashes": {
+            "sha-256": "af28edf96ee09c2407e70895e20d1b3f5f074298bb340d954f10c42b597be389"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/toml11-main/include/toml11/impl/region_impl.hpp"
+          },
+          "hashes": {
+            "sha-256": "40bbb00fb619a1ad83127645dd8c1c1986a413a6e2da1276fbe9ff298626ca6d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/toml11-main/include/toml11/impl/source_location_impl.hpp"
+          },
+          "hashes": {
+            "sha-256": "112fa1392623301ed098eb8e01a75334b68227e634e4e196016589c99ecba63c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/toml11-main/include/toml11/impl/error_info_impl.hpp"
+          },
+          "hashes": {
+            "sha-256": "aa8a5fccfaf788598952c99f2f63e0653b2b21da7f5ef81a8f0772dc047b0d58"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/toml11-main/include/toml11/spec.hpp"
+          },
+          "hashes": {
+            "sha-256": "192ae28b46d66d815b3cade6dcb6b58665195569911ea034dfe42f36008a77a4"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/toml11-main/include/toml11/conversion.hpp"
+          },
+          "hashes": {
+            "sha-256": "a574568266731565fcde16d879ee397673feaa6d7c1ed38e4ebc74c125e8fa7f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/toml11-main/include/toml11/find.hpp"
+          },
+          "hashes": {
+            "sha-256": "a828bb570c527092fec03de093c5f20f46bb9531764f6692fdd63515ed81b70f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/toml11-main/include/toml11/get.hpp"
+          },
+          "hashes": {
+            "sha-256": "7317b3455bc090111701ac9e438a37a639a4e6fe85edf1e749597a02d5eb5738"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/toml11-main/include/toml11/format.hpp"
+          },
+          "hashes": {
+            "sha-256": "7c702cb31544e9efc2320b286c7f91045f3a42065c1d8f04a77ccc743dc3f2c7"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/toml11-main/include/toml11/fwd/format_fwd.hpp"
+          },
+          "hashes": {
+            "sha-256": "f26d84b3982386c5827fe7c8cf389f99e5330419bed451df72df2b30036f3f9a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/toml11-main/include/toml11/impl/format_impl.hpp"
+          },
+          "hashes": {
+            "sha-256": "8a886ca4f02cb2d0882c6ec0fd66bab7715ac4b7d8a18423a2e75863b76fea2a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/toml11-main/include/toml11/ordered_map.hpp"
+          },
+          "hashes": {
+            "sha-256": "ba198543dcd91976d40466930ef82483f97d4b0cd1f544e0042e77b06ef6e123"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/toml11-main/include/toml11/datetime.hpp"
+          },
+          "hashes": {
+            "sha-256": "8907f8ba73315afbdcfc37dd02a1685a59f6d7bf03b75405a7fddf9f8ee4a79d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/toml11-main/include/toml11/fwd/datetime_fwd.hpp"
+          },
+          "hashes": {
+            "sha-256": "4b23a90c5a7e8cca9a8501ab04374352b9fbee2a130494bae8d98c59bdad91e1"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/toml11-main/include/toml11/impl/datetime_impl.hpp"
+          },
+          "hashes": {
+            "sha-256": "898fad6e5378af7eb7d3d73ce4c7ed6e9384798bcb2f29d4c8918c0ea982bfe8"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/toml11-main/include/toml11/storage.hpp"
+          },
+          "hashes": {
+            "sha-256": "d2ee5e0ea332c3c70601ee4ceb187875d3d7ee86f65562552d34913ad64d93c3"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/toml11-main/include/toml11/value_t.hpp"
+          },
+          "hashes": {
+            "sha-256": "fbbb8c910b8f77b59e8585dcd5c17b59c370aac430b6ff6ee2fa7313e05ca09d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/toml11-main/include/toml11/fwd/value_t_fwd.hpp"
+          },
+          "hashes": {
+            "sha-256": "f6eddcedeb18732b277554bf6977faa59df4c0415fc44c9afbecbdb6dbcc04f4"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/toml11-main/include/toml11/impl/value_t_impl.hpp"
+          },
+          "hashes": {
+            "sha-256": "96a31c030d45e8d58b0f525800791baf0c75f23cfd11f7be105aa0039b86b86a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/toml11-main/include/toml11/literal.hpp"
+          },
+          "hashes": {
+            "sha-256": "83d1d05cf37c8d8764a887c4a0a8394501d1825830b32f7d97cad8a416943a5b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/toml11-main/include/toml11/fwd/literal_fwd.hpp"
+          },
+          "hashes": {
+            "sha-256": "6096da293bcaebd731cba4b63616d292802d3ca8b05579d10e03bf742af97939"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/toml11-main/include/toml11/impl/literal_impl.hpp"
+          },
+          "hashes": {
+            "sha-256": "002b916329736c4a0fad6db6b4d826a6e424d3c8ad71aa313b57b20aad5537e8"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/toml11-main/include/toml11/scanner.hpp"
+          },
+          "hashes": {
+            "sha-256": "1fb7011c76b65d722b4dac107d7d1d466b4e37f1c7c593ee4d12f7dff92f5197"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/toml11-main/include/toml11/fwd/scanner_fwd.hpp"
+          },
+          "hashes": {
+            "sha-256": "ad117804f096df60ef9492ccddc72767c7ec7b25b3431225c132ab6ce70aa6d8"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/toml11-main/include/toml11/impl/scanner_impl.hpp"
+          },
+          "hashes": {
+            "sha-256": "1517104a19025284ca8124c4a3c634626d39f803e2a1438644f801a3bf940e12"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/toml11-main/include/toml11/skip.hpp"
+          },
+          "hashes": {
+            "sha-256": "11a69968dad84ccad53e762adedb0a75e965e5e4e4e250022f016efcc7752b30"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/toml11-main/include/toml11/syntax.hpp"
+          },
+          "hashes": {
+            "sha-256": "59865ed8c17dd80c4545f83a06f90875bc5419ab2ffaf3e8e0d611c881fd3205"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/toml11-main/include/toml11/fwd/syntax_fwd.hpp"
+          },
+          "hashes": {
+            "sha-256": "fa379530592d8730ec6d2a897c8f3262fe66cb2eda855f4e576bdf38a9da9ba5"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/toml11-main/include/toml11/impl/syntax_impl.hpp"
+          },
+          "hashes": {
+            "sha-256": "7084fd8c858040936ea501428dbce1b54c7498861bf932d373a17a7827da51d1"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/toml11-main/include/toml11/serializer.hpp"
+          },
+          "hashes": {
+            "sha-256": "79950ba7e7a40a87418e570451f0c8b4ee1ab577bfd718dbc0ab276d03c08869"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/peyton/documents/dev/fortide/deps/toml11-main/include/toml11/visit.hpp"
+          },
+          "hashes": {
+            "sha-256": "ebfabc3af58b362c5c0442d0d8cd658da5505db18265a1297eae5f180da94888"
           }
         }
       ]
