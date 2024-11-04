@@ -412,7 +412,7 @@ bool multiPurp::pushChanges(git_repository* repo) {
 
     // Set up the callbacks for authentication
     callbacks.credentials = [](git_credential** out, const char* url, const char* username_from_url, unsigned int allowed_types, void* payload) {
-        return git_credential_userpass_plaintext_new(out, "peytonk132", "github_token"); // Use your actual token here
+        return git_credential_userpass_plaintext_new(out, "peytonk132", "fuck you git"); // Use your actual token here
         };
     options.callbacks = callbacks;
 
