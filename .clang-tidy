@@ -1,0 +1,35 @@
+# Example .clang-tidy configuration for C++20 project
+---
+Checks: >
+  -*,
+  bugprone-*,
+  cppcoreguidelines-*,
+  modernize-*,
+  performance-*,
+  readability-*,
+  clang-analyzer-*,
+  misc-*
+
+WarningsAsErrors: # Treat these specific checks as errors
+  - modernize-* # Encourage modern C++ practices
+  - performance-* # Avoid performance issues
+  - cppcoreguidelines-* # Follow core guidelines
+
+HeaderFilterRegex: '.*' # Apply checks to all files
+AnalyzeTemporaryDtors: true # Check destruction of temporaries
+FormatStyle: 'file' # Use .clang-format for code style
+CheckOptions: # Customize specific checks
+  - key: readability-identifier-naming.VariableCase
+    value: camelCase
+  - key: readability-identifier-naming.FunctionCase
+    value: camelCase
+  - key: readability-identifier-naming.ClassCase
+    value: PascalCase
+  - key: cppcoreguidelines-pro-bounds-array-to-pointer-decay
+    value: 'true'
+  - key: performance-unnecessary-copy-initialization.Enabled
+    value: 'true'
+  - key: modernize-use-override.CheckVirtualDtor
+    value: 'true'
+  - key: modernize-avoid-c-arrays.StrictMode
+    value: 'true'
