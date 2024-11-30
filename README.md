@@ -3,10 +3,10 @@ This is a simple Fortran-dedicated IDE im making. This is the Reddit post kind o
 
 # whoami
 
-  My name is Peyton but my online name is The Irish Dev. I'm a tennage programmer living in the backwoods of Pennsylvania who has a computer and dream. My end goal is to eventually work at rockstar someday and I also want to get my CS Degree. I programm primarily in C++ and (if it wasn't obvious) I'm trying to learn Fortran. I love history, firearms and related things, Computer Science, machine-shop work, and generally figuring out what makes things tick.
+  My name is Peyton but my online name is The Irish Dev. I'm a teenage programmer living in the backwoods of Pennsylvania who has a computer and dream. My end goal is to eventually work at Rockstar someday and I also want to get my CS Degree. I programm primarily in C++ and (if it wasn't obvious) I'm trying to learn Fortran. I love history, firearms and related things, Computer Science, machine-shop work, and generally figuring out what makes things tick.
 
 # "Why'd you do it Baby Billy"
-  So this has greatly deviated from my original goal. Basically, I had gone through the area of learning where you think you know enough to take on a large scale project and then realize you don't know a damn thing worth the project. Yeah, that was me. So, what happened was, me and friend in my 5th pd. Physics class were arguing about what the best programming language is (Plot twist: there isn't), C/C++ or Python (Which is ironic becuase Python derives from C). My physics teacher had chimed in saying that we were both wrong and that Fortran was beter than both in terms of speed, readability, and slightly in functionality. My friend and I had dropped the argument after that and later on I had asked my teacher what Fortran was. He gave me an extremely brief intro to it and I had gotten curious and researched it myself. Obviously I was immediately disgusted by the syntax of the language but it wasn't long be fore I started to warm up to it.
+  So this has greatly deviated from my original goal. Basically, I had gone through the area of learning where you think you know enough to take on a large scale project and then realize you don't know a damn thing worth the project. Yeah, that was me. So, what happened was, me and a friend in my 5th pd. Physics class were arguing about what the best programming language is (Plot twist: there isn't), C/C++ or Python (Which is ironic becuase Python derives from C). My physics teacher had chimed in saying that we were both wrong and that Fortran was beter than both in terms of speed, readability, and slightly in functionality. My friend and I had dropped the argument after that and later on I had asked my teacher what Fortran was. He gave me an extremely brief intro to it and I had gotten curious and researched it myself. Obviously I was immediately disgusted by the syntax of the language but it wasn't long be fore I started to warm up to it.
   
   I had then gotten a want to do some serious learning about it. There was a big issue though, how the hell do I do that? I didn't find extremely good documentation on the language and I was hoping to find a Visual Studio like IDE. I searched far and wide but couldn't find anything. I first came upon Code::Blocks but that felt too overtly complicated and I generally didn't like the look and feel of it. 
     
@@ -14,7 +14,7 @@ This is a simple Fortran-dedicated IDE im making. This is the Reddit post kind o
     Because I was raised by an engineer, the same man who got me into machine-shop work, I decided to make the IDE myself so it can be taylored to what I think is good as well as the community because I VALUE YOUR OPINION AND LISTEN TO YOU. I as well realized that this was a good oppurtunity to make a large scale project for the first time.
 
 # The Goal
-The goal is to make a light-weight, easy-on-the-eyes, simple and easy to use IDE. I want to to be a be easy to install and leave a small footprint on the computer.
+The goal is to make a light-weight, easy-on-the-eyes, simple and easy to use IDE. I want it to be easy to install and leave a small footprint on the computer.
 
 # The libraies I used are:
 * SFML
@@ -25,7 +25,9 @@ The goal is to make a light-weight, easy-on-the-eyes, simple and easy to use IDE
 * Boost
 * FPM
 * libgit2
-* toml11
+* ANTLR 4
+* Boost 1.86.0 (Specifically filesystem and system)
+* ImGuiColorTextEdit
 
 # How To Basic
 These are just the beginning steps to creating a project and using it in the IDE.
