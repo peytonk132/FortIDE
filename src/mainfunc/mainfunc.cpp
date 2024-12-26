@@ -7,12 +7,9 @@
 #include <cstdlib>
 #include <string>
 #include <fstream>
-#include <filesystem>
 #include <iostream>
 #include <memory>
 #include <vector>
-#include <chrono>
-#include <codecvt>
 
 using namespace std;
 namespace bp = boost::process;
@@ -23,10 +20,7 @@ ostringstream oss;
 ostringstream setStr;
 
 char multiPurp::buf[2048]{ '\0' };
-//char multiPurp::ftcbuf[256]{ '\0' };
-//char multiPurp::buildDir[256]{ '\0' };
-//char multiPurp::exeName[256]{ '\0' };
-// Global or static variables to preserve state across frames
+
 static char repoUrl[128] = "https://github.com/user/repo.git";
 static char localPath[128] = "";
 static char commitMessage[128] = "Initial commit";
@@ -34,29 +28,21 @@ static bool commitSuccess = false;
 static bool pushSuccess = false;
 static std::string repoPath = "";  // Path to the local repo, can be set dynamically
 static char repoPathBuf[256] = ""; // Buffer for InputText
-//static std::atomic<int> push_Progress(0);
-//static std::atomic<bool> isPushing(false);
 
 // Declare variables to manage threading
 std::atomic<bool> _isRepoPickerRunning = false;
 std::thread _repoPickerThread;
-//push_progress_data pushProgress = { 0, 0, 0, 0, 0, false };
 
 std::unique_ptr<std::istream> fileContent; // Unique pointer to hold the file content
-
 // Highlighting is done by ImGuiColorTextEdit. The repo: https://github.com/BalazsJako/ImGuiColorTextEdit
 
 int _repoPathPicker() {
-    nfdchar_t* outPath = NULL;
-    nfdresult_t result = NFD_PickFolder(NULL, &outPath);
-
-    if (result == NFD_OKAY) {
-        repoPath = outPath;              // Update std::string with selected path
+    auto dialog = pfd::select_folder("Select Repository Path");
+    if (!dialog.result().empty()) {
+        repoPath = dialog.result();              // Update std::string with selected path
         std::strncpy(repoPathBuf, repoPath.c_str(), sizeof(repoPathBuf) - 1);  // Sync buffer with repoPath
         repoPathBuf[sizeof(repoPathBuf) - 1] = '\0';  // Ensure null-termination
-        free(outPath);  // Free memory allocated by NFD
     }
-
     return 0;
 }
 
@@ -70,71 +56,67 @@ void _startRepoPathPicker() {
     _repoPickerThread = std::thread([]() {
         _repoPathPicker(); // Call the function
         _isRepoPickerRunning = false; // Reset flag after completion
-        });
+    });
 
     // Detach the thread to let it run independently
     _repoPickerThread.detach();
 }
 
-std::string multiPurp::chooseFilePath()
-{
-    nfdchar_t* outPath = NULL;
-    nfdresult_t result = NFD_OpenDialog("f90", NULL, &outPath);  // Opens dialog for Fortran files
-    if (result == NFD_OKAY)
-    {
-        std::string filePath(outPath);
-        free(outPath);  // Free the path memory
-        return filePath;
-    }
-    else if (result == NFD_CANCEL)
-    {
+
+std::string multiPurp::chooseFilePath() {
+    auto dialog = pfd::open_file("Select a Fortran File", "", { "Fortran Files (*.f90)", "*.f90" });
+    if (!dialog.result().empty()) {
+        return dialog.result()[0]; // Return the selected file path
+    } else {
         std::cout << "User canceled the file selection." << std::endl;
-        return "";
-    }
-    else
-    {
-        std::cerr << "Error: " << NFD_GetError() << std::endl;
         return "";
     }
 }
 
-bool multiPurp::createFile(const std::string& filePath)
-{
+bool multiPurp::createFile(const std::string& filePath) {
     std::ofstream newFile(filePath);
-    if (newFile.is_open())
-    {
+    if (newFile.is_open()) {
         newFile.close();
         std::cout << "File created at: " << filePath << std::endl;
         return true;
-    }
-    else
-    {
+    } else {
         std::cerr << "Error creating file at: " << filePath << std::endl;
         return false;
     }
 }
 
-std::string multiPurp::readFileContent(const std::string& filePath)
-{
+std::string multiPurp::readFileContent(const std::string& filePath) {
     std::ifstream file(filePath);
-    if (file.is_open())
-    {
+    if (file.is_open()) {
         std::string content((std::istreambuf_iterator<char>(file)),
             std::istreambuf_iterator<char>());
         file.close();
         return content;
-    }
-    else
-    {
+    } else {
         std::cerr << "Error reading file: " << filePath << std::endl;
         return "";
     }
 }
 
 
-bool multiPurp::saveToFile() 
+bool multiPurp::saveToFile(const std::string& content) 
 {
-    return 0;
+    auto dialog = pfd::save_file("Save File As", "", { "Text Files (*.txt)", "*.txt", "All Files", "*" });
+    if (!dialog.result().empty()) {
+        std::ofstream file(dialog.result());
+        if (file.is_open()) {
+            file << content;
+            file.close();
+            std::cout << "File saved at: " << dialog.result() << std::endl;
+            return true;
+        } else {
+            std::cerr << "Error saving file at: " << dialog.result() << std::endl;
+            return false;
+        }
+    } else {
+        std::cout << "User canceled the save operation." << std::endl;
+        return false;
+    }
 }
 
 std::vector<multiPurp::SearchOutput> multiPurp::findMatches(const std::string& searchWord, const std::string& content)
@@ -396,6 +378,7 @@ void multiPurp::OpenGitControl()
 
 void multiPurp::Compilefunc()
 {
+    Config cfg;
     if (ImGui::Button("Build Options"))
     {
         ImGui::OpenPopup("Build Options");
@@ -406,7 +389,7 @@ void multiPurp::Compilefunc()
         {
             try {
                 std::stringstream ss;
-                ss << Config::buildCom;
+                ss << cfg.buildCom;
                 std::string command = ss.str();
                 bp::system(command);
                 ImGui::Text("Build command executed successfully.");
@@ -421,7 +404,7 @@ void multiPurp::Compilefunc()
         {
             try {
                 std::stringstream ss;
-                ss << Config::runCom;
+                ss << cfg.runCom;
                 std::string command = ss.str();
                 bp::system(command);
                 ImGui::Text("Run command executed successfully.");
@@ -436,7 +419,7 @@ void multiPurp::Compilefunc()
         {
             try {
                 std::stringstream ss;
-                ss << Config::testCom;
+                ss << cfg.testCom;
                 std::string command = ss.str();
                 bp::system(command);
                 ImGui::Text("Test command executed successfully.");

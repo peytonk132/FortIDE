@@ -34,7 +34,8 @@
 # Deps
 antlr4/
 boost/
-boost_1_86_0/
+#boost_1_86_0/
+freetype/
 imgui/
 imgui-sfml/
 SFML/
@@ -42,7 +43,7 @@ libgit2/
 spdlog/
 tinyxml2/
 ImGuiColorTextEdit/
-nativefiledialog/
+portable-file-dialogs/
 .cache/
 .vs/
 CMakeFiles/

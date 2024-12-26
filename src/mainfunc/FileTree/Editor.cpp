@@ -61,5 +61,6 @@ int Editor::loadFileIntoEditor(const std::string& filePath, TextEditor& editor)
         buffer << file.rdbuf();
         editor.SetText(buffer.str());
     }
+    return 0;
 }
 

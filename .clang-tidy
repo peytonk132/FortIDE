@@ -9,6 +9,7 @@ Checks: >
   readability-*,
   clang-analyzer-*,
   misc-*
+  cert-*
 
 WarningsAsErrors: # Treat these specific checks as errors
   - modernize-* # Encourage modern C++ practices

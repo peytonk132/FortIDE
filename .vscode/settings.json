@@ -77,7 +77,13 @@
         "*.ipp": "cpp"
     },
     "clangd.arguments": [
-      "--compile-commands-dir=/path/to/",
-      "--clang-tidy"
-    ]
+        "--compile-commands-dir=${workspaceFolder}",
+        "--clang-tidy"
+    ],
+    "[cpp]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+    "C_Cpp.clang_format_fallbackStyle": "none",
+    "C_Cpp.clang_format_style": "file",
+    "editor.formatOnSave": true
 }

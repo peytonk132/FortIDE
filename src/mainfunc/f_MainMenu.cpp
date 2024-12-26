@@ -7,7 +7,8 @@
 #include <imgui-SFML.h>
 #include <boost/filesystem.hpp>
 #include <boost/process.hpp>
-#include <nfd.h>
+#include <iostream>
+#include <portable-file-dialogs.h>
 #include <chrono>
 #include <ctime>
 #include <thread>
@@ -22,7 +23,6 @@ static bool cloneSuccess = false;
 static std::string repoPath = "";  // Path to the local repo, can be set dynamically
 static char repoPathBuf[256] = ""; // Buffer for InputText
 
-
 // Struct to store cloning progress
 struct progress_data {
     int received_objects;
@@ -30,7 +30,6 @@ struct progress_data {
     int indexed_objects;
     bool cloning_complete = false;
 };
-
 
 // Declare variables to manage threading
 std::atomic<bool> isRepoPickerRunning = false;
@@ -50,18 +49,16 @@ void checkout_progress(const char* path, size_t cur, size_t tot, void* payload) 
     // Optionally store this info for detailed GUI feedback
 }
 
-
-int repoPathPicker() {
-    nfdchar_t* outPath = NULL;
-    nfdresult_t result = NFD_PickFolder(NULL, &outPath);
-
-    if (result == NFD_OKAY) {
-        repoPath = outPath;              // Update std::string with selected path
-        std::strncpy(repoPathBuf, repoPath.c_str(), sizeof(repoPathBuf) - 1);  // Sync buffer with repoPath
-        repoPathBuf[sizeof(repoPathBuf) - 1] = '\0';  // Ensure null-termination
-        free(outPath);  // Free memory allocated by NFD
+int repoPathPicker() 
+{
+    auto result = pfd::select_folder("Select a directory", pfd::path::home()).result();
+    if (!result.empty()) {
+        boost::filesystem::current_path(result);
+        repoPath = result;
+        std::cout << "Selected path: " << result << std::endl;
+    } else {
+        std::cout << "User canceled the operation." << std::endl;
     }
-
     return 0;
 }
 
@@ -75,7 +72,7 @@ void startRepoPathPicker() {
     repoPickerThread = std::thread([]() {
         repoPathPicker(); // Call the function
         isRepoPickerRunning = false; // Reset flag after completion
-        });
+    });
 
     // Detach the thread to let it run independently
     repoPickerThread.detach();
@@ -114,12 +111,15 @@ bool cloneRepository(const std::string& url, const std::string& path) {
     return true;
 }
 
-int git_window() {
-    if (ImGui::Button("Clone A Repo")) {
+int git_window() 
+{
+    if (ImGui::Button("Clone A Repo")) 
+    {
         ImGui::OpenPopup("Git_Control");
     }
 
-    if (ImGui::BeginPopup("Git_Control")) {
+    if (ImGui::BeginPopup("Git_Control")) 
+    {
         ImGui::Begin("Clone");
         ImGui::Text("URL: ");
         ImGui::SameLine();
@@ -127,33 +127,39 @@ int git_window() {
 
         ImGui::Text("PATH: ");
         ImGui::SameLine();
-        if (ImGui::InputText("Local Path", repoPathBuf, sizeof(repoPathBuf))) {
+        if (ImGui::InputText("Local Path", repoPathBuf, sizeof(repoPathBuf))) 
+        {
             repoPath = repoPathBuf;  // Sync repoPath with updated buffer
         }
         ImGui::SameLine();
 
-        if (ImGui::Button("...")) {
+        if (ImGui::Button("...")) 
+        {
             startRepoPathPicker(); // Start `repoPathPicker` in a new thread
         }
 
         if (isRepoPickerRunning) {
             ImGui::Text("Loading path picker..."); // Display loading message
         }
-        else if (ImGui::Button("Clone")) {
+        else if (ImGui::Button("Clone")) 
+        {
             // Launch the cloning in a new thread to avoid UI blocking
-            std::thread cloneThread([&]() {
+            std::thread cloneThread([&]() 
+            {
                 cloneSuccess = cloneRepository(repoUrl, repoPath);
-                });
+            });
             cloneThread.detach();
         }
 
-        if (cloneProgress.total_objects > 0) {
+        if (cloneProgress.total_objects > 0) 
+        {
             float progress = (float)cloneProgress.received_objects / cloneProgress.total_objects;
             ImGui::Text("Cloning repository...");
             ImGui::ProgressBar(progress, ImVec2(0.0f, 0.0f));
             ImGui::Text("Received objects: %d/%d", cloneProgress.received_objects, cloneProgress.total_objects);
             ImGui::Text("Indexed objects: %d", cloneProgress.indexed_objects);
-            if (cloneProgress.cloning_complete) {
+            if (cloneProgress.cloning_complete) 
+            {
                 ImGui::Text("Clone completed successfully!");
             }
         }
@@ -165,77 +171,80 @@ int git_window() {
     return 0;
 }
 
-
-int f_MainMenu::f_genNewProject()
+int f_MainMenu::f_genNewProject() 
 {
     std::string projectTitle(buf);
     std::string title = "fpm new " + projectTitle;
     boost::process::system(title);
     return 0;
-    printf("Works");
 }
 
-void getDate()
+void getDate() 
 {
     auto now = std::chrono::system_clock::now();
     std::time_t currentTime = std::chrono::system_clock::to_time_t(now);
     std::tm* localTime = std::localtime(&currentTime);
 }
 
-int f_MainMenu::startMenu()
+int f_MainMenu::startMenu() 
 {
     sf::VideoMode autoReSize = sf::VideoMode::getDesktopMode();
     unsigned int sizeY = autoReSize.size.x;
     unsigned int sizeX = autoReSize.size.y;
+    /*
+    // Update ImGui DisplaySize
+    ImGuiIO& io = ImGui::GetIO();
+    io.DisplaySize = ImVec2(static_cast<float>(sizeX), static_cast<float>(sizeY));
+
+    // Validate DisplaySize
+    if (io.DisplaySize.x <= 0.0f || io.DisplaySize.y <= 0.0f) {
+        std::cerr << "Invalid DisplaySize: (" << io.DisplaySize.x << ", " << io.DisplaySize.y << ")\n";
+        return -1; // Skip rendering
+    }*/
+
     ImVec2 fixedfieldPos = ImVec2(850, 0);
     ImVec2 sizedWidget = ImVec2(500, sizeY);
+    ImGui::SetNextWindowPos(fixedfieldPos);
+    ImGui::SetNextWindowSize(sizedWidget);
 
-    ImGui::SetNextWindowPos(fixedfieldPos, ImGuiCond_Always);
-    ImGui::SetNextWindowSize(sizedWidget, ImGuiCond_Always);
-    ImGui::Begin("##", NULL, ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoTitleBar);
+    ImGui::Begin("SomethingUniqueq", 0, ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoTitleBar);
 
-    if (ImGui::Button("New Project", ImVec2(200, 100)))
+    if (ImGui::Button("New Project", ImVec2(200, 100))) 
     {
         ImGui::OpenPopup("New Project");
     }
 
-    if (ImGui::BeginPopupModal("New Project", NULL))
+    if (ImGui::BeginPopupModal("New Project", 0)) 
     {
         ImGui::Text("Enter the name for your Project:");
         ImGui::InputText("##", buf, sizeof(buf));
 
-        if (ImGui::IsKeyReleased(ImGuiKey_Enter))
+        if (ImGui::IsKeyReleased(ImGuiKey_Enter)) 
         {
-            nfdchar_t* wdPath = NULL;
-            nfdresult_t result = NFD_PickFolder("C:\\", &wdPath);
+            auto wdPath = pfd::select_folder("Select project directory", pfd::path::home()).result();
 
-            if (result == NFD_OKAY && wdPath != NULL) {
+            if (!wdPath.empty()) 
+            {
                 boost::filesystem::current_path(wdPath);
                 std::cout << "Current Working Directory: " << boost::filesystem::current_path().string() << std::endl;
-                free(wdPath);
 
-                if (f_genNewProject() == 0)
+                if (f_genNewProject() == 0) 
                 {
                     std::cout << "Project created successfully in directory: " << boost::filesystem::current_path().string() << std::endl;
                     boost::filesystem::current_path(buf);
                     std::cout << "New path: " << boost::filesystem::current_path().string() << std::endl;
                     std::ofstream cfgFile("Config.xml");
-                }
-                else
+                } else 
                 {
                     std::cout << "Project creation failed." << std::endl;
                 }
-            }
-            else if (result == NFD_CANCEL) {
+            } else 
+            {
                 std::cout << "User canceled the operation." << std::endl;
-            }
-            else {
-                const std::exception& e{};
-                std::cerr << "Error: " <<  e.what() << std::endl;
             }
         }
 
-        if (ImGui::Button("Close"))
+        if (ImGui::Button("Close")) 
         {
             ImGui::CloseCurrentPopup();
         }
@@ -243,34 +252,29 @@ int f_MainMenu::startMenu()
         ImGui::EndPopup();
     }
 
-    if (ImGui::Button("Open Project"))
+    if (ImGui::Button("Open Project")) 
     {
-        nfdchar_t* opPath = NULL;
-        nfdresult_t result = NFD_PickFolder(NULL, &opPath);
+        auto opPath = pfd::select_folder("Select a project directory", "").result();
 
-        if (result == NFD_OKAY) {
+        if (!opPath.empty()) 
+        {
             boost::filesystem::current_path(opPath);
             std::cout << "Current Working Directory: " << boost::filesystem::current_path().string() << std::endl;
-            free(opPath);
-        }
-        else if (result == NFD_CANCEL) {
-            std::cout << "User canceled the operation." << std::endl;
-        }
-        else {
-            std::cerr << "Error: " << NFD_GetError() << std::endl;
+        } else 
+        {
+            std::cout << "No directory selected!" << std::endl;
         }
     }
 
-
-    f_MainMenu git;
     git_window();
-
     ImGui::End();
+
     return 0;
 }
 
 int f_MainMenu::entryPoint()
 {
+    
     sf::VideoMode autoSize = sf::VideoMode::getDesktopMode();
 
     sf::RenderWindow window(autoSize, "Menu", sf::Style::Default);
@@ -291,12 +295,12 @@ int f_MainMenu::entryPoint()
                 window.close();
             }
         }
-
-
         ImGui::SFML::Update(window, deltaClock.restart());
 
         window.clear();
+        //ImGui::NewFrame();
         mainMenu.startMenu();
+        //ImGui::Render();
         ImGui::SFML::Render(window);
         window.display();
     }

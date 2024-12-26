@@ -4,13 +4,13 @@ project(FortIDE)
 # Set C++ standard
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-#set(Boost_USE_STATIC_LIBS       ON)
+set(Boost_USE_STATIC_LIBS       ON)
 set(CMAKE_BUILD_TYPE "Release")
 # Set Boost root and include/library directories 
 set(BOOST_ROOT "${CMAKE_SOURCE_DIR}/deps/boost") 
 set(BOOST_INCLUDEDIR "${BOOST_ROOT}/boost") 
 set(BOOST_LIBRARYDIR "${BOOST_ROOT}/stage/lib") 
-set(SFML_DIR "${CMAKE_SOURCE_DIR}/deps/SFML") 
+#set(SFML_DIR "${CMAKE_SOURCE_DIR}/deps/SFML/build") 
 set(spdlog_DIR "${CMAKE_SOURCE_DIR}/deps/spdlog/build") 
 set(TinyXML_DIR "${CMAKE_SOURCE_DIR}/deps/tinyxml2")
 # Policy to handle FindBoost module removal warning 
@@ -40,11 +40,7 @@ set (MAIN_SOURCES
     ${CMAKE_SOURCE_DIR}/deps/ImGuiColorTextEdit/LanguageDefinitions.cpp
     ${CMAKE_SOURCE_DIR}/deps/ImGuiColorTextEdit/TextEditor.cpp
     ${CMAKE_SOURCE_DIR}/deps/ImGuiColorTextEdit/UnitTests.cpp
-    ${FILETREE_SOURCES}
-
-
-
-)
+    ${FILETREE_SOURCES})
     
 set (ANTLR_FORTRAN_SOURCES
     ${CMAKE_SOURCE_DIR}/src/mainfunc/F90Files/ErrorListener.cpp
@@ -54,8 +50,7 @@ set (ANTLR_FORTRAN_SOURCES
     ${CMAKE_SOURCE_DIR}/src/mainfunc/F90Files/Fortran90ParserBaseListener.cpp
     ${CMAKE_SOURCE_DIR}/src/mainfunc/F90Files/Fortran90ParserBaseVisitor.cpp
     ${CMAKE_SOURCE_DIR}/src/mainfunc/F90Files/Fortran90ParserListener.cpp
-    ${CMAKE_SOURCE_DIR}/src/mainfunc/F90Files/Fortran90ParserVisitor.cpp
-    )
+    ${CMAKE_SOURCE_DIR}/src/mainfunc/F90Files/Fortran90ParserVisitor.cpp)
 
 # Add source files to the target
 target_sources(FortIDE PRIVATE ${IMGUI_SOURCES} ${MAIN_SOURCES} ${ANTLR_FORTRAN_SOURCES})
@@ -70,10 +65,10 @@ target_include_directories(FortIDE PRIVATE
     ${CMAKE_SOURCE_DIR}/deps/tinyxml2/
     ${CMAKE_SOURCE_DIR}/deps/boost_1_86_0
     ${CMAKE_SOURCE_DIR}/deps/antlr4/runtime/Cpp/runtime/src
-    ${CMAKE_SOURCE_DIR}/deps/nativefiledialog/src/include
+    ${CMAKE_SOURCE_DIR}/deps/portable-file-dialogs/
     ${CMAKE_SOURCE_DIR}/deps/ImGuiColorTextEdit/
-
-)
+    ${BOOST_ROOT}
+    )
 
 # Platform-specific settings
 if (WIN32)
@@ -83,52 +78,60 @@ elseif (UNIX)
     target_link_libraries(FortIDE PRIVATE pthread dl)
 endif()
 
+#[[
 # Boost
-set(Boost_DEBUG ON)
-find_package(Boost 1.87 REQUIRED COMPONENTS filesystem system)
+find_package(Boost 1.86 REQUIRED COMPONENTS filesystem system)
 if(Boost_FOUND)
     target_include_directories(FortIDE PRIVATE ${Boost_INCLUDE_DIRS})
     target_link_libraries(FortIDE PRIVATE Boost::filesystem Boost::system)
 endif()
-
-# SFML
-set(SFML_STATIC_LIBRARIES ON)
-find_package(SFML 3 REQUIRED COMPONENTS Main Graphics Window System)
-if(SFML_FOUND)
-    target_link_libraries(FortIDE PRIVATE sfml-main-s sfml-graphics-s sfml-window-s sfml-system-s)
-else()
-    message(FATAL_ERROR "SFML not found or incomplete configuration.")
+]]
+#[[
+find_package(SFML 3 REQUIRED COMPONENTS System Window Graphics)
+if(SFMl_FOUND)
+    target_link_libraries(FortIDE PRIVATE SFML::System SFMl::Window SFML::Graphics)
 endif()
-# Spdlog
-find_package(spdlog REQUIRED)
-if(spdlog_FOUND)
-    target_link_libraries(FortIDE PRIVATE spdlog)
-endif()
+]]
 
-
-find_package(TinyXML REQUIRED)
-if(TinyXML_FOUND)
-    target_include_directories(FortIDE PRIVATE ${TinyXML_INCLUDE_DIRS})
-    target_link_libraries(FortIDE PRIVATE ${TinyXML_LIBRARIES})
-endif()
 
 # Link additional libraries
 target_link_directories(FortIDE PRIVATE
-    ${CMAKE_SOURCE_DIR}/deps/antlr4/runtime/Cpp/build/runtime/
-    ${CMAKE_SOURCE_DIR}/deps/nativefiledialog/build/lib/Release/x64
-    ${CMAKE_SOURCE_DIR}/deps/libgit2/build/
-    ${CMAKE_SOURCE_DIR}/deps/spdlog/build/
-    ${CMAKE_SOURCE_DIR}/deps/SFML/build/lib/
-    ${CMAKE_SOURCE_DIR}/deps/tinyxml2/build/
+    ${CMAKE_SOURCE_DIR}/deps/antlr4/runtime/Cpp/build-d/runtime/Release
+    ${CMAKE_SOURCE_DIR}/deps/antlr4/runtime/Cpp/build-d/runtime/Debug
+    ${CMAKE_SOURCE_DIR}/deps/libgit2/build/Release
+    ${CMAKE_SOURCE_DIR}/deps/libgit2/build/Debug
+    ${CMAKE_SOURCE_DIR}/deps/spdlog/build/Release
+    ${CMAKE_SOURCE_DIR}/deps/SFML/build/lib/Release
+    ${CMAKE_SOURCE_DIR}/deps/SFML/build/lib/Debug
+    ${CMAKE_SOURCE_DIR}/deps/tinyxml2/build/Release
+    ${CMAKE_SOURCE_DIR}/deps/tinyxml2/build/Debug
+    ${BOOST_LIBRARYDIR}
+    
 )
 target_link_libraries(FortIDE PRIVATE 
-    libantlr4-runtime-static
-    libtinyxml2
+    antlr4-runtime-static
+    #libboost_filesystem-vc143-mt-x64-1_87
+    #libboost_system-vc143-mt-x64-1_87
+    boost_system-mgw14-mt-sd-x64-1_87
+    boost_filesystem-mgw14-mt-sd-x64-1_87
+   # sfml-main-s
+    #sfml-system-s
+    #sfml-window-s
+    #sfml-graphics-s
+    sfml-main-s-d
+    sfml-graphics-s-d
+    sfml-window-s-d
+    sfml-system-s-d
+    tinyxml2
     git2
-    nfd
     winhttp
+    gdi32
+    winmm
+    opengl32
+    ws2_32
     crypt32
     rpcrt4
+   
 )
 
 

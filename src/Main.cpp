@@ -1,9 +1,13 @@
 //#pragma comment(linker, "/SUBSYSTEM:windows /ENTRY:mainCRTStartup")
+#ifdef NDEBUG
+#undef NDEBUG
+#endif
 
 #include <imgui.h>
 #include <imgui-SFML.h>
+#include <portable-file-dialogs.h>
 #include "mainfunc/FileTree/Editor.h"
-#include <nfd.h>
+#include <git2.h>
 //#include "mainfunc/c_Parser.h"
 #include "mainfunc/f_MainMenu.h"
 #include <TextEditor.h>
@@ -16,13 +20,11 @@
 #include <string>
 #include <sstream>
 #include <array>
-#include <cstdio>
 #include <SFML/Graphics.hpp>
-//#include <boost/filesystem.hpp>
-#include <sstream>
 
 using namespace std;
 
+// Utility function to load a file's content into the TextEditor
 void loadFileIntoEditor(const std::string& filePath, TextEditor& editor)
 {
     std::ifstream file(filePath);
@@ -34,19 +36,24 @@ void loadFileIntoEditor(const std::string& filePath, TextEditor& editor)
     }
 }
 
-std::string exec(const char* cmd) {
+// Function to execute a system command and capture its output
+std::string exec(const char* cmd)
+{
     std::array<char, 128> buffer{};
     std::string result;
     std::unique_ptr<FILE, decltype(&_pclose)> pipe(_popen(cmd, "r"), _pclose);
-    if (!pipe) {
+    if (!pipe)
+    {
         throw std::runtime_error("_popen() failed!");
     }
-    while (fgets(buffer.data(), buffer.size(), pipe.get()) != nullptr) {
+    while (fgets(buffer.data(), buffer.size(), pipe.get()) != nullptr)
+    {
         result += buffer.data();
     }
     return result;
 }
 
+// Function to check if a package exists in the fpm.toml file
 bool isPackageInFpmToml(const std::string& packageName)
 {
     std::ifstream infile("fpm.toml");
@@ -61,8 +68,9 @@ bool isPackageInFpmToml(const std::string& packageName)
     return false;
 }
 
-void installPackage(const std::string& toml) {
-    // Run the command to install the package
+// Function to install a package using fpm
+void installPackage(const std::string& toml)
+{
     std::string command = "fpm run -- demo substitute fpm.toml";
     try
     {
@@ -77,11 +85,14 @@ void installPackage(const std::string& toml) {
 
 int main()
 {
-    // Capture the output of 'fpm search' command
+    f_MainMenu::entryPoint();
+    ImGui::CreateContext();
+    //ImGui::SetCurrentContext();
+    // Run the `fpm search` command and capture its output
     std::string fpmOutput;
     try
     {
-        fpmOutput = exec("fpm-search --verbose");
+        fpmOutput = exec("fpm search --verbose");
     }
     catch (const std::exception& e)
     {
@@ -95,33 +106,36 @@ int main()
 
     // Write the XML to a file
     std::ofstream outFile("packages.xml");
-    if (outFile.is_open()) {
+    if (outFile.is_open())
+    {
         outFile << xml;
         outFile.close();
     }
-    else {
+    else
+    {
         std::cerr << "Unable to open file for writing\n";
     }
 
     // Load packages from the XML file
     packages = loadPackagesFromXML("packages.xml");
 
-
     sf::VideoMode desktopSize = sf::VideoMode::getDesktopMode();
 
-    f_MainMenu::entryPoint();
-
+    //IM_ASSERT(false); // Test if assertions are enabled and functioning.
     sf::RenderWindow window(desktopSize, "FortIDE");
+    ImGui::SFML::Init(window);
     window.setVerticalSyncEnabled(true); // Enable vertical sync
-    ImGui::SFML::Init(window);   
+    /*if (!io.Fonts->AddFontFromFileTTF("C:\\Users\\Peyton\\Downloads\\Open_Sans\\OpenSans-VariableFont_wdth,wght.ttf", 8.0f)) {
+        printf("Failed to load font1.ttf\n");
+    }*/
+    //ImGui::CreateContext();  // Call this early in your application.
+
     TextEditor editor; // Create a TextEditor instance
 
     sf::Clock deltaClock;
-
+    git_libgit2_init();
     while (window.isOpen())
     {
-        boost::filesystem::current_path();
-
         while (const std::optional<sf::Event> event = window.pollEvent())
         {
             ImGui::SFML::ProcessEvent(window, *event);
@@ -131,19 +145,21 @@ int main()
                 window.close();
             }
         }
-
         ImGui::SFML::Update(window, deltaClock.restart());
-
-        // This is the creation of the editor. Pretty self-explanatory.
-        // Update to pass the editor instance
-
-        ImVec2 fixedWidgetPosition = ImVec2(800, 30); // Set your desired fixed position here
+        //ImGui::NewFrame();
+        //f_MainMenu::entryPoint();
+        //f_MainMenu::startMenu();
+        //ImGui::EndFrame();
+        
+        ImVec2 fixedWidgetPosition = ImVec2(800, 30); // Fixed position for the widget
         ImVec2 sizedWidget = ImVec2(570, 450);
 
-        ImGui::SetNextWindowPos(fixedWidgetPosition, ImGuiCond_Always);
-        ImGui::SetNextWindowSize(sizedWidget, ImGuiCond_Always);
+        //ImGui::NewFrame();
+        ImGui::SetNextWindowPos(fixedWidgetPosition);
+        ImGui::SetNextWindowSize(sizedWidget);
         ImGui::Begin("Package Installer");
-        for (const auto& pkg : packages) {
+        for (const auto& pkg : packages)
+        {
             ImGui::Text("Version: %s", pkg.version.c_str());
             ImGui::TextWrapped("Description: %s", pkg.description.c_str());
             ImGui::Text("License: %s", pkg.license.c_str());
@@ -152,13 +168,15 @@ int main()
             ImGui::Separator();
         }
         ImGui::End();
-        git_libgit2_init();
-        //ImGui::ShowDemoWindow();
-        Editor::RenderEditor(editor);
+        //ImGui::EndFrame();
+        
 
+        Editor::RenderEditor(editor);
+        
         window.clear();
         ImGui::SFML::Render(window);
         window.display();
+        //deltaClock.restart(); // Restart clock for next frame
         git_libgit2_shutdown();
     }
 
