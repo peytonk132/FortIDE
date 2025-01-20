@@ -96,8 +96,8 @@ endif()
 
 # Link additional libraries
 target_link_directories(FortIDE PRIVATE
-    ${CMAKE_SOURCE_DIR}/deps/antlr4/runtime/Cpp/build-d/runtime/Release
-    ${CMAKE_SOURCE_DIR}/deps/antlr4/runtime/Cpp/build-d/runtime/Debug
+    ${CMAKE_SOURCE_DIR}/deps/antlr4/runtime/Cpp/build/runtime/Release
+    ${CMAKE_SOURCE_DIR}/deps/antlr4/runtime/Cpp/build/runtime/Debug
     ${CMAKE_SOURCE_DIR}/deps/libgit2/build/Release
     ${CMAKE_SOURCE_DIR}/deps/libgit2/build/Debug
     ${CMAKE_SOURCE_DIR}/deps/spdlog/build/Release
@@ -109,28 +109,28 @@ target_link_directories(FortIDE PRIVATE
     
 )
 target_link_libraries(FortIDE PRIVATE 
-    antlr4-runtime-static
-    #libboost_filesystem-vc143-mt-x64-1_87
-    #libboost_system-vc143-mt-x64-1_87
-    boost_system-mgw14-mt-sd-x64-1_87
-    boost_filesystem-mgw14-mt-sd-x64-1_87
+    antlr4-runtime
+    #libboost_filesystem
+    #libboost_system
+    boost_system
+    boost_filesystem
    # sfml-main-s
     #sfml-system-s
     #sfml-window-s
     #sfml-graphics-s
-    sfml-main-s-d
-    sfml-graphics-s-d
-    sfml-window-s-d
-    sfml-system-s-d
+    #sfml-main-s-d
+    sfml-graphics-d
+    sfml-window-d
+    sfml-system-d
     tinyxml2
     git2
-    winhttp
-    gdi32
-    winmm
-    opengl32
-    ws2_32
-    crypt32
-    rpcrt4
+    #winhttp
+    #gdi32
+    #winmm
+    GL
+    #ws2_32
+    #crypt32
+    #rpcrt4
    
 )
 
