@@ -1,3 +1,8 @@
+# Announcement
+I have moved developement over to Linux, specifically I am using Arch Linux. On Windows the filesystem should work by default. You'll have to install Zenity to use the dialogs as that is the main backend that portable-file-dialogs works with, on Linux anyhow. It builds and runs fine, performance is something i'll have to work on but I am going through learncpp.com to learn more about C++ so I'll hopefully get bette with that. I know nobody is going to read this but hey, maybe someday.
+
+
+
 # FortIDE
 This is a simple Fortran-dedicated IDE im making. This is the Reddit post kind of describing the things I want to do and a run down of who I am: https://www.reddit.com/r/AskProgramming/comments/1c0bat6/making_a_simple_ide_for_fortran
 
