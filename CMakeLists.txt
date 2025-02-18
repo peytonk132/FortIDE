@@ -122,6 +122,7 @@ target_link_libraries(FortIDE PRIVATE
     sfml-graphics-d
     sfml-window-d
     sfml-system-d
+    spdlog
     tinyxml2
     git2
     #winhttp

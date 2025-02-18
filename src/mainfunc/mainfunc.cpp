@@ -1,12 +1,14 @@
 #include "mainfunc.h"
 #include <boost/process.hpp>
 #include <boost/filesystem.hpp>
+#include <boost/asio.hpp>
 #include <TextEditor.h>
 #include "c_Parser.h"
 #include "Config.h"
 #include <cstdlib>
 #include <string>
 #include <fstream>
+#include <future>
 #include <iostream>
 #include <memory>
 #include <vector>
@@ -150,16 +152,16 @@ int multiPurp::menuBarfunc(TextEditor& editor)
 
         static bool showPopup = false;
         static bool saveDialog = false;
-        //if (ImGui::IsKeyPressed(ImGuiKey_LeftCtrl) || ImGui::IsKeyPressed(ImGuiKey_RightCtrl) && ImGui::IsKeyPressed(ImGuiKey_S))
-        //{
-          //  saveDialog = true; // Set flag to open the file dialog
-        //}
+        if (ImGui::IsKeyPressed(ImGuiKey_LeftCtrl) || ImGui::IsKeyPressed(ImGuiKey_RightCtrl) && ImGui::IsKeyPressed(ImGuiKey_S))
+        {
+            saveDialog = true; // Set flag to open the file dialog
+        }
 
         // Save button functionality
 
         if (ImGui::Button("Save"))
         {
-           printf("Fuck you, it doesn't work.");
+           printf("Still doesn't work.");
         }
 
 
@@ -379,57 +381,32 @@ void multiPurp::OpenGitControl()
 void multiPurp::Compilefunc()
 {
     Config cfg;
-    if (ImGui::Button("Build Options"))
-    {
+    if (ImGui::Button("Build Options")) {
         ImGui::OpenPopup("Build Options");
     }
-    if (ImGui::BeginPopup("Build Options"))
-    {
-        if (ImGui::Button("Build"))
-        {
-            try {
-                std::stringstream ss;
-                ss << cfg.buildCom;
-                std::string command = ss.str();
-                bp::system(command);
-                ImGui::Text("Build command executed successfully.");
-            }
-            catch (const std::exception& e) {
-                ImGui::Text("Error executing build: %s", e.what());
-            }
-            ImGui::CloseCurrentPopup();
-        }
 
-        if (ImGui::Button("Run"))
-        {
-            try {
-                std::stringstream ss;
-                ss << cfg.runCom;
-                std::string command = ss.str();
-                bp::system(command);
-                ImGui::Text("Run command executed successfully.");
-            }
-            catch (const std::exception& e) {
-                ImGui::Text("Error executing build: %s", e.what());
-            }
-            ImGui::CloseCurrentPopup();
-        }
+    if (ImGui::BeginPopup("Build Options")) {
+        // Disable buttons while build is running
+        ImGui::BeginDisabled(buildInProgress);
 
-        if (ImGui::Button("Test"))
-        {
-            try {
-                std::stringstream ss;
-                ss << cfg.testCom;
-                std::string command = ss.str();
-                bp::system(command);
-                ImGui::Text("Test command executed successfully.");
-            }
-            catch (const std::exception& e) {
-                ImGui::Text("Error executing build: %s", e.what());
-            }
-            ImGui::CloseCurrentPopup();
+        if (ImGui::Button("Build")) {
+            startAsyncProcess(cfg.buildCom, "Build");
         }
+            if (ImGui::Button("Run")) {
+                startAsyncProcess(cfg.runCom, "Run");
+            }
 
-        ImGui::EndPopup();
-    }
+            if (ImGui::Button("Test")) {
+                startAsyncProcess(cfg.testCom, "Test");
+            }
+
+            ImGui::EndDisabled();
+
+            if (buildInProgress) {
+                ImGui::SameLine();
+                ImGui::TextColored(ImVec4(1,1,0,1), "Running...");
+            }
+
+            ImGui::EndPopup();
+        }
 }

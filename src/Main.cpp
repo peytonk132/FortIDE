@@ -6,6 +6,8 @@
 #include <imgui.h>
 #include <imgui-SFML.h>
 #include <portable-file-dialogs.h>
+#include "mainfunc/mainfunc.h"
+#include "mainfunc/Logger.h"
 #include "mainfunc/FileTree/Editor.h"
 #include <git2.h>
 //#include "mainfunc/c_Parser.h"
@@ -83,6 +85,48 @@ void installPackage(const std::string& toml)
     std::cout << "Installed package: " << toml << std::endl;
 }
 
+// In your main rendering loop where you draw the UI
+/*
+void DrawMainInterface(std::shared_ptr<BuildLogWidget> buildLogWidget) {
+    // Create a full-width tab bar at the bottom
+    ImGui::SetNextWindowSize(ImVec2(-1, 400), ImGuiCond_Always);
+    ImGui::SetNextWindowPos(ImVec2(0, ImGui::GetIO().DisplaySize.y - 400), ImGuiCond_Always);
+    
+    if (ImGui::Begin("BottomPanel", nullptr, 
+        ImGuiWindowFlags_NoTitleBar | 
+        ImGuiWindowFlags_NoMove |
+        ImGuiWindowFlags_NoCollapse))
+    {
+        if (ImGui::BeginTabBar("MainTabBar"))
+        {
+            // Build Output Tab
+            if (ImGui::BeginTabItem("Build Output")) 
+            {
+                buildLogWidget->Draw();
+                ImGui::EndTabItem();
+            }
+            // Terminal Tab
+            if (ImGui::BeginTabItem("Terminal"))
+            {
+                // Add your terminal content here
+                ImGui::Text("Terminal content...");
+                ImGui::EndTabItem();
+            }
+
+            // Problems Tab
+            if (ImGui::BeginTabItem("Problems"))
+            {
+                // Add problems/errors list
+                ImGui::Text("No problems detected");
+                ImGui::EndTabItem();
+            }
+
+            ImGui::EndTabBar();
+        }
+    }
+    ImGui::End();
+}*/
+
 int main()
 {
     f_MainMenu::entryPoint();
@@ -125,6 +169,29 @@ int main()
     sf::RenderWindow window(desktopSize, "FortIDE");
     ImGui::SFML::Init(window);
     window.setVerticalSyncEnabled(true); // Enable vertical sync
+     // 1. Create build log widget
+    auto build_log_widget = std::make_shared<BuildLogWidget>();
+    
+    // 2. Create the sink from the widget
+    auto sink = build_log_widget->create_sink();
+
+    // 3. Logger initialization code HERE
+    std::shared_ptr<spdlog::logger> logger;
+    try {
+        std::vector<spdlog::sink_ptr> sinks {sink};
+        
+        if (auto existing = spdlog::get("build_logger")) {
+            logger = existing;
+            logger->sinks().push_back(sink);
+        } else {
+            logger = std::make_shared<spdlog::logger>("build_logger", sinks.begin(), sinks.end());
+            spdlog::register_logger(logger);
+        }
+        logger->set_pattern("[%T] [%l] %v");
+    } catch (const spdlog::spdlog_ex& ex) {
+        std::cerr << "Logger initialization failed: " << ex.what() << std::endl;
+        return EXIT_FAILURE;
+    }
     /*if (!io.Fonts->AddFontFromFileTTF("C:\\Users\\Peyton\\Downloads\\Open_Sans\\OpenSans-VariableFont_wdth,wght.ttf", 8.0f)) {
         printf("Failed to load font1.ttf\n");
     }*/
@@ -170,9 +237,15 @@ int main()
         ImGui::End();
         //ImGui::EndFrame();
         
-
+        multiPurp mainbar;
         Editor::RenderEditor(editor);
-        
+        mainbar.menuBarfunc(editor);
+
+        build_log_widget->Draw();
+        //DrawMainInterface(build_log_widget);
+
+
+
         window.clear();
         ImGui::SFML::Render(window);
         window.display();
