@@ -15,6 +15,8 @@
 #include <cstring>
 #include <atomic>
 
+namespace fs = boost::filesystem;
+
 // Buffer for ImGui input
 char f_MainMenu::buf[256]{ '\0' };
 static char repoUrl[128] = "";
@@ -36,6 +38,48 @@ std::atomic<bool> isRepoPickerRunning = false;
 std::thread repoPickerThread;
 progress_data cloneProgress = { 0, 0, 0, false };
 
+void f_MainMenu::DrawProjectList()
+{
+    fs::path rootPath = fs::current_path();
+    ImVec2 fixedWidgetPosition = ImVec2(10, 30); 
+    ImVec2 sizedWidget = ImVec2(380, 450);
+
+    ImGui::SetNextWindowPos(fixedWidgetPosition, ImGuiCond_Always);
+    ImGui::SetNextWindowSize(sizedWidget, ImGuiCond_Always);
+
+    ImGui::Begin("Project List", NULL, ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoCollapse);
+
+    if (fs::exists(rootPath) && fs::is_directory(rootPath))
+    {
+        for (const auto& entry : fs::directory_iterator(rootPath))
+        {
+            if (fs::is_directory(entry))
+            {
+                // Check if this directory is a valid project (e.g., contains Config.xml)
+                fs::path configPath = entry.path() / "Config.xml";
+                if (!fs::exists(configPath)) continue; // Skip non-project directories
+
+                // Only display valid projects
+                std::string projectName = entry.path().filename().string();
+                auto ftime = fs::last_write_time(entry.path());
+                std::time_t cftime = ftime;
+                std::tm tm = *std::localtime(&cftime);
+                char buffer[80];
+                std::strftime(buffer, sizeof(buffer), "%Y-%m-%d %H:%M:%S", &tm);
+                std::string creationDate(buffer);
+
+                ImGui::Text("Project: %s", projectName.c_str());
+                ImGui::Text("Created: %s", creationDate.c_str());
+                ImGui::Text("Directory: %s", entry.path().string().c_str());
+                ImGui::Separator();
+            }
+        }
+    }
+
+    ImGui::End();
+}
+
+
 int fetch_progress(const git_indexer_progress* stats, void* payload) {
     progress_data* pd = (progress_data*)payload;
     pd->received_objects = stats->received_objects;
@@ -53,7 +97,7 @@ int repoPathPicker()
 {
     auto result = pfd::select_folder("Select a directory", pfd::path::home()).result();
     if (!result.empty()) {
-        boost::filesystem::current_path(result);
+        fs::current_path(result);
         repoPath = result;
         std::cout << "Selected path: " << result << std::endl;
     } else {
@@ -207,6 +251,8 @@ int f_MainMenu::startMenu()
     ImGui::SetNextWindowPos(fixedfieldPos);
     ImGui::SetNextWindowSize(sizedWidget);
 
+    f_MainMenu::DrawProjectList();
+
     ImGui::Begin("SomethingUniqueq", 0, ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoTitleBar);
 
     if (ImGui::Button("New Project", ImVec2(200, 100))) 
@@ -225,14 +271,14 @@ int f_MainMenu::startMenu()
 
             if (!wdPath.empty()) 
             {
-                boost::filesystem::current_path(wdPath);
-                std::cout << "Current Working Directory: " << boost::filesystem::current_path().string() << std::endl;
+                fs::current_path(wdPath);
+                std::cout << "Current Working Directory: " << fs::current_path().string() << std::endl;
 
                 if (f_genNewProject() == 0) 
                 {
-                    std::cout << "Project created successfully in directory: " << boost::filesystem::current_path().string() << std::endl;
-                    boost::filesystem::current_path(buf);
-                    std::cout << "New path: " << boost::filesystem::current_path().string() << std::endl;
+                    std::cout << "Project created successfully in directory: " << fs::current_path().string() << std::endl;
+                    fs::current_path(buf);
+                    std::cout << "New path: " << fs::current_path().string() << std::endl;
                     std::ofstream cfgFile("Config.xml");
                 } else 
                 {
@@ -258,8 +304,8 @@ int f_MainMenu::startMenu()
 
         if (!opPath.empty()) 
         {
-            boost::filesystem::current_path(opPath);
-            std::cout << "Current Working Directory: " << boost::filesystem::current_path().string() << std::endl;
+            fs::current_path(opPath);
+            std::cout << "Current Working Directory: " << fs::current_path().string() << std::endl;
         } else 
         {
             std::cout << "No directory selected!" << std::endl;

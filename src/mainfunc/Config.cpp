@@ -26,7 +26,7 @@ void Config::SettingsMenu()
         }
         if (ImGui::BeginPopup("Build", 0))
         {
-            ImGui::InputText("Build Command", buildComArr, COMMAND_SIZE); // Use .data() for the char array
+            ImGui::InputText("Build Command", buildCom, COMMAND_SIZE); // Use .data() for the char array
             if (ImGui::Button("Ok"))
             {
                 std::cout << "Written successfully!" << std::endl;
@@ -41,7 +41,7 @@ void Config::SettingsMenu()
         }
         if (ImGui::BeginPopup("Run", 0))
         {
-            ImGui::InputText("Run Command", runComArr, COMMAND_SIZE); // Use .data() for the char array
+            ImGui::InputText("Run Command", runCom, COMMAND_SIZE); // Use .data() for the char array
             if (ImGui::Button("Ok"))
             {
                 std::cout << "Written successfully!" << std::endl;
@@ -56,7 +56,7 @@ void Config::SettingsMenu()
         }
         if (ImGui::BeginPopup("Test", 0))
         {
-            ImGui::InputText("Test Command", testComArr, COMMAND_SIZE); // Use .data() for the char array
+            ImGui::InputText("Test Command", testCom, COMMAND_SIZE); // Use .data() for the char array
             if (ImGui::Button("Ok"))
             {
                 std::cout << "Written successfully!" << std::endl;

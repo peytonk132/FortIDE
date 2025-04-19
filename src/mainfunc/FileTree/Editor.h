@@ -4,10 +4,46 @@
 #include "FileTree.h"
 #include <imgui.h>
 #include <fstream>
+#include <vector>
+#include <boost/filesystem.hpp>
 
-class Editor
-{
-public: 
-    static int RenderEditor(TextEditor& editor);
-    static int loadFileIntoEditor(const std::string& filePath, TextEditor& editor);
+namespace fs = boost::filesystem;
+
+class Editor {
+public:
+    struct EditorTab {
+        TextEditor editor;
+        std::string filePath;
+        bool isUnsaved = false;
+        std::string displayName;
+        std::string savedText;
+
+        EditorTab() = default;
+        
+        EditorTab(const std::string& path) : filePath(path) {
+            if (!filePath.empty()) {
+                displayName = fs::path(filePath).filename().string();
+                std::ifstream file(filePath);
+                if (file.is_open()) {
+                    std::stringstream buffer;
+                    buffer << file.rdbuf();
+                    savedText = buffer.str();
+                    editor.SetText(savedText);
+                }
+            } else {
+                displayName = "Untitled";
+                savedText = "";
+                isUnsaved = true;
+            }
+        }
+    };
+
+    static int RenderEditor();
+    static void OpenFileInTab(const std::string& filePath);
+    static void SaveCurrentTab();
+
+private:
+    static std::vector<EditorTab> tabs;
+    static int currentTab;
+    static void HandleShortcuts();
 };

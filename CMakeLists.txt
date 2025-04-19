@@ -5,7 +5,7 @@ project(FortIDE)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(Boost_USE_STATIC_LIBS       ON)
-set(CMAKE_BUILD_TYPE "Release")
+set(CMAKE_BUILD_TYPE "Debug")
 # Set Boost root and include/library directories 
 set(BOOST_ROOT "${CMAKE_SOURCE_DIR}/deps/boost") 
 set(BOOST_INCLUDEDIR "${BOOST_ROOT}/boost") 
@@ -17,6 +17,8 @@ set(TinyXML_DIR "${CMAKE_SOURCE_DIR}/deps/tinyxml2")
 cmake_policy(SET CMP0167 OLD)
 
 # Create the executable target
+add_compile_options( -g -pg )
+add_link_options(-pg)
 add_executable(FortIDE src/Main.cpp)  # Replace `main.cpp` with your main source file
 
 # Specify source files for ImGui

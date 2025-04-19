@@ -1,4 +1,5 @@
 #include "mainfunc.h"
+#include "NewFile.h"
 #include <boost/process.hpp>
 #include <boost/filesystem.hpp>
 #include <boost/asio.hpp>
@@ -37,6 +38,74 @@ std::thread _repoPickerThread;
 
 std::unique_ptr<std::istream> fileContent; // Unique pointer to hold the file content
 // Highlighting is done by ImGuiColorTextEdit. The repo: https://github.com/BalazsJako/ImGuiColorTextEdit
+
+bool BeginButtonDropDown(const char* label, ImVec2 buttonSize)
+{
+    ImGui::SameLine(0.0f, 0.0f);
+
+    ImGuiWindow* window = ImGui::GetCurrentWindow();
+    ImGuiContext& g = *GImGui;
+    const ImGuiStyle& style = g.Style;
+
+    // Get screen position before creating the dropdown button
+    ImVec2 dropdownButtonPos = ImGui::GetCursorScreenPos();
+    ImVec2 dropdownButtonSize(20.0f, buttonSize.y);
+    
+    // Create invisible dropdown button
+    ImGui::PushID(label);
+    bool pressed = ImGui::Button("##", dropdownButtonSize);
+    ImGui::PopID();
+
+    // Calculate arrow position with explicit component operations
+    ImVec2 center = ImVec2(
+        dropdownButtonPos.x + dropdownButtonSize.x * 0.5f,
+        dropdownButtonPos.y + dropdownButtonSize.y * 0.5f
+    );
+    center.y -= dropdownButtonSize.y * 0.25f;
+    
+    // Draw arrow with explicit component-wise scaling
+    const float arrowSize = dropdownButtonSize.y * 0.25f;
+    ImVec2 a = ImVec2(
+        center.x + (0.0f * arrowSize),
+        center.y + (1.0f * arrowSize)
+    );
+    ImVec2 b = ImVec2(
+        center.x + (-0.866f * arrowSize),
+        center.y + (-0.5f * arrowSize)
+    );
+    ImVec2 c = ImVec2(
+        center.x + (0.866f * arrowSize),
+        center.y + (-0.5f * arrowSize)
+    );
+    window->DrawList->AddTriangleFilled(a, b, c, ImGui::GetColorU32(ImGuiCol_Text));
+
+    // Calculate popup position
+    ImVec2 popupPos = ImVec2(
+        dropdownButtonPos.x - buttonSize.x,
+        dropdownButtonPos.y + dropdownButtonSize.y
+    );
+
+    ImGui::SetNextWindowPos(popupPos, ImGuiCond_Appearing);
+
+    if (pressed)
+        ImGui::OpenPopup(label);
+
+    if (ImGui::BeginPopup(label))
+    {
+        ImGui::PushStyleColor(ImGuiCol_FrameBg, style.Colors[ImGuiCol_Button]);
+        ImGui::PushStyleColor(ImGuiCol_WindowBg, style.Colors[ImGuiCol_Button]);
+        ImGui::PushStyleColor(ImGuiCol_ChildBg, style.Colors[ImGuiCol_Button]);
+        return true;
+    }
+
+    return false;
+}
+
+void EndButtonDropDown()
+{
+    ImGui::PopStyleColor(3);
+    ImGui::EndPopup();
+}
 
 int _repoPathPicker() {
     auto dialog = pfd::select_folder("Select Repository Path");
@@ -164,8 +233,15 @@ int multiPurp::menuBarfunc(TextEditor& editor)
            printf("Still doesn't work.");
         }
 
-
-
+        if(BeginButtonDropDown("##jdjf", ImVec2(100, 30)))
+        {
+            if(ImGui::Button("New File"))
+            {
+               CreateNewFile nf;
+               nf.NewFile();
+            }
+            EndButtonDropDown();
+        }
 
         if (showPopup) {
             ImGui::OpenPopup("Popup");
@@ -173,6 +249,8 @@ int multiPurp::menuBarfunc(TextEditor& editor)
         }
 
         multiPurp::Compilefunc();
+        Config sett;
+        sett.SettingsMenu();
 
         OpenGitControl();
 

@@ -26,4 +26,5 @@ public:
     static int f_genNewProject();
     static int stackWindow();
     bool cloneRepo(const std::string& repoUrl, const std::string& localPath);
+    static void DrawProjectList(); // Add this line
 };

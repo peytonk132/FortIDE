@@ -9,6 +9,7 @@
 #include <atomic>           // For std::atomic
 
 #include <imgui.h>
+#include <imgui_internal.h>
 #include <imgui-SFML.h>
 #include <portable-file-dialogs.h>
 #include <TextEditor.h>
@@ -52,6 +53,7 @@ public:
     bool pushChanges(git_repository* repo);               // Push changes to Git
     void OpenGitControl();                                // Open Git control window
     std::wstring Utf8ToWstring(const std::string& str);   // Convert UTF-8 to wstring
+    
 
     struct SearchOutput
     {

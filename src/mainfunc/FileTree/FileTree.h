@@ -15,21 +15,9 @@ public:
 
     static void treeNode();
     static void setFileClickCallback(FileClickCallback callback);
-    
-    
 
 private:
     static std::string filePath;
-    /*struct FileName
-    {
-        std::string path;
-        bool isDirectory;
-
-        FileName() : isDirectory(false) {}
-
-        FileName(const std::string& path, bool isDirectory)
-            : path(path), isDirectory(isDirectory) {}
-    };*/
 
     struct FileNode 
     {
@@ -49,7 +37,6 @@ private:
 
     static FileNode TraverseDirectory(const boost::filesystem::path& directory);
     static void RenderFileNode(FileNode& node);
-    //int getFilePath(FileName& node);
     static void UpdateTree();
 
     static FileNode rootNode;

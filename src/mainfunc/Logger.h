@@ -69,6 +69,9 @@ public:
 
     void Draw() 
     {
+        // Create a full-width tab bar at the bottom
+        ImGui::SetNextWindowSize(ImVec2(-1, 400), ImGuiCond_Always);
+        ImGui::SetNextWindowPos(ImVec2(0, ImGui::GetIO().DisplaySize.y - 240), ImGuiCond_Always);
         if(ImGui::Begin("Bottom Panel", nullptr, ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoCollapse))
         {
             if(ImGui::BeginTabBar("MainTabBar"))

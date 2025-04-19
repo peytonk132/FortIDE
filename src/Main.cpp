@@ -85,48 +85,6 @@ void installPackage(const std::string& toml)
     std::cout << "Installed package: " << toml << std::endl;
 }
 
-// In your main rendering loop where you draw the UI
-/*
-void DrawMainInterface(std::shared_ptr<BuildLogWidget> buildLogWidget) {
-    // Create a full-width tab bar at the bottom
-    ImGui::SetNextWindowSize(ImVec2(-1, 400), ImGuiCond_Always);
-    ImGui::SetNextWindowPos(ImVec2(0, ImGui::GetIO().DisplaySize.y - 400), ImGuiCond_Always);
-    
-    if (ImGui::Begin("BottomPanel", nullptr, 
-        ImGuiWindowFlags_NoTitleBar | 
-        ImGuiWindowFlags_NoMove |
-        ImGuiWindowFlags_NoCollapse))
-    {
-        if (ImGui::BeginTabBar("MainTabBar"))
-        {
-            // Build Output Tab
-            if (ImGui::BeginTabItem("Build Output")) 
-            {
-                buildLogWidget->Draw();
-                ImGui::EndTabItem();
-            }
-            // Terminal Tab
-            if (ImGui::BeginTabItem("Terminal"))
-            {
-                // Add your terminal content here
-                ImGui::Text("Terminal content...");
-                ImGui::EndTabItem();
-            }
-
-            // Problems Tab
-            if (ImGui::BeginTabItem("Problems"))
-            {
-                // Add problems/errors list
-                ImGui::Text("No problems detected");
-                ImGui::EndTabItem();
-            }
-
-            ImGui::EndTabBar();
-        }
-    }
-    ImGui::End();
-}*/
-
 int main()
 {
     f_MainMenu::entryPoint();
@@ -238,7 +196,7 @@ int main()
         //ImGui::EndFrame();
         
         multiPurp mainbar;
-        Editor::RenderEditor(editor);
+        Editor::RenderEditor();
         mainbar.menuBarfunc(editor);
 
         build_log_widget->Draw();

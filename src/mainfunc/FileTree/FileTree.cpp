@@ -3,13 +3,16 @@
 #include <fstream>
 #include <sstream>
 #include <chrono>
+#include <iomanip> // For std::put_time
 
 namespace fs = boost::filesystem;
+
 // Define and initialize static variables
 std::string FileTree::clickedFileName = ""; // Initialize with an empty string
 std::string FileTree::filePath = "";        // Initialize with an empty string
 FileTree::FileNode FileTree::rootNode("", "", true); // Initialize rootNode with default values
 FileTree::FileClickCallback FileTree::fileClickCallback = nullptr; // Initialize callback to null
+
 
 FileTree::FileNode FileTree::TraverseDirectory(const fs::path& directory)
 {
@@ -67,14 +70,38 @@ void FileTree::RenderFileNode(FileNode& node)
         }
 
         if (ImGui::BeginDragDropTarget()) {
-            if (const ImGuiPayload* payload = ImGui::AcceptDragDropPayload("DND_FILE"))
-            {
+            if (const ImGuiPayload* payload = ImGui::AcceptDragDropPayload("DND_FILE")) {
                 std::string sourcePath((const char*)payload->Data);
-                std::string destinationPath = node.path + "/" + fs::path(sourcePath).filename().string();
+                fs::path sourceFsPath(sourcePath);
+                fs::path destinationDir(node.path);  // Target directory
+                fs::path destinationPath = destinationDir / sourceFsPath.filename();
 
-                std::cout << "Source: " << sourcePath << std::endl;
-                std::cout << "Destination: " << destinationPath << std::endl;
+                try {
+                    // Attempt direct rename first
+                    fs::rename(sourceFsPath, destinationPath);
+                    std::cout << "Moved: " << sourcePath << " to " << destinationPath << std::endl;
+                } 
+                catch (const fs::filesystem_error& e) {
+                    if (e.code() == boost::system::errc::cross_device_link) {
+                        // Cross-filesystem move: Copy then delete
+                        try {
+                            fs::copy(sourceFsPath, destinationPath, 
+                                   fs::copy_options::recursive | 
+                                   fs::copy_options::overwrite_existing);
+                            fs::remove_all(sourceFsPath);
+                            std::cout << "Copied across filesystems: " << sourcePath 
+                                    << " to " << destinationPath << std::endl;
+                        }
+                        catch (const fs::filesystem_error& copy_err) {
+                            std::cerr << "Cross-device move failed: " << copy_err.what() << std::endl;
+                        }
+                    }
+                    else {
+                        std::cerr << "Move error: " << e.what() << std::endl;
+                    }
+                }
 
+                // Update tree regardless of success/failure
                 rootNode = TraverseDirectory(fs::path(rootNode.path));
             }
             ImGui::EndDragDropTarget();
