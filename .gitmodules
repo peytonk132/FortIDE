@@ -1,0 +1,24 @@
+[submodule "deps/imgui"]
+	path = deps/imgui
+	url = https://github.com/ocornut/imgui
+[submodule "deps/boost"]
+	path = deps/boost
+	url = https://github.com/boostorg/boost.git
+[submodule "deps/SFML"]
+	path = deps/SFML
+	url = https://github.com/SFML/SFML.git
+[submodule "deps/imgui-sfml"]
+	path = deps/imgui-sfml
+	url = https://github.com/SFML/imgui-sfml.git
+[submodule "deps/tinyxml2"]
+	path = deps/tinyxml2
+	url = https://github.com/leethomason/tinyxml2.git
+[submodule "deps/libgit2"]
+	path = deps/libgit2
+	url = https://github.com/libgit2/libgit2.git
+[submodule "deps/portable-file-dialogs"]
+	path = deps/portable-file-dialogs
+	url = https://github.com/samhocevar/portable-file-dialogs.git
+[submodule "deps/antlr4"]
+	path = deps/antlr4
+	url = https://github.com/antlr/antlr4.git
