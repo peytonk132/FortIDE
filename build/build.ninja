@@ -51,209 +51,181 @@ build cmake_object_order_depends_target_FortIDE: phony || .
 
 build CMakeFiles/FortIDE.dir/src/Main.cpp.o: CXX_COMPILER__FortIDE_unscanned_Debug /home/peyton/dev/FortIDE/src/Main.cpp || cmake_object_order_depends_target_FortIDE
   CONFIG = Debug
+  DEFINES = -DBOOST_FILESYSTEM_NO_LIB -DBOOST_SYSTEM_NO_LIB -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -DTINYXML2_DEBUG -DTINYXML2_IMPORT -D_FILE_OFFSET_BITS=64
   DEP_FILE = CMakeFiles/FortIDE.dir/src/Main.cpp.o.d
   FLAGS = -g -std=gnu++20 -g -pg
-  INCLUDES = -I/home/peyton/dev/FortIDE/deps/spdlog/include -I/home/peyton/dev/FortIDE/deps/libgit2/include -I/home/peyton/dev/FortIDE/deps/imgui -I/home/peyton/dev/FortIDE/deps/imgui-sfml -I/home/peyton/dev/FortIDE/deps/SFML/include -I/home/peyton/dev/FortIDE/deps/tinyxml2 -I/home/peyton/dev/FortIDE/deps/boost_1_86_0 -I/home/peyton/dev/FortIDE/deps/antlr4/runtime/Cpp/runtime/src -I/home/peyton/dev/FortIDE/deps/portable-file-dialogs -I/home/peyton/dev/FortIDE/deps/ImGuiColorTextEdit -I/home/peyton/dev/FortIDE/deps/boost
+  INCLUDES = -I/usr/include/antlr4-runtime -I/home/peyton/dev/FortIDE/deps/ImGuiColorTextEdit/TextEditor.h
   OBJECT_DIR = CMakeFiles/FortIDE.dir
   OBJECT_FILE_DIR = CMakeFiles/FortIDE.dir/src
 
-build CMakeFiles/FortIDE.dir/deps/imgui/imgui.cpp.o: CXX_COMPILER__FortIDE_unscanned_Debug /home/peyton/dev/FortIDE/deps/imgui/imgui.cpp || cmake_object_order_depends_target_FortIDE
-  CONFIG = Debug
-  DEP_FILE = CMakeFiles/FortIDE.dir/deps/imgui/imgui.cpp.o.d
-  FLAGS = -g -std=gnu++20 -g -pg
-  INCLUDES = -I/home/peyton/dev/FortIDE/deps/spdlog/include -I/home/peyton/dev/FortIDE/deps/libgit2/include -I/home/peyton/dev/FortIDE/deps/imgui -I/home/peyton/dev/FortIDE/deps/imgui-sfml -I/home/peyton/dev/FortIDE/deps/SFML/include -I/home/peyton/dev/FortIDE/deps/tinyxml2 -I/home/peyton/dev/FortIDE/deps/boost_1_86_0 -I/home/peyton/dev/FortIDE/deps/antlr4/runtime/Cpp/runtime/src -I/home/peyton/dev/FortIDE/deps/portable-file-dialogs -I/home/peyton/dev/FortIDE/deps/ImGuiColorTextEdit -I/home/peyton/dev/FortIDE/deps/boost
-  OBJECT_DIR = CMakeFiles/FortIDE.dir
-  OBJECT_FILE_DIR = CMakeFiles/FortIDE.dir/deps/imgui
-
-build CMakeFiles/FortIDE.dir/deps/imgui/imgui_draw.cpp.o: CXX_COMPILER__FortIDE_unscanned_Debug /home/peyton/dev/FortIDE/deps/imgui/imgui_draw.cpp || cmake_object_order_depends_target_FortIDE
-  CONFIG = Debug
-  DEP_FILE = CMakeFiles/FortIDE.dir/deps/imgui/imgui_draw.cpp.o.d
-  FLAGS = -g -std=gnu++20 -g -pg
-  INCLUDES = -I/home/peyton/dev/FortIDE/deps/spdlog/include -I/home/peyton/dev/FortIDE/deps/libgit2/include -I/home/peyton/dev/FortIDE/deps/imgui -I/home/peyton/dev/FortIDE/deps/imgui-sfml -I/home/peyton/dev/FortIDE/deps/SFML/include -I/home/peyton/dev/FortIDE/deps/tinyxml2 -I/home/peyton/dev/FortIDE/deps/boost_1_86_0 -I/home/peyton/dev/FortIDE/deps/antlr4/runtime/Cpp/runtime/src -I/home/peyton/dev/FortIDE/deps/portable-file-dialogs -I/home/peyton/dev/FortIDE/deps/ImGuiColorTextEdit -I/home/peyton/dev/FortIDE/deps/boost
-  OBJECT_DIR = CMakeFiles/FortIDE.dir
-  OBJECT_FILE_DIR = CMakeFiles/FortIDE.dir/deps/imgui
-
-build CMakeFiles/FortIDE.dir/deps/imgui/imgui_tables.cpp.o: CXX_COMPILER__FortIDE_unscanned_Debug /home/peyton/dev/FortIDE/deps/imgui/imgui_tables.cpp || cmake_object_order_depends_target_FortIDE
-  CONFIG = Debug
-  DEP_FILE = CMakeFiles/FortIDE.dir/deps/imgui/imgui_tables.cpp.o.d
-  FLAGS = -g -std=gnu++20 -g -pg
-  INCLUDES = -I/home/peyton/dev/FortIDE/deps/spdlog/include -I/home/peyton/dev/FortIDE/deps/libgit2/include -I/home/peyton/dev/FortIDE/deps/imgui -I/home/peyton/dev/FortIDE/deps/imgui-sfml -I/home/peyton/dev/FortIDE/deps/SFML/include -I/home/peyton/dev/FortIDE/deps/tinyxml2 -I/home/peyton/dev/FortIDE/deps/boost_1_86_0 -I/home/peyton/dev/FortIDE/deps/antlr4/runtime/Cpp/runtime/src -I/home/peyton/dev/FortIDE/deps/portable-file-dialogs -I/home/peyton/dev/FortIDE/deps/ImGuiColorTextEdit -I/home/peyton/dev/FortIDE/deps/boost
-  OBJECT_DIR = CMakeFiles/FortIDE.dir
-  OBJECT_FILE_DIR = CMakeFiles/FortIDE.dir/deps/imgui
-
-build CMakeFiles/FortIDE.dir/deps/imgui/imgui_widgets.cpp.o: CXX_COMPILER__FortIDE_unscanned_Debug /home/peyton/dev/FortIDE/deps/imgui/imgui_widgets.cpp || cmake_object_order_depends_target_FortIDE
-  CONFIG = Debug
-  DEP_FILE = CMakeFiles/FortIDE.dir/deps/imgui/imgui_widgets.cpp.o.d
-  FLAGS = -g -std=gnu++20 -g -pg
-  INCLUDES = -I/home/peyton/dev/FortIDE/deps/spdlog/include -I/home/peyton/dev/FortIDE/deps/libgit2/include -I/home/peyton/dev/FortIDE/deps/imgui -I/home/peyton/dev/FortIDE/deps/imgui-sfml -I/home/peyton/dev/FortIDE/deps/SFML/include -I/home/peyton/dev/FortIDE/deps/tinyxml2 -I/home/peyton/dev/FortIDE/deps/boost_1_86_0 -I/home/peyton/dev/FortIDE/deps/antlr4/runtime/Cpp/runtime/src -I/home/peyton/dev/FortIDE/deps/portable-file-dialogs -I/home/peyton/dev/FortIDE/deps/ImGuiColorTextEdit -I/home/peyton/dev/FortIDE/deps/boost
-  OBJECT_DIR = CMakeFiles/FortIDE.dir
-  OBJECT_FILE_DIR = CMakeFiles/FortIDE.dir/deps/imgui
-
-build CMakeFiles/FortIDE.dir/deps/imgui/imgui_demo.cpp.o: CXX_COMPILER__FortIDE_unscanned_Debug /home/peyton/dev/FortIDE/deps/imgui/imgui_demo.cpp || cmake_object_order_depends_target_FortIDE
-  CONFIG = Debug
-  DEP_FILE = CMakeFiles/FortIDE.dir/deps/imgui/imgui_demo.cpp.o.d
-  FLAGS = -g -std=gnu++20 -g -pg
-  INCLUDES = -I/home/peyton/dev/FortIDE/deps/spdlog/include -I/home/peyton/dev/FortIDE/deps/libgit2/include -I/home/peyton/dev/FortIDE/deps/imgui -I/home/peyton/dev/FortIDE/deps/imgui-sfml -I/home/peyton/dev/FortIDE/deps/SFML/include -I/home/peyton/dev/FortIDE/deps/tinyxml2 -I/home/peyton/dev/FortIDE/deps/boost_1_86_0 -I/home/peyton/dev/FortIDE/deps/antlr4/runtime/Cpp/runtime/src -I/home/peyton/dev/FortIDE/deps/portable-file-dialogs -I/home/peyton/dev/FortIDE/deps/ImGuiColorTextEdit -I/home/peyton/dev/FortIDE/deps/boost
-  OBJECT_DIR = CMakeFiles/FortIDE.dir
-  OBJECT_FILE_DIR = CMakeFiles/FortIDE.dir/deps/imgui
-
 build CMakeFiles/FortIDE.dir/src/mainfunc/mainfunc.cpp.o: CXX_COMPILER__FortIDE_unscanned_Debug /home/peyton/dev/FortIDE/src/mainfunc/mainfunc.cpp || cmake_object_order_depends_target_FortIDE
   CONFIG = Debug
+  DEFINES = -DBOOST_FILESYSTEM_NO_LIB -DBOOST_SYSTEM_NO_LIB -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -DTINYXML2_DEBUG -DTINYXML2_IMPORT -D_FILE_OFFSET_BITS=64
   DEP_FILE = CMakeFiles/FortIDE.dir/src/mainfunc/mainfunc.cpp.o.d
   FLAGS = -g -std=gnu++20 -g -pg
-  INCLUDES = -I/home/peyton/dev/FortIDE/deps/spdlog/include -I/home/peyton/dev/FortIDE/deps/libgit2/include -I/home/peyton/dev/FortIDE/deps/imgui -I/home/peyton/dev/FortIDE/deps/imgui-sfml -I/home/peyton/dev/FortIDE/deps/SFML/include -I/home/peyton/dev/FortIDE/deps/tinyxml2 -I/home/peyton/dev/FortIDE/deps/boost_1_86_0 -I/home/peyton/dev/FortIDE/deps/antlr4/runtime/Cpp/runtime/src -I/home/peyton/dev/FortIDE/deps/portable-file-dialogs -I/home/peyton/dev/FortIDE/deps/ImGuiColorTextEdit -I/home/peyton/dev/FortIDE/deps/boost
+  INCLUDES = -I/usr/include/antlr4-runtime -I/home/peyton/dev/FortIDE/deps/ImGuiColorTextEdit/TextEditor.h
   OBJECT_DIR = CMakeFiles/FortIDE.dir
   OBJECT_FILE_DIR = CMakeFiles/FortIDE.dir/src/mainfunc
 
 build CMakeFiles/FortIDE.dir/src/mainfunc/c_Parser.cpp.o: CXX_COMPILER__FortIDE_unscanned_Debug /home/peyton/dev/FortIDE/src/mainfunc/c_Parser.cpp || cmake_object_order_depends_target_FortIDE
   CONFIG = Debug
+  DEFINES = -DBOOST_FILESYSTEM_NO_LIB -DBOOST_SYSTEM_NO_LIB -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -DTINYXML2_DEBUG -DTINYXML2_IMPORT -D_FILE_OFFSET_BITS=64
   DEP_FILE = CMakeFiles/FortIDE.dir/src/mainfunc/c_Parser.cpp.o.d
   FLAGS = -g -std=gnu++20 -g -pg
-  INCLUDES = -I/home/peyton/dev/FortIDE/deps/spdlog/include -I/home/peyton/dev/FortIDE/deps/libgit2/include -I/home/peyton/dev/FortIDE/deps/imgui -I/home/peyton/dev/FortIDE/deps/imgui-sfml -I/home/peyton/dev/FortIDE/deps/SFML/include -I/home/peyton/dev/FortIDE/deps/tinyxml2 -I/home/peyton/dev/FortIDE/deps/boost_1_86_0 -I/home/peyton/dev/FortIDE/deps/antlr4/runtime/Cpp/runtime/src -I/home/peyton/dev/FortIDE/deps/portable-file-dialogs -I/home/peyton/dev/FortIDE/deps/ImGuiColorTextEdit -I/home/peyton/dev/FortIDE/deps/boost
+  INCLUDES = -I/usr/include/antlr4-runtime -I/home/peyton/dev/FortIDE/deps/ImGuiColorTextEdit/TextEditor.h
   OBJECT_DIR = CMakeFiles/FortIDE.dir
   OBJECT_FILE_DIR = CMakeFiles/FortIDE.dir/src/mainfunc
 
 build CMakeFiles/FortIDE.dir/src/mainfunc/Config.cpp.o: CXX_COMPILER__FortIDE_unscanned_Debug /home/peyton/dev/FortIDE/src/mainfunc/Config.cpp || cmake_object_order_depends_target_FortIDE
   CONFIG = Debug
+  DEFINES = -DBOOST_FILESYSTEM_NO_LIB -DBOOST_SYSTEM_NO_LIB -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -DTINYXML2_DEBUG -DTINYXML2_IMPORT -D_FILE_OFFSET_BITS=64
   DEP_FILE = CMakeFiles/FortIDE.dir/src/mainfunc/Config.cpp.o.d
   FLAGS = -g -std=gnu++20 -g -pg
-  INCLUDES = -I/home/peyton/dev/FortIDE/deps/spdlog/include -I/home/peyton/dev/FortIDE/deps/libgit2/include -I/home/peyton/dev/FortIDE/deps/imgui -I/home/peyton/dev/FortIDE/deps/imgui-sfml -I/home/peyton/dev/FortIDE/deps/SFML/include -I/home/peyton/dev/FortIDE/deps/tinyxml2 -I/home/peyton/dev/FortIDE/deps/boost_1_86_0 -I/home/peyton/dev/FortIDE/deps/antlr4/runtime/Cpp/runtime/src -I/home/peyton/dev/FortIDE/deps/portable-file-dialogs -I/home/peyton/dev/FortIDE/deps/ImGuiColorTextEdit -I/home/peyton/dev/FortIDE/deps/boost
+  INCLUDES = -I/usr/include/antlr4-runtime -I/home/peyton/dev/FortIDE/deps/ImGuiColorTextEdit/TextEditor.h
   OBJECT_DIR = CMakeFiles/FortIDE.dir
   OBJECT_FILE_DIR = CMakeFiles/FortIDE.dir/src/mainfunc
 
 build CMakeFiles/FortIDE.dir/src/mainfunc/f_MainMenu.cpp.o: CXX_COMPILER__FortIDE_unscanned_Debug /home/peyton/dev/FortIDE/src/mainfunc/f_MainMenu.cpp || cmake_object_order_depends_target_FortIDE
   CONFIG = Debug
+  DEFINES = -DBOOST_FILESYSTEM_NO_LIB -DBOOST_SYSTEM_NO_LIB -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -DTINYXML2_DEBUG -DTINYXML2_IMPORT -D_FILE_OFFSET_BITS=64
   DEP_FILE = CMakeFiles/FortIDE.dir/src/mainfunc/f_MainMenu.cpp.o.d
   FLAGS = -g -std=gnu++20 -g -pg
-  INCLUDES = -I/home/peyton/dev/FortIDE/deps/spdlog/include -I/home/peyton/dev/FortIDE/deps/libgit2/include -I/home/peyton/dev/FortIDE/deps/imgui -I/home/peyton/dev/FortIDE/deps/imgui-sfml -I/home/peyton/dev/FortIDE/deps/SFML/include -I/home/peyton/dev/FortIDE/deps/tinyxml2 -I/home/peyton/dev/FortIDE/deps/boost_1_86_0 -I/home/peyton/dev/FortIDE/deps/antlr4/runtime/Cpp/runtime/src -I/home/peyton/dev/FortIDE/deps/portable-file-dialogs -I/home/peyton/dev/FortIDE/deps/ImGuiColorTextEdit -I/home/peyton/dev/FortIDE/deps/boost
+  INCLUDES = -I/usr/include/antlr4-runtime -I/home/peyton/dev/FortIDE/deps/ImGuiColorTextEdit/TextEditor.h
   OBJECT_DIR = CMakeFiles/FortIDE.dir
   OBJECT_FILE_DIR = CMakeFiles/FortIDE.dir/src/mainfunc
 
 build CMakeFiles/FortIDE.dir/src/mainfunc/searchParser/s_Parser.cpp.o: CXX_COMPILER__FortIDE_unscanned_Debug /home/peyton/dev/FortIDE/src/mainfunc/searchParser/s_Parser.cpp || cmake_object_order_depends_target_FortIDE
   CONFIG = Debug
+  DEFINES = -DBOOST_FILESYSTEM_NO_LIB -DBOOST_SYSTEM_NO_LIB -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -DTINYXML2_DEBUG -DTINYXML2_IMPORT -D_FILE_OFFSET_BITS=64
   DEP_FILE = CMakeFiles/FortIDE.dir/src/mainfunc/searchParser/s_Parser.cpp.o.d
   FLAGS = -g -std=gnu++20 -g -pg
-  INCLUDES = -I/home/peyton/dev/FortIDE/deps/spdlog/include -I/home/peyton/dev/FortIDE/deps/libgit2/include -I/home/peyton/dev/FortIDE/deps/imgui -I/home/peyton/dev/FortIDE/deps/imgui-sfml -I/home/peyton/dev/FortIDE/deps/SFML/include -I/home/peyton/dev/FortIDE/deps/tinyxml2 -I/home/peyton/dev/FortIDE/deps/boost_1_86_0 -I/home/peyton/dev/FortIDE/deps/antlr4/runtime/Cpp/runtime/src -I/home/peyton/dev/FortIDE/deps/portable-file-dialogs -I/home/peyton/dev/FortIDE/deps/ImGuiColorTextEdit -I/home/peyton/dev/FortIDE/deps/boost
+  INCLUDES = -I/usr/include/antlr4-runtime -I/home/peyton/dev/FortIDE/deps/ImGuiColorTextEdit/TextEditor.h
   OBJECT_DIR = CMakeFiles/FortIDE.dir
   OBJECT_FILE_DIR = CMakeFiles/FortIDE.dir/src/mainfunc/searchParser
 
 build CMakeFiles/FortIDE.dir/src/mainfunc/FileTree/FileTree.cpp.o: CXX_COMPILER__FortIDE_unscanned_Debug /home/peyton/dev/FortIDE/src/mainfunc/FileTree/FileTree.cpp || cmake_object_order_depends_target_FortIDE
   CONFIG = Debug
+  DEFINES = -DBOOST_FILESYSTEM_NO_LIB -DBOOST_SYSTEM_NO_LIB -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -DTINYXML2_DEBUG -DTINYXML2_IMPORT -D_FILE_OFFSET_BITS=64
   DEP_FILE = CMakeFiles/FortIDE.dir/src/mainfunc/FileTree/FileTree.cpp.o.d
   FLAGS = -g -std=gnu++20 -g -pg
-  INCLUDES = -I/home/peyton/dev/FortIDE/deps/spdlog/include -I/home/peyton/dev/FortIDE/deps/libgit2/include -I/home/peyton/dev/FortIDE/deps/imgui -I/home/peyton/dev/FortIDE/deps/imgui-sfml -I/home/peyton/dev/FortIDE/deps/SFML/include -I/home/peyton/dev/FortIDE/deps/tinyxml2 -I/home/peyton/dev/FortIDE/deps/boost_1_86_0 -I/home/peyton/dev/FortIDE/deps/antlr4/runtime/Cpp/runtime/src -I/home/peyton/dev/FortIDE/deps/portable-file-dialogs -I/home/peyton/dev/FortIDE/deps/ImGuiColorTextEdit -I/home/peyton/dev/FortIDE/deps/boost
+  INCLUDES = -I/usr/include/antlr4-runtime -I/home/peyton/dev/FortIDE/deps/ImGuiColorTextEdit/TextEditor.h
   OBJECT_DIR = CMakeFiles/FortIDE.dir
   OBJECT_FILE_DIR = CMakeFiles/FortIDE.dir/src/mainfunc/FileTree
 
-build CMakeFiles/FortIDE.dir/deps/imgui-sfml/imgui-SFML.cpp.o: CXX_COMPILER__FortIDE_unscanned_Debug /home/peyton/dev/FortIDE/deps/imgui-sfml/imgui-SFML.cpp || cmake_object_order_depends_target_FortIDE
-  CONFIG = Debug
-  DEP_FILE = CMakeFiles/FortIDE.dir/deps/imgui-sfml/imgui-SFML.cpp.o.d
-  FLAGS = -g -std=gnu++20 -g -pg
-  INCLUDES = -I/home/peyton/dev/FortIDE/deps/spdlog/include -I/home/peyton/dev/FortIDE/deps/libgit2/include -I/home/peyton/dev/FortIDE/deps/imgui -I/home/peyton/dev/FortIDE/deps/imgui-sfml -I/home/peyton/dev/FortIDE/deps/SFML/include -I/home/peyton/dev/FortIDE/deps/tinyxml2 -I/home/peyton/dev/FortIDE/deps/boost_1_86_0 -I/home/peyton/dev/FortIDE/deps/antlr4/runtime/Cpp/runtime/src -I/home/peyton/dev/FortIDE/deps/portable-file-dialogs -I/home/peyton/dev/FortIDE/deps/ImGuiColorTextEdit -I/home/peyton/dev/FortIDE/deps/boost
-  OBJECT_DIR = CMakeFiles/FortIDE.dir
-  OBJECT_FILE_DIR = CMakeFiles/FortIDE.dir/deps/imgui-sfml
-
 build CMakeFiles/FortIDE.dir/deps/ImGuiColorTextEdit/ImGuiDebugPanel.cpp.o: CXX_COMPILER__FortIDE_unscanned_Debug /home/peyton/dev/FortIDE/deps/ImGuiColorTextEdit/ImGuiDebugPanel.cpp || cmake_object_order_depends_target_FortIDE
   CONFIG = Debug
+  DEFINES = -DBOOST_FILESYSTEM_NO_LIB -DBOOST_SYSTEM_NO_LIB -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -DTINYXML2_DEBUG -DTINYXML2_IMPORT -D_FILE_OFFSET_BITS=64
   DEP_FILE = CMakeFiles/FortIDE.dir/deps/ImGuiColorTextEdit/ImGuiDebugPanel.cpp.o.d
   FLAGS = -g -std=gnu++20 -g -pg
-  INCLUDES = -I/home/peyton/dev/FortIDE/deps/spdlog/include -I/home/peyton/dev/FortIDE/deps/libgit2/include -I/home/peyton/dev/FortIDE/deps/imgui -I/home/peyton/dev/FortIDE/deps/imgui-sfml -I/home/peyton/dev/FortIDE/deps/SFML/include -I/home/peyton/dev/FortIDE/deps/tinyxml2 -I/home/peyton/dev/FortIDE/deps/boost_1_86_0 -I/home/peyton/dev/FortIDE/deps/antlr4/runtime/Cpp/runtime/src -I/home/peyton/dev/FortIDE/deps/portable-file-dialogs -I/home/peyton/dev/FortIDE/deps/ImGuiColorTextEdit -I/home/peyton/dev/FortIDE/deps/boost
+  INCLUDES = -I/usr/include/antlr4-runtime -I/home/peyton/dev/FortIDE/deps/ImGuiColorTextEdit/TextEditor.h
   OBJECT_DIR = CMakeFiles/FortIDE.dir
   OBJECT_FILE_DIR = CMakeFiles/FortIDE.dir/deps/ImGuiColorTextEdit
 
 build CMakeFiles/FortIDE.dir/deps/ImGuiColorTextEdit/LanguageDefinitions.cpp.o: CXX_COMPILER__FortIDE_unscanned_Debug /home/peyton/dev/FortIDE/deps/ImGuiColorTextEdit/LanguageDefinitions.cpp || cmake_object_order_depends_target_FortIDE
   CONFIG = Debug
+  DEFINES = -DBOOST_FILESYSTEM_NO_LIB -DBOOST_SYSTEM_NO_LIB -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -DTINYXML2_DEBUG -DTINYXML2_IMPORT -D_FILE_OFFSET_BITS=64
   DEP_FILE = CMakeFiles/FortIDE.dir/deps/ImGuiColorTextEdit/LanguageDefinitions.cpp.o.d
   FLAGS = -g -std=gnu++20 -g -pg
-  INCLUDES = -I/home/peyton/dev/FortIDE/deps/spdlog/include -I/home/peyton/dev/FortIDE/deps/libgit2/include -I/home/peyton/dev/FortIDE/deps/imgui -I/home/peyton/dev/FortIDE/deps/imgui-sfml -I/home/peyton/dev/FortIDE/deps/SFML/include -I/home/peyton/dev/FortIDE/deps/tinyxml2 -I/home/peyton/dev/FortIDE/deps/boost_1_86_0 -I/home/peyton/dev/FortIDE/deps/antlr4/runtime/Cpp/runtime/src -I/home/peyton/dev/FortIDE/deps/portable-file-dialogs -I/home/peyton/dev/FortIDE/deps/ImGuiColorTextEdit -I/home/peyton/dev/FortIDE/deps/boost
+  INCLUDES = -I/usr/include/antlr4-runtime -I/home/peyton/dev/FortIDE/deps/ImGuiColorTextEdit/TextEditor.h
   OBJECT_DIR = CMakeFiles/FortIDE.dir
   OBJECT_FILE_DIR = CMakeFiles/FortIDE.dir/deps/ImGuiColorTextEdit
 
 build CMakeFiles/FortIDE.dir/deps/ImGuiColorTextEdit/TextEditor.cpp.o: CXX_COMPILER__FortIDE_unscanned_Debug /home/peyton/dev/FortIDE/deps/ImGuiColorTextEdit/TextEditor.cpp || cmake_object_order_depends_target_FortIDE
   CONFIG = Debug
+  DEFINES = -DBOOST_FILESYSTEM_NO_LIB -DBOOST_SYSTEM_NO_LIB -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -DTINYXML2_DEBUG -DTINYXML2_IMPORT -D_FILE_OFFSET_BITS=64
   DEP_FILE = CMakeFiles/FortIDE.dir/deps/ImGuiColorTextEdit/TextEditor.cpp.o.d
   FLAGS = -g -std=gnu++20 -g -pg
-  INCLUDES = -I/home/peyton/dev/FortIDE/deps/spdlog/include -I/home/peyton/dev/FortIDE/deps/libgit2/include -I/home/peyton/dev/FortIDE/deps/imgui -I/home/peyton/dev/FortIDE/deps/imgui-sfml -I/home/peyton/dev/FortIDE/deps/SFML/include -I/home/peyton/dev/FortIDE/deps/tinyxml2 -I/home/peyton/dev/FortIDE/deps/boost_1_86_0 -I/home/peyton/dev/FortIDE/deps/antlr4/runtime/Cpp/runtime/src -I/home/peyton/dev/FortIDE/deps/portable-file-dialogs -I/home/peyton/dev/FortIDE/deps/ImGuiColorTextEdit -I/home/peyton/dev/FortIDE/deps/boost
+  INCLUDES = -I/usr/include/antlr4-runtime -I/home/peyton/dev/FortIDE/deps/ImGuiColorTextEdit/TextEditor.h
   OBJECT_DIR = CMakeFiles/FortIDE.dir
   OBJECT_FILE_DIR = CMakeFiles/FortIDE.dir/deps/ImGuiColorTextEdit
 
 build CMakeFiles/FortIDE.dir/deps/ImGuiColorTextEdit/UnitTests.cpp.o: CXX_COMPILER__FortIDE_unscanned_Debug /home/peyton/dev/FortIDE/deps/ImGuiColorTextEdit/UnitTests.cpp || cmake_object_order_depends_target_FortIDE
   CONFIG = Debug
+  DEFINES = -DBOOST_FILESYSTEM_NO_LIB -DBOOST_SYSTEM_NO_LIB -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -DTINYXML2_DEBUG -DTINYXML2_IMPORT -D_FILE_OFFSET_BITS=64
   DEP_FILE = CMakeFiles/FortIDE.dir/deps/ImGuiColorTextEdit/UnitTests.cpp.o.d
   FLAGS = -g -std=gnu++20 -g -pg
-  INCLUDES = -I/home/peyton/dev/FortIDE/deps/spdlog/include -I/home/peyton/dev/FortIDE/deps/libgit2/include -I/home/peyton/dev/FortIDE/deps/imgui -I/home/peyton/dev/FortIDE/deps/imgui-sfml -I/home/peyton/dev/FortIDE/deps/SFML/include -I/home/peyton/dev/FortIDE/deps/tinyxml2 -I/home/peyton/dev/FortIDE/deps/boost_1_86_0 -I/home/peyton/dev/FortIDE/deps/antlr4/runtime/Cpp/runtime/src -I/home/peyton/dev/FortIDE/deps/portable-file-dialogs -I/home/peyton/dev/FortIDE/deps/ImGuiColorTextEdit -I/home/peyton/dev/FortIDE/deps/boost
+  INCLUDES = -I/usr/include/antlr4-runtime -I/home/peyton/dev/FortIDE/deps/ImGuiColorTextEdit/TextEditor.h
   OBJECT_DIR = CMakeFiles/FortIDE.dir
   OBJECT_FILE_DIR = CMakeFiles/FortIDE.dir/deps/ImGuiColorTextEdit
 
 build CMakeFiles/FortIDE.dir/src/mainfunc/FileTree/Editor.cpp.o: CXX_COMPILER__FortIDE_unscanned_Debug /home/peyton/dev/FortIDE/src/mainfunc/FileTree/Editor.cpp || cmake_object_order_depends_target_FortIDE
   CONFIG = Debug
+  DEFINES = -DBOOST_FILESYSTEM_NO_LIB -DBOOST_SYSTEM_NO_LIB -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -DTINYXML2_DEBUG -DTINYXML2_IMPORT -D_FILE_OFFSET_BITS=64
   DEP_FILE = CMakeFiles/FortIDE.dir/src/mainfunc/FileTree/Editor.cpp.o.d
   FLAGS = -g -std=gnu++20 -g -pg
-  INCLUDES = -I/home/peyton/dev/FortIDE/deps/spdlog/include -I/home/peyton/dev/FortIDE/deps/libgit2/include -I/home/peyton/dev/FortIDE/deps/imgui -I/home/peyton/dev/FortIDE/deps/imgui-sfml -I/home/peyton/dev/FortIDE/deps/SFML/include -I/home/peyton/dev/FortIDE/deps/tinyxml2 -I/home/peyton/dev/FortIDE/deps/boost_1_86_0 -I/home/peyton/dev/FortIDE/deps/antlr4/runtime/Cpp/runtime/src -I/home/peyton/dev/FortIDE/deps/portable-file-dialogs -I/home/peyton/dev/FortIDE/deps/ImGuiColorTextEdit -I/home/peyton/dev/FortIDE/deps/boost
+  INCLUDES = -I/usr/include/antlr4-runtime -I/home/peyton/dev/FortIDE/deps/ImGuiColorTextEdit/TextEditor.h
   OBJECT_DIR = CMakeFiles/FortIDE.dir
   OBJECT_FILE_DIR = CMakeFiles/FortIDE.dir/src/mainfunc/FileTree
 
 build CMakeFiles/FortIDE.dir/src/mainfunc/F90Files/ErrorListener.cpp.o: CXX_COMPILER__FortIDE_unscanned_Debug /home/peyton/dev/FortIDE/src/mainfunc/F90Files/ErrorListener.cpp || cmake_object_order_depends_target_FortIDE
   CONFIG = Debug
+  DEFINES = -DBOOST_FILESYSTEM_NO_LIB -DBOOST_SYSTEM_NO_LIB -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -DTINYXML2_DEBUG -DTINYXML2_IMPORT -D_FILE_OFFSET_BITS=64
   DEP_FILE = CMakeFiles/FortIDE.dir/src/mainfunc/F90Files/ErrorListener.cpp.o.d
   FLAGS = -g -std=gnu++20 -g -pg
-  INCLUDES = -I/home/peyton/dev/FortIDE/deps/spdlog/include -I/home/peyton/dev/FortIDE/deps/libgit2/include -I/home/peyton/dev/FortIDE/deps/imgui -I/home/peyton/dev/FortIDE/deps/imgui-sfml -I/home/peyton/dev/FortIDE/deps/SFML/include -I/home/peyton/dev/FortIDE/deps/tinyxml2 -I/home/peyton/dev/FortIDE/deps/boost_1_86_0 -I/home/peyton/dev/FortIDE/deps/antlr4/runtime/Cpp/runtime/src -I/home/peyton/dev/FortIDE/deps/portable-file-dialogs -I/home/peyton/dev/FortIDE/deps/ImGuiColorTextEdit -I/home/peyton/dev/FortIDE/deps/boost
+  INCLUDES = -I/usr/include/antlr4-runtime -I/home/peyton/dev/FortIDE/deps/ImGuiColorTextEdit/TextEditor.h
   OBJECT_DIR = CMakeFiles/FortIDE.dir
   OBJECT_FILE_DIR = CMakeFiles/FortIDE.dir/src/mainfunc/F90Files
 
 build CMakeFiles/FortIDE.dir/src/mainfunc/F90Files/Fortran90Lexer.cpp.o: CXX_COMPILER__FortIDE_unscanned_Debug /home/peyton/dev/FortIDE/src/mainfunc/F90Files/Fortran90Lexer.cpp || cmake_object_order_depends_target_FortIDE
   CONFIG = Debug
+  DEFINES = -DBOOST_FILESYSTEM_NO_LIB -DBOOST_SYSTEM_NO_LIB -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -DTINYXML2_DEBUG -DTINYXML2_IMPORT -D_FILE_OFFSET_BITS=64
   DEP_FILE = CMakeFiles/FortIDE.dir/src/mainfunc/F90Files/Fortran90Lexer.cpp.o.d
   FLAGS = -g -std=gnu++20 -g -pg
-  INCLUDES = -I/home/peyton/dev/FortIDE/deps/spdlog/include -I/home/peyton/dev/FortIDE/deps/libgit2/include -I/home/peyton/dev/FortIDE/deps/imgui -I/home/peyton/dev/FortIDE/deps/imgui-sfml -I/home/peyton/dev/FortIDE/deps/SFML/include -I/home/peyton/dev/FortIDE/deps/tinyxml2 -I/home/peyton/dev/FortIDE/deps/boost_1_86_0 -I/home/peyton/dev/FortIDE/deps/antlr4/runtime/Cpp/runtime/src -I/home/peyton/dev/FortIDE/deps/portable-file-dialogs -I/home/peyton/dev/FortIDE/deps/ImGuiColorTextEdit -I/home/peyton/dev/FortIDE/deps/boost
+  INCLUDES = -I/usr/include/antlr4-runtime -I/home/peyton/dev/FortIDE/deps/ImGuiColorTextEdit/TextEditor.h
   OBJECT_DIR = CMakeFiles/FortIDE.dir
   OBJECT_FILE_DIR = CMakeFiles/FortIDE.dir/src/mainfunc/F90Files
 
 build CMakeFiles/FortIDE.dir/src/mainfunc/F90Files/Fortran90LexerBase.cpp.o: CXX_COMPILER__FortIDE_unscanned_Debug /home/peyton/dev/FortIDE/src/mainfunc/F90Files/Fortran90LexerBase.cpp || cmake_object_order_depends_target_FortIDE
   CONFIG = Debug
+  DEFINES = -DBOOST_FILESYSTEM_NO_LIB -DBOOST_SYSTEM_NO_LIB -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -DTINYXML2_DEBUG -DTINYXML2_IMPORT -D_FILE_OFFSET_BITS=64
   DEP_FILE = CMakeFiles/FortIDE.dir/src/mainfunc/F90Files/Fortran90LexerBase.cpp.o.d
   FLAGS = -g -std=gnu++20 -g -pg
-  INCLUDES = -I/home/peyton/dev/FortIDE/deps/spdlog/include -I/home/peyton/dev/FortIDE/deps/libgit2/include -I/home/peyton/dev/FortIDE/deps/imgui -I/home/peyton/dev/FortIDE/deps/imgui-sfml -I/home/peyton/dev/FortIDE/deps/SFML/include -I/home/peyton/dev/FortIDE/deps/tinyxml2 -I/home/peyton/dev/FortIDE/deps/boost_1_86_0 -I/home/peyton/dev/FortIDE/deps/antlr4/runtime/Cpp/runtime/src -I/home/peyton/dev/FortIDE/deps/portable-file-dialogs -I/home/peyton/dev/FortIDE/deps/ImGuiColorTextEdit -I/home/peyton/dev/FortIDE/deps/boost
+  INCLUDES = -I/usr/include/antlr4-runtime -I/home/peyton/dev/FortIDE/deps/ImGuiColorTextEdit/TextEditor.h
   OBJECT_DIR = CMakeFiles/FortIDE.dir
   OBJECT_FILE_DIR = CMakeFiles/FortIDE.dir/src/mainfunc/F90Files
 
 build CMakeFiles/FortIDE.dir/src/mainfunc/F90Files/Fortran90Parser.cpp.o: CXX_COMPILER__FortIDE_unscanned_Debug /home/peyton/dev/FortIDE/src/mainfunc/F90Files/Fortran90Parser.cpp || cmake_object_order_depends_target_FortIDE
   CONFIG = Debug
+  DEFINES = -DBOOST_FILESYSTEM_NO_LIB -DBOOST_SYSTEM_NO_LIB -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -DTINYXML2_DEBUG -DTINYXML2_IMPORT -D_FILE_OFFSET_BITS=64
   DEP_FILE = CMakeFiles/FortIDE.dir/src/mainfunc/F90Files/Fortran90Parser.cpp.o.d
   FLAGS = -g -std=gnu++20 -g -pg
-  INCLUDES = -I/home/peyton/dev/FortIDE/deps/spdlog/include -I/home/peyton/dev/FortIDE/deps/libgit2/include -I/home/peyton/dev/FortIDE/deps/imgui -I/home/peyton/dev/FortIDE/deps/imgui-sfml -I/home/peyton/dev/FortIDE/deps/SFML/include -I/home/peyton/dev/FortIDE/deps/tinyxml2 -I/home/peyton/dev/FortIDE/deps/boost_1_86_0 -I/home/peyton/dev/FortIDE/deps/antlr4/runtime/Cpp/runtime/src -I/home/peyton/dev/FortIDE/deps/portable-file-dialogs -I/home/peyton/dev/FortIDE/deps/ImGuiColorTextEdit -I/home/peyton/dev/FortIDE/deps/boost
+  INCLUDES = -I/usr/include/antlr4-runtime -I/home/peyton/dev/FortIDE/deps/ImGuiColorTextEdit/TextEditor.h
   OBJECT_DIR = CMakeFiles/FortIDE.dir
   OBJECT_FILE_DIR = CMakeFiles/FortIDE.dir/src/mainfunc/F90Files
 
 build CMakeFiles/FortIDE.dir/src/mainfunc/F90Files/Fortran90ParserBaseListener.cpp.o: CXX_COMPILER__FortIDE_unscanned_Debug /home/peyton/dev/FortIDE/src/mainfunc/F90Files/Fortran90ParserBaseListener.cpp || cmake_object_order_depends_target_FortIDE
   CONFIG = Debug
+  DEFINES = -DBOOST_FILESYSTEM_NO_LIB -DBOOST_SYSTEM_NO_LIB -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -DTINYXML2_DEBUG -DTINYXML2_IMPORT -D_FILE_OFFSET_BITS=64
   DEP_FILE = CMakeFiles/FortIDE.dir/src/mainfunc/F90Files/Fortran90ParserBaseListener.cpp.o.d
   FLAGS = -g -std=gnu++20 -g -pg
-  INCLUDES = -I/home/peyton/dev/FortIDE/deps/spdlog/include -I/home/peyton/dev/FortIDE/deps/libgit2/include -I/home/peyton/dev/FortIDE/deps/imgui -I/home/peyton/dev/FortIDE/deps/imgui-sfml -I/home/peyton/dev/FortIDE/deps/SFML/include -I/home/peyton/dev/FortIDE/deps/tinyxml2 -I/home/peyton/dev/FortIDE/deps/boost_1_86_0 -I/home/peyton/dev/FortIDE/deps/antlr4/runtime/Cpp/runtime/src -I/home/peyton/dev/FortIDE/deps/portable-file-dialogs -I/home/peyton/dev/FortIDE/deps/ImGuiColorTextEdit -I/home/peyton/dev/FortIDE/deps/boost
+  INCLUDES = -I/usr/include/antlr4-runtime -I/home/peyton/dev/FortIDE/deps/ImGuiColorTextEdit/TextEditor.h
   OBJECT_DIR = CMakeFiles/FortIDE.dir
   OBJECT_FILE_DIR = CMakeFiles/FortIDE.dir/src/mainfunc/F90Files
 
 build CMakeFiles/FortIDE.dir/src/mainfunc/F90Files/Fortran90ParserBaseVisitor.cpp.o: CXX_COMPILER__FortIDE_unscanned_Debug /home/peyton/dev/FortIDE/src/mainfunc/F90Files/Fortran90ParserBaseVisitor.cpp || cmake_object_order_depends_target_FortIDE
   CONFIG = Debug
+  DEFINES = -DBOOST_FILESYSTEM_NO_LIB -DBOOST_SYSTEM_NO_LIB -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -DTINYXML2_DEBUG -DTINYXML2_IMPORT -D_FILE_OFFSET_BITS=64
   DEP_FILE = CMakeFiles/FortIDE.dir/src/mainfunc/F90Files/Fortran90ParserBaseVisitor.cpp.o.d
   FLAGS = -g -std=gnu++20 -g -pg
-  INCLUDES = -I/home/peyton/dev/FortIDE/deps/spdlog/include -I/home/peyton/dev/FortIDE/deps/libgit2/include -I/home/peyton/dev/FortIDE/deps/imgui -I/home/peyton/dev/FortIDE/deps/imgui-sfml -I/home/peyton/dev/FortIDE/deps/SFML/include -I/home/peyton/dev/FortIDE/deps/tinyxml2 -I/home/peyton/dev/FortIDE/deps/boost_1_86_0 -I/home/peyton/dev/FortIDE/deps/antlr4/runtime/Cpp/runtime/src -I/home/peyton/dev/FortIDE/deps/portable-file-dialogs -I/home/peyton/dev/FortIDE/deps/ImGuiColorTextEdit -I/home/peyton/dev/FortIDE/deps/boost
+  INCLUDES = -I/usr/include/antlr4-runtime -I/home/peyton/dev/FortIDE/deps/ImGuiColorTextEdit/TextEditor.h
   OBJECT_DIR = CMakeFiles/FortIDE.dir
   OBJECT_FILE_DIR = CMakeFiles/FortIDE.dir/src/mainfunc/F90Files
 
 build CMakeFiles/FortIDE.dir/src/mainfunc/F90Files/Fortran90ParserListener.cpp.o: CXX_COMPILER__FortIDE_unscanned_Debug /home/peyton/dev/FortIDE/src/mainfunc/F90Files/Fortran90ParserListener.cpp || cmake_object_order_depends_target_FortIDE
   CONFIG = Debug
+  DEFINES = -DBOOST_FILESYSTEM_NO_LIB -DBOOST_SYSTEM_NO_LIB -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -DTINYXML2_DEBUG -DTINYXML2_IMPORT -D_FILE_OFFSET_BITS=64
   DEP_FILE = CMakeFiles/FortIDE.dir/src/mainfunc/F90Files/Fortran90ParserListener.cpp.o.d
   FLAGS = -g -std=gnu++20 -g -pg
-  INCLUDES = -I/home/peyton/dev/FortIDE/deps/spdlog/include -I/home/peyton/dev/FortIDE/deps/libgit2/include -I/home/peyton/dev/FortIDE/deps/imgui -I/home/peyton/dev/FortIDE/deps/imgui-sfml -I/home/peyton/dev/FortIDE/deps/SFML/include -I/home/peyton/dev/FortIDE/deps/tinyxml2 -I/home/peyton/dev/FortIDE/deps/boost_1_86_0 -I/home/peyton/dev/FortIDE/deps/antlr4/runtime/Cpp/runtime/src -I/home/peyton/dev/FortIDE/deps/portable-file-dialogs -I/home/peyton/dev/FortIDE/deps/ImGuiColorTextEdit -I/home/peyton/dev/FortIDE/deps/boost
+  INCLUDES = -I/usr/include/antlr4-runtime -I/home/peyton/dev/FortIDE/deps/ImGuiColorTextEdit/TextEditor.h
   OBJECT_DIR = CMakeFiles/FortIDE.dir
   OBJECT_FILE_DIR = CMakeFiles/FortIDE.dir/src/mainfunc/F90Files
 
 build CMakeFiles/FortIDE.dir/src/mainfunc/F90Files/Fortran90ParserVisitor.cpp.o: CXX_COMPILER__FortIDE_unscanned_Debug /home/peyton/dev/FortIDE/src/mainfunc/F90Files/Fortran90ParserVisitor.cpp || cmake_object_order_depends_target_FortIDE
   CONFIG = Debug
+  DEFINES = -DBOOST_FILESYSTEM_NO_LIB -DBOOST_SYSTEM_NO_LIB -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -DTINYXML2_DEBUG -DTINYXML2_IMPORT -D_FILE_OFFSET_BITS=64
   DEP_FILE = CMakeFiles/FortIDE.dir/src/mainfunc/F90Files/Fortran90ParserVisitor.cpp.o.d
   FLAGS = -g -std=gnu++20 -g -pg
-  INCLUDES = -I/home/peyton/dev/FortIDE/deps/spdlog/include -I/home/peyton/dev/FortIDE/deps/libgit2/include -I/home/peyton/dev/FortIDE/deps/imgui -I/home/peyton/dev/FortIDE/deps/imgui-sfml -I/home/peyton/dev/FortIDE/deps/SFML/include -I/home/peyton/dev/FortIDE/deps/tinyxml2 -I/home/peyton/dev/FortIDE/deps/boost_1_86_0 -I/home/peyton/dev/FortIDE/deps/antlr4/runtime/Cpp/runtime/src -I/home/peyton/dev/FortIDE/deps/portable-file-dialogs -I/home/peyton/dev/FortIDE/deps/ImGuiColorTextEdit -I/home/peyton/dev/FortIDE/deps/boost
+  INCLUDES = -I/usr/include/antlr4-runtime -I/home/peyton/dev/FortIDE/deps/ImGuiColorTextEdit/TextEditor.h
   OBJECT_DIR = CMakeFiles/FortIDE.dir
   OBJECT_FILE_DIR = CMakeFiles/FortIDE.dir/src/mainfunc/F90Files
 
@@ -265,13 +237,12 @@ build CMakeFiles/FortIDE.dir/src/mainfunc/F90Files/Fortran90ParserVisitor.cpp.o:
 #############################################
 # Link the executable FortIDE
 
-build FortIDE: CXX_EXECUTABLE_LINKER__FortIDE_Debug CMakeFiles/FortIDE.dir/src/Main.cpp.o CMakeFiles/FortIDE.dir/deps/imgui/imgui.cpp.o CMakeFiles/FortIDE.dir/deps/imgui/imgui_draw.cpp.o CMakeFiles/FortIDE.dir/deps/imgui/imgui_tables.cpp.o CMakeFiles/FortIDE.dir/deps/imgui/imgui_widgets.cpp.o CMakeFiles/FortIDE.dir/deps/imgui/imgui_demo.cpp.o CMakeFiles/FortIDE.dir/src/mainfunc/mainfunc.cpp.o CMakeFiles/FortIDE.dir/src/mainfunc/c_Parser.cpp.o CMakeFiles/FortIDE.dir/src/mainfunc/Config.cpp.o CMakeFiles/FortIDE.dir/src/mainfunc/f_MainMenu.cpp.o CMakeFiles/FortIDE.dir/src/mainfunc/searchParser/s_Parser.cpp.o CMakeFiles/FortIDE.dir/src/mainfunc/FileTree/FileTree.cpp.o CMakeFiles/FortIDE.dir/deps/imgui-sfml/imgui-SFML.cpp.o CMakeFiles/FortIDE.dir/deps/ImGuiColorTextEdit/ImGuiDebugPanel.cpp.o CMakeFiles/FortIDE.dir/deps/ImGuiColorTextEdit/LanguageDefinitions.cpp.o CMakeFiles/FortIDE.dir/deps/ImGuiColorTextEdit/TextEditor.cpp.o CMakeFiles/FortIDE.dir/deps/ImGuiColorTextEdit/UnitTests.cpp.o CMakeFiles/FortIDE.dir/src/mainfunc/FileTree/Editor.cpp.o CMakeFiles/FortIDE.dir/src/mainfunc/F90Files/ErrorListener.cpp.o CMakeFiles/FortIDE.dir/src/mainfunc/F90Files/Fortran90Lexer.cpp.o CMakeFiles/FortIDE.dir/src/mainfunc/F90Files/Fortran90LexerBase.cpp.o CMakeFiles/FortIDE.dir/src/mainfunc/F90Files/Fortran90Parser.cpp.o CMakeFiles/FortIDE.dir/src/mainfunc/F90Files/Fortran90ParserBaseListener.cpp.o CMakeFiles/FortIDE.dir/src/mainfunc/F90Files/Fortran90ParserBaseVisitor.cpp.o CMakeFiles/FortIDE.dir/src/mainfunc/F90Files/Fortran90ParserListener.cpp.o CMakeFiles/FortIDE.dir/src/mainfunc/F90Files/Fortran90ParserVisitor.cpp.o
+build FortIDE: CXX_EXECUTABLE_LINKER__FortIDE_Debug CMakeFiles/FortIDE.dir/src/Main.cpp.o CMakeFiles/FortIDE.dir/src/mainfunc/mainfunc.cpp.o CMakeFiles/FortIDE.dir/src/mainfunc/c_Parser.cpp.o CMakeFiles/FortIDE.dir/src/mainfunc/Config.cpp.o CMakeFiles/FortIDE.dir/src/mainfunc/f_MainMenu.cpp.o CMakeFiles/FortIDE.dir/src/mainfunc/searchParser/s_Parser.cpp.o CMakeFiles/FortIDE.dir/src/mainfunc/FileTree/FileTree.cpp.o CMakeFiles/FortIDE.dir/deps/ImGuiColorTextEdit/ImGuiDebugPanel.cpp.o CMakeFiles/FortIDE.dir/deps/ImGuiColorTextEdit/LanguageDefinitions.cpp.o CMakeFiles/FortIDE.dir/deps/ImGuiColorTextEdit/TextEditor.cpp.o CMakeFiles/FortIDE.dir/deps/ImGuiColorTextEdit/UnitTests.cpp.o CMakeFiles/FortIDE.dir/src/mainfunc/FileTree/Editor.cpp.o CMakeFiles/FortIDE.dir/src/mainfunc/F90Files/ErrorListener.cpp.o CMakeFiles/FortIDE.dir/src/mainfunc/F90Files/Fortran90Lexer.cpp.o CMakeFiles/FortIDE.dir/src/mainfunc/F90Files/Fortran90LexerBase.cpp.o CMakeFiles/FortIDE.dir/src/mainfunc/F90Files/Fortran90Parser.cpp.o CMakeFiles/FortIDE.dir/src/mainfunc/F90Files/Fortran90ParserBaseListener.cpp.o CMakeFiles/FortIDE.dir/src/mainfunc/F90Files/Fortran90ParserBaseVisitor.cpp.o CMakeFiles/FortIDE.dir/src/mainfunc/F90Files/Fortran90ParserListener.cpp.o CMakeFiles/FortIDE.dir/src/mainfunc/F90Files/Fortran90ParserVisitor.cpp.o | /usr/lib/libboost_filesystem.a /usr/lib/libboost_system.a /usr/lib/libtinyxml2.so.11.0.0 /usr/lib/libspdlog.so.1.15.3 /usr/lib/libfmt.so.11.2.0
   CONFIG = Debug
   DEP_FILE = CMakeFiles/FortIDE.dir/link.d
   FLAGS = -g
   LINK_FLAGS = -pg -Wl,--dependency-file=CMakeFiles/FortIDE.dir/link.d
-  LINK_LIBRARIES = -Wl,-rpath,/home/peyton/dev/FortIDE/deps/antlr4/runtime/Cpp/build/runtime/Release:/home/peyton/dev/FortIDE/deps/antlr4/runtime/Cpp/build/runtime/Debug:/home/peyton/dev/FortIDE/deps/libgit2/build/Release:/home/peyton/dev/FortIDE/deps/libgit2/build/Debug:/home/peyton/dev/FortIDE/deps/spdlog/build/Release:/home/peyton/dev/FortIDE/deps/SFML/build/lib/Release:/home/peyton/dev/FortIDE/deps/SFML/build/lib/Debug:/home/peyton/dev/FortIDE/deps/tinyxml2/build/Release:/home/peyton/dev/FortIDE/deps/tinyxml2/build/Debug:/home/peyton/dev/FortIDE/deps/boost/stage/lib  -lpthread  -ldl  -lantlr4-runtime  -lboost_system  -lboost_filesystem  -lsfml-graphics-d  -lsfml-window-d  -lsfml-system-d  -lspdlog  -ltinyxml2  -lgit2  -lGL
-  LINK_PATH = -L/home/peyton/dev/FortIDE/deps/antlr4/runtime/Cpp/build/runtime/Release   -L/home/peyton/dev/FortIDE/deps/antlr4/runtime/Cpp/build/runtime/Debug   -L/home/peyton/dev/FortIDE/deps/libgit2/build/Release   -L/home/peyton/dev/FortIDE/deps/libgit2/build/Debug   -L/home/peyton/dev/FortIDE/deps/spdlog/build/Release   -L/home/peyton/dev/FortIDE/deps/SFML/build/lib/Release   -L/home/peyton/dev/FortIDE/deps/SFML/build/lib/Debug   -L/home/peyton/dev/FortIDE/deps/tinyxml2/build/Release   -L/home/peyton/dev/FortIDE/deps/tinyxml2/build/Debug   -L/home/peyton/dev/FortIDE/deps/boost/stage/lib
+  LINK_LIBRARIES = -lpthread  -ldl  -lantlr4-runtime  /usr/lib/libboost_filesystem.a  /usr/lib/libboost_system.a  /usr/lib/libtinyxml2.so.11.0.0  /usr/lib/libspdlog.so.1.15.3  /usr/lib/libfmt.so.11.2.0
   OBJECT_DIR = CMakeFiles/FortIDE.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -322,14 +293,14 @@ build all: phony FortIDE
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja /home/peyton/dev/FortIDE/build/cmake_install.cmake: RERUN_CMAKE | /home/peyton/dev/FortIDE/CMakeLists.txt /usr/share/cmake/Modules/CMakeCInformation.cmake /usr/share/cmake/Modules/CMakeCXXInformation.cmake /usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake/Modules/CMakeGenericSystem.cmake /usr/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake/Modules/Compiler/GNU-C.cmake /usr/share/cmake/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake/Modules/Compiler/GNU.cmake /usr/share/cmake/Modules/Internal/CMakeCLinkerInformation.cmake /usr/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake /usr/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake /usr/share/cmake/Modules/Linker/GNU-C.cmake /usr/share/cmake/Modules/Linker/GNU-CXX.cmake /usr/share/cmake/Modules/Linker/GNU.cmake /usr/share/cmake/Modules/Platform/Linker/GNU.cmake /usr/share/cmake/Modules/Platform/Linker/Linux-GNU-C.cmake /usr/share/cmake/Modules/Platform/Linker/Linux-GNU-CXX.cmake /usr/share/cmake/Modules/Platform/Linker/Linux-GNU.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU.cmake /usr/share/cmake/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake/Modules/Platform/Linux.cmake /usr/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/4.0.0/CMakeCCompiler.cmake CMakeFiles/4.0.0/CMakeCXXCompiler.cmake CMakeFiles/4.0.0/CMakeSystem.cmake
+build build.ninja /home/peyton/dev/FortIDE/build/cmake_install.cmake: RERUN_CMAKE | /home/peyton/dev/FortIDE/CMakeLists.txt /usr/lib/cmake/Boost-1.88.0/BoostConfig.cmake /usr/lib/cmake/Boost-1.88.0/BoostConfigVersion.cmake /usr/lib/cmake/BoostDetectToolset-1.88.0.cmake /usr/lib/cmake/SFML/SFMLConfig.cmake /usr/lib/cmake/SFML/SFMLConfigVersion.cmake /usr/lib/cmake/SFML/SFMLGraphicsSharedTargets-release.cmake /usr/lib/cmake/SFML/SFMLGraphicsSharedTargets.cmake /usr/lib/cmake/SFML/SFMLSystemSharedTargets-release.cmake /usr/lib/cmake/SFML/SFMLSystemSharedTargets.cmake /usr/lib/cmake/SFML/SFMLWindowSharedTargets-release.cmake /usr/lib/cmake/SFML/SFMLWindowSharedTargets.cmake /usr/lib/cmake/antlr4-runtime/antlr4-runtime-config-version.cmake /usr/lib/cmake/antlr4-runtime/antlr4-runtime-config.cmake /usr/lib/cmake/antlr4-runtime/antlr4-targets-release.cmake /usr/lib/cmake/antlr4-runtime/antlr4-targets.cmake /usr/lib/cmake/boost_filesystem-1.88.0/boost_filesystem-config-version.cmake /usr/lib/cmake/boost_filesystem-1.88.0/boost_filesystem-config.cmake /usr/lib/cmake/boost_filesystem-1.88.0/libboost_filesystem-variant-shared.cmake /usr/lib/cmake/boost_filesystem-1.88.0/libboost_filesystem-variant-static.cmake /usr/lib/cmake/boost_headers-1.88.0/boost_headers-config-version.cmake /usr/lib/cmake/boost_headers-1.88.0/boost_headers-config.cmake /usr/lib/cmake/boost_system-1.88.0/boost_system-config-version.cmake /usr/lib/cmake/boost_system-1.88.0/boost_system-config.cmake /usr/lib/cmake/boost_system-1.88.0/libboost_system-variant-shared.cmake /usr/lib/cmake/boost_system-1.88.0/libboost_system-variant-static.cmake /usr/lib/cmake/fmt/fmt-config-version.cmake /usr/lib/cmake/fmt/fmt-config.cmake /usr/lib/cmake/fmt/fmt-targets-none.cmake /usr/lib/cmake/fmt/fmt-targets.cmake /usr/lib/cmake/spdlog/spdlogConfig.cmake /usr/lib/cmake/spdlog/spdlogConfigTargets-none.cmake /usr/lib/cmake/spdlog/spdlogConfigTargets.cmake /usr/lib/cmake/spdlog/spdlogConfigVersion.cmake /usr/lib/cmake/tinyxml2/tinyxml2-config-version.cmake /usr/lib/cmake/tinyxml2/tinyxml2-config.cmake /usr/lib/cmake/tinyxml2/tinyxml2-shared-targets-noconfig.cmake /usr/lib/cmake/tinyxml2/tinyxml2-shared-targets.cmake /usr/share/cmake/Modules/CMakeCInformation.cmake /usr/share/cmake/Modules/CMakeCXXInformation.cmake /usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake /usr/share/cmake/Modules/CMakeGenericSystem.cmake /usr/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake/Modules/CheckCSourceCompiles.cmake /usr/share/cmake/Modules/CheckIncludeFile.cmake /usr/share/cmake/Modules/CheckLibraryExists.cmake /usr/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake/Modules/Compiler/GNU-C.cmake /usr/share/cmake/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake/Modules/Compiler/GNU.cmake /usr/share/cmake/Modules/FindBoost.cmake /usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake/Modules/FindPackageMessage.cmake /usr/share/cmake/Modules/FindThreads.cmake /usr/share/cmake/Modules/Internal/CMakeCLinkerInformation.cmake /usr/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake /usr/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake /usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake /usr/share/cmake/Modules/Linker/GNU-C.cmake /usr/share/cmake/Modules/Linker/GNU-CXX.cmake /usr/share/cmake/Modules/Linker/GNU.cmake /usr/share/cmake/Modules/Platform/Linker/GNU.cmake /usr/share/cmake/Modules/Platform/Linker/Linux-GNU-C.cmake /usr/share/cmake/Modules/Platform/Linker/Linux-GNU-CXX.cmake /usr/share/cmake/Modules/Platform/Linker/Linux-GNU.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU.cmake /usr/share/cmake/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake/Modules/Platform/Linux.cmake /usr/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/4.0.2-dirty/CMakeCCompiler.cmake CMakeFiles/4.0.2-dirty/CMakeCXXCompiler.cmake CMakeFiles/4.0.2-dirty/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/peyton/dev/FortIDE/CMakeLists.txt /usr/share/cmake/Modules/CMakeCInformation.cmake /usr/share/cmake/Modules/CMakeCXXInformation.cmake /usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake/Modules/CMakeGenericSystem.cmake /usr/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake/Modules/Compiler/GNU-C.cmake /usr/share/cmake/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake/Modules/Compiler/GNU.cmake /usr/share/cmake/Modules/Internal/CMakeCLinkerInformation.cmake /usr/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake /usr/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake /usr/share/cmake/Modules/Linker/GNU-C.cmake /usr/share/cmake/Modules/Linker/GNU-CXX.cmake /usr/share/cmake/Modules/Linker/GNU.cmake /usr/share/cmake/Modules/Platform/Linker/GNU.cmake /usr/share/cmake/Modules/Platform/Linker/Linux-GNU-C.cmake /usr/share/cmake/Modules/Platform/Linker/Linux-GNU-CXX.cmake /usr/share/cmake/Modules/Platform/Linker/Linux-GNU.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU.cmake /usr/share/cmake/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake/Modules/Platform/Linux.cmake /usr/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/4.0.0/CMakeCCompiler.cmake CMakeFiles/4.0.0/CMakeCXXCompiler.cmake CMakeFiles/4.0.0/CMakeSystem.cmake: phony
+build /home/peyton/dev/FortIDE/CMakeLists.txt /usr/lib/cmake/Boost-1.88.0/BoostConfig.cmake /usr/lib/cmake/Boost-1.88.0/BoostConfigVersion.cmake /usr/lib/cmake/BoostDetectToolset-1.88.0.cmake /usr/lib/cmake/SFML/SFMLConfig.cmake /usr/lib/cmake/SFML/SFMLConfigVersion.cmake /usr/lib/cmake/SFML/SFMLGraphicsSharedTargets-release.cmake /usr/lib/cmake/SFML/SFMLGraphicsSharedTargets.cmake /usr/lib/cmake/SFML/SFMLSystemSharedTargets-release.cmake /usr/lib/cmake/SFML/SFMLSystemSharedTargets.cmake /usr/lib/cmake/SFML/SFMLWindowSharedTargets-release.cmake /usr/lib/cmake/SFML/SFMLWindowSharedTargets.cmake /usr/lib/cmake/antlr4-runtime/antlr4-runtime-config-version.cmake /usr/lib/cmake/antlr4-runtime/antlr4-runtime-config.cmake /usr/lib/cmake/antlr4-runtime/antlr4-targets-release.cmake /usr/lib/cmake/antlr4-runtime/antlr4-targets.cmake /usr/lib/cmake/boost_filesystem-1.88.0/boost_filesystem-config-version.cmake /usr/lib/cmake/boost_filesystem-1.88.0/boost_filesystem-config.cmake /usr/lib/cmake/boost_filesystem-1.88.0/libboost_filesystem-variant-shared.cmake /usr/lib/cmake/boost_filesystem-1.88.0/libboost_filesystem-variant-static.cmake /usr/lib/cmake/boost_headers-1.88.0/boost_headers-config-version.cmake /usr/lib/cmake/boost_headers-1.88.0/boost_headers-config.cmake /usr/lib/cmake/boost_system-1.88.0/boost_system-config-version.cmake /usr/lib/cmake/boost_system-1.88.0/boost_system-config.cmake /usr/lib/cmake/boost_system-1.88.0/libboost_system-variant-shared.cmake /usr/lib/cmake/boost_system-1.88.0/libboost_system-variant-static.cmake /usr/lib/cmake/fmt/fmt-config-version.cmake /usr/lib/cmake/fmt/fmt-config.cmake /usr/lib/cmake/fmt/fmt-targets-none.cmake /usr/lib/cmake/fmt/fmt-targets.cmake /usr/lib/cmake/spdlog/spdlogConfig.cmake /usr/lib/cmake/spdlog/spdlogConfigTargets-none.cmake /usr/lib/cmake/spdlog/spdlogConfigTargets.cmake /usr/lib/cmake/spdlog/spdlogConfigVersion.cmake /usr/lib/cmake/tinyxml2/tinyxml2-config-version.cmake /usr/lib/cmake/tinyxml2/tinyxml2-config.cmake /usr/lib/cmake/tinyxml2/tinyxml2-shared-targets-noconfig.cmake /usr/lib/cmake/tinyxml2/tinyxml2-shared-targets.cmake /usr/share/cmake/Modules/CMakeCInformation.cmake /usr/share/cmake/Modules/CMakeCXXInformation.cmake /usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake /usr/share/cmake/Modules/CMakeGenericSystem.cmake /usr/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake/Modules/CheckCSourceCompiles.cmake /usr/share/cmake/Modules/CheckIncludeFile.cmake /usr/share/cmake/Modules/CheckLibraryExists.cmake /usr/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake/Modules/Compiler/GNU-C.cmake /usr/share/cmake/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake/Modules/Compiler/GNU.cmake /usr/share/cmake/Modules/FindBoost.cmake /usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake/Modules/FindPackageMessage.cmake /usr/share/cmake/Modules/FindThreads.cmake /usr/share/cmake/Modules/Internal/CMakeCLinkerInformation.cmake /usr/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake /usr/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake /usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake /usr/share/cmake/Modules/Linker/GNU-C.cmake /usr/share/cmake/Modules/Linker/GNU-CXX.cmake /usr/share/cmake/Modules/Linker/GNU.cmake /usr/share/cmake/Modules/Platform/Linker/GNU.cmake /usr/share/cmake/Modules/Platform/Linker/Linux-GNU-C.cmake /usr/share/cmake/Modules/Platform/Linker/Linux-GNU-CXX.cmake /usr/share/cmake/Modules/Platform/Linker/Linux-GNU.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU.cmake /usr/share/cmake/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake/Modules/Platform/Linux.cmake /usr/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/4.0.2-dirty/CMakeCCompiler.cmake CMakeFiles/4.0.2-dirty/CMakeCXXCompiler.cmake CMakeFiles/4.0.2-dirty/CMakeSystem.cmake: phony
 
 
 #############################################
