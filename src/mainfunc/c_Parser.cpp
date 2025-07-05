@@ -1,11 +1,11 @@
 #include "c_Parser.h"
-#include <antlr4-runtime.h>
+#include "../../deps/ImGuiColorTextEdit/TextEditor.h"
 #include "F90Files/Fortran90Lexer.h"
 #include "F90Files/Fortran90Parser.h"
-#include <memory>
+#include <antlr4-runtime.h>
 #include <iostream>
+#include <memory>
 #include <regex>
-#include <TextEditor.h>
 
 /*
 void c_Parser::parseCode(TextEditor& editor)
@@ -22,12 +22,12 @@ void c_Parser::parseCode(TextEditor& editor)
         public:
             std::map<int, std::string>& errorMarkers;
 
-            SyntaxErrorListener(std::map<int, std::string>& markers) : errorMarkers(markers) {}
+            SyntaxErrorListener(std::map<int, std::string>& markers) :
+errorMarkers(markers) {}
 
-            void syntaxError(antlr4::Recognizer* recognizer, antlr4::Token* offendingSymbol,
-                size_t line, size_t charPositionInLine,
-                const std::string& msg, std::exception_ptr e) override {
-                errorMarkers[static_cast<int>(line)] = msg;
+            void syntaxError(antlr4::Recognizer* recognizer, antlr4::Token*
+offendingSymbol, size_t line, size_t charPositionInLine, const std::string& msg,
+std::exception_ptr e) override { errorMarkers[static_cast<int>(line)] = msg;
             }
         };
 
@@ -44,8 +44,8 @@ void c_Parser::parseCode(TextEditor& editor)
 
     // Clear resolved errors (this function updates the editor)
     clearResolvedErrors(editor);
-        editor.SetErrorMarkers(errorMarkers);  // Set error markers in the editor
-        clearResolvedErrors(editor);  // Clear resolved errors
+        editor.SetErrorMarkers(errorMarkers);  // Set error markers in the
+editor clearResolvedErrors(editor);  // Clear resolved errors
     }
     catch (const std::exception& e) {
         std::cerr << "Exception during parsing: " << e.what() << std::endl;

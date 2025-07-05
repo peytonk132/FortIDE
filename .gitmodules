@@ -1,9 +1,6 @@
 [submodule "deps/imgui"]
 	path = deps/imgui
 	url = https://github.com/ocornut/imgui
-[submodule "deps/boost"]
-	path = deps/boost
-	url = https://github.com/boostorg/boost.git
 [submodule "deps/SFML"]
 	path = deps/SFML
 	url = https://github.com/SFML/SFML.git

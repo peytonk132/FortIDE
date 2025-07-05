@@ -33,8 +33,6 @@
 
 # Deps
 antlr4/
-boost/
-#boost_1_86_0/
 freetype/
 imgui/
 imgui-sfml/

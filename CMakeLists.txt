@@ -36,7 +36,7 @@ set(MAIN_SOURCES
 set(ANTLR_FORTRAN_SOURCES
     ${CMAKE_SOURCE_DIR}/src/mainfunc/F90Files/ErrorListener.cpp
     ${CMAKE_SOURCE_DIR}/src/mainfunc/F90Files/Fortran90Lexer.cpp
-    ${CMAKE_SOURCE_DIR}/src/mainfunc/F90Files/Fortran90ParserBaseListenerase.cpp
+    ${CMAKE_SOURCE_DIR}/src/mainfunc/F90Files/Fortran90ParserBaseListener.cpp
     ${CMAKE_SOURCE_DIR}/src/mainfunc/F90Files/Fortran90Parser.cpp
     ${CMAKE_SOURCE_DIR}/src/mainfunc/F90Files/Fortran90ParserBaseListener.cpp
     ${CMAKE_SOURCE_DIR}/src/mainfunc/F90Files/Fortran90ParserBaseVisitor.cpp
