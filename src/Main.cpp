@@ -5,14 +5,14 @@
 
 #include <imgui.h>
 #include <imgui-SFML.h>
-#include <portable-file-dialogs.h>
+#include "../deps/portable-file-dialogs/portable-file-dialogs.h"
 #include "mainfunc/mainfunc.h"
 #include "mainfunc/Logger.h"
 #include "mainfunc/FileTree/Editor.h"
 #include <git2.h>
 //#include "mainfunc/c_Parser.h"
 #include "mainfunc/f_MainMenu.h"
-#include <TextEditor.h>
+#include "../deps/ImGuiColorTextEdit/TextEditor.h"
 #include "mainfunc/searchParser/s_Parser.h"
 
 #include <fstream>
@@ -238,7 +238,7 @@ int main()
         //ImGui::EndFrame();
         
         multiPurp mainbar;
-        Editor::RenderEditor(editor);
+        Editor::RenderEditor();
         mainbar.menuBarfunc(editor);
 
         build_log_widget->Draw();

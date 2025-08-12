@@ -1,3 +1,0 @@
-/home/peyton/dev/FortIDE/build/CMakeFiles/FortIDE.dir
-/home/peyton/dev/FortIDE/build/CMakeFiles/edit_cache.dir
-/home/peyton/dev/FortIDE/build/CMakeFiles/rebuild_cache.dir

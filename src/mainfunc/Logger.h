@@ -69,7 +69,7 @@ public:
 
     void Draw() 
     {
-        if(ImGui::Begin("Bottom Panel", nullptr, ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoCollapse))
+        if(ImGui::Begin("Bottom Panel", nullptr, ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoCollapse))
         {
             if(ImGui::BeginTabBar("MainTabBar"))
             {

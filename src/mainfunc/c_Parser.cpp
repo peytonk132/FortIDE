@@ -5,7 +5,7 @@
 #include <memory>
 #include <iostream>
 #include <regex>
-#include <TextEditor.h>
+#include "../../deps/ImGuiColorTextEdit/TextEditor.h"
 
 /*
 void c_Parser::parseCode(TextEditor& editor)

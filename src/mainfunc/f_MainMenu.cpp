@@ -8,7 +8,7 @@
 #include <boost/filesystem.hpp>
 #include <boost/process.hpp>
 #include <iostream>
-#include <portable-file-dialogs.h>
+#include "../../deps/portable-file-dialogs/portable-file-dialogs.h"
 #include <chrono>
 #include <ctime>
 #include <thread>

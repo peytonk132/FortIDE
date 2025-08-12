@@ -27,59 +27,25 @@ FileTree::FileNode FileTree::TraverseDirectory(const fs::path& directory)
 
 void FileTree::RenderFileNode(FileNode& node)
 {
-    // Add an asterisk if the file is unsaved
-    std::string displayName = node.name;
-    if (!node.isDirectory && node.isUnsaved)
-    {
-        displayName += " *"; // Append an asterisk for unsaved files
+    // Remove asterisk logic - tabs handle this now
+    ImGuiTreeNodeFlags flags = node.isDirectory ?
+        ImGuiTreeNodeFlags_OpenOnArrow :
+        ImGuiTreeNodeFlags_Leaf | ImGuiTreeNodeFlags_NoTreePushOnOpen;
+
+    bool isOpen = ImGui::TreeNodeEx(node.name.c_str(), flags);
+
+    if (!node.isDirectory && ImGui::IsItemClicked()) {
+        FileTree::clickedFileName = node.name;
+        FileTree::filePath = node.path;
+        if (fileClickCallback) {
+            fileClickCallback(node.path);
+        }
     }
 
-    ImGuiTreeNodeFlags flags = node.isDirectory ? ImGuiTreeNodeFlags_OpenOnArrow : ImGuiTreeNodeFlags_Leaf;
-
-    if (ImGui::TreeNodeEx(displayName.c_str(), flags))
-    {
-        if (node.isDirectory)
-        {
-            for (auto& child : node.children)
-            {
-                FileTree::RenderFileNode(child);
-            }
+    if (isOpen && node.isDirectory) {
+        for (auto& child : node.children) {
+            RenderFileNode(child);
         }
-
-        if (!node.isDirectory && ImGui::IsItemClicked())
-        {
-            FileTree::clickedFileName = node.name;
-            FileTree::filePath = node.path;
-            std::cout << "Clicked file: " << clickedFileName << std::endl;
-            std::cout << "File path: " << filePath << std::endl;
-
-            if (fileClickCallback)
-            {
-                fileClickCallback(filePath);
-            }
-        }
-
-        // Drag-and-drop logic remains unchanged
-        if (ImGui::BeginDragDropSource(ImGuiDragDropFlags_SourceAllowNullID)) {
-            ImGui::SetDragDropPayload("DND_FILE", node.path.c_str(), node.path.size() + 1);
-            ImGui::Text("Moving: %s", node.name.c_str());
-            ImGui::EndDragDropSource();
-        }
-
-        if (ImGui::BeginDragDropTarget()) {
-            if (const ImGuiPayload* payload = ImGui::AcceptDragDropPayload("DND_FILE"))
-            {
-                std::string sourcePath((const char*)payload->Data);
-                std::string destinationPath = node.path + "/" + fs::path(sourcePath).filename().string();
-
-                std::cout << "Source: " << sourcePath << std::endl;
-                std::cout << "Destination: " << destinationPath << std::endl;
-
-                rootNode = TraverseDirectory(fs::path(rootNode.path));
-            }
-            ImGui::EndDragDropTarget();
-        }
-
         ImGui::TreePop();
     }
 }

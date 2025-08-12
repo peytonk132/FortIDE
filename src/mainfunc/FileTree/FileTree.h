@@ -31,18 +31,12 @@ private:
             : path(path), isDirectory(isDirectory) {}
     };*/
 
-    struct FileNode 
-    {
+    struct FileNode {
         std::string name;
         std::string path;
-        std::vector<FileNode> children;
-        bool isUnsaved = false;  // New flag to indicate unsaved status
         bool isDirectory;
+        std::vector<FileNode> children;
 
-        // Default constructor
-        FileNode() : isDirectory(false) {}
-
-        // User-defined constructor
         FileNode(const std::string& name, const std::string& path, bool isDirectory)
             : name(name), path(path), isDirectory(isDirectory) {}
     };

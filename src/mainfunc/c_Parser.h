@@ -1,5 +1,5 @@
 #pragma once
-#include <TextEditor.h>
+#include "../../deps/ImGuiColorTextEdit/TextEditor.h"
 #include <map>
 #include <string>
 /*
