@@ -1,4 +1,5 @@
 #include "f_MainMenu.h"
+#include "List.h"
 
 #include <git2.h>
 #include <fstream>
@@ -282,6 +283,7 @@ int f_MainMenu::entryPoint()
 
     ImGui::SFML::Init(window);
 
+    loadProjects();
     f_MainMenu mainMenu;
 
     sf::Clock deltaClock;
@@ -300,6 +302,7 @@ int f_MainMenu::entryPoint()
         window.clear();
         //ImGui::NewFrame();
         mainMenu.startMenu();
+        renderProjectManager(window);
         //ImGui::Render();
         ImGui::SFML::Render(window);
         window.display();

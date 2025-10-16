@@ -35,73 +35,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45a6a227-5544-4bfd-ade5-f6ee02a0f0c6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/mainfunc/NewFile.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.30.5/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.30.5/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.30.5/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.30.5/CMakeRCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.30.5/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.30.5/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.30.5/CompilerIdC/CompilerIdC.vcxproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.30.5/CompilerIdC/Debug/CompilerIdC.exe.recipe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.30.5/CompilerIdC/Debug/CompilerIdC.tlog/CL.command.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.30.5/CompilerIdC/Debug/CompilerIdC.tlog/CL.read.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.30.5/CompilerIdC/Debug/CompilerIdC.tlog/CL.write.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.30.5/CompilerIdC/Debug/CompilerIdC.tlog/Cl.items.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.30.5/CompilerIdC/Debug/CompilerIdC.tlog/CompilerIdC.lastbuildstate" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.30.5/CompilerIdC/Debug/CompilerIdC.tlog/link.command.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.30.5/CompilerIdC/Debug/CompilerIdC.tlog/link.read.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.30.5/CompilerIdC/Debug/CompilerIdC.tlog/link.secondary.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.30.5/CompilerIdC/Debug/CompilerIdC.tlog/link.write.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.30.5/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.30.5/CompilerIdCXX/CompilerIdCXX.vcxproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.30.5/CompilerIdCXX/Debug/CompilerIdCXX.exe.recipe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.30.5/CompilerIdCXX/Debug/CompilerIdCXX.tlog/CL.command.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.30.5/CompilerIdCXX/Debug/CompilerIdCXX.tlog/CL.read.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.30.5/CompilerIdCXX/Debug/CompilerIdCXX.tlog/CL.write.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.30.5/CompilerIdCXX/Debug/CompilerIdCXX.tlog/Cl.items.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.30.5/CompilerIdCXX/Debug/CompilerIdCXX.tlog/CompilerIdCXX.lastbuildstate" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.30.5/CompilerIdCXX/Debug/CompilerIdCXX.tlog/link.command.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.30.5/CompilerIdCXX/Debug/CompilerIdCXX.tlog/link.read.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.30.5/CompilerIdCXX/Debug/CompilerIdCXX.tlog/link.secondary.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.30.5/CompilerIdCXX/Debug/CompilerIdCXX.tlog/link.write.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.30.5/VCTargetsPath.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.30.5/VCTargetsPath.vcxproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.30.5/VCTargetsPath/x64/Debug/VCTargetsPath.recipe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.30.5/VCTargetsPath/x64/Debug/VCTargetsPath.tlog/VCTargetsPath.lastbuildstate" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/418f1cf1ec1ebaa45cab874993fe4442/generate.stamp.rule" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/cmake.check_cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/generate.stamp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/generate.stamp.depend" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/generate.stamp.list" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/.ninja_deps" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/.ninja_log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeCache.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/cmake.check_cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/rules.ninja" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/build.ninja" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cmake_install.cmake" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mainfunc/List.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mainfunc/List.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deps/ImGuiColorTextEdit" beforeDir="false" afterPath="$PROJECT_DIR$/deps/ImGuiColorTextEdit" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deps/ImGuiColorTextEdit/LanguageDefinitions.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/deps/ImGuiColorTextEdit/LanguageDefinitions.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deps/ImGuiColorTextEdit/TextEditor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/deps/ImGuiColorTextEdit/TextEditor.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deps/ImGuiColorTextEdit/TextEditor.h" beforeDir="false" afterPath="$PROJECT_DIR$/deps/ImGuiColorTextEdit/TextEditor.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainfunc/FileTree/Editor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainfunc/FileTree/Editor.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainfunc/FileTree/Editor.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainfunc/FileTree/Editor.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainfunc/FileTree/FileTree.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainfunc/FileTree/FileTree.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainfunc/FileTree/FileTree.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainfunc/FileTree/FileTree.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainfunc/Logger.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainfunc/Logger.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainfunc/c_Parser.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainfunc/c_Parser.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainfunc/c_Parser.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainfunc/c_Parser.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mainfunc/f_MainMenu.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainfunc/f_MainMenu.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainfunc/mainfunc.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainfunc/mainfunc.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainfunc/mainfunc.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainfunc/mainfunc.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,6 +56,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
@@ -338,14 +281,14 @@
     "RunOnceActivity.west.config.association.type.startup.service": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/peyton/dev/FortIDE/src/mainfunc",
+    "git-widget-placeholder": "Tabs-Feature",
+    "last_opened_file_path": "/home/peyton/dev/OpenGL_Practice",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.qodana",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -355,48 +298,38 @@
       <recent name="$PROJECT_DIR$/src/mainfunc/FileTree" />
     </key>
   </component>
-  <component name="RunManager" selected="CMake Debug.Unnamed">
-    <configuration name="Unnamed" type="CMakeListConfigurationType" factoryName="CMakeListConfigurationFactory">
-      <method v="2" />
-    </configuration>
-    <configuration name="FortIDE" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="FortIDE" TARGET_NAME="FortIDE" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="FortIDE" RUN_TARGET_NAME="FortIDE">
+  <component name="RunManager" selected="CMake Application.sfml-audio">
+    <configuration name="sfml-audio" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="FortIDE" TARGET_NAME="sfml-audio">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="sfml-audio" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="FortIDE" TARGET_NAME="sfml-audio" CONFIG_NAME="Debug">
+    <configuration name="sfml-graphics" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="FortIDE" TARGET_NAME="sfml-graphics">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="sfml-graphics" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="FortIDE" TARGET_NAME="sfml-graphics" CONFIG_NAME="Debug">
+    <configuration name="sfml-network" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="FortIDE" TARGET_NAME="sfml-network">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="sfml-network" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="FortIDE" TARGET_NAME="sfml-network" CONFIG_NAME="Debug">
+    <configuration name="sfml-system" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="FortIDE" TARGET_NAME="sfml-system">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="sfml-system" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="FortIDE" TARGET_NAME="sfml-system" CONFIG_NAME="Debug">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="sfml-window" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="FortIDE" TARGET_NAME="sfml-window" CONFIG_NAME="Debug">
+    <configuration name="sfml-window" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="FortIDE" TARGET_NAME="sfml-window">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="CMake Application.FortIDE" />
       <item itemvalue="CMake Application.sfml-audio" />
       <item itemvalue="CMake Application.sfml-graphics" />
       <item itemvalue="CMake Application.sfml-network" />
       <item itemvalue="CMake Application.sfml-system" />
       <item itemvalue="CMake Application.sfml-window" />
-      <item itemvalue="CMake Debug.Unnamed" />
     </list>
   </component>
   <component name="TaskManager">
@@ -414,7 +347,12 @@
       <workItem from="1754832710111" duration="4476000" />
       <workItem from="1754840356050" duration="246000" />
       <workItem from="1754875344073" duration="2679000" />
-      <workItem from="1755019635007" duration="6610000" />
+      <workItem from="1755019635007" duration="9421000" />
+      <workItem from="1755043522283" duration="1830000" />
+      <workItem from="1758140722183" duration="753000" />
+      <workItem from="1758141500560" duration="8000" />
+      <workItem from="1758141522763" duration="176000" />
+      <workItem from="1758572391646" duration="253000" />
     </task>
     <servers />
   </component>
@@ -425,6 +363,17 @@
     <isAutomaticCheckingOnLaunch value="false" />
     <isAutomaticFoundErrors value="true" />
     <isAutomaticReloadCMake value="true" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

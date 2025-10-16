@@ -436,33 +436,5 @@ void multiPurp::OpenGitControl() {
 }
 
 void multiPurp::Compilefunc() {
-  Config cfg;
-  if (ImGui::Button("Build Options")) {
-    ImGui::OpenPopup("Build Options");
-  }
-
-  if (ImGui::BeginPopup("Build Options")) {
-    // Disable buttons while build is running
-    ImGui::BeginDisabled(buildInProgress);
-
-    if (ImGui::Button("Build")) {
-      startAsyncProcess(cfg.buildCom, "Build");
-    }
-    if (ImGui::Button("Run")) {
-      startAsyncProcess(cfg.runCom, "Run");
-    }
-
-    if (ImGui::Button("Test")) {
-      startAsyncProcess(cfg.testCom, "Test");
-    }
-
-    ImGui::EndDisabled();
-
-    if (buildInProgress) {
-      ImGui::SameLine();
-      ImGui::TextColored(ImVec4(1, 1, 0, 1), "Running...");
-    }
-
-    ImGui::EndPopup();
-  }
+  
 }

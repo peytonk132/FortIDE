@@ -2,7 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/deps" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps" vcs="" />
     <mapping directory="$PROJECT_DIR$/deps/ImGuiColorTextEdit" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/deps/ImGuiColorTextEdit/vendor/regex" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/deps/boost" vcs="Git" />
