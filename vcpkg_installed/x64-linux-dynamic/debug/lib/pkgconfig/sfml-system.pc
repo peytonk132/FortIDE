@@ -1,0 +1,12 @@
+prefix=${pcfiledir}/../..
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/../include
+
+Name: SFML-system
+Description: The Simple and Fast Multimedia Library, system module.
+URL: http://www.sfml-dev.org
+Version: 3.0.2
+Libs: "-L${libdir}" -lsfml-system
+Cflags: "-I${includedir}"
+

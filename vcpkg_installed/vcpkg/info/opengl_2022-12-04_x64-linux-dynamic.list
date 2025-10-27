@@ -1,0 +1,6 @@
+x64-linux-dynamic/
+x64-linux-dynamic/share/
+x64-linux-dynamic/share/opengl/
+x64-linux-dynamic/share/opengl/usage
+x64-linux-dynamic/share/opengl/vcpkg.spdx.json
+x64-linux-dynamic/share/opengl/vcpkg_abi_info.txt

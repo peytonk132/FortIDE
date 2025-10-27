@@ -1,0 +1,8 @@
+x64-linux-dynamic/
+x64-linux-dynamic/include/
+x64-linux-dynamic/include/miniaudio.h
+x64-linux-dynamic/share/
+x64-linux-dynamic/share/miniaudio/
+x64-linux-dynamic/share/miniaudio/copyright
+x64-linux-dynamic/share/miniaudio/vcpkg.spdx.json
+x64-linux-dynamic/share/miniaudio/vcpkg_abi_info.txt

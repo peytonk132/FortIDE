@@ -1,0 +1,27 @@
+{
+  "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg-tool/main/docs/vcpkg.schema.json",
+  "name": "fortide",
+  "version-string": "0.1.0",
+  "dependencies": [
+    "antlr4",
+    "spdlog",
+    "sfml",
+    "imgui",
+    "imgui-sfml",
+    "nativefiledialog-extended",
+    "libgit2",
+    "tinyxml2",
+    {
+      "name": "boost-process",
+      "version>=": "1.86.0"
+    },
+    {
+      "name": "boost-filesystem",
+      "version>=": "1.86.0"
+    }
+  ],
+  "overrides": [
+    {"name": "boost-process", "version": "1.86.0"},
+    {"name": "boost-filesystem", "version": "1.86.0"}
+  ]
+}

@@ -62,7 +62,7 @@ void Editor::OpenFileInTab(const std::string& filePath) {
     }
 
     EditorTab newTab(filePath);
-    newTab.editor.SetLanguageDefinition(TextEditor::LanguageDefinitionId::Fortran);
+    newTab.editor.SetLanguageDefinition(TextEditor::LanguageDefinitionId::Cpp);
     tabs.push_back(newTab);
     currentTab = tabs.size() - 1;
 }

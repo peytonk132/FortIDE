@@ -1,0 +1,17 @@
+x64-linux-dynamic/
+x64-linux-dynamic/debug/
+x64-linux-dynamic/debug/lib/
+x64-linux-dynamic/debug/lib/libhttp_parser.a
+x64-linux-dynamic/include/
+x64-linux-dynamic/include/http_parser.h
+x64-linux-dynamic/lib/
+x64-linux-dynamic/lib/libhttp_parser.a
+x64-linux-dynamic/share/
+x64-linux-dynamic/share/http-parser/
+x64-linux-dynamic/share/http-parser/copyright
+x64-linux-dynamic/share/http-parser/vcpkg.spdx.json
+x64-linux-dynamic/share/http-parser/vcpkg_abi_info.txt
+x64-linux-dynamic/share/unofficial-http-parser/
+x64-linux-dynamic/share/unofficial-http-parser/unofficial-http-parser-config-debug.cmake
+x64-linux-dynamic/share/unofficial-http-parser/unofficial-http-parser-config-release.cmake
+x64-linux-dynamic/share/unofficial-http-parser/unofficial-http-parser-config.cmake
