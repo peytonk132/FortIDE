@@ -42,8 +42,7 @@ SFML/
 libgit2/
 spdlog/
 tinyxml2/
-ImGuiColorTextEdit/
-portable-file-dialogs/
+
 .cache/
 .vs/
 CMakeFiles/

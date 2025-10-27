@@ -1,0 +1,6 @@
+[submodule "ImGuiColorTextEdit"]
+	path = ImGuiColorTextEdit
+	url = git@github.com:santaclose/ImGuiColorTextEdit.git
+[submodule "deps/portable-file-dialogs"]
+	path = deps/portable-file-dialogs
+	url = https://github.com/samhocevar/portable-file-dialogs.git
