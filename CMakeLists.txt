@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.15)
-#set(CMAKE_TOOLCHAIN_FILE "${VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake")
+set(CMAKE_TOOLCHAIN_FILE "${VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake")
 set(VCPKG_TARGET_TRIPLET "x64-linux-dynamic")
 project(FortIDE)
 
@@ -7,7 +7,7 @@ project(FortIDE)
 set(CMAKE_CXX_STANDARD 26)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(Boost_USE_STATIC_LIBS       ON)
-set(CMAKE_BUILD_TYPE "Release")
+#set(CMAKE_BUILD_TYPE Release)
 set(ImGui-SFML_DIR "${VCPKG_ROOT}/installed/x64-linux-dynamic/share/imgui-sfml/")
 # Policy to handle FindBoost module removal warning 
 cmake_policy(SET CMP0167 OLD)
