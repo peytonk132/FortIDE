@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.15)
-set(CMAKE_TOOLCHAIN_FILE "${VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake")
+set(CMAKE_TOOLCHAIN_FILE "/home/peyton/dev/vcpkg/scripts/buildsystems/vcpkg.cmake")
 set(VCPKG_TARGET_TRIPLET "x64-linux-dynamic")
 project(FortIDE)
 

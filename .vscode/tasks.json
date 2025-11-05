@@ -6,7 +6,7 @@
 			"label": "CMake: build",
 			"command": "build",
 			"targets": [
-				"GCC 15.2.1 x86_64-pc-linux-gnu"
+				"all"
 			],
 			"group": "build",
 			"problemMatcher": [],
