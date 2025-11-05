@@ -1,13 +1,29 @@
 {
-  "version": 2,
+  "version": 3,
   "configurePresets": [
     {
-      "name": "debug",
-      "generator": "Ninja",
-      "binaryDir": "${sourceDir}/build/",
+      "name": "ninja-multi-vcpkg",
+      "displayName": "Ninja Multi-Config with vcpkg",
+      "description": "Configure with vcpkg toolchain",
+      "generator": "Ninja Multi-Config",
+      "binaryDir": "${sourceDir}/build",
       "cacheVariables": {
         "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake"
       }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "ninja-multi-vcpkg",
+      "configurePreset": "ninja-multi-vcpkg",
+      "configuration": "Release"
+    }
+  ],
+  "testPresets": [
+    {
+      "name": "ninja-multi-vcpkg",
+      "configurePreset": "ninja-multi-vcpkg",
+      "configuration": "Release"
     }
   ]
 }
