@@ -1,0 +1,36 @@
+name: Build with CMake and vcpkg
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # or windows-latest, macos-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        submodules: recursive  # Important if using vcpkg as submodule!
+
+    # Install latest CMake and Ninja
+    - uses: lukka/get-cmake@latest
+
+    # Setup vcpkg
+    - name: Setup vcpkg
+      uses: lukka/run-vcpkg@v11
+      # If using vcpkg as submodule, no additional inputs needed
+      # If NOT using submodule, uncomment and modify:
+      # with:
+      #   vcpkgGitCommitId: 'your-commit-id-here'
+
+    # Run CMake
+    - name: Run CMake
+      uses: lukka/run-cmake@v10
+      with:
+        configurePreset: 'ninja-multi-vcpkg'
+        buildPreset: 'ninja-multi-vcpkg'
+        testPreset: 'ninja-multi-vcpkg'
