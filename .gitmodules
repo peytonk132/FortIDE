@@ -7,3 +7,12 @@
 [submodule "deps/vcpkg"]
 	path = deps/vcpkg
 	url = git@github.com:microsoft/vcpkg.git
+[submodule "deps/qTox"]
+	path = deps/qTox
+	url = git@github.com:TokTok/qTox.git
+[submodule "deps/ImGit"]
+	path = deps/ImGit
+	url = git@github.com:aiekick/ImGit.git
+[submodule "deps/ImGui-Terminal"]
+	path = deps/ImGui-Terminal
+	url = git@github.com:nealmick/ImGui-Terminal.git
