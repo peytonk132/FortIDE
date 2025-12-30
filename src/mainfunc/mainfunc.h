@@ -53,10 +53,10 @@ public:
   void Compilefunc();                  // Compile functionality
   void loadFont();                     // Load font
   int menuBarfunc(TextEditor &editor); // Menu bar functionality
-  int commitChanges(git_repository *repo,
-                    const std::string &commitMessage); // Commit changes to Git
-  bool pushChanges(git_repository *repo);              // Push changes to Git
-  void OpenGitControl(); // Open Git control window
+//  int commitChanges(git_repository *repo,
+//                    const std::string &commitMessage); // Commit changes to Git
+//  bool pushChanges(git_repository *repo);              // Push changes to Git
+//  void OpenGitControl(); // Open Git control window
   std::wstring
   Utf8ToWstring(const std::string &str); // Convert UTF-8 to wstring
 

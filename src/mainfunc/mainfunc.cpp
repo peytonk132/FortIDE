@@ -252,7 +252,7 @@ int multiPurp::menuBarfunc(TextEditor &editor) {
 
   return 0;
 }
-
+/*
 int multiPurp::commitChanges(git_repository *repo,
                              const std::string &commitMessage) {
   int error = 0;
@@ -337,8 +337,10 @@ int multiPurp::commitChanges(git_repository *repo,
   git_reference_free(ref);
 
   return error;
-}
+}*/
 
+
+/*
 bool multiPurp::pushChanges(git_repository *repo) {
   // pushProgress = { 0, 0, 0, 0, 0, false };
   int error;
@@ -385,8 +387,10 @@ bool multiPurp::pushChanges(git_repository *repo) {
   // pushProgress = 100;
   // isPushing = false;
   return true;
-}
+}*/
 
+
+/*
 void multiPurp::OpenGitControl() {
   boost::filesystem::path currentPath = boost::filesystem::current_path();
   std::string pathString = currentPath.string(); // Keep the string in scope
@@ -433,7 +437,7 @@ void multiPurp::OpenGitControl() {
     ImGui::End();
     ImGui::EndPopup();
   }
-}
+}*/ 
 
 void multiPurp::Compilefunc() {
   

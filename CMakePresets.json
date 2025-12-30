@@ -2,27 +2,34 @@
   "version": 3,
   "configurePresets": [
     {
-      "name": "ninja-multi-vcpkg",
-      "displayName": "Ninja Multi-Config with vcpkg",
+      "name": "make",
+      "displayName": "Make with vcpkg",
       "description": "Configure with vcpkg toolchain",
-      "generator": "Ninja Multi-Config",
+      "generator": "Unix Makefiles",
       "binaryDir": "${sourceDir}/build",
       "cacheVariables": {
-        "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake"
-      }
+        "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
+	"CMAKE_C_COMPILER": "/usr/bin/gcc",
+	"CMAKE_CXX_COMPILER": "/usr/bin/g++",
+	"CMAKE_MAKE_PROGRAM": "make"
+      },
+	"environment": {
+		"CC": "/usr/bin/gcc",
+		"CXX": "/usr/bin/g++"
+	}
     }
   ],
   "buildPresets": [
     {
-      "name": "ninja-multi-vcpkg",
-      "configurePreset": "ninja-multi-vcpkg",
+      "name": "make",
+      "configurePreset": "make",
       "configuration": "Release"
     }
   ],
   "testPresets": [
     {
-      "name": "ninja-multi-vcpkg",
-      "configurePreset": "ninja-multi-vcpkg",
+      "name": "make",
+      "configurePreset": "make",
       "configuration": "Release"
     }
   ]
