@@ -243,7 +243,7 @@ int multiPurp::menuBarfunc(TextEditor &editor) {
     Config sett;
     sett.SettingsMenu();
 
-    OpenGitControl();
+//    OpenGitControl();
 
     // Terminal term;
     // term.Render();

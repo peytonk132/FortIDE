@@ -28,6 +28,7 @@ set (MAIN_SOURCES
     ${CMAKE_SOURCE_DIR}/deps/ImGuiColorTextEdit/LanguageDefinitions.cpp
     ${CMAKE_SOURCE_DIR}/deps/ImGuiColorTextEdit/TextEditor.cpp
     ${CMAKE_SOURCE_DIR}/deps/ImGuiColorTextEdit/UnitTests.cpp
+    ${CMAKE_SOURCE_DIR}/src/mainfunc/Git.cpp
 
     ${FILETREE_SOURCES})
     
