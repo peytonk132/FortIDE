@@ -14,6 +14,7 @@
 #include "mainfunc/f_MainMenu.h"
 #include "../deps/ImGuiColorTextEdit/TextEditor.h"
 #include "mainfunc/searchParser/s_Parser.h"
+#include "mainfunc/git/git_panel.h"
 
 #include <fstream>
 #include <memory>
@@ -129,6 +130,7 @@ void DrawMainInterface(std::shared_ptr<BuildLogWidget> buildLogWidget) {
 
 int main()
 {
+    git_libgit2_init();
     f_MainMenu::entryPoint();
     ImGui::CreateContext();
     //ImGui::SetCurrentContext();
@@ -240,6 +242,8 @@ int main()
         multiPurp mainbar;
         Editor::RenderEditor();
         mainbar.menuBarfunc(editor);
+        if (ImGui::Button("Git"))
+            Git::show();
 
         build_log_widget->Draw();
         //DrawMainInterface(build_log_widget);
@@ -254,5 +258,6 @@ int main()
     }
 
     ImGui::SFML::Shutdown();
+    git_libgit2_shutdown();
     return 0;
 }

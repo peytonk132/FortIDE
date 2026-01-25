@@ -28,9 +28,13 @@ set (MAIN_SOURCES
     ${CMAKE_SOURCE_DIR}/deps/ImGuiColorTextEdit/LanguageDefinitions.cpp
     ${CMAKE_SOURCE_DIR}/deps/ImGuiColorTextEdit/TextEditor.cpp
     ${CMAKE_SOURCE_DIR}/deps/ImGuiColorTextEdit/UnitTests.cpp
-    ${CMAKE_SOURCE_DIR}/src/mainfunc/Git.cpp
+    ${CMAKE_SOURCE_DIR}/src/mainfunc/git/git_panel.cpp
+    ${CMAKE_SOURCE_DIR}/src/mainfunc/git/init.c
+    ${CMAKE_SOURCE_DIR}/src/mainfunc/git/common.c
+    ${CMAKE_SOURCE_DIR}/src/mainfunc/git/args.c
 
-    ${FILETREE_SOURCES})
+    ${FILETREE_SOURCES}
+    )
     
 
 # Add source files to the target

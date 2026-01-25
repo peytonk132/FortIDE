@@ -3,6 +3,7 @@
 #include "Config.h"
 #include "NewFile.h"
 #include "c_Parser.h"
+#include "git/git_panel.h"
 #include <boost/asio.hpp>
 #include <boost/filesystem.hpp>
 #include <boost/process.hpp>
@@ -41,6 +42,7 @@ std::unique_ptr<std::istream>
     fileContent; // Unique pointer to hold the file content
 // Highlighting is done by ImGuiColorTextEdit. The repo:
 // https://github.com/BalazsJako/ImGuiColorTextEdit
+Git git;
 
 bool BeginButtonDropDown(const char *label, ImVec2 buttonSize) {
   ImGui::SameLine(0.0f, 0.0f);
@@ -238,6 +240,9 @@ int multiPurp::menuBarfunc(TextEditor &editor) {
       ImGui::OpenPopup("Popup");
       showPopup = false;
     }
+    git.git_panel();
+    if (ImGui::Button("Git"))
+      Git::show();
 
     multiPurp::Compilefunc();
     Config sett;
