@@ -15,6 +15,7 @@
 #include "../deps/ImGuiColorTextEdit/TextEditor.h"
 #include "mainfunc/searchParser/s_Parser.h"
 #include "mainfunc/git/git_panel.h"
+#include "mainfunc/git/GitLogger.h"
 
 #include <fstream>
 #include <memory>
@@ -194,6 +195,18 @@ int main()
         std::cerr << "Logger initialization failed: " << ex.what() << std::endl;
         return EXIT_FAILURE;
     }
+
+    GitLogger::Initialize([build_log_widget](const LogLine& line) {
+        build_log_widget->AddLog(line);
+    });
+
+
+    LogLine startupLine;
+    startupLine.time = std::chrono::system_clock::now();
+    startupLine.level = LogLevel::Info;
+    startupLine.message = "FortIDE Started";
+    build_log_widget->AddLog(startupLine);
+
     /*if (!io.Fonts->AddFontFromFileTTF("C:\\Users\\Peyton\\Downloads\\Open_Sans\\OpenSans-VariableFont_wdth,wght.ttf", 8.0f)) {
         printf("Failed to load font1.ttf\n");
     }*/

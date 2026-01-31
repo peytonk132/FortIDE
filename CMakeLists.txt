@@ -32,6 +32,7 @@ set (MAIN_SOURCES
     ${CMAKE_SOURCE_DIR}/src/mainfunc/git/init.c
     ${CMAKE_SOURCE_DIR}/src/mainfunc/git/common.c
     ${CMAKE_SOURCE_DIR}/src/mainfunc/git/args.c
+    ${CMAKE_SOURCE_DIR}/src/mainfunc/git/GitLogger.cpp
 
     ${FILETREE_SOURCES}
     )

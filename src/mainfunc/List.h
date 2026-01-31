@@ -22,7 +22,34 @@ struct Project {
 };
 
 std::vector<Project> projects;
-const char* XML_PATH = "~/.config/FortIDE/projects.xml";
+
+std::string getConfigPath() {
+    const char* homeDir = nullptr;
+
+    // Get home directory (works on Unix-like systems)
+    homeDir = getenv("HOME");
+    if (!homeDir) {
+        // For Windows
+        homeDir = getenv("USERPROFILE");
+    }
+    if (!homeDir) {
+        homeDir = ".";
+    }
+
+    return std::string(homeDir) + "/.config/FortIDE/projects.xml";
+}
+
+std::string getConfigDir() {
+    const char* homeDir = getenv("HOME");
+    if (!homeDir) {
+        homeDir = getenv("USERPROFILE");
+    }
+    if (!homeDir) {
+        homeDir = ".";
+    }
+
+    return std::string(homeDir) + "/.config/FortIDE";
+}
 
 // Get current timestamp in ISO 8601 format
 std::string currentDateTime() {
@@ -41,50 +68,73 @@ void createProjects(char* name) {
 }
 
 void saveProjects() {
+    // Get the config directory
+    std::string configDir = getConfigDir();
+    std::string xmlPath = getConfigPath();
+
+    // Create the directory if it doesn't exist
+    try {
+        if (!fs::exists(configDir)) {
+            fs::create_directories(configDir);
+            std::cout << "Created directory: " << configDir << std::endl;
+        }
+    } catch (const std::exception& e) {
+        std::cerr << "Error creating directory: " << e.what() << std::endl;
+    }
+
     XMLDocument doc;
     doc.InsertEndChild(doc.NewDeclaration());
-    
+
     XMLElement* root = doc.NewElement("Projects");
     doc.InsertEndChild(root);
-    
+
     for (const auto& project : projects) {
         XMLElement* projElement = doc.NewElement("Project");
         projElement->SetAttribute("name", project.name.c_str());
         projElement->SetAttribute("created", project.created.c_str());
-        
+
         XMLElement* dirElement = doc.NewElement("Directory");
         dirElement->SetText(project.directory.c_str());
         projElement->InsertEndChild(dirElement);
-        
-       root->InsertEndChild(projElement);
+
+        root->InsertEndChild(projElement);
     }
-    
-    doc.SaveFile(XML_PATH);
+
+    // Save to the expanded path
+    if (doc.SaveFile(xmlPath.c_str()) != XML_SUCCESS) {
+        std::cerr << "Error saving projects to: " << xmlPath << std::endl;
+    }
 }
 
 void loadProjects() {
     projects.clear();
-    
+
+    std::string xmlPath = getConfigPath();
+
     XMLDocument doc;
-    if (doc.LoadFile(XML_PATH)) return; // File doesn't exist or error
-    
+    if (doc.LoadFile(xmlPath.c_str())) {
+        // File doesn't exist or error - this is expected on first run
+        std::cout << "No existing projects file found at: " << xmlPath << std::endl;
+        return;
+    }
+
     XMLElement* root = doc.FirstChildElement("Projects");
     if (!root) return;
-    
-    for (XMLElement* proj = root->FirstChildElement("Project"); 
-         proj; 
-         proj = proj->NextSiblingElement()) 
-    {
-        Project project;
-        project.name = proj->Attribute("name");
-        project.created = proj->Attribute("created");
-        
-        if (XMLElement* dir = proj->FirstChildElement("Directory")) {
-            project.directory = dir->GetText() ? dir->GetText() : "";
-        }
-        
-        projects.push_back(project);
-    }
+
+    for (XMLElement* proj = root->FirstChildElement("Project");
+         proj;
+    proj = proj->NextSiblingElement())
+         {
+             Project project;
+             project.name = proj->Attribute("name");
+             project.created = proj->Attribute("created");
+
+             if (XMLElement* dir = proj->FirstChildElement("Directory")) {
+                 project.directory = dir->GetText() ? dir->GetText() : "";
+             }
+
+             projects.push_back(project);
+         }
 }
 
 // Global state for UI
@@ -122,7 +172,7 @@ void renderProjectManager(sf::RenderWindow& window) {
             
             break;
         }
-        ImGui::SameLine(450);
+        ImGui::SameLine(550);
         if (ImGui::Button("Open")) {
             boost::filesystem::current_path(newProjectDir);
             printf("filesystem changed.");

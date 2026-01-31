@@ -1,3 +1,4 @@
+#pragma once
 #include <vector>
 #include <mutex>
 #include <chrono>
@@ -12,7 +13,9 @@ enum class LogLevel {
     Info,
     Warn,
     Error,
-    Critical
+    Critical,
+    GitCommand,
+    GitOutput
 };
 
 struct LogLine {
@@ -153,10 +156,13 @@ private:
             case LogLevel::Warn: return "Warn";
             case LogLevel::Error: return "Error";
             case LogLevel::Critical: return "Critical";
+            case LogLevel::GitCommand: return "Git Command";
+            case LogLevel::GitOutput: return "Git Output";
             default: return "Unknown";
         }
     }
 
+    // Modify the GetLevelColor function
     ImVec4 GetLevelColor(LogLevel level) {
         switch (level) {
             case LogLevel::Trace: return ImVec4(0.5f, 0.5f, 0.5f, 1.0f);
@@ -165,6 +171,8 @@ private:
             case LogLevel::Warn: return ImVec4(1.0f, 1.0f, 0.0f, 1.0f);
             case LogLevel::Error: return ImVec4(1.0f, 0.4f, 0.4f, 1.0f);
             case LogLevel::Critical: return ImVec4(1.0f, 0.0f, 0.0f, 1.0f);
+            case LogLevel::GitCommand: return ImVec4(0.0f, 1.0f, 0.5f, 1.0f);
+            case LogLevel::GitOutput: return ImVec4(0.5f, 1.0f, 0.8f, 1.0f);
             default: return ImVec4(1.0f, 1.0f, 1.0f, 1.0f);
         }
     }
